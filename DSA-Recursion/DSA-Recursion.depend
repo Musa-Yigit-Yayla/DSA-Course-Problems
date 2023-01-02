@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1672653220 source:c:\users\yigit\documents\cs201\dsa-recursion\main.cpp
+	<iostream>
+	"PowerOfNumbers.cpp"
+
+1672653155 source:c:\users\yigit\documents\cs201\dsa-recursion\powerofnumbers.cpp
+	<iostream>
+	<cmath>
+
+1672653222 source:c:\users\yigit\documents\cs201\dsa-recursion\tester.cpp
+
+1672653477 c:\users\yigit\documents\cs201\dsa-recursion\powerofnumbers.cpp
+	<iostream>
+	<cmath>
+

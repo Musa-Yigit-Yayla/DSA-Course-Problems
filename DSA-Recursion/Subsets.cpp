@@ -35,6 +35,14 @@ public:
             calculateSubsetHelper(s, copyVec, currString + s.at(i));
         }
     }
+    void subset(string s, string curr, int i = 0){
+        if(i == s.length()){
+            //base case
+            cout << curr;
+        }
+        subset(s, curr, i + 1);
+        subset(s, curr + s.at(i), i + 1);
+    }
     vector<int> vectorCopier(vector<int> original){
         vector<int> copyVec;
         for(int i = 0; i < original.size(); i++){

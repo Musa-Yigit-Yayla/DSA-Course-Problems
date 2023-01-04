@@ -24,11 +24,29 @@
 1672738474 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-recursion\ropecutting.cpp
 	<vector>
 
-1672740909 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-recursion\subsets.cpp
+1672741742 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-recursion\subsets.cpp
 	<string>
 	<vector>
 	<iostream>
 	<bits/stdc++.h>
 
-1672741721 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-recursion\tester.cpp
+1672841232 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-recursion\tester.cpp
+
+1671659006 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\c---test\geekproblems\permutation.cpp
+	<iostream>
+	<vector>
+	<string>
+	<cmath>
+	<ctime>
+	<random>
+	<algorithm>
+
+1672842955 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-recursion\permutation2.cpp
+	<iostream>
+	<vector>
+	<string>
+	<cmath>
+	<ctime>
+	<random>
+	<algorithm>
 

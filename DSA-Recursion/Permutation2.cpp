@@ -8,12 +8,15 @@
 
 using namespace std;
 
-class Permutation{
+class Permutation2{
 private:
     vector<string> allPermutations;
     string originalString;
     int stringLength;
 public:
+    Permutation2(){
+
+    }
     vector<string>find_permutation(string s){
         stringLength = s.length();
         originalString = s;
@@ -109,5 +112,8 @@ public:
             }
         }
         return false;
+    }
+    vector<string> getAllPermutations(){
+        return this->allPermutations;
     }
 };

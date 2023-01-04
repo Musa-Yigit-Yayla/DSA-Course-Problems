@@ -13,9 +13,11 @@
 	<iostream>
 	<cmath>
 
-1672653220 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-recursion\main.cpp
-	<iostream>
-	"PowerOfNumbers.cpp"
+1672845417 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-recursion\main.cpp
+	<bits/stdc++.h>
+	<vector>
+	<string>
+	"PossibleWordsFromPhoneDigits.cpp"
 
 1672653477 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-recursion\powerofnumbers.cpp
 	<iostream>
@@ -30,7 +32,7 @@
 	<iostream>
 	<bits/stdc++.h>
 
-1672841232 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-recursion\tester.cpp
+1672845417 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-recursion\tester.cpp
 
 1671659006 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\c---test\geekproblems\permutation.cpp
 	<iostream>
@@ -41,7 +43,7 @@
 	<random>
 	<algorithm>
 
-1672842955 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-recursion\permutation2.cpp
+1672844492 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-recursion\permutation2.cpp
 	<iostream>
 	<vector>
 	<string>
@@ -49,4 +51,25 @@
 	<ctime>
 	<random>
 	<algorithm>
+
+1672844492 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-recursion\possiblewordsfromphonedigits.cpp
+	<bits/stdc++.h>
+	<vector>
+	<string>
+	"Permutation2.cpp"
+
+1672844492 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-recursion\permutation2.cpp
+	<iostream>
+	<vector>
+	<string>
+	<cmath>
+	<ctime>
+	<random>
+	<algorithm>
+
+1672844492 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-recursion\possiblewordsfromphonedigits.cpp
+	<bits/stdc++.h>
+	<vector>
+	<string>
+	"Permutation2.cpp"
 

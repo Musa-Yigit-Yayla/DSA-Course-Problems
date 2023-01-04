@@ -47,7 +47,7 @@ public:
         //Your code here
         string digitsPressed = "";
         for(int i = 0; i < N; i++){
-            digitsPressed += a[i];
+            digitsPressed += to_string(a[i]);
         }
         //find all permutations of the digits
         perm->find_permutation(digitsPressed);

@@ -15,4 +15,5 @@ int main(){
     for(size_t i = 0; i < result.size(); i++){
         cout << result.at(i) << " ";
     }
+    return 0;
 }

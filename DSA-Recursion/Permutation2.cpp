@@ -58,7 +58,7 @@ public:
         int boundary = static_cast<int>(-s.length());
         boundary += stringLength;
         for(int i = 0; i < boundary; i++){ // switch to <
-            int x; // new char adding index
+            //int x; // new char adding index
             //
            // copyNewDeletionIndexes(newDeletionIndex, deletionIndexes, s.length()); // change to stringLength
             /*for(int i = 0; i < originalString.length(); i++){

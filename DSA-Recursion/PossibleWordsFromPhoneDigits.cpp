@@ -10,35 +10,37 @@ class PossibleWordsFromPhoneDigits{
 public:
 
     PossibleWordsFromPhoneDigits(){
-        string arr0[2] = {"1", "1"};
-        this->arr[0] = arr0;
+        vector<string> arr0{"1", "1"};
+        this->arr.push_back(arr0);
 
-        string arr1[2] = {"2", "ABC"};
-        this->arr[1] = {"2", "ABC"};
+        vector<string> arr1{"2", "ABC"};
+        this->arr.push_back(arr1);
 
-        string arr2[2] = {"3", "DEF"};
-        this->arr[2] = {"3", "DEF"};
+        vector<string> arr2{"3", "DEF"};
+        this->arr.push_back(arr2);
 
-        string arr3[2] = {"4", "GHI"};
-        this->arr[3] = {"4", "GHI"};
+        vector<string> arr3{"4", "GHI"};
+        this->arr.push_back(arr3);
 
-        string arr4[2] = {"5", "JKL"};
-        this->arr[4] = {"5", "JKL"};
+        vector<string> arr4{"5", "JKL"};
+        this->arr.push_back(arr4);
 
-        string arr5[2] = {"6", "MNO"};
-        this->arr[5] = {"6", "MNO"};
+        vector<string> arr5{"6", "MNO"};
+        this->arr.push_back(arr5);
 
-        string arr6[2] = {"7", "PQRS"};
-        this->arr[6] = {"7", "PQRS"};
+        vector<string> arr6{"7", "PQRS"};
+        this->arr.push_back(arr6);
 
-        string arr7[2] = {"8", "TUV"};
-        this->arr[7] = {"8", "TUV"};
+        vector<string> arr7{"8", "TUV"};
+        this->arr.push_back(arr7);
 
-        string arr8[2] = {"9", "WXYZ"};
-        this->arr[8] = {"9", "WXYZ"};
+        vector<string> arr8{"9", "WXYZ"};
+        this->arr.push_back(arr8);
 
-        string arr9[2] = {"0", "0"}
-        this->arr[9] = {"0", "0"};
+        vector<string> arr9{"0", "0"};
+        this->arr.push_back(arr9);
+
+
     }
     //Function to find list of all words possible by pressing given numbers.
     vector<string> possibleWords(int a[], int N){
@@ -88,5 +90,6 @@ public:
 private:
     vector<string> returnValue;
     Permutation2* perm = new Permutation2();
-    string arr[][10]; //= {{"1", "1"},{"2", "ABC"},{"3", "DEF"},{"4", "GHI"},{"5", "JKL"},{"6", "MNO"},{"7", "PQRS"},{"8", "TUV"},{"9", "WXYZ"},{"0", "0"}};
+    //string arr[][10]; //= {{"1", "1"},{"2", "ABC"},{"3", "DEF"},{"4", "GHI"},{"5", "JKL"},{"6", "MNO"},{"7", "PQRS"},{"8", "TUV"},{"9", "WXYZ"},{"0", "0"}};
+    vector<vector<string>> arr;
 };

@@ -10,6 +10,9 @@ class PossibleWordsFromPhoneDigits{
 public:
 
     PossibleWordsFromPhoneDigits(){
+        vector<string> arr9{"0", "0"};
+        this->arr.push_back(arr9);
+
         vector<string> arr0{"1", "1"};
         this->arr.push_back(arr0);
 
@@ -37,15 +40,13 @@ public:
         vector<string> arr8{"9", "WXYZ"};
         this->arr.push_back(arr8);
 
-        vector<string> arr9{"0", "0"};
-        this->arr.push_back(arr9);
 
 
     }
     //Function to find list of all words possible by pressing given numbers.
     vector<string> possibleWords(int a[], int N){
         //Your code here
-        string digitsPressed = "";
+        /*string digitsPressed = "";
         for(int i = 0; i < N; i++){
             digitsPressed += to_string(a[i]);
         }
@@ -61,24 +62,43 @@ public:
                 string currDigitIndex = "";
                 currDigitIndex += currStr.at(j);
 
+
                 int currDigit = stoi(currDigitIndex); // might be problematic
                 string wordArray = (arr.at(currDigit - 1)).at(1); // now you have the string "ABC" for example. The values one digit can represent as a char.
                 //cout << wordArray << " ";
                 for(int k = 0; k < wordArray.length(); k++){
+                    //if j == 0 create the strings and add wordArray.at(k) sequentially
+                    //else
 
                 }
-            }
-
+            }*/
+            helper(a, N);
+            return this->returnValue;
         }
 
 
 
         //sort the values
-        sort(returnValue.begin(), returnValue.end());
-        delete this->perm;
-        return this->returnValue;
-    }
+        //sort(returnValue.begin(), returnValue.end());
+        //delete this->perm;
 
+
+    void helper(int a[], const int* n, string curr = "",int level = 0){
+        if(level == *n){
+            this->returnValue.push_back(curr);
+            cout << "hi";
+            return;
+        }
+        int currDigit = a[level];
+        string possibleChars = this->arr.at(currDigit).at(1);
+
+        for(int i = 0; i < possibleChars.length(); i++){
+            char ch = possibleChars.at(i);
+            helper(a, n, curr + ch, level + 1);
+        }
+
+
+    }
     void comb(string originalString){
         comb('a', "", originalString.length(), 0, originalString);
     }

@@ -58,8 +58,10 @@ public:
             vector<string> words;
             //cout << currStr << " ";
             for(size_t j = 0; j < currStr.length(); j++){
+                string currDigitIndex = "";
+                currDigitIndex += currStr.at(j);
 
-                int currDigit = stoi(currStr.substr(j, j + 1)); // might be problematic
+                int currDigit = stoi(currDigitIndex); // might be problematic
                 string wordArray = (arr.at(currDigit - 1)).at(1); // now you have the string "ABC" for example. The values one digit can represent as a char.
                 cout << wordArray << " ";
                 //for(int k = 0; k < wordArray.size(); k++){

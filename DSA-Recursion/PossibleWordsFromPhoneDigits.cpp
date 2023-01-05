@@ -55,7 +55,18 @@ public:
 
         for(size_t i = 0; i < allPermutations.size(); i++){
             string currStr = allPermutations.at(i);
-            comb(currStr);
+            vector<string> words;
+            //cout << currStr << " ";
+            for(size_t j = 0; j < currStr.length(); j++){
+
+                int currDigit = stoi(currStr.substr(j, j + 1)); // might be problematic
+                string wordArray = (arr.at(currDigit - 1)).at(1); // now you have the string "ABC" for example. The values one digit can represent as a char.
+                cout << wordArray << " ";
+                //for(int k = 0; k < wordArray.size(); k++){
+
+                //}
+            }
+
         }
 
 
@@ -73,16 +84,18 @@ public:
     * n is the length of originalString
     */
     void comb(const char& ch, string currString, const int& n, int index, string originalString){
-        if(currString.length() == n){
+        if(index == n){
             //base case, add the currString to the results
+            cout << currString << " ";
             this->returnValue.push_back(currString);
             return;
         }
         for(int i = index; i < n; i++){
-            if(index != 0)
-             comb(originalString.at(i), currString + ch, n, index + 1, originalString);
+            if(index != 0){
+                comb(originalString.at(i), currString + ch, n, index + 1, originalString);
+            }
             else{
-            comb(originalString.at(i), currString, n, index + 1, originalString);
+                comb(originalString.at(i), currString, n, index + 1, originalString);
             }
         }
 

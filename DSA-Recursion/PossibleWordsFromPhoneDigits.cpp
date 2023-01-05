@@ -63,10 +63,10 @@ public:
 
                 int currDigit = stoi(currDigitIndex); // might be problematic
                 string wordArray = (arr.at(currDigit - 1)).at(1); // now you have the string "ABC" for example. The values one digit can represent as a char.
-                cout << wordArray << " ";
-                //for(int k = 0; k < wordArray.size(); k++){
+                //cout << wordArray << " ";
+                for(int k = 0; k < wordArray.length(); k++){
 
-                //}
+                }
             }
 
         }

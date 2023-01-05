@@ -32,6 +32,9 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="../../C---Test/GeekProblems/Permutation.cpp" />
+		<Unit filename="Permutation2.cpp" />
+		<Unit filename="PossibleWordsFromPhoneDigits.cpp" />
 		<Unit filename="RopeCutting.cpp" />
 		<Unit filename="Subsets.cpp" />
 		<Unit filename="Tester.cpp" />

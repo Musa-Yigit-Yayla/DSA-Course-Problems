@@ -50,8 +50,8 @@ public:
             digitsPressed += to_string(a[i]);
         }
         //find all permutations of the digits
-        perm->find_permutation(digitsPressed);
-        vector<string> allPermutations = perm->getAllPermutations();
+        vector<string> allPermutations = perm->find_permutation(digitsPressed);
+
 
         for(size_t i = 0; i < allPermutations.size(); i++){
             string currStr = allPermutations.at(i);

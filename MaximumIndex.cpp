@@ -95,8 +95,7 @@ public:
                 reverseSubArray(arr, i, k - 1);
             }
             else{
-            reverseSubArray(arr, i, i + n);
-
+                reverseSubArray(arr, i, i + n);
             }
         }
 
@@ -112,9 +111,9 @@ public:
         //low high inclusive
         while(low < high){
 
-            long long temp = arr.erase(low, arr);
+            long long temp = erase(low, arr);
             arr.insert(low, arr.at(high));
-            arr.erase(high, arr);
+            erase(high, arr);
             arr.insert(high, temp);
             low++;
             high--;

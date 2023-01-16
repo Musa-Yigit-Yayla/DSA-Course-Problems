@@ -1,17 +1,22 @@
 # depslib dependency file v1.0
-1673803553 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\matchsticks.cpp
+1673805974 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\matchsticks.cpp
 	<iostream>
 
-1673803564 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\maximumindex.cpp
+1673861934 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\maximumindex.cpp
+	<iostream>
 
 1673803574 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\arrayoperations.cpp
 	<iostream>
 
-1673803654 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\main.cpp
+1673861960 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\main.cpp
 	"Matchsticks.cpp"
+	"MaximumIndex.cpp"
 	<iostream>
 	<vector>
 
-1673803687 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\matchsticks.cpp
+1673805974 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\matchsticks.cpp
+	<iostream>
+
+1673862235 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\maximumindex.cpp
 	<iostream>
 

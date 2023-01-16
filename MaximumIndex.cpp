@@ -1,3 +1,6 @@
+#include <iostream>
+using namespace std;
+
 class MaximumIndex{
 public:
     // A[]: input array
@@ -27,7 +30,7 @@ public:
                 maxElt = a[i];
             }
         }
-        int secondMax = INT_MIN;
+        int secondMax = -1000000;
         int secondMaxPos = -1;
         for(int i = 0; i < n; i++){
             if(a[i] > secondMax && a[i] != maxElt){
@@ -37,5 +40,50 @@ public:
         }
         return secondMaxPos;
     }
+    /*
+    *Returns the size of the array after removing duplicates
+    *no extra array storage used built-in
+    */
+    static int getDistinctElements(int a[], int n){
+        int prev = 0;
+        int modifiedSize = n;
+        for(int i = 1; i < n; i++, prev++){
+            if(a[i] == a[prev]){
+                shift(a, modifiedSize, prev);
+                modifiedSize--;
+            }
+        }
+        //print array
+        printArray(a, modifiedSize);
+        return modifiedSize;
+    }
+    static void shift(int a[], int n, int pos){
+        for(int i = pos + 1; i < n; i++, pos++){
+            a[pos] = a[i];
+        }
+    }
+    static void printArray(int a[], int n){
+        for(int i = 0; i < n; i++){
+            cout << a[i] << " ";
+        }
+        cout << endl;
+    }
+    static void moveZerosToEnd(int arr[], int n){
+        int initialN = n;
+        for(int i = 0; i < initialN; i++){
+            if(arr[i] == 0){
+                //move to the end
+                //swap with n - 1th element
+                if(arr[n - 1] != 0){
+                    int temp = arr[i];
+                    arr[i] = arr[n - 1];
+                    arr[n - 1] = temp;
+                    //n--;
+                }
 
+                //n--; // may need to remove
+            }
+
+        }
+    }
 };

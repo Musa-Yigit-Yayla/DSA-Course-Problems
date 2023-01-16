@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 class MaximumIndex{
@@ -84,6 +85,39 @@ public:
                 //n--; // may need to remove
             }
 
+        }
+    }
+    //Function to reverse every sub-array group of size k.
+    void reverseInGroups(vector<long long>& arr, int n, int k){
+        // code here
+        for(int i = 0; i < k; i += n){
+            if(i + n > k){
+                reverseSubArray(arr, i, k - 1);
+            }
+            else{
+            reverseSubArray(arr, i, i + n);
+
+            }
+        }
+
+    }
+    long long erase(int pos, vector<long long>& arr){
+        long long returnValue = arr.at(pos);
+        for(int i = pos; i < arr.size() - 1; i++){
+            arr.insert(pos, arr.at(pos + 1));
+        }
+        return returnValue;
+    }
+    void reverseSubArray(vector<long long>& arr, int low, int high){
+        //low high inclusive
+        while(low < high){
+
+            long long temp = arr.erase(low, arr);
+            arr.insert(low, arr.at(high));
+            arr.erase(high, arr);
+            arr.insert(high, temp);
+            low++;
+            high--;
         }
     }
 };

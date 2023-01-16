@@ -72,7 +72,7 @@ public:
 
                 }
             }*/
-            helper(a, N);
+            helper(a, &N);
             return this->returnValue;
         }
 

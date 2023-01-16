@@ -5,6 +5,9 @@
 
 using namespace std;
 
+vector<int> numbers; // for lucky numbers
+bool isLucky(int);
+
 int main(){
     PossibleWordsFromPhoneDigits pwfpd;
     int a[3];
@@ -16,4 +19,8 @@ int main(){
         cout << result.at(i) << " ";
     }
     return 0;
+}
+
+bool isLucky(int n){
+
 }

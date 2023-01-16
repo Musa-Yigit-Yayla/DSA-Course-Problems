@@ -5,7 +5,7 @@ using namespace std;
 class ArrayOperations{
 public:
     //Return int min if elt dne
-    int delete(int arr[], int n, int x){
+    int delete1(int arr[], int n, int x){
         int i;
 
         for(i = 0; i < n; i++){

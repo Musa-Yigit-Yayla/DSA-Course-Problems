@@ -33,6 +33,7 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="ArrayOperations.cpp" />
+		<Unit filename="Matchsticks.cpp" />
 		<Unit filename="MaximumIndex.cpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>

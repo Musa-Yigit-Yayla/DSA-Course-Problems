@@ -144,4 +144,35 @@ public:
         cout << endl;
         return leaders;
     }
+    static vector<vector<int>> getFrequenciesFromSortedArray(int arr[], int n){
+        vector<vector<int>> value;
+
+        int* counter;
+        *counter = 1;
+        int prev = arr[0];
+        vector<int> vec{prev, *counter};
+        value.push_back(vec);
+        for(int i = 1; i < n; i++){
+            if(arr[i] == prev){
+                *counter++;
+            }
+            else{
+                prev = arr[i];
+                int newCounter = 1;
+                counter = &newCounter;
+                vector<int> vec{prev, *counter};
+                value.push_back(vec);
+            }
+        }
+        return value;
+    }
+    static void print2DVector(vector<vector<int>> vec){
+        for(int i = 0; i < vec.size(); i++){
+            vector<int> curr = vec.at(i);
+            for(int j = 0; j < curr.size(); j++){
+                cout << curr.at(j) << " ";
+            }
+            cout << endl;
+        }
+    }
 };

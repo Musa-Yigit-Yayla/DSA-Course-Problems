@@ -88,7 +88,7 @@ public:
         }
     }
     //Function to reverse every sub-array group of size k.
-    void reverseInGroups(vector<long long>& arr, int n, int k){
+    /*void reverseInGroups(vector<long long>& arr, int n, int k){
         // code here
         for(int i = 0; i < k; i += n){
             if(i + n > k){
@@ -99,8 +99,8 @@ public:
             }
         }
 
-    }
-    long long erase(int pos, vector<long long>& arr){
+    }*/
+    /*long long erase(int pos, vector<long long>& arr){
         long long returnValue = arr.at(pos);
         for(int i = pos; i < arr.size() - 1; i++){
             arr.insert(pos, arr.at(pos + 1));
@@ -118,5 +118,30 @@ public:
             low++;
             high--;
         }
+    }*/
+    static vector<int> getLeaders(int arr[], int n){
+        vector<int> leaders; //don't use parantheses for the default constructor
+        for(int i = 0; i < n; i++){
+            for(int j = i + 1; j <= n; j++){
+                if(i == n - 1){
+                    leaders.push_back(arr[i]);
+                }
+                else if(j == n){
+                    break;
+                }
+                else if(arr[j] >= arr[i]){
+                    break;
+                }
+                else if(j == n - 1){
+                    leaders.push_back(arr[i]);
+                }
+            }
+        }
+        //print leaders
+        for(int i = 0; i < leaders.size(); i++){
+            cout << leaders.at(i) << ", ";
+        }
+        cout << endl;
+        return leaders;
     }
 };

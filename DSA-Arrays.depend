@@ -2,13 +2,14 @@
 1673805974 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\matchsticks.cpp
 	<iostream>
 
-1673861934 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\maximumindex.cpp
+1673946734 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\maximumindex.cpp
 	<iostream>
+	<vector>
 
 1673803574 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\arrayoperations.cpp
 	<iostream>
 
-1673861960 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\main.cpp
+1673946742 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\main.cpp
 	"Matchsticks.cpp"
 	"MaximumIndex.cpp"
 	<iostream>
@@ -17,6 +18,7 @@
 1673805974 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\matchsticks.cpp
 	<iostream>
 
-1673862235 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\maximumindex.cpp
+1673947001 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\maximumindex.cpp
 	<iostream>
+	<vector>
 

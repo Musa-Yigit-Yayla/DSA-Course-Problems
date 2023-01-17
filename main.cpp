@@ -16,10 +16,11 @@ int main(){
     Matchsticks msticks;
     msticks.printGame();
 
-    int a[8]{1,5,0,0, 8, 0, 9, 0};
+    int a[7]{7, 10, 4, 10, 6, 5, 2};
     //cout << MaximumIndex::secondMaxIndex(a, 6) << endl;
     //MaximumIndex::getDistinctElements(a, 6);
-    MaximumIndex::moveZerosToEnd(a, 8);
-    MaximumIndex::printArray(a, 8);
+    //MaximumIndex::moveZerosToEnd(a, 8);
+    //MaximumIndex::printArray(a, 8);
+    MaximumIndex::getLeaders(a, 7);
     return 0;
 }

@@ -39,8 +39,15 @@ public:
         int leftMostElement = arr[0];
         int rightMostElement = arr[n - 1];
 
-        for(int i = 0; i < LEFT_SIZE; i++){
-            if(arr[i] <= min1 || i < minIndex){
+        /*for(int i = 0; i < LEFT_SIZE; i++){
+            if(arr[i] <= min1 || ((maxIndex - i) > lengthiestDiff) && arr[i] < max1){
+                min1 = arr[i];
+                minIndex = i;
+            }
+        }*/
+
+        for(int i = LEFT_SIZE - 1; i >= 0; i--){
+            if(arr[i] <= min1 && ((maxIndex - i) > lengthiestDiff) && arr[i] < max1){
                 min1 = arr[i];
                 minIndex = i;
             }
@@ -63,7 +70,7 @@ public:
             if(arr[i] >= max1 || ((i - minIndex) > lengthiestDiff && arr[i] > min1)){
                 max1 = arr[i];
                 maxIndex = i;
-                lengthiestDiff = i - minIndex;
+                lengthiestDiff = maxIndex - minIndex;
             }
         }
         /*if(rightMostElement > leftMostElement){
@@ -72,7 +79,7 @@ public:
         else if(leftMostElement < max1){
             lengthiestDiff = maxIndex - 0;
         }*/
-        cout << "leftMost " << minIndex << " rightmost " << maxIndex;
+        //cout << "leftMost " << minIndex << " rightmost " << maxIndex;
         return lengthiestDiff;
     }
     static int secondMaxIndex(int a[], int n){

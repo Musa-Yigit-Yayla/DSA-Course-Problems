@@ -16,14 +16,16 @@ int main(){
     Matchsticks msticks;
     msticks.printGame();
 
-    int a[7]{7, 10, 4, 10, 6, 5, 2};
+    int a[7]{63, 70, 80, 33, 33, 47, 20};
     int b[6]{10, 10, 10, 25, 30, 30};
+    bool c[9]{1,0,1,1,1,1, 0, 0,1};
     //cout << MaximumIndex::secondMaxIndex(a, 6) << endl;
     //MaximumIndex::getDistinctElements(a, 6);
     //MaximumIndex::moveZerosToEnd(a, 8);
     //MaximumIndex::printArray(a, 8);
-    MaximumIndex::getLeaders(a, 7);
+    /*MaximumIndex::getLeaders(a, 7);
     vector<vector<int>> vec = MaximumIndex::getFrequenciesFromSortedArray(b, 6);
-    MaximumIndex::print2DVector(vec);
+    MaximumIndex::print2DVector(vec);*/
+    cout << MaximumIndex::getMaxConsecutiveOnes(c, 9);
     return 0;
 }

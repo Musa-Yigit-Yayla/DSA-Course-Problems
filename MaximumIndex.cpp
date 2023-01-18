@@ -175,4 +175,24 @@ public:
             cout << endl;
         }
     }
+    static int getMaxConsecutiveOnes(bool arr[], int n){
+        int maxCount = 0;
+        int currCount = 0;
+        int prev = arr[0];
+        for(int i = 0; i < n; i++){
+            if(arr[i] == 1){
+                currCount++;
+                //check whether currCount is greater than maxCount
+                if(currCount > maxCount){
+                    maxCount = currCount;
+                }
+            }
+            else if(arr[i] == 0){
+                currCount = 0;
+            }
+
+            prev = arr[i];
+        }
+        return maxCount;
+    }
 };

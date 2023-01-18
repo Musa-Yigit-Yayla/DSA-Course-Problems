@@ -8,7 +8,7 @@ public:
     // N: size of array
     // Function to find the maximum index difference.
     //Brute force
-    static int maxIndexDiff(int a[], int n){
+    /*static int maxIndexDiff(int a[], int n){
         // Your code here
         int lengthiestDiff = 0;
         for(int i = 0; i < n -1; i++){
@@ -18,6 +18,61 @@ public:
                 }
             }
         }
+        return lengthiestDiff;
+    }*/
+    int maxIndexDiff(int arr[], int n){
+        //int lengthiestDiff = 0;
+        //divide the arr into two subarrays
+        const int LEFT_SIZE = n / 2;
+        const int RIGHT_SIZE = n - n / 2;
+
+        //int left[LEFT_SIZE];
+        //int right[RIGHT_SIZE];
+        //find min of left find max of right find their difference
+
+        int min1 = INT_MAX;
+        int minIndex = 0;
+        int max1 = INT_MIN;
+        int maxIndex = n - 1;
+
+        int lengthiestDiff = maxIndex - minIndex;
+        int leftMostElement = arr[0];
+        int rightMostElement = arr[n - 1];
+
+        for(int i = 0; i < LEFT_SIZE; i++){
+            if(arr[i] <= min1 || i < minIndex){
+                min1 = arr[i];
+                minIndex = i;
+            }
+        }
+
+        if(leftMostElement < min1){
+            min1 = leftMostElement;
+            minIndex = 0;
+        }
+
+        /*for(int i = n - 1; i >= LEFT_SIZE; i--){
+            if(arr[i] >= max1 || ((i - minIndex) > lengthiestDiff && arr[i] > min1)){
+                max1 = arr[i];
+                maxIndex = i;
+                lengthiestDiff = i - minIndex;
+            }
+
+        }*/
+        for(int i = LEFT_SIZE; i < n; i++){
+            if(arr[i] >= max1 || ((i - minIndex) > lengthiestDiff && arr[i] > min1)){
+                max1 = arr[i];
+                maxIndex = i;
+                lengthiestDiff = i - minIndex;
+            }
+        }
+        /*if(rightMostElement > leftMostElement){
+            lengthiestDiff = n - 1; // n -1
+        }
+        else if(leftMostElement < max1){
+            lengthiestDiff = maxIndex - 0;
+        }*/
+        cout << "leftMost " << minIndex << " rightmost " << maxIndex;
         return lengthiestDiff;
     }
     static int secondMaxIndex(int a[], int n){
@@ -45,7 +100,7 @@ public:
     *Returns the size of the array after removing duplicates
     *no extra array storage used built-in
     */
-    static int getDistinctElements(int a[], int n){
+    /*static int getDistinctElements(int a[], int n){
         int prev = 0;
         int modifiedSize = n;
         for(int i = 1; i < n; i++, prev++){
@@ -57,7 +112,7 @@ public:
         //print array
         printArray(a, modifiedSize);
         return modifiedSize;
-    }
+    }*/
     static void shift(int a[], int n, int pos){
         for(int i = pos + 1; i < n; i++, pos++){
             a[pos] = a[i];

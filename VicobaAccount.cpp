@@ -61,4 +61,13 @@ void VicobaAccount::setLoanDuration(int loanDuration){
 void VicobaAccount::setCustomerName(string customerName){
     this->customerName = customerName;
 }
+string VicobaAccount::toString() const{
+    string* s = &("");
+    *s += "Customer name: " + this->customerName + "\n";
+    *s += "Customer ID: " + this->customerID + "\n";
+    *s += "Amount borrowed: " + this->amountBorrowed + "\n";
+    *s += "Loan duration: " + this->loanDuration + "\n";
+
+    return *s;
+}
 

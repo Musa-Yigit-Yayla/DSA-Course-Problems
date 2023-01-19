@@ -26,8 +26,39 @@ VicobaAccount::VicobaAccount(double ab, int ld, string cn): amountBorrowed(ab), 
         }
 
     }while(isIDUsed);
-
-
 }
-
+VicobaAccount::~VicobaAccount(){
+    usedIDS.erase(remove(usedIDS.begin(), usedIDS.end(), this->customerID), usedIDS.end());
+}
+static void VicobaAccount::setAnnualInterestRate(double annualInterestRate){
+    this->annualInterestRate = annualInterestRate;
+}
+double VicobaAccount::getCurrentDebt() const{
+    double result = this->amountBorrowed;
+    for(int i = 0; i < this->loanDuration; i++){
+        result *= annualInterestRate;
+    }
+    return result;
+}
+double VicobaAccount::getAmountBorrowed() const{
+    return this->amountBorrowed;
+}
+static double VicobaAccount::getAnnualInterestRate() const{
+    return this->annualInterestRate;
+}
+int VicobaAccount::getLoanDuration() const{
+    return this->loanDuration;
+}
+string VicobaAccount::getCustomerName(){
+    return this->customerName;
+}
+void VicobaAccount::setAmountBorrowed(double amountBorrowed){
+    this->amountBorrowed = amountBorrowed;
+}
+void VicobaAccount::setLoanDuration(int loanDuration){
+    this->loanDuration = loanDuration;
+}
+void VicobaAccount::setCustomerName(string customerName){
+    this->customerName = customerName;
+}
 

@@ -259,15 +259,15 @@ public:
         return maxCount;
     }
     int overAllMaxSum(int arr[], int n){
-        int result = arr[0];
+        int res = arr[0];
         int maxEnding = arr[0];
-        for(int i = 0; i < n; i++){
+        for(int i = 1; i < n; i++){
             maxEnding = max(maxEnding + arr[i], arr[i]);
             res = max(maxEnding, res);
         }
         return res;
     }
-    int overallMaxSum(int arr[], int n){
+    int circularSubarraySum(int arr[], int n){
         int max_normal = normalMaxSum(arr, n);
 
         if(max_normal < 0)

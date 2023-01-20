@@ -285,15 +285,27 @@ public:
         return max(max_circular, max_normal);
     }
     static bool subarrayWithGivenSum(int arr[], int n, int sum){
-        int result = INT_MIN;
-        int currSum = 0;
-        for(int length = 1; length < n; length++){
-            int currLength = length;
-            for(int i = 0; i < ((length + i) < n); i++){
-                currSum += arr[i];
+        for (int i = 0; i < n; i++) {
+		int currentSum = arr[i];
+
+		if (currentSum == sum) {
+			cout << "Sum found at indexes " << i << endl;
+			return;
             }
-            result = max(currSum, result);
+        else {
+        // Try all subarrays starting with 'i'
+            for (int j = i + 1; j < n; j++) {
+                currentSum += arr[j];
+
+                if (currentSum == sum) {
+                    cout << "Sum found between indexes "
+                    << i << " and " << j << endl;
+                    return;
+                }
+            }
         }
-        return sum == currSum;
+        }
+        cout << "No subarray found";
+        return;
     }
 };

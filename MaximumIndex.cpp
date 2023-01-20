@@ -319,11 +319,24 @@ public:
             return 1; // corner case
         }
         sort(posNumbers.begin(), posNumbers.end());
-            for(int i = 1; i < posNumbers.at(posNumbers.size() - 1); i++){
+        /*for(int i = 1; i < posNumbers.at(posNumbers.size() - 1); i++){
                 if(std::count(posNumbers.begin(), posNumbers.end(), i) == 0){
                     //vector does not contain i
                     return i;
                 }
+            }*/
+            //check until posNumbers.at(0)
+
+            int prev = posNumbers.at(0);
+            if(1 < prev){
+                return 1; // corner case
+            }
+            for(int i = 1; i < posNumbers.size(); i++){
+                int curr = posNumbers.at(i);
+                if(curr - prev > 1){
+                    return prev + 1;
+                }
+                prev = curr;
             }
             return posNumbers.at(posNumbers.size() - 1) + 1;
     }

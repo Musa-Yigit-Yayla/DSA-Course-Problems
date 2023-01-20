@@ -34,6 +34,7 @@ int main(){
     MaximumIndex mi;
     cout << mi.maxIndexDiff(d, 18) << endl;
     cout << mi.subarrayWithGivenSum(e, 5, sum);
+    cout << endl;
     mi.frequencyCount(f, 5, 5);
     for(int i = 0; i < f.size(); i++){
         cout << f.at(i) << " ";

@@ -346,13 +346,13 @@ public:
         //2 3 2 3 5 as input
         int currIndex = 0;
         for(int i = 1; i <= P; i++){
-            int count = 0;
+            int counter = 0;
             for(int j = 0; j < N; j++){
                 if(arr.at(j) == i){
-                    count++;
+                    counter++;
                 }
             }
-            arr.at(currIndex++) = count;
+            arr.at(currIndex++) = counter;
             //cout << count << " ";
         }
     }

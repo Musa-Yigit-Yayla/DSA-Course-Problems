@@ -308,4 +308,23 @@ public:
         cout << "No subarray found";
         return;
     }
+    int missingNumber(int arr[], int n) {
+        // Your code here
+        vector<int> posNumbers;
+        for(int i = 0; i < n; i++){
+            if(arr[i] > 0)
+             posNumbers.push_back(arr[i]);
+        }
+        if(posNumbers.size() == 0){
+            return 1; // corner case
+        }
+        sort(posNumbers.begin(), posNumbers.end());
+            for(int i = 1; i < posNumbers.at(posNumbers.size() - 1); i++){
+                if(std::count(posNumbers.begin(), posNumbers.end(), i) == 0){
+                    //vector does not contain i
+                    return i;
+                }
+            }
+            return posNumbers.at(posNumbers.size() - 1) + 1;
+    }
 };

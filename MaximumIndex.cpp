@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <cmath>
+#include <algorithm>
 using namespace std;
 
 class MaximumIndex{
@@ -290,7 +291,7 @@ public:
 
 		if (currentSum == sum) {
 			cout << "Sum found at indexes " << i << endl;
-			return;
+			return true;
             }
         else {
         // Try all subarrays starting with 'i'
@@ -300,15 +301,15 @@ public:
                 if (currentSum == sum) {
                     cout << "Sum found between indexes "
                     << i << " and " << j << endl;
-                    return;
+                    return true;
                 }
             }
         }
         }
         cout << "No subarray found";
-        return;
+        return false;
     }
-    int missingNumber(int arr[], int n) {
+    static int missingNumber(int arr[], int n) {
         // Your code here
         vector<int> posNumbers;
         for(int i = 0; i < n; i++){
@@ -339,5 +340,20 @@ public:
                 prev = curr;
             }
             return posNumbers.at(posNumbers.size() - 1) + 1;
+    }
+    static void frequencyCount(vector<int>& arr,int N, int P){
+        // code here
+        //2 3 2 3 5 as input
+        int currIndex = 0;
+        for(int i = 1; i <= P; i++){
+            int count = 0;
+            for(int j = 0; j < N; j++){
+                if(arr.at(j) == i){
+                    count++;
+                }
+            }
+            arr.at(currIndex++) = count;
+            //cout << count << " ";
+        }
     }
 };

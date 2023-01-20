@@ -2,10 +2,11 @@
 1673805974 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\matchsticks.cpp
 	<iostream>
 
-1674201505 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\maximumindex.cpp
+1674228612 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\maximumindex.cpp
 	<iostream>
 	<vector>
 	<cmath>
+	<algorithm>
 
 1673803574 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\arrayoperations.cpp
 	<iostream>

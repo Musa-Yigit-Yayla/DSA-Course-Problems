@@ -22,6 +22,7 @@ int main(){
     int d[18]{85, 62, 2, 88, 16, 31, 36, 12, 10, 7, 79, 4, 37, 27, 63, 1, 4, 87};
     int e[5]{1, 4, 20, 3, 10};
     int sum = 33;
+    vector<int> f{2, 3, 2, 3, 5};
     //cout << MaximumIndex::secondMaxIndex(a, 6) << endl;
     //MaximumIndex::getDistinctElements(a, 6);
     //MaximumIndex::moveZerosToEnd(a, 8);
@@ -33,5 +34,10 @@ int main(){
     MaximumIndex mi;
     cout << mi.maxIndexDiff(d, 18) << endl;
     cout << mi.subarrayWithGivenSum(e, 5, sum);
+    mi.frequencyCount(f, 5, 5);
+    for(int i = 0; i < f.size(); i++){
+        cout << f.at(i) << " ";
+    }
+    cout << endl;
     return 0;
 }

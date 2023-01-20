@@ -20,6 +20,8 @@ int main(){
     int b[6]{10, 10, 10, 25, 30, 30};
     bool c[9]{1,0,1,1,1,1, 0, 0,1};
     int d[18]{85, 62, 2, 88, 16, 31, 36, 12, 10, 7, 79, 4, 37, 27, 63, 1, 4, 87};
+    int e[5]{1, 4, 20, 3, 10};
+    int sum = 33;
     //cout << MaximumIndex::secondMaxIndex(a, 6) << endl;
     //MaximumIndex::getDistinctElements(a, 6);
     //MaximumIndex::moveZerosToEnd(a, 8);
@@ -29,6 +31,7 @@ int main(){
     MaximumIndex::print2DVector(vec);*/
     //cout << MaximumIndex::getMaxConsecutiveOnes(c, 9);
     MaximumIndex mi;
-    cout << mi.maxIndexDiff(d, 18);
+    cout << mi.maxIndexDiff(d, 18) << endl;
+    cout << mi.subarrayWithGivenSum(e, 5, sum);
     return 0;
 }

@@ -258,7 +258,7 @@ public:
         }
         return maxCount;
     }
-    static int overAllMaxSum(int arr[], int n){
+    static int overallMaxSum(int arr[], int n){
         int res = arr[0];
         int maxEnding = arr[0];
         for(int i = 1; i < n; i++){
@@ -268,7 +268,7 @@ public:
         return res;
     }
     static int circularSubarraySum(int arr[], int n){
-        int max_normal = normalMaxSum(arr, n);
+        int max_normal = overallMaxSum(arr, n);
 
         if(max_normal < 0)
             return max_normal;
@@ -281,15 +281,15 @@ public:
             arr[i] = -arr[i];
         }
 
-        int max_circular = arr_sum + normalMaxSum(arr, n);
+        int max_circular = arr_sum + overallMaxSum(arr, n);
         return max(max_circular, max_normal);
     }
     static bool subarrayWithGivenSum(int arr[], int n, int sum){
         int result = INT_MIN;
         int currSum = 0;
-        for(int length = 1; length <= n; length++){
+        for(int length = 1; length < n; length++){
             int currLength = length;
-            for(int i = 0; i < length + i && i < n; i++){
+            for(int i = 0; i < ((length + i) < n); i++){
                 currSum += arr[i];
             }
             result = max(currSum, result);

@@ -59,4 +59,45 @@ class ArrayContest1{
         e = maxOccurentElt;
         cout << b << " " << e << endl;
     }
+    static int q3(int n){
+        int distance = min(n - floor(sqrt(n)), ceil(sqrt(n)) - n);
+    if(distance == n - floor(sqrt(n))){
+        return floor(sqrt(n));
+    }
+    else{
+        return ceil(sqrt(n));
+    }
+    }
+    static int fun (int n)
+{
+  int x = 1;
+  if (n == 1 ){
+    return x;
+  }
+  for (int k =1 ; k < n; ++k){
+     x = x + fun(k) * fun(n - k);
+  }
+  return x;
+}
+int q1v2 (int n){
+        int res = 0;
+        while(n != 1){
+            if(n % 2 == 0){
+                n /= 2;
+                res++;
+            }
+            else{
+                if(n <= 0){
+                    n++;
+                    res++;
+                }
+                else{
+                    n--;
+                    res++;
+
+                }
+            }
+        }
+        return res;
+};
 };

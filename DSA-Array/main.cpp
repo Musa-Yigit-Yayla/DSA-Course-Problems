@@ -2,6 +2,7 @@
 #include "MaximumIndex.cpp"
 #include <iostream>
 #include <vector>
+#include "ArrayContest1.cpp"
 using namespace std;
 
 void reverseInGroups(vector<long long>& arr, int n, int k){
@@ -13,7 +14,7 @@ void reverseInGroups(vector<long long>& arr, int n, int k){
 
 int main(){
 
-    /*Matchsticks msticks;
+    Matchsticks msticks;
     msticks.printGame();
 
     int a[7]{63, 70, 80, 33, 33, 47, 20};
@@ -27,7 +28,7 @@ int main(){
     //MaximumIndex::getDistinctElements(a, 6);
     //MaximumIndex::moveZerosToEnd(a, 8);
     //MaximumIndex::printArray(a, 8);
-    /*MaximumIndex::getLeaders(a, 7);
+    MaximumIndex::getLeaders(a, 7);
     vector<vector<int>> vec = MaximumIndex::getFrequenciesFromSortedArray(b, 6);
     MaximumIndex::print2DVector(vec);
     //cout << MaximumIndex::getMaxConsecutiveOnes(c, 9);
@@ -39,18 +40,8 @@ int main(){
     for(int i = 0; i < f.size(); i++){
         cout << f.at(i) << " ";
     }
-    cout << endl;*/
-    int t, n;
-    cin >> t;
-    while(t > 0){
-        cin >> n;
-        cout << ArrayContest1.q1(n) << endl;
-        t--;
-    }
-	//code
-	return 0;
+    cout << endl;
 
-
-
+    cout << ArrayContest1.fun(5);
     return 0;
 }

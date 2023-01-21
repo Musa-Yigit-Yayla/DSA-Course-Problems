@@ -6,7 +6,7 @@
 class GeekArray{
 public:
      //Function to find the days of buying and selling stock for max profit.
-    static vector<vector<int>> stockBuySell(vector<int> arr, int n){
+    /*static vector<vector<int>> stockBuySell(vector<int> arr, int n){
         // code here
         vector<vector<int>> result;
         vector<vector<int>> bottoms;
@@ -57,5 +57,5 @@ public:
 
         return result;
     }
-
+    */
 };

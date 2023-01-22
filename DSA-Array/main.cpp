@@ -3,6 +3,7 @@
 #include <iostream>
 #include <vector>
 #include "ArrayContest1.cpp"
+#include "PatternChecker.cpp"
 using namespace std;
 
 void reverseInGroups(vector<long long>& arr, int n, int k){
@@ -38,5 +39,7 @@ int main(){
     //cout << mi.subarrayWithGivenSum(e, 5, sum);
     cout << endl;
     cout << MaximumIndex::trappingWater(g, 4);
+    PatternChecker checker;
+    vector<int> h = checker.pattern(16);
 
 }

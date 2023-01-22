@@ -394,7 +394,7 @@ public:
     }
     else{
         for(int i = 0; i <= str.size() - pat.size(); i++){
-            for(int j = i + 1; j <= pat.size(); j++){
+            for(int j = 0; j <= pat.size(); j++){
                 if(str.substr(i, j) == pat){
                     return true;
                 }
@@ -402,5 +402,5 @@ public:
         }
     }
     return false;
-}
+    }
 };

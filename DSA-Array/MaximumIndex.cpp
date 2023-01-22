@@ -382,4 +382,25 @@ public:
         delete[] right;
         return sum;
     }
+    bool searchPattern(string str, string pat){
+    // your code here
+    if(pat.size() == 1){
+        char ch = pat.at(0);
+        for(int i = 0; i < str.size(); i++){
+            if(str.at(i) == ch){
+                return true;
+            }
+        }
+    }
+    else{
+        for(int i = 0; i <= str.size() - pat.size(); i++){
+            for(int j = i + 1; j <= pat.size(); j++){
+                if(str.substr(i, j) == pat){
+                    return true;
+                }
+            }
+        }
+    }
+    return false;
+}
 };

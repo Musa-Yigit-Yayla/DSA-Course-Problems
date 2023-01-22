@@ -37,6 +37,7 @@
 		<Unit filename="GeekArray.cpp" />
 		<Unit filename="Matchsticks.cpp" />
 		<Unit filename="MaximumIndex.cpp" />
+		<Unit filename="PatternChecker.cpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

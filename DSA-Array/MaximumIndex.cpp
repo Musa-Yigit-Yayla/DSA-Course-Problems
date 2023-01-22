@@ -377,7 +377,7 @@ public:
            right[i] = max(right[i + 1], arr[i]);
         }
         for(int i = 1; i < n - 1; i++){
-            sum += min(left[i], right[i] - arr[i]);
+            sum += min(left[i], right[i]) - arr[i];
         }
         delete[] right;
         return sum;

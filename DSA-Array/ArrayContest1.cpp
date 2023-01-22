@@ -93,7 +93,7 @@ int q1v2 (int n, int res){
                 return min(q1v2(n / 2, res + 1), q1v2(n - 1, res + 1));
             }
             else{
-                return min(q1v2(n / 2, res + 1), q1v2(n + 1, res + 1))
+                return min(q1v2(n / 2, res + 1), q1v2(n + 1, res + 1));
             }
         }
 }

@@ -24,24 +24,19 @@ int main(){
     int e[5]{1, 4, 20, 3, 10};
     int sum = 33;
     vector<int> f{2, 3, 2, 3, 5};
+     int g[4]{7, 4, 0, 9};
     //cout << MaximumIndex::secondMaxIndex(a, 6) << endl;
     //MaximumIndex::getDistinctElements(a, 6);
     //MaximumIndex::moveZerosToEnd(a, 8);
     //MaximumIndex::printArray(a, 8);
     MaximumIndex::getLeaders(a, 7);
-    vector<vector<int>> vec = MaximumIndex::getFrequenciesFromSortedArray(b, 6);
-    MaximumIndex::print2DVector(vec);
+    //vector<vector<int>> vec = MaximumIndex::getFrequenciesFromSortedArray(b, 6);
+    //MaximumIndex::print2DVector(vec);
     //cout << MaximumIndex::getMaxConsecutiveOnes(c, 9);
-    MaximumIndex mi;
-    cout << mi.maxIndexDiff(d, 18) << endl;
-    cout << mi.subarrayWithGivenSum(e, 5, sum);
+    //MaximumIndex mi;
+    //cout << mi.maxIndexDiff(d, 18) << endl;
+    //cout << mi.subarrayWithGivenSum(e, 5, sum);
     cout << endl;
-    mi.frequencyCount(f, 5, 5);
-    for(int i = 0; i < f.size(); i++){
-        cout << f.at(i) << " ";
-    }
-    cout << endl;
+    cout << MaximumIndex::trappingWater(g, 4);
 
-    cout << ArrayContest1.fun(5);
-    return 0;
 }

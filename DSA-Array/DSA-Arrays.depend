@@ -26,7 +26,7 @@
 	<cmath>
 	<algorithm>
 
-1674295864 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-array\arraycontest1.cpp
+1674379780 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-array\arraycontest1.cpp
 	<iostream>
 	<algorithm>
 	<vector>
@@ -39,15 +39,38 @@
 1673805974 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-array\matchsticks.cpp
 	<iostream>
 
-1674229874 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-array\maximumindex.cpp
+1674379618 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-array\maximumindex.cpp
 	<iostream>
 	<vector>
 	<cmath>
 	<algorithm>
 
-1674295876 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-array\geekarray.cpp
+1674379806 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-array\geekarray.cpp
 	<iostream>
 	<vector>
 	<cmath>
 	<algorithm>
+
+1674381097 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-array\main.cpp
+	"Matchsticks.cpp"
+	"MaximumIndex.cpp"
+	<iostream>
+	<vector>
+	"ArrayContest1.cpp"
+
+1673805974 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-array\matchsticks.cpp
+	<iostream>
+
+1674381424 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-array\maximumindex.cpp
+	<iostream>
+	<vector>
+	<cmath>
+	<algorithm>
+
+1674379780 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-array\arraycontest1.cpp
+	<iostream>
+	<algorithm>
+	<vector>
+	<string>
+	<cmath>
 

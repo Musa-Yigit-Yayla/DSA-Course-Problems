@@ -32,6 +32,7 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="ArrayContest1.cpp" />
 		<Unit filename="ArrayOperations.cpp" />
 		<Unit filename="GeekArray.cpp" />
 		<Unit filename="Matchsticks.cpp" />

@@ -79,25 +79,22 @@ class ArrayContest1{
   }
   return x;
 }
-int q1v2 (int n){
-        int res = 0;
-        while(n != 1){
-            if(n % 2 == 0){
-                n /= 2;
-                res++;
+int q1v2 (int n, int res){
+
+        if(n == 0){
+            return res + 1;
+        }
+        else if(n == 1){
+            return res;
+        }
+        else{
+            if(n > 0){
+
+                return min(q1v2(n / 2, res + 1), q1v2(n - 1, res + 1));
             }
             else{
-                if(n <= 0){
-                    n++;
-                    res++;
-                }
-                else{
-                    n--;
-                    res++;
-
-                }
+                return min(q1v2(n / 2, res + 1), q1v2(n + 1, res + 1))
             }
         }
-        return res;
-};
+}
 };

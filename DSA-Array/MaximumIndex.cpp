@@ -356,4 +356,34 @@ public:
             //cout << count << " ";
         }
     }
+    //Returns the amount of rain watter that can be trapped on the given arr
+    //arr represents obstacles. For instance if arr[0] -> 2 then there is a 2m obstacle on index 0
+    static long long trappingRainWater(int arr[], int n){
+        //traverse from 1 to n - 2
+        long long sum = 0;
+        int maxElt = arr[0];
+
+        int left[n];
+        int* right = new int[n];
+
+        for(int i = 0; i < n; i++){
+            //left array,
+            if(arr[i] > maxElt){
+                maxElt = arr[i];
+            }
+            left[i] = maxElt
+        }
+        maxElt = arr[n - 1];
+        for(int i = n -1; i >= 0; i--){
+            if(arr[i] > maxElt){
+                maxElt = arr[i];
+            }
+            right[i] = maxElt;
+        }
+        for(int i = 0; i < n; i++){
+            sum += min(left[i], right[i] - arr[i]);
+        }
+        delete[] right;
+        return sum;
+    }
 };

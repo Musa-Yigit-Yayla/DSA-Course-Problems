@@ -16,7 +16,7 @@ class Solution{
         int prev = a[0];
         int currEltOccurence = 1;
 
-        int arr[10000000];
+        int arr[10000000] = {0};
 
         for(int i = 1; i < size; i++){
             currElt = a[i];
@@ -25,7 +25,7 @@ class Solution{
                     maxOccurence++;
                 }
                 arr[maxOccurence] = maxOccurence;
-                currEltOccurence = 1;
+                currEltOccurence = arr[currEltOccurence] + 1;
             }
             else{
                 currEltOccurence++;

@@ -6,7 +6,7 @@
 class GeekArray{
 public:
      //Function to find the days of buying and selling stock for max profit.
-    static vector<vector<int>> stockBuySell(vector<int> arr, int n){
+    /*static vector<vector<int>> stockBuySell(vector<int> arr, int n){
         // code here
         vector<vector<int>> result;
         vector<vector<int>> bottoms;
@@ -56,7 +56,7 @@ public:
         }
 
         return result;
-    }
+    }*/
     int binarySearch(int arr[], int low, int high, const int& x){
 
         if(low > high){
@@ -72,7 +72,7 @@ public:
             return binarySearch(arr,low, mid - 1, x);
         }
         else{
-            return binarySearch;(arr, mid + 1, high, x);
+            return binarySearch(arr, mid + 1, high, x);
         }
     }
 };

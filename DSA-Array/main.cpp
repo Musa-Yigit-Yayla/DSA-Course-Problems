@@ -4,6 +4,7 @@
 #include <vector>
 #include "ArrayContest1.cpp"
 #include "PatternChecker.cpp"
+#include "MajorityElement.cpp"
 using namespace std;
 
 void reverseInGroups(vector<long long>& arr, int n, int k){
@@ -38,8 +39,9 @@ int main(){
     //cout << mi.maxIndexDiff(d, 18) << endl;
     //cout << mi.subarrayWithGivenSum(e, 5, sum);
     cout << endl;
-    cout << MaximumIndex::trappingWater(g, 4);
+    cout << MaximumIndex::trappingWater(g, 4) << endl;
     PatternChecker checker;
     vector<int> h = checker.pattern(16);
-
+    MajorityElement me;
+    cout << me.majorityElement({3, 1, 3, 3, 2}, 5) << endl;
 }

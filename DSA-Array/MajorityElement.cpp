@@ -58,14 +58,17 @@ class Solution{
             if(arr[mid] == X){
                 index = mid;
                 mid = high - 1;
+                cout << "bool 0" << endl;
             }
             else if(arr[mid] > X){
                 //search for right half
-
                 high = mid - 1;
+
+                cout << "bool 1" << endl;
             }
             else{
                 low = mid + 1;
+                cout << "bool 2" << endl;
             }
         }
         return - index;

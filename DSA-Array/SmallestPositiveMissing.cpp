@@ -18,14 +18,33 @@ class SmallestPositiveMissing{
             }
         }
         int i = 1;
-
-        for(int j = firstPosIndex; j < n && j != -1; j++){
+        int smallestSoFar = arr[0];
+        int secondSmallestSoFar = arr[0];
+        bool enteredLoop = false;
+        for(int j = firstPosIndex; j < n && j != -1 && arr[j] > 0; j++){
+            enteredLoop = true;
             if(arr[j] > i){
-                return i;
+                if(smallestSoFar > arr[j]){
+                    secondSmallestSoFar = smallestSoFar;
+                    smallestSoFar = arr[j];
+                }
+                else if(secondSmallestSoFar > arr[j]){
+                    secondSmallestSoFar = arr[j];
+                }
+                //return i;
             }
             i++;
         }
-        return i;
+        if(!enteredLoop)
+         return i;
+        else{
+            if(secondSmallestSoFar - smallestSoFar == 1){
+                return secondSmallestSoFar + 1;
+            }
+            else{
+                return smallestSoFar + 1;
+            }
+        }
     }
 
     void partition(int arr[], int n){

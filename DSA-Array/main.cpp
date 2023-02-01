@@ -49,6 +49,10 @@ int main(){
 
     int arr[15] = {37, 6, -7, 41, -23, 15, 9, -14, -18, 1, -13, -22, 25, -43, 24};
     SmallestPositiveMissing spm;
-    cout << spm.missingNumber(arr, 15);
-
+    //cout << spm.missingNumber(arr, 15);
+    spm.partition(arr, 15);
+    for(int i: arr){
+        cout << i << " ";
+    }
+    return 0;
 }

@@ -5,6 +5,8 @@
 #include "ArrayContest1.cpp"
 #include "PatternChecker.cpp"
 #include "MajorityElement.cpp"
+#include "SmallestPositiveMissing.cpp"
+
 using namespace std;
 
 void reverseInGroups(vector<long long>& arr, int n, int k){
@@ -42,6 +44,11 @@ int main(){
     cout << MaximumIndex::trappingWater(g, 4) << endl;
     PatternChecker checker;
     vector<int> h = checker.pattern(16);
-    MajorityElement me;
-    cout << me.majorityElement({3, 1, 3, 3, 2}, 5) << endl;
+//    MajorityElement me;
+  //  cout << me.majorityElement({3, 1, 3, 3, 2}, 5) << endl;
+
+    int arr[15] = {37, 6, -7, 41, -23, 15, 9, -14, -18, 1, -13, -22, 25, -43, 24};
+    SmallestPositiveMissing spm;
+    cout << spm.missingNumber(arr, 15);
+
 }

@@ -35,6 +35,7 @@
 		<Unit filename="ArrayContest1.cpp" />
 		<Unit filename="ArrayOperations.cpp" />
 		<Unit filename="GeekArray.cpp" />
+		<Unit filename="MajorityElement.cpp" />
 		<Unit filename="Matchsticks.cpp" />
 		<Unit filename="MaximumIndex.cpp" />
 		<Unit filename="PatternChecker.cpp" />

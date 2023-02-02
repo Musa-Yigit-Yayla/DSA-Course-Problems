@@ -51,13 +51,15 @@
 	<cmath>
 	<algorithm>
 
-1674385117 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-array\main.cpp
+1675262643 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-array\main.cpp
 	"Matchsticks.cpp"
 	"MaximumIndex.cpp"
 	<iostream>
 	<vector>
 	"ArrayContest1.cpp"
 	"PatternChecker.cpp"
+	"MajorityElement.cpp"
+	"SmallestPositiveMissing.cpp"
 
 1673805974 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-array\matchsticks.cpp
 	<iostream>
@@ -79,14 +81,21 @@
 	<bits/stdc++.h>
 	<vector>
 
-1674385270 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-array\patternchecker.cpp
+1674385527 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-array\patternchecker.cpp
 	<bits/stdc++.h>
 	<vector>
 
 1675195642 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-array\majorityelement.cpp
 	<iostream>
 
-1675262595 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-array\smallestpositivemissing.cpp
+1675263138 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-array\smallestpositivemissing.cpp
+	<algorithm>
+	<bits/stdc++.h>
+
+1675195642 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-array\majorityelement.cpp
+	<iostream>
+
+1675263138 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-array\smallestpositivemissing.cpp
 	<algorithm>
 	<bits/stdc++.h>
 

@@ -39,6 +39,7 @@
 		<Unit filename="Matchsticks.cpp" />
 		<Unit filename="MaximumIndex.cpp" />
 		<Unit filename="PatternChecker.cpp" />
+		<Unit filename="PeakElement.cpp" />
 		<Unit filename="SmallestPositiveMissing.cpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>

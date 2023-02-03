@@ -6,7 +6,7 @@ using namespace std;
 int* arr;
 int noOfColumns, noOfRows;
 void fun2(int, int);
-void function( int rows, int columns){
+void function1( int rows, int columns){
     //check each row for whether that row contains one, if it does call fun2 on that row
     for(int k = 0; k < rows; k++){
         for(int j = 0; j < columns; j++){
@@ -24,6 +24,18 @@ void fun2( int rowIndex, int columns){
 
     }
 }
+bool fun3(int arr[], int n, int x){
+    //find the sum of each pair and compare it with x
+    for(int i = 0; i < n - 1; i++){
+        for(int j = i; j < n; j++){
+            if(arr[i] + arr[j] == x){
+                return true,
+            }
+        }
+    }
+    return false;
+}
+
 int main() {
 	//code
 	int T;
@@ -49,7 +61,7 @@ int main() {
 	        }
 	        //cout << endl;
 	    }
-	    function(m, n);
+	    function1(m, n);
 	    T--;
 	}
 	//function(m, n);

@@ -41,6 +41,7 @@
 		<Unit filename="PatternChecker.cpp" />
 		<Unit filename="PeakElement.cpp" />
 		<Unit filename="SmallestPositiveMissing.cpp" />
+		<Unit filename="ToggleMiddle.cpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

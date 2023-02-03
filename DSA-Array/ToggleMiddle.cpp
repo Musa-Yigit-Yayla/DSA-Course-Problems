@@ -27,7 +27,7 @@ void fun2( int rowIndex, int columns){
 bool fun3(int arr[], int n, int x){
     //find the sum of each pair and compare it with x
     for(int i = 0; i < n - 1; i++){
-        for(int j = i; j < n; j++){
+        for(int j = i + 1; j < n; j++){
             if(arr[i] + arr[j] == x){
                 return true,
             }

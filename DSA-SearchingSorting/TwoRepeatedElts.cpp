@@ -14,12 +14,12 @@ public:
             if(firstElt == arr[i]){
                 firstEltOccurence++;
             }
-            if(arr[arr[i]] < 0 || (arr[i] == arr[arr[i]] && count(returnValue.begin(), returnValue.end(), firstElt) == 0)){
+            if(arr[arr[i]] < 0 || (arr[i] == arr[arr[i]] && arr[i] != i && count(returnValue.begin(), returnValue.end(), arr[i]) == 0)){
                 returnValue.push_back(arr[i]);
             }
-            else if(firstEltOccurence > 1 && count(returnValue.begin(), returnValue.end(), firstElt) == 0){
+            /*else if(firstEltOccurence > 1 && count(returnValue.begin(), returnValue.end(), firstElt) == 0){
                 returnValue.push_back(firstElt);
-            }
+            }*/
             arr[i] *= -1;
         }
         return returnValue;

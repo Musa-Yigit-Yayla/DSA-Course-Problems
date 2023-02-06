@@ -2,9 +2,8 @@
 
 using namespace std;
 
-class Solution
-{
-    public:
+class AllocateMinPages{
+public:
     //Function to find minimum number of pages.
     int findPages(int A[], int N, int M)
     {

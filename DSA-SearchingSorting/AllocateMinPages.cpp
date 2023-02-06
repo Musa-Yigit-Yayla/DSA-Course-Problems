@@ -8,6 +8,10 @@ public:
     int findPages(int A[], int N, int M)
     {
         //code here
+        //if we have more students than the books then return -1
+        if(N < M){
+            return -1;
+        }
         //sum the pages
         int sum = 0;
         int minPages = A[0]; // minimum of the pages
@@ -19,7 +23,7 @@ public:
         }
 
         int start = 0, end = sum;
-        int result = -1;
+        int result = INT_MAX;
         while(start <= end){
             int mid = (start + end) / 2;
 
@@ -33,18 +37,29 @@ public:
         }
         return result;
     }
-    //function to check whether curr_min is feasible or not
     bool isValid(int A[], int N, int M, int curr_min){
         int studentsRequired = 1;
         int curr_sum = 0;
 
         for(int i = 0; i < N; i++){
-            curr_sum += A[i];
-            if(curr_sum > curr_min){
-                studentsRequired++;
-            }
-            if(studentsRequired > M){
+
+            if(A[i] > curr_min){
                 return false;
+            }
+
+            //curr_sum += A[i];
+            if(curr_sum + A[i] > curr_min){
+                studentsRequired++;
+
+                //update curr_sum
+                curr_sum = A[i];
+
+                if(studentsRequired > M){
+                    return false;
+                }
+            }
+            else{
+                curr_sum += A[i];
             }
         }
         return true;

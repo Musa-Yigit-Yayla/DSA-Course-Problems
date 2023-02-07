@@ -32,6 +32,8 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="AllocateMinPages.cpp" />
+		<Unit filename="MaxWaterBetweenTowers.cpp" />
 		<Unit filename="Searching.cpp" />
 		<Unit filename="TwoRepeatedElts.cpp" />
 		<Unit filename="main.cpp" />

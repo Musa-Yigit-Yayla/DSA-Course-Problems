@@ -8,34 +8,37 @@ public:
     void insertionSort(int arr[], int n)
     {
         //code here
-        for(int i = 1; i < n - 1; i++){
+        for(int i = 1; i < n; i++){
             int key = arr[i];
-            int insertionPos = 0;
-            int j;
-            bool hasBroken = false;
-            for(j = 0; j < i; j++){
+            int insertionPos;//position for the key to be inserted in the sorted part
+            //Elements before i are assumed to be sorted already
+            bool insertionPosFound = false;
+            for(int j = 0; j < i; j++){
                 if(arr[j] > key){
-                    //place before the bigger elt
+                    //insert right before the first bigger element
                     insertionPos = j;
-                    hasBroken = true;
+                    insertionPosFound = true;
                     break;
                 }
-                else{
+            }
+            if(!insertionPosFound){
+                insertionPos = i;
+            }
 
-                }
-            }
-            if(!hasBroken){
-                insertionPos = j;
-            }
+            //insert the element
             int temp = arr[insertionPos];
-            arr[insertionPos] = key;
-            for(int j = insertionPos; j < n - 1; j++){
-                if(j == insertionPos){
-                    arr[j + 1] = temp;
-                    temp = arr[j + 1];
-                }
-                //arr[j]
+
+            for(int j = insertionPos, counter = 0; j < i; j++, counter++){
+                /*int currElt = arr[j];
+                if(counter == 0){
+                    arr[j] = temp;
+                    temp = currElt;
+                }*/
+                arr[j + 1] = arr[j];
+                //arr[j + 1] = arr[j];
+                counter++;
             }
+            arr[insertionPos] = key;
 
         }
     }

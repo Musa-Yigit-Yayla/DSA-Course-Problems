@@ -33,6 +33,7 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="AllocateMinPages.cpp" />
+		<Unit filename="InsertionSort.cpp" />
 		<Unit filename="MaxWaterBetweenTowers.cpp" />
 		<Unit filename="Searching.cpp" />
 		<Unit filename="TwoRepeatedElts.cpp" />

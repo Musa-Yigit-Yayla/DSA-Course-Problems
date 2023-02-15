@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1675672984 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-searchingsorting\allocateminpages.cpp
+	<iostream>
+
+1675863098 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-searchingsorting\insertionsort.cpp
+	<iostream>
+
+1584205420 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-searchingsorting\main.cpp
+	<iostream>
+
+1675673782 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-searchingsorting\maxwaterbetweentowers.cpp
+	<iostream>
+
+1674464876 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-searchingsorting\searching.cpp
+	<iostream>
+
+1675863169 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-searchingsorting\tworepeatedelts.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+

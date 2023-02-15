@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1676450806 source:c:\users\yigit\documents\cs201\matrixquestions\main.cpp
+	<iostream>
+	<vector>
+	"MatrixMultiplication.cpp"
+
+1676450771 source:c:\users\yigit\documents\cs201\matrixquestions\matrixmultiplication.cpp
+	<iostream>
+	<vector>
+
+1676450771 c:\users\yigit\documents\cs201\matrixquestions\matrixmultiplication.cpp
+	<iostream>
+	<vector>
+

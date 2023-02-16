@@ -11,14 +11,17 @@ public:
 
         for(İnt i = 0; i < mat.size(); i++){
             for(int j = 0; j < mat.at(0).size(); j++){
-
+                if(calculate(mat, i, j)){
+                    counter++;
+                }
             }
         }
+        return counter;
     }
     //i represents row index, whereas j represents column index
     //
     bool calculate(vector<vector<int>>& mat, int i, int j){
-
+        return calculateHelper(mat, i, j);
     }
     //Recursive helper method
     bool calculateHelper(vector<vector<int>>& mat, int i, int j){
@@ -39,8 +42,30 @@ public:
             return true;
         }
         if(calculateHelper(mat, i + 1, j){
+            arabicReached = false;
+            indianReached = false;
+
             return true;
         }
+        else if(calculateHelper(mat, i, j + 1)){
+            arabicReached = false;
+            indianReached = false;
 
+            return true;
+        }
+        else if(calculateHelper(mat, i - 1, j)){
+            arabicReached = false;
+            indianReached = false;
+
+            return true;
+        }
+        else if(calculateHelper(mat, i, j - 1)){
+            arabicReached = false;
+            indianReached = false;
+
+            return true;
+        }
+        //eventually return false
+        return false;
     }
 };

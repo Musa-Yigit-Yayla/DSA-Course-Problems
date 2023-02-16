@@ -3,6 +3,7 @@
 using namespacestd;
 
 class BoundaryTraversal{
+    public:
     vector<int> boundaryTraversal(vector<vector<int> > matrix, int n, int m){
         // code here
         vector<int> result;

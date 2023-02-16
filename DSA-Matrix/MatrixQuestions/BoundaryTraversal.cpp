@@ -3,33 +3,39 @@
 using namespacestd;
 
 class BoundaryTraversal{
-    public:
-    //Function to return list of integers that form the boundary
-    //traversal of the matrix in a clockwise manner.
-    vector<int> boundaryTraversal(vector<vector<int> > matrix, int n, int m)
-    {
+    vector<int> boundaryTraversal(vector<vector<int> > matrix, int n, int m){
         // code here
-        int i, j;
         vector<int> result;
+        if(n == 1){
+		    for(int i = 0; i < m; i++)
+			    result.push_back(matrix[0][i]);
+	    }
+	    else if(1 == m)
+	    {
+	    	for(int i = 0; i < n; i++)
+	    		result.push_back(matrix[i][0]);
+    	}
+        int i, j;
+
         for(i = 0, j = 0; i < matrix.size(); i++){
-            result.push_back(matrix[j][i]);
+            result.push_back(matrix[0][i]);
         }
-        i--;
-        while(j < matrix.at(0).size() - 1){
+        i = 1;
+        while(i < n){
             j++;
-            result.push_back(matrix[j][i]);
+            result.push_back(matrix[i][m - 1]);
 
         }
+        i = n - 2;
+        while(i >= 0){
 
-        while(i > 0){
+            result.push_back(matrix[m - 1][i]);
             i--;
-            result.push_back(matrix[j][i]);
-
         }
-        while(j > 0){
-            j--;
-            result.push_back(matrix[j][i]);
+        while(i >= 1){
 
+            result.push_back(matrix[i][0]);
+            i--;
         }
         result.pop_back();
         return result;

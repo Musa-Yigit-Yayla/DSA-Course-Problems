@@ -1,3 +1,7 @@
+#include <vector>
+
+using namespace std;
+
 class GeeksIslandProblem{
 private:
     int rowSize;
@@ -21,7 +25,10 @@ public:
     //i represents row index, whereas j represents column index
     //
     bool calculate(vector<vector<int>>& mat, int i, int j){
-        return calculateHelper(mat, i, j);
+        if(calculateHelper(mat, i, j)){
+            return true;
+        }
+        return false;
     }
     //Recursive helper method
     bool calculateHelper(vector<vector<int>>& mat, int i, int j){

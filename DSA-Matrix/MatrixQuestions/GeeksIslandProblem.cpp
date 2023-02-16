@@ -9,7 +9,7 @@ public:
 
         int counter = 0;
 
-        for(İnt i = 0; i < mat.size(); i++){
+        for(int i = 0; i < mat.size(); i++){
             for(int j = 0; j < mat.at(0).size(); j++){
                 if(calculate(mat, i, j)){
                     counter++;
@@ -41,7 +41,7 @@ public:
 
             return true;
         }
-        if(calculateHelper(mat, i + 1, j){
+        if(calculateHelper(mat, i + 1, j)){
             arabicReached = false;
             indianReached = false;
 

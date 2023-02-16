@@ -1,10 +1,12 @@
 #include <iostream>
 #include <vector>
 #include "MatrixMultiplication.cpp"
+#include "GeeksIslandProblem.cpp"
 
+using namespace std;
 int main(){
 
-    Solution sol;
+    /*Solution sol;
     vector<vector<int>> a;
     vector<vector<int>> b;
 
@@ -42,6 +44,10 @@ int main(){
     vector<vector<int>> result = sol.multiplyMatrix(a, b);
     cout << "Mcgregor";
     sol.printMatrix(result);
+    */
 
+    vector<vector<int>> vec = {{1, 3, 3, 2, 4},{4, 5, 6, 4, 4},{2, 4, 5, 3, 1},{6, 7, 1, 4, 5},{6, 1, 1, 3, 4}};
+    GeeksIslandProblem gip;
+    cout << gip.water_flow(vec, 5, 5) << endl;
     return 0;
 }

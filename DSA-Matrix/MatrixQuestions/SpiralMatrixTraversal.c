@@ -1,6 +1,7 @@
 class{
 public:
-    //Function to print the list of integers denoting spiral traversal of matrix.
+    //Function to print the list of integers denoting spiral traversal of matrix
+    //r denotes row count, c denotes column count
     void spirallyTraverse(vector<vector<int> > matrix, int r, int c) {
         int left = 0, top = 0, bottom = r - 1, right = c - 1;
 
@@ -17,7 +18,7 @@ public:
             }
             right--;
             //print bottom row in reverse order
-            for(int i = right; i >= 0; i--){
+            for(int i = right; i >= left; i--){
                 cout << matrix[bottom][i] << " ";
             }
             bottom--;

@@ -11,7 +11,7 @@ public:
     r represents row count
     c represents column count
     */
-    static int getMedian(vector<vector<int>>& vec, int r, int c){
+    int getMedian(vector<vector<int>>& vec, int r, int c){
         vector<int> container;
 
         for(int i = 0; i < r; i++){

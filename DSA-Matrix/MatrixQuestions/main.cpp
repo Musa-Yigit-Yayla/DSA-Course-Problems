@@ -53,7 +53,9 @@ int main(){
     //cout << gip.water_flow(vec, 5, 5) << endl
     //SpiralMatrixTraversal smt;
     //smt.spirallyTraverse(vec, 3, 5);
-    MedianOfMatrix.getMedian(vec, 3, 5);
+    MedianOfMatrix* mom = new MedianOfMatrix();
+    int median = mom->getMedian(vec, 3, 5);
     cout << "Median of the matrix is " << median << endl;
+    delete mom;
     return 0;
 }

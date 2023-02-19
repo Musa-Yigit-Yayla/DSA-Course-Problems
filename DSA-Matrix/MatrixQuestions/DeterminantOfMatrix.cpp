@@ -21,7 +21,7 @@ public:
         for(int i = 0; i < n; i++){
             for(int j = 0; j < n; j++){
                 int curr = matrix[i][j];
-                int cofactor = getCofactor(matrix, temp, 0, i, n);
+                getCofactor(matrix, temp, 0, i, n);
                 sum += sign * matrix[0][i] * determinantOfMatrix(temp, n - 1);
 
                 sign *= -1;
@@ -41,7 +41,7 @@ public:
             //  which are not in given row and column
             if (row != p && col != q)
             {
-                temp[i][j++] = mat[row][col];
+                temp[i][j++] = matrix[row][col];
 
                 // Row is filled, so increase row index and
                 // reset col index

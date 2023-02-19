@@ -36,7 +36,7 @@ class Solution
         return sum;
     }
     //Utility function to print any given matrix of integers
-    void printMatrix(const vector<vector<int>> a){
+    void printMatrix(const vector<vector<int>>& a){
         for(int i = 0; i < a.size(); i++){
             for(int j = 0; j < a.at(i).size(); j++){
                 cout << a.at(i).at(j) << " ";

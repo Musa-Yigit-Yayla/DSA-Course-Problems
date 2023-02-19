@@ -2,6 +2,7 @@
 #include <vector>
 #include "MatrixMultiplication.cpp"
 #include "GeeksIslandProblem.cpp"
+#include "SpiralMatrixTraversal.cpp"
 
 using namespace std;
 int main(){
@@ -46,8 +47,10 @@ int main(){
     sol.printMatrix(result);
     */
 
-    vector<vector<int>> vec = {{1, 3, 3, 2, 4},{4, 5, 6, 4, 4},{2, 4, 5, 3, 1},{6, 7, 1, 4, 5},{6, 1, 1, 3, 4}};
-    GeeksIslandProblem gip;
-    cout << gip.water_flow(vec, 5, 5) << endl;
+    vector<vector<int>> vec = {{6, 6, 2, 28, 2},{12, 26, 3, 28, 7},{22, 25, 3, 4, 23}};
+    //GeeksIslandProblem gip;
+    //cout << gip.water_flow(vec, 5, 5) << endl
+    SpiralMatrixTraversal smt;
+    smt.spirallyTraverse(vec, 3, 5);
     return 0;
 }

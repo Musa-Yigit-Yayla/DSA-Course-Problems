@@ -1,6 +1,6 @@
 #include <vector>
 
-using namespacestd;
+using namespace std;
 
 class BoundaryTraversal{
     public:

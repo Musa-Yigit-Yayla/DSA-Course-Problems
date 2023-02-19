@@ -12,19 +12,32 @@
 	<iostream>
 	<vector>
 
-1676555103 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-matrix\matrixquestions\main.cpp
+1676793658 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-matrix\matrixquestions\main.cpp
 	<iostream>
 	<vector>
 	"MatrixMultiplication.cpp"
 	"GeeksIslandProblem.cpp"
+	"SpiralMatrixTraversal.cpp"
 
-1676450771 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-matrix\matrixquestions\matrixmultiplication.cpp
+1676793407 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-matrix\matrixquestions\matrixmultiplication.cpp
 	<iostream>
 	<vector>
 
-1676450771 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-matrix\matrixquestions\matrixmultiplication.cpp
+1676793407 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-matrix\matrixquestions\matrixmultiplication.cpp
 	<iostream>
 	<vector>
 
-1676554812 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-matrix\matrixquestions\geeksislandproblem.cpp
+1676555251 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-matrix\matrixquestions\geeksislandproblem.cpp
+	<vector>
+
+1676793494 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-matrix\matrixquestions\spiralmatrixtraversal.cpp
+	<vector>
+	<iostream>
+
+1676793542 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-matrix\matrixquestions\boundarytraversal.cpp
+	<vector>
+
+1676794708 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-matrix\matrixquestions\spiralmatrixtraversal.cpp
+	<vector>
+	<iostream>
 

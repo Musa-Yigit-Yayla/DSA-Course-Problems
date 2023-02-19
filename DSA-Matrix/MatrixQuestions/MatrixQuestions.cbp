@@ -34,6 +34,9 @@
 		</Compiler>
 		<Unit filename="BoundaryTraversal.cpp" />
 		<Unit filename="MatrixMultiplication.cpp" />
+		<Unit filename="SpiralMatrixTraversal.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

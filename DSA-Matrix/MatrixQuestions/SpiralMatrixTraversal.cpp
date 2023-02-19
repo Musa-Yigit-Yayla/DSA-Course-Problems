@@ -24,7 +24,7 @@ public:
             right--;
             //print bottom row in reverse order
             for(int i = right; i >= left; i--){
-                if(left != bottom && top != right)
+                if(left != bottom || top != right)
                 cout << matrix[bottom][i] << " "; // last print is done here
             }
             bottom--;

@@ -23,16 +23,20 @@ public:
             }
             right--;
             //print bottom row in reverse order
-            for(int i = right; i >= left; i--){
-                if(left != bottom || top != right)
-                cout << matrix[bottom][i] << " "; // last print is done here
+            if(top <= bottom){
+                for(int i = right; i >= left; i--){
+                    if(left != bottom || top != right)
+                    cout << matrix[bottom][i] << " "; // last print is done here
+                }
+                bottom--;
             }
-            bottom--;
-            //print left column from bottom to top (top inclusive)
-            for(int i = bottom; i >= top; i--){
-                cout << matrix[i][left] << " ";
+            if(left <= right){
+                //print left column from bottom to top (top inclusive)
+                for(int i = bottom; i >= top; i--){
+                    cout << matrix[i][left] << " ";
+                }
+                left++;
             }
-            left++;
         }
     }
 };

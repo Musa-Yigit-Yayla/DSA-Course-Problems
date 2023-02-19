@@ -37,6 +37,7 @@
 		<Unit filename="SpiralMatrixTraversal.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="SpiralMatrixTraversal.cpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

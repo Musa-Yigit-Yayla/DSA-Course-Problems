@@ -30,7 +30,7 @@
 1676555251 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-matrix\matrixquestions\geeksislandproblem.cpp
 	<vector>
 
-1676793494 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-matrix\matrixquestions\spiralmatrixtraversal.cpp
+1676837976 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-matrix\matrixquestions\spiralmatrixtraversal.cpp
 	<vector>
 	<iostream>
 
@@ -40,4 +40,9 @@
 1676794708 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-matrix\matrixquestions\spiralmatrixtraversal.cpp
 	<vector>
 	<iostream>
+
+1676839654 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-matrix\matrixquestions\medianofmatrix.cpp
+	<iostream>
+	<vector>
+	<algorithm>
 

@@ -3,6 +3,7 @@
 #include "MatrixMultiplication.cpp"
 #include "GeeksIslandProblem.cpp"
 #include "SpiralMatrixTraversal.cpp"
+#include "MedianOfMatrix.cpp"
 
 using namespace std;
 int main(){
@@ -50,7 +51,9 @@ int main(){
     vector<vector<int>> vec = {{6, 6, 2, 28, 2},{12, 26, 3, 28, 7},{22, 25, 3, 4, 23}};
     //GeeksIslandProblem gip;
     //cout << gip.water_flow(vec, 5, 5) << endl
-    SpiralMatrixTraversal smt;
-    smt.spirallyTraverse(vec, 3, 5);
+    //SpiralMatrixTraversal smt;
+    //smt.spirallyTraverse(vec, 3, 5);
+    MedianOfMatrix.getMedian(vec, 3, 5);
+    cout << "Median of the matrix is " << median << endl;
     return 0;
 }

@@ -33,7 +33,9 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="BoundaryTraversal.cpp" />
+		<Unit filename="DeterminantOfMatrix.cpp" />
 		<Unit filename="MatrixMultiplication.cpp" />
+		<Unit filename="MedianOfMatrix.cpp" />
 		<Unit filename="SpiralMatrixTraversal.c">
 			<Option compilerVar="CC" />
 		</Unit>

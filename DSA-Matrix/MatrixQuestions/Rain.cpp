@@ -7,7 +7,6 @@ using namespace std;
 string generateLine();
 
 int main(){
-
     long long counter = 0;
     while(counter < 100000000){
         string s = generateLine();

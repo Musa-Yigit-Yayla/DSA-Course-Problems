@@ -19,8 +19,8 @@ int main(){
 string generateLine(){
     string s = "";
     for(int i = 0; i < 100; i++){
-        int value = rand() % 2;
-        if(value == 0){
+        int value = rand() % 15;
+        if(value <= 13){
             s += " ";
         }
         else{

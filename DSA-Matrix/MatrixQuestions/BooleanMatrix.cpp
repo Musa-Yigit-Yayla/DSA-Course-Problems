@@ -1,6 +1,8 @@
 #include <vector>
 #include <iostream>
 
+using namespace std;
+
 class Solution
 {
     public:
@@ -13,7 +15,7 @@ class Solution
         int hitColumn = 0; // represents the column that we will start the next iteration. Update inside the loops properly.
 
         while(i < rows){
-            while(j < columns){
+            while(i < rows && j < columns){
                int curr = matrix.at(i).at(j);
                if(curr == 1){
                    turnIntoOne(matrix, i, j);

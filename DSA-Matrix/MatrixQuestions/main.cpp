@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+//#include "MatrixMultiplication.cpp"
 #include "MatrixMultiplication.cpp"
 #include "GeeksIslandProblem.cpp"
 #include "SpiralMatrixTraversal.cpp"
@@ -57,5 +58,15 @@ int main(){
     int median = mom->getMedian(vec, 3, 5);
     cout << "Median of the matrix is " << median << endl;
     delete mom;
+    MatrixMultiplication mm;
+    vector<vector<int>> vec2 = {{1, 2},
+                                {3, 4},
+                                {5, 6}};
+    vector<vector<int>> vec3 = {{1, 2},
+                                {3, 4},
+                                {5, 6}};
+    vector<vector<int>> vec4 = mm.multiplyMatrix(vec2, vec3);
+    mm.printMatrix(vec4);
+
     return 0;
 }

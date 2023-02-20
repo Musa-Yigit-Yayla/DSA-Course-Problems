@@ -27,6 +27,7 @@ class Solution
                        //switch to the next row
                        i++;
                        j = hitColumn;
+                       break;
                    }
                    else{
                        j++;

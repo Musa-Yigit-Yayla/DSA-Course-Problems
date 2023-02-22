@@ -12,18 +12,20 @@
 	<iostream>
 	<vector>
 
-1676793658 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-matrix\matrixquestions\main.cpp
+1677079449 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-matrix\matrixquestions\main.cpp
 	<iostream>
 	<vector>
 	"MatrixMultiplication.cpp"
 	"GeeksIslandProblem.cpp"
 	"SpiralMatrixTraversal.cpp"
+	"MedianOfMatrix.cpp"
+	"BooleanMatrix.cpp"
 
-1676793407 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-matrix\matrixquestions\matrixmultiplication.cpp
+1677079449 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-matrix\matrixquestions\matrixmultiplication.cpp
 	<iostream>
 	<vector>
 
-1676793407 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-matrix\matrixquestions\matrixmultiplication.cpp
+1677079449 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-matrix\matrixquestions\matrixmultiplication.cpp
 	<iostream>
 	<vector>
 
@@ -37,7 +39,7 @@
 1676793542 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-matrix\matrixquestions\boundarytraversal.cpp
 	<vector>
 
-1676794708 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-matrix\matrixquestions\spiralmatrixtraversal.cpp
+1676837976 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-matrix\matrixquestions\spiralmatrixtraversal.cpp
 	<vector>
 	<iostream>
 
@@ -50,7 +52,16 @@
 	<iostream>
 	<vector>
 
-1676893053 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-matrix\matrixquestions\booleanmatrix.cpp
+1677079202 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-matrix\matrixquestions\booleanmatrix.cpp
+	<vector>
+	<iostream>
+
+1676840443 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-matrix\matrixquestions\medianofmatrix.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+
+1677079826 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-matrix\matrixquestions\booleanmatrix.cpp
 	<vector>
 	<iostream>
 

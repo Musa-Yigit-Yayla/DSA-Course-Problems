@@ -5,6 +5,7 @@
 #include "GeeksIslandProblem.cpp"
 #include "SpiralMatrixTraversal.cpp"
 #include "MedianOfMatrix.cpp"
+#include "BooleanMatrix.cpp"
 
 using namespace std;
 int main(){
@@ -58,7 +59,7 @@ int main(){
     int median = mom->getMedian(vec, 3, 5);
     cout << "Median of the matrix is " << median << endl;
     delete mom;
-    MatrixMultiplication mm;
+    /*MatrixMultiplication mm;
     vector<vector<int>> vec2 = {{1, 2},
                                 {3, 4},
                                 {5, 6}};
@@ -66,7 +67,13 @@ int main(){
                                 {3, 4},
                                 {5, 6}};
     vector<vector<int>> vec4 = mm.multiplyMatrix(vec2, vec3);
-    mm.printMatrix(vec4);
+    mm.printMatrix(vec4);*/
+    vector<vector<int>> vec5 = {{1, 1},
+                                {1, 0}};
+    MatrixMultiplication mm;
 
+    BooleanMatrix bm;
+    bm.booleanMatrix(vec5);
+    mm.printMatrix(vec5);
     return 0;
 }

@@ -3,8 +3,7 @@
 
 using namespace std;
 
-class Solution
-{
+class BooleanMatrix{
     public:
     //Function to modify the matrix such that if a matrix cell matrix[i][j]
     //is 1 then all the cells in its ith row and jth column will become 1.
@@ -14,7 +13,7 @@ class Solution
         int columns = matrix.at(0).size();
         int hitColumn = 0; // represents the column that we will start the next iteration. Update inside the loops properly.
 
-        while(i < rows){
+        //while(i < rows){
             while(i < rows && j < columns){
                int curr = matrix.at(i).at(j);
                if(curr == 1){
@@ -37,7 +36,7 @@ class Solution
                }
             }
 
-        }
+        //}
     }
     /*
     *Function to turn ith row and jth column elements all into 1
@@ -47,7 +46,7 @@ class Solution
     bool turnIntoOne(vector<vector<int>>& matrix, int i, int j){
         //traverse the row first
         bool returnValue = false;
-        for(int k = 0; k < matrix.at(i).size(); i++){
+        for(int k = 0; k < matrix.at(i).size(); k++){
             matrix.at(i).at(k) = 1;
             returnValue = true;
         }

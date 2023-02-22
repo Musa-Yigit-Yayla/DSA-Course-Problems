@@ -2,8 +2,7 @@
 #include <vector>
 
 using namespace std;
-class Solution
-{
+class MatrixMultiplication{
     public:
     //Function to multiply two matrices.
     vector<vector<int>> multiplyMatrix( const vector<vector<int>>& A, const vector<vector<int>>& B){

@@ -32,6 +32,7 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="BooleanMatrix.cpp" />
 		<Unit filename="BoundaryTraversal.cpp" />
 		<Unit filename="DeterminantOfMatrix.cpp" />
 		<Unit filename="MatrixMultiplication.cpp" />

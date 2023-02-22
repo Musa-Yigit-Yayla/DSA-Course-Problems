@@ -27,8 +27,8 @@ class BooleanMatrix{
                    if(j == columns - 1){
                        //switch to the next row
                        i++;
-                       j = hitColumn;
-                       break;
+                       j = 0; // j = hitColumn;
+                       continue;
                    }
                    else{
                        j++;

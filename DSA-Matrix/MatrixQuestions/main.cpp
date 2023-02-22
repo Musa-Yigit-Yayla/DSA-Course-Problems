@@ -68,8 +68,10 @@ int main(){
                                 {5, 6}};
     vector<vector<int>> vec4 = mm.multiplyMatrix(vec2, vec3);
     mm.printMatrix(vec4);*/
-    vector<vector<int>> vec5 = {{1, 1},
-                                {1, 0}};
+    vector<vector<int>> vec5 = {{1, 0, 0, 0},
+                                {0, 0, 1, 1},
+                                {0, 0, 0, 0},
+                                {1, 1, 0,0}};
     MatrixMultiplication mm;
 
     BooleanMatrix bm;

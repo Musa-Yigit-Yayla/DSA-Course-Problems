@@ -4,10 +4,14 @@
 using namespace std;
 
 class BooleanMatrix{
-    public:
+private:
+vector<vector<int>> initialVector;
+
+public:
     //Function to modify the matrix such that if a matrix cell matrix[i][j]
     //is 1 then all the cells in its ith row and jth column will become 1.
     void booleanMatrix(vector<vector<int>>& matrix){
+        this->initialVector = matrix;
         int i = 0, j = 0;
         int rows = matrix.size();
         int columns = matrix.at(0).size();
@@ -15,13 +19,18 @@ class BooleanMatrix{
 
         //while(i < rows){
             while(i < rows && j < columns){
-               int curr = matrix.at(i).at(j);
+               int curr = this->initialVector.at(i).at(j);
                if(curr == 1){
                    turnIntoOne(matrix, i, j);
-                   i++;
-                   j++;
-                   hitColumn = j;
-                   continue;
+                   if(j == columns - 1){
+                       //switch to the next row
+                       i++;
+                       j = 0; // j = hitColumn;
+                       continue;
+                   }
+                   else{
+                       j++;
+                   }
                }
                else{
                    if(j == columns - 1){

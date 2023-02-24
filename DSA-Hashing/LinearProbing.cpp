@@ -7,7 +7,7 @@ class LinearProbing{
 public:
     //Function to fill the array elements into a hash table
     //using Linear Probing to handle collisions.
-    vector<int> linearProbing(int hashSize&, int arr[], int sizeOfArray)
+    vector<int> linearProbing(int hashSize, int arr[], int sizeOfArray)
     {
         vector<int> hashTable(hashSize);
         //Your code here

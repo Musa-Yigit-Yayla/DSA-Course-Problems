@@ -24,7 +24,7 @@ class QuadraticProbing{
                 int l = 1;
                 while(hash.at(hashIndex) == -1){
                     hashIndex = ((hashSize % N) + (static_cast<int>(pow(l, 2)))) % N;
-                    if(hash.at(hashIndex) == INT_MIN){
+                    if(hash.at(hashIndex) == -1){
                         hash.insert(hash.begin() + hashIndex, curr);
                     }
                     l++;

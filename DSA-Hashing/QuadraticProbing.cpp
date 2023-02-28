@@ -29,6 +29,7 @@ class QuadraticProbing{
                 while(hashIndex < hashLength && hashVector.at(hashIndex) != -1){
                     hashIndex = ((curr % hashSize) + (static_cast<int>(pow(l, 2)))) % hashLength;
                     if(hashVector.at(hashIndex) == -1){
+                        hashVector.erase(hashVector.begin() + hashIndex);
                         hashVector.insert(hashVector.begin() + hashIndex, curr);
                         break;
                     }

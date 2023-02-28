@@ -15,18 +15,19 @@ class QuadraticProbing{
         }
         for(int i = 0; i < N; i++){
             int curr = arr[i];
-            int hashIndex = (hashSize % N);
+            int hashIndex = (curr % hashSize);
 
             if(hashVector.at(hashIndex) == -1){
                 //insert
+                hashVector.erase(hashVector.begin() + hashIndex);
                 hashVector.insert(hashVector.begin() + hashIndex, curr);
             }
             else{
                 //use the quadratic probing
                 int l = 1;
-                int hashLength = hashVector.size();
+                int hashLength = hashSize;
                 while(hashIndex < hashLength && hashVector.at(hashIndex) != -1){
-                    hashIndex = ((hashSize % hashLength) + (static_cast<int>(pow(l, 2)))) % hashLength;
+                    hashIndex = ((curr % hashSize) + (static_cast<int>(pow(l, 2)))) % hashLength;
                     if(hashVector.at(hashIndex) == -1){
                         hashVector.insert(hashVector.begin() + hashIndex, curr);
                         break;
@@ -36,6 +37,5 @@ class QuadraticProbing{
             }
         }
     }
-
 };
 

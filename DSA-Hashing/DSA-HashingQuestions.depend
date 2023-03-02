@@ -2,16 +2,31 @@
 1677489889 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-hashing\linearprobing.cpp
 	<vector>
 
-1677581998 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-hashing\main.cpp
+1677744571 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-hashing\main.cpp
 	<iostream>
 	<vector>
 	"QuadraticProbing.cpp"
+	"HashingForPair.cpp"
 
-1677585006 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-hashing\quadraticprobing.cpp
+1677593656 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-hashing\quadraticprobing.cpp
 	<cmath>
 	<vector>
 
 1677593656 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-hashing\quadraticprobing.cpp
 	<cmath>
 	<vector>
+
+1677744492 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-hashing\hashingforpair.cpp
+	<unordered_set>
+	<iostream>
+
+1677744492 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-hashing\hashingforpair.cpp
+	<unordered_set>
+	<iostream>
+
+1677744504 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-hashing\checkarrayequality.cpp
+	<vector>
+	<algorithm>
+	<unordered_map>
+	<iterator>
 

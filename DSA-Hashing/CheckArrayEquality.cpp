@@ -1,5 +1,9 @@
 #include <vector>
 #include <algorithm>
+#include <unordered_map>
+#include <iterator>
+
+#define ll long
 
 using namespace std;
 
@@ -8,14 +12,39 @@ public:
     //Function to check if two arrays are equal or not.
     bool check(vector<ll> A, vector<ll> B, int N) {
         //code here
-        //quickSort(A);
-        //quickSort(B);
 
+        unordered_map<ll, int> hash; // contains value and occurence count pairs
+
+        //append the first array's elements to the hash
         for(int i = 0; i < N; i++){
-            if(A.at(i) != B.at(i)){
+            int curr = A.at(i);
+            if(hash.find(curr) == hash.end()){
+                hash.insert({curr, 1});
+            }
+            else{
+                //increment the count by one
+                auto it = hash.find(curr);
+                it->second++;
+            }
+        }
+        //Traverse the second array and decrement the counts by one
+        for(int i = 0; i < N; i++){
+            int curr = B.at(i);
+            if(hash.find(curr) == hash.end()){
+                return false;
+            }
+            else{
+                auto it = hash.find(curr);
+                it->second--;
+            }
+        }
+        //traverse the unordered_map and check whether each key's second value equals 0
+        for(auto i: hash){
+            if(i.second != 0){
                 return false;
             }
         }
+
         return true;
     }
     void quickSort(vector<long long>& arr){

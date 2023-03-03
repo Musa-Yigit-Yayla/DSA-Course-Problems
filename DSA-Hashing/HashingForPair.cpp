@@ -28,5 +28,23 @@ public:
         }
         return 0;
     }
+    int sumExists2(int arr[], int N, int sum) {
+        // Your code here
+        unordered_set<int> set;
+        for(int i = 0; i < N; i++){
+            set.insert(arr[i]);
+        }
 
+        //traverse the set and use find function to check whether the sum exists
+        for(int i = 0; i < set.size(); i++){
+            int curr = arr[i];
+            if(sum - curr == curr){
+                continue;
+            }
+            if(set.find(sum - curr) != set.end()){
+                return 1; // sum exists
+            }
+        }
+        return 0;
+    }
 };

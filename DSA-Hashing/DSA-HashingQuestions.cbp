@@ -33,6 +33,7 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="CheckArrayEquality.cpp" />
+		<Unit filename="HashingForPair.cpp" />
 		<Unit filename="LinearProbing.cpp" />
 		<Unit filename="QuadraticProbing.cpp" />
 		<Unit filename="main.cpp" />

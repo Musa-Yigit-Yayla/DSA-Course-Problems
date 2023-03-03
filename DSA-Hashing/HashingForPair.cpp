@@ -16,8 +16,14 @@ public:
         }
         for(int i = 0; i < N; i++){
             int curr = arr[i];
-            if(set.find(sum - curr) != set.end()){
-                return 1;
+
+            if(sum - arr[i] == arr[i]){
+                continue;
+            }
+            else{
+                if(set.find(sum - curr) != set.end()){
+                    return 1;
+                }
             }
         }
         return 0;

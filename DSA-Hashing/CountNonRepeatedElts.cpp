@@ -4,7 +4,6 @@
 using namespace std;
 class CountNonRepeatedElts{
 public:
-    public:
     //Complete this function
     //Function to sort the array according to frequency of elements.
     vector<int> sortByFreq(int arr[],int n){
@@ -21,6 +20,8 @@ public:
                 it->second++;
             }
         }
+
+
         vector<int> usedElements;
         vector<int> arr2;
         /*for(int i = 0; i < map.size(); i++){
@@ -28,8 +29,10 @@ public:
             int freqElt = arr2[0];
             result.push_back(curr);
         }*/
-        do{
-            arr2 = getHighestFreqElt(map, usedElements);
+        vector<int> frequencies = getFrequencies(map);
+        sort(frequencies.begin(), frequencies.end());
+        for(int i = 0; i < frequencies.size(); i++){
+            arr2 = getHighestFreqElt(map, usedElements, frequencies);
             //if(arr2 != ){
                 int freqElt = arr2.at(0);
                 int frequency = arr2.at(1);
@@ -38,7 +41,8 @@ public:
                     result.push_back(freqElt);
                 }
             //}
-        }while(arr2.at(0) != -1);
+            i--;
+        }
 
         return result;
     }
@@ -46,15 +50,14 @@ public:
     //Before returning the element adds it to the usedElements vector
     //If multiple elements have the same frequency then the smallest one must be returned
     //If no element exists return {-1, -1}
-    vector<int> getHighestFreqElt(const unordered_map<int, int>& map, vector<int>& usedElements){
+    vector<int> getHighestFreqElt(const unordered_map<int, int>& map, vector<int>& usedElements, vector<int>& frequencies){
         //Find the biggest frequency in the map by excluding the usedElements
-        int max = -1; //max frequency
+        int maxFreq = frequencies.at(frequencies.size() - 1); //max frequency
         int counter = 0;
         vector<int> frequentElts; //contains the elements with the highest frequency that hasn't been used yet
         for(auto it: map){
-            max = getGreatestFrequency(map, usedElements);
-            if(it.second >= max && count(usedElements.begin(), usedElements.end(), it.first) == 0){
-                max = it.second;
+
+            if(it.second >= maxFreq && count(usedElements.begin(), usedElements.end(), it.first) == 0){
                 frequentElts.push_back(it.first);
                 counter++;
             }
@@ -70,8 +73,10 @@ public:
         freqElt = frequentElts.at(0);
         usedElements.push_back(freqElt);
 
+        //remove the maxFreq from the frequencies vector before returning
+        frequencies.erase(frequencies.begin() + (frequencies.size() - 1));
         //return the biggest one of those elements
-        vector<int> arr({freqElt, max});
+        vector<int> arr({freqElt, maxFreq});
         return(arr);
     }
     //Returns the greatest frequency excluding the usedElements
@@ -84,5 +89,13 @@ public:
             }
         }
         return max;
+    }
+    //Returns all of the frequencies of each map entry in a vector, duplicates allowed
+    vector<int> getFrequencies(const unordered_map<int, int>& map){
+        vector<int> frequencies;
+        for(auto it: map){
+            frequencies.push_back(it.second);
+        }
+        return frequencies;
     }
 };

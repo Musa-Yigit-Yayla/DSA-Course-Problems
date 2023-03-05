@@ -21,18 +21,30 @@ public:
             }
         }
         vector<int> usedElements;
-        for(int i = 0; i < map.size(); i++){
-            int curr = getHighestFreqElt(map, usedElements);
+        int* arr2 = &arr[0]; // just to save the pointer from having a garbage value
+        /*for(int i = 0; i < map.size(); i++){
+            int* arr2 = getHighestFreqElt(map, usedElements);
+            int freqElt = arr2[0];
             result.push_back(curr);
-        }
-        return result;
+        }*/
+        do{
+            arr2 = getHighestFreqElt(map, usedElements);
+            if(arr2 != nullptr){
+                int freqElt = arr2[0];
+                int frequency = arr2[1];
+                for(int i = 0; i < frequency; i++){
+                    result.push_back(freqElt);
+                }
+            }
+        }while(arr2 != nullptr);
 
+        return result;
     }
-    //Returns the most frequent element that has not been added to the usedElements yet
+    //Returns the most frequent element and its frequency consecutively as an array that has not been added to the usedElements yet
     //Before returning the element adds it to the usedElements vector
     //If multiple elements have the same frequency then the smallest one must be returned
-    //If no element exists return -1
-    int getHighestFreqElt(const unordered_map<int, int>& map, vector<int>& usedElements){
+    //If no element exists return nullptr
+    int* getHighestFreqElt(const unordered_map<int, int>& map, vector<int>& usedElements){
         //Find the biggest frequency in the map by excluding the usedElements
         int max = -1; //max frequency
         for(auto it: map){
@@ -41,20 +53,21 @@ public:
             }
         }
         if(max == -1){
-            return -1; // all elements are used up apparently
+            return nullptr; // all elements are used up apparently
         }
         vector<int> frequentElts;
+        int freqElt;
         for(auto it: map){
             if(it.second == max){
-                //this is a frequent elements we are searching for, push it to the vector
-                frequentElts.push_back(it.first);
+                //this is a frequent elements we are searching for
+                freqElt = it.first;
+                break;
             }
         }
-        sort(frequentElts.begin(), frequentElts.end());
-        //Store the elements that have that frequency and are not in the usedElements in a separate vector
-        int freqElt = frequentElts.at(0);
+
         usedElements.push_back(freqElt);
         //return the biggest one of those elements
-        return(freqElt);
+        int arr[2] = {freqElt, max};
+        return(arr);
     }
 };

@@ -4,6 +4,7 @@
 using namespace std;
 class CountNonRepeatedElts{
 public:
+    public:
     //Complete this function
     //Function to sort the array according to frequency of elements.
     vector<int> sortByFreq(int arr[],int n){
@@ -21,7 +22,7 @@ public:
             }
         }
         vector<int> usedElements;
-        int* arr2 = &arr[0]; // just to save the pointer from having a garbage value
+        vector<int> arr2;
         /*for(int i = 0; i < map.size(); i++){
             int* arr2 = getHighestFreqElt(map, usedElements);
             int freqElt = arr2[0];
@@ -29,45 +30,37 @@ public:
         }*/
         do{
             arr2 = getHighestFreqElt(map, usedElements);
-            if(arr2 != nullptr){
-                int freqElt = arr2[0];
-                int frequency = arr2[1];
+            //if(arr2 != ){
+                int freqElt = arr2.at(0);
+                int frequency = arr2.at(1);
+                //cout << "freqElt: " << freqElt << " frequency: " << frequency << endl;
                 for(int i = 0; i < frequency; i++){
                     result.push_back(freqElt);
                 }
-            }
-        }while(arr2 != nullptr);
+            //}
+        }while(arr2.at(0) != -1);
 
         return result;
     }
     //Returns the most frequent element and its frequency consecutively as an array that has not been added to the usedElements yet
     //Before returning the element adds it to the usedElements vector
     //If multiple elements have the same frequency then the smallest one must be returned
-    //If no element exists return nullptr
-    int* getHighestFreqElt(const unordered_map<int, int>& map, vector<int>& usedElements){
+    //If no element exists return {-1, -1}
+    vector<int> getHighestFreqElt(const unordered_map<int, int>& map, vector<int>& usedElements){
         //Find the biggest frequency in the map by excluding the usedElements
         int max = -1; //max frequency
+        int freqElt = -1;
         for(auto it: map){
             if(it.second > max && count(usedElements.begin(), usedElements.end(), it.first) == 0){
                 max = it.second;
-            }
-        }
-        if(max == -1){
-            return nullptr; // all elements are used up apparently
-        }
-        vector<int> frequentElts;
-        int freqElt;
-        for(auto it: map){
-            if(it.second == max){
-                //this is a frequent elements we are searching for
                 freqElt = it.first;
-                break;
             }
         }
-
+        //vector<int> frequentElts;
         usedElements.push_back(freqElt);
+
         //return the biggest one of those elements
-        int arr[2] = {freqElt, max};
+        vector<int> arr({freqElt, max});
         return(arr);
     }
 };

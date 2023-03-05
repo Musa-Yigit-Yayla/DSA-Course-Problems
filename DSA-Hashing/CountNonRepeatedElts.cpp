@@ -37,9 +37,10 @@ class CountNonRepeatedElts{
     vector<int> printNonRepeated(int arr[], int n){
         //Your code here
         unordered_set<int> set;
-        vector<int> alreadyFound; // keeps track of the already found and checked elements inside the loop
+
         vector<int> result;
         vector<int> originalArr(arr, arr + n);
+        vector<int> eltsToRemove; // elements to not to be printed
 
         //add all the elements into the set, notice multiple elements will only be added once to the set
         for(int i = 0; i < n; i++){
@@ -52,16 +53,17 @@ class CountNonRepeatedElts{
                 //no multiple occurences, add it to the result
                 result.push_back(curr);
             }
+            else{
+                eltsToRemove.push_back(curr);
+            }
         }
 
         //remove the elements which are not occuring in result from the original array
-        for(int i = 0; i < n; i++){
-            int curr = arr[i];
-            if(count(result.begin(), result.end(), curr) == 0){
-                //originalArr.remove(originalArr.begin(), originalArr.end(), curr);
-                originalArr.erase(std::remove(originalArr.begin(), originalArr.end(), curr), originalArr.end());
+        for(int i = 0; i < eltsToRemove.size(); i++){
+            int curr = eltsToRemove[i];
+            //originalArr.remove(originalArr.begin(), originalArr.end(), curr);
+            originalArr.erase(std::remove(originalArr.begin(), originalArr.end(), curr), originalArr.end());
 
-            }
         }
 
         //assign result to originalArr

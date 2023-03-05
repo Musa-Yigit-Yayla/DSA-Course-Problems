@@ -52,6 +52,7 @@ public:
         int counter = 0;
         vector<int> frequentElts; //contains the elements with the highest frequency that hasn't been used yet
         for(auto it: map){
+            max = getGreatestFrequency(map, usedElements);
             if(it.second >= max && count(usedElements.begin(), usedElements.end(), it.first) == 0){
                 max = it.second;
                 frequentElts.push_back(it.first);

@@ -19,10 +19,14 @@ int main()
     cout << hfp.sumExists(arr, 7, 68);
     */
     SortArrayAccordingToOther saato;
-    int arr2[11] = {2, 1, 2, 5, 7, 1, 9, 3, 6, 8, 8};
-    int arr3[4] = {2, 1, 8, 3};
-    vector<int> vec(arr2);
-    vector<int> vec1(arr3);
-    saato.sortA1ByA2(arr2, 11, arr3, 4);
+
+    vector<int> vec({2, 1, 2, 5, 7, 1, 9, 3, 6, 8, 8});
+    vector<int> vec1({2, 1, 8, 3});
+    saato.sortA1ByA2(vec, 11, vec1, 4);
+
+    for(int i: vec){
+        cout << i << " ";
+    }
+    cout << endl;
     return 0;
 }

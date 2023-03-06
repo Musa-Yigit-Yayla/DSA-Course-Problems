@@ -2,11 +2,12 @@
 1677489889 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-hashing\linearprobing.cpp
 	<vector>
 
-1677744571 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-hashing\main.cpp
+1678113710 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-hashing\main.cpp
 	<iostream>
 	<vector>
 	"QuadraticProbing.cpp"
 	"HashingForPair.cpp"
+	"SortArrayAccordingToOther.cpp"
 
 1677593656 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-hashing\quadraticprobing.cpp
 	<cmath>
@@ -29,4 +30,28 @@
 	<algorithm>
 	<unordered_map>
 	<iterator>
+
+1678039574 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-hashing\sortbyfrequency.cpp
+	<unordered_map>
+	<algorithm>
+	<vector>
+
+1678113502 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-hashing\countnonrepeatedelts.cpp
+	<unordered_map>
+	<vector>
+	<algorithm>
+
+1678114688 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-hashing\sortarrayaccordingtoother.cpp
+	<unordered_map>
+	<algorithm>
+	<string>
+	<vector>
+	<sstream>
+
+1678115011 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-hashing\sortarrayaccordingtoother.cpp
+	<unordered_map>
+	<algorithm>
+	<string>
+	<vector>
+	<sstream>
 

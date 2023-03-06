@@ -3,7 +3,7 @@
 #include <string>
 
 class SortArrayAccordingToOther{
-    public:
+public:
     // A1[] : the input array-1
     // N : size of the array A1[]
     // A2[] : the input array-2
@@ -24,14 +24,17 @@ class SortArrayAccordingToOther{
             int indexOf = getIndexOf(curr, A2); //indexOf curr in the A2 will be used as the key in map
 
             remove(curr, initialA1);
-            string s = "" + curr + "," + occurenceCount;
-            myMap.insert({indexOf, s});
+
+            stringstream ss;
+            ss << "" << indexOf << "," << occurenceCount;
+            string s = ss.str();
+            myMap.insert({curr, s});
 
         }
 
         int insertionIndex = 0;
         //Traverse the map
-        for(auto it: map){
+        /*for(auto it: map){
             int indexOf = it.first;
             int* arr = getValueAndCount(it.second);
             int value = *(arr);
@@ -42,7 +45,24 @@ class SortArrayAccordingToOther{
 
                 insertionIndex++;
             }
+        }*/
+        for(int i = 0; i < A2.size(); i++){
+            int curr = A2.at(i);
+            unordered_map<int, string>::iterator it = myMap.find(curr);
+            int* arr = getIndexOfAndCount(it->second);
+            int indexOf = *(arr);
+            int occurenceCount = *(arr++);
+
+            for(int i = 0; i < occurenceCount; i++){
+
+                //swap the element at the insertionIndex with the indexOf element
+                //remove the element at insertionIndex and insert the indexOf element's value to that index
+                insertionIndex++;
+                A1.erase(A1.begin() + insertionIndex);
+                A1.insert(A1.begin() + insertionIndex, curr);
+            }
         }
+        return A1;
     }
     //Returns the first occurence of the element
     int getIndexOf(int elt, const vector<int>& a){
@@ -54,8 +74,8 @@ class SortArrayAccordingToOther{
         }
         return index;
     }
-    //returns the value and the occurence count of an element in the a1 which is also included in a2
-    int* getValueAndCount(string s){
+    //returns the indexOf and the occurence count of an element in the a1 which is also included in a2
+    int* getIndexOfAndCount(string s){
         //might be problematic !!
         int commaIndex = s.find(",", 0);
         string s1 = s.substr(0, commaIndex);

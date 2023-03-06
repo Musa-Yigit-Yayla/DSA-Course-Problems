@@ -37,6 +37,7 @@
 		<Unit filename="HashingForPair.cpp" />
 		<Unit filename="LinearProbing.cpp" />
 		<Unit filename="QuadraticProbing.cpp" />
+		<Unit filename="SortArrayAccordingToOther.cpp" />
 		<Unit filename="SortByFrequency.cpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>

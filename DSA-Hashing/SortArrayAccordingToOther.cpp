@@ -65,6 +65,15 @@ public:
                 insertionIndex++;
             }
         }
+
+        //Erase the elements after insertionIndex in A1
+        A1.erase(A1.begin() + insertionIndex, A1.end());
+        //Append the unused elements in initialA1 in sorted order to A1
+        sort(initialA1.begin(), initialA1.end());
+        for(int i = 0; i < initialA1.size(); i++){
+            A1.push_back(initialA1.at(i));
+        }
+
         return A1;
     }
     //Returns the first occurence of the element

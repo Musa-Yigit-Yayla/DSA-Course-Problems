@@ -3,6 +3,7 @@
 #include "QuadraticProbing.cpp"
 #include "HashingForPair.cpp"
 #include "SortArrayAccordingToOther.cpp"
+#include "FirstRepeatingElement.cpp"
 
 using namespace std;
 
@@ -22,6 +23,7 @@ int main()
 
     vector<int> vec({2, 1, 2, 5, 7, 1, 9, 3, 6, 8, 8});
     vector<int> vec1({2, 1, 8, 3});
+    vector<int> vec2({1, 2, 3, 4, 5});
     saato.sortA1ByA2(vec, 11, vec1, 4);
 
     for(int i: vec){

@@ -11,16 +11,19 @@ class Solution {
         for(int i = 0; i < n; i++){
             myMap[arr[i]]++;
         }
-        for(auto it: myMap){
-            if(it.second == 1){
-                myMap.erase(it);
+        for(int i = 0; i < n; i++){
+            int curr = arr[i];
+            if((myMap.at(curr) == 1)){
+
+                myMap.erase((curr));
             }
         }
         int minIndex = INT_MAX;
         for(auto it: myMap){
-            int index = find(arr, arr + n, it.first);
-            if(index != n && index < minIndex ){
-                minIndex = index;
+            int* iterator = find(arr, arr + n, it.first);
+            //int index = abs(distance(iterator, myMap.begin()));
+            if(*iterator != n && *iterator < minIndex ){
+                minIndex = *iterator;
             }
         }
         if(minIndex == INT_MAX){

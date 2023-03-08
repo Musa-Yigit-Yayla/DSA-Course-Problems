@@ -34,6 +34,7 @@
 		</Compiler>
 		<Unit filename="CheckArrayEquality.cpp" />
 		<Unit filename="CountNonRepeatedElts.cpp" />
+		<Unit filename="FirstRepeatingElement.cpp" />
 		<Unit filename="HashingForPair.cpp" />
 		<Unit filename="LinearProbing.cpp" />
 		<Unit filename="QuadraticProbing.cpp" />

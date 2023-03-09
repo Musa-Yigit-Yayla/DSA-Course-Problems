@@ -2,12 +2,14 @@
 1677489889 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-hashing\linearprobing.cpp
 	<vector>
 
-1678113710 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-hashing\main.cpp
+1678372496 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-hashing\main.cpp
 	<iostream>
 	<vector>
 	"QuadraticProbing.cpp"
 	"HashingForPair.cpp"
 	"SortArrayAccordingToOther.cpp"
+	"FirstRepeatingElement.cpp"
+	"SubarrayWith0Sum.cpp"
 
 1677593656 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-hashing\quadraticprobing.cpp
 	<cmath>
@@ -63,6 +65,14 @@
 	<unordered_set>
 
 1678372344 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-hashing\subarraywith0sum.cpp
+	<unordered_set>
+	<vector>
+
+1678202210 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-hashing\firstrepeatingelement.cpp
+	<unordered_map>
+	<algorithm>
+
+1678374013 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-hashing\subarraywith0sum.cpp
 	<unordered_set>
 	<vector>
 

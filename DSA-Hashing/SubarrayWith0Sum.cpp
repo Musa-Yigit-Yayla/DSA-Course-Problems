@@ -24,4 +24,26 @@ class SubarrayWith0Sum{
         }
         return false;
     }
+    //Function to count subarrays with sum equal to 0.
+    long long int findSubarray(vector<long long int>& arr, int n ) {
+        //code here
+        long long int sum = 0;
+
+        unordered_set<int> set;
+
+        long long int subArraySum = 0;
+        for(int i = 0; i < n; i++){
+            subArraySum += arr[i];
+
+            if(set.find(subArraySum) != set.end()){
+                //we have encountered this sum before, so there has to be a subarray with 0 sum
+                sum++;
+            }
+            if(subArraySum == 0){
+                sum++;
+            }
+            set.insert(subArraySum);
+        }
+        return sum;
+    }
 };

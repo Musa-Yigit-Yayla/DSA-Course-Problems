@@ -41,6 +41,7 @@
 		<Unit filename="QuadraticProbing.cpp" />
 		<Unit filename="SortArrayAccordingToOther.cpp" />
 		<Unit filename="SortByFrequency.cpp" />
+		<Unit filename="SubarrayWith0Sum.cpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

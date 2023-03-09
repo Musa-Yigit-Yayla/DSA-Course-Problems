@@ -1,4 +1,5 @@
 #include <unordered_set>
+#include <vector>
 
 using namespace std;
 class SubarrayWith0Sum{
@@ -39,7 +40,7 @@ class SubarrayWith0Sum{
                 //we have encountered this sum before, so there has to be a subarray with 0 sum
                 sum++;
             }
-            if(subArraySum == 0){
+            if(subArraySum == 0 || arr[i] == 0){
                 sum++;
             }
             set.insert(subArraySum);

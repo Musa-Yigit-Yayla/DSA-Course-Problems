@@ -1,6 +1,7 @@
 
 #include <unordered_set>
 
+using namespace std;
 class IntersectionUnionOfArrays{
   public:
     // Function to return the count of the number of elements in

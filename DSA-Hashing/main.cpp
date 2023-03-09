@@ -4,6 +4,7 @@
 #include "HashingForPair.cpp"
 #include "SortArrayAccordingToOther.cpp"
 #include "FirstRepeatingElement.cpp"
+#include "SubarrayWith0Sum.cpp"
 
 using namespace std;
 
@@ -30,5 +31,10 @@ int main()
         cout << i << " ";
     }
     cout << endl;
+
+    vector<long long int> vec3({0, 0, 5, 5, 0, 0});
+    SubarrayWith0Sum* sw0s = new SubarrayWith0Sum();
+    cout << sw0s->findSubarray(vec3, vec3.size()) << endl;
+    delete sw0s;
     return 0;
 }

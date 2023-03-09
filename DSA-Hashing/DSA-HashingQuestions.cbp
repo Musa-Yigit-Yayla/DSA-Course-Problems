@@ -36,6 +36,7 @@
 		<Unit filename="CountNonRepeatedElts.cpp" />
 		<Unit filename="FirstRepeatingElement.cpp" />
 		<Unit filename="HashingForPair.cpp" />
+		<Unit filename="IntersectionUnionOfArrays.cpp" />
 		<Unit filename="LinearProbing.cpp" />
 		<Unit filename="QuadraticProbing.cpp" />
 		<Unit filename="SortArrayAccordingToOther.cpp" />

@@ -47,4 +47,34 @@ class SubarrayWith0Sum{
         }
         return sum;
     }
+    //Function to count the number of subarrays which adds to the given sum.
+    int subArraySum(int arr[], int n, int sum){
+        //Your code here
+        //sum the whole array
+        int totalSum = 0;
+        for(int i = 0; i < n; i++){
+            totalSum += arr[i];
+        }
+        unordered_map<int, int> map;
+        int currSum = 0;
+        int result = 0;
+        int l = 0;
+        for(int i = 0; i < n; i++){
+            currSum += arr[i];
+            if(currSum == sum){
+                result++;
+            }
+            if(map.find(currSum - sum) != map.end()){
+                result += map[currSum - sum];
+                map[currSum - sum]++;
+            }
+            if(map.find(currSum) == map.end()){
+                map.insert({currSum, 1});
+            }
+            else{
+                map[currSum]++;
+            }
+        }
+        return result;
+    }
 };

@@ -1,5 +1,6 @@
 #include <vector>
 #include <string>
+#include "SubarrayWith0Sum.cpp"
 
 using namespace std;
 class LongestSubarrayWithEqual01{
@@ -48,6 +49,18 @@ public:
         }
         return noOf1s == noOf0s;
     }
-
+    //Function to count subarrays with 1s and 0s.
+    //Takes a binary array as argument
+    long long int countSubarrWithEqualZeroAndOne(int arr[], int n){
+        //Your code here
+        //Replace 0s with -1s
+        for(int i = 0; i < n; i++){
+            if(arr[i] == 0){
+                arr[i] = -1;
+            }
+        }
+        SubarrayWith0Sum sw0s;
+        return sw0s.subArraySum(arr, n, 0);
+    }
 
 };

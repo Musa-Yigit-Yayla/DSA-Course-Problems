@@ -5,6 +5,8 @@
 #include "SortArrayAccordingToOther.cpp"
 #include "FirstRepeatingElement.cpp"
 #include "SubarrayWith0Sum.cpp"
+#include "LongestConsequtiveSubsequence.cpp"
+
 
 using namespace std;
 
@@ -36,5 +38,10 @@ int main()
     SubarrayWith0Sum* sw0s = new SubarrayWith0Sum();
     cout << sw0s->findSubarray(vec3, vec3.size()) << endl;
     delete sw0s;
+
+    LongestConsequtiveSubsequence lcs;
+    int arr[7] = {1, 3, 9, 2, 8, 2};
+    cout << lcs.longestSubsequence(arr, 7);
+
     return 0;
 }

@@ -2,7 +2,7 @@
 1677489889 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-hashing\linearprobing.cpp
 	<vector>
 
-1678372496 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-hashing\main.cpp
+1678477778 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-hashing\main.cpp
 	<iostream>
 	<vector>
 	"QuadraticProbing.cpp"
@@ -10,6 +10,7 @@
 	"SortArrayAccordingToOther.cpp"
 	"FirstRepeatingElement.cpp"
 	"SubarrayWith0Sum.cpp"
+	"LongestConsequtiveSubsequence.cpp"
 
 1677593656 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-hashing\quadraticprobing.cpp
 	<cmath>
@@ -83,6 +84,9 @@
 	<string>
 	"SubarrayWith0Sum.cpp"
 
-1678477719 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-hashing\longestconsequtivesubsequence.cpp
+1678478174 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-hashing\longestconsequtivesubsequence.cpp
+	<unordered_set>
+
+1678478174 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-hashing\longestconsequtivesubsequence.cpp
 	<unordered_set>
 

@@ -31,6 +31,15 @@ public:
                 searchingUpwards = true;
             }
             else{
+                if(set.find(*(it) -1) != set.end()){
+                   it = set.find(*(it) - 1);
+                }
+                else if(set.find(*(it) + 1) != set.end()){
+                    it = set.find(*(it) + 1);
+                }
+                else{
+                    it = set.end();
+                }
                 searchingUpwards = false;
                 currResult = 1;
             }

@@ -15,17 +15,17 @@ public:
 
         unordered_set<int>::iterator it = set.begin();
         bool searchingUpwards = false;
-        int subsequenceBegin = 0;
+        //int subsequenceBegin = 0;
         int result = 1;
         int currResult = 1;
         while(it != set.end()){
 
-            if(set.find(*(it - 1)) != set.end() && !searchingUpwards){
-                it = set.find(*(it - 1));
-                subsequenceBegin = it - set.begin();
+            if(set.find(*(it) - 1) != set.end() && !searchingUpwards){
+                it = set.find(*(it) - 1);
+                //subsequenceBegin = it - set.begin();
             }
-            else if(set.find(*next(it, 1) != set.end()){
-                it = set.find(*(it + 1));
+            else if(set.find(*(it) + 1) != set.end()){
+                it = set.find(*(it) + 1);
                 currResult++;
                 result = max(result, currResult);
                 searchingUpwards = true;

@@ -2,14 +2,19 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="LongestSubarrayWithEqual01.cpp" open="1" top="1" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="CountNonRepeatedElts.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="283" topLine="0" />
+			<Cursor1 position="67" topLine="60" />
 		</Cursor>
 	</File>
 	<File name="main.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="955" topLine="13" />
+			<Cursor1 position="1173" topLine="19" />
+		</Cursor>
+	</File>
+	<File name="LongestConsequtiveSubsequence.cpp" open="1" top="1" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="678" topLine="14" />
 		</Cursor>
 	</File>
 	<File name="SortByFrequency.cpp" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -17,24 +22,14 @@
 			<Cursor1 position="1391" topLine="0" />
 		</Cursor>
 	</File>
+	<File name="CheckArrayEquality.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="101" topLine="0" />
+		</Cursor>
+	</File>
 	<File name="QuadraticProbing.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="907" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="HashingForPair.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1231" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="SortArrayAccordingToOther.cpp" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2956" topLine="77" />
-		</Cursor>
-	</File>
-	<File name="CountNonRepeatedElts.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="67" topLine="60" />
 		</Cursor>
 	</File>
 	<File name="LinearProbing.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -42,9 +37,24 @@
 			<Cursor1 position="959" topLine="8" />
 		</Cursor>
 	</File>
+	<File name="FirstRepeatingElement.cpp" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="370" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="LongestSubarrayWithEqual01.cpp" open="1" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2040" topLine="39" />
+		</Cursor>
+	</File>
 	<File name="SubarrayWith0Sum.cpp" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1110" topLine="20" />
+			<Cursor1 position="24" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="SortArrayAccordingToOther.cpp" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2956" topLine="77" />
 		</Cursor>
 	</File>
 	<File name="IntersectionUnionOfArrays.cpp" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -52,14 +62,9 @@
 			<Cursor1 position="904" topLine="6" />
 		</Cursor>
 	</File>
-	<File name="FirstRepeatingElement.cpp" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="HashingForPair.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="370" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="CheckArrayEquality.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="101" topLine="0" />
+			<Cursor1 position="1231" topLine="0" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

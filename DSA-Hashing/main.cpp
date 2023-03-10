@@ -22,7 +22,7 @@ int main()
     HashingForPair hfp;
     cout << hfp.sumExists(arr, 7, 68);
     */
-    SortArrayAccordingToOther saato;
+    /*SortArrayAccordingToOther saato;
 
     vector<int> vec({2, 1, 2, 5, 7, 1, 9, 3, 6, 8, 8});
     vector<int> vec1({2, 1, 8, 3});
@@ -38,7 +38,7 @@ int main()
     SubarrayWith0Sum* sw0s = new SubarrayWith0Sum();
     cout << sw0s->findSubarray(vec3, vec3.size()) << endl;
     delete sw0s;
-
+    */
     LongestConsequtiveSubsequence lcs;
     int arr[7] = {1, 3, 9, 2, 8, 2};
     cout << lcs.longestSubsequence(arr, 7);

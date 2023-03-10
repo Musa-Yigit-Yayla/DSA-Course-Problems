@@ -38,6 +38,7 @@
 		<Unit filename="HashingForPair.cpp" />
 		<Unit filename="IntersectionUnionOfArrays.cpp" />
 		<Unit filename="LinearProbing.cpp" />
+		<Unit filename="LongestConsequtiveSubsequence.cpp" />
 		<Unit filename="LongestSubarrayWithEqual01.cpp" />
 		<Unit filename="QuadraticProbing.cpp" />
 		<Unit filename="SortArrayAccordingToOther.cpp" />

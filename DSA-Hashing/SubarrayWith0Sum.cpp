@@ -66,14 +66,12 @@ class SubarrayWith0Sum{
             }
             if(map.find(currSum - sum) != map.end()){
                 result += map[currSum - sum];
-                map[currSum - sum]++;
+                //map[currSum - sum]++;
             }
-            if(map.find(currSum) == map.end()){
+            /*if(map.find(currSum) == map.end()){
                 map.insert({currSum, 1});
-            }
-            else{
-                map[currSum]++;
-            }
+            }*/
+            map[currSum]++;
         }
         return result;
     }

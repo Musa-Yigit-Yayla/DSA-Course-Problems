@@ -42,8 +42,12 @@ int main()
     LongestConsequtiveSubsequence lcs;
     int arr[7] = {1, 3, 9, 2, 8, 2};
     int arr2[7] = {2, 6, 1, 9, 4, 5, 3};
+    int arr3[5] = {1, 2, 3, 4, 5};
+    int arr4[20] =  {6, 6, 2, 3, 1, 4, 1, 5, 6, 2, 8, 7, 4, 2, 1, 3, 4, 5, 9, 6};
     //cout << lcs.longestSubsequence(arr, 7);
-    cout << lcs.findLongestConseqSubseq(arr2, 7);
+    //cout << lcs.findLongestConseqSubseq(arr3, 5) << endl;
+    //cout << lcs.findLongestConseqSubseq(arr2, 7) << endl;
+    cout << lcs.findLongestConseqSubseq(arr4, 20) << endl;
 
     return 0;
 }

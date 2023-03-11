@@ -19,7 +19,6 @@ public:
         int result = 1;
         int currResult = 1;
         while(it != set.end()){
-
             if(set.find(*(it) - 1) != set.end() && !searchingUpwards){
                 it = set.find(*(it) - 1);
                 //subsequenceBegin = it - set.begin();
@@ -31,6 +30,7 @@ public:
                 searchingUpwards = true;
             }
             else{
+
                 if(set.find(*(it) -1) != set.end()){
                    it = set.find(*(it) - 1);
                 }
@@ -45,6 +45,35 @@ public:
             }
         }
         return result;
+    }
+    //Function to return length of longest subsequence of consecutive integers.
+    //Efficient approach
+    int findLongestConseqSubseq(int arr[], int n){
+      //Your code here
+      unordered_set<int> set;
+      for(int i = 0; i < n; i++){
+          set.insert(arr[i]);
+      }
+      int result = 1;
+      int maxResult = 1;
+      int curr = arr[0];
+      for(int i = 0; i < n; i++){
+          //int curr = arr[i];
+          if(set.find(curr - 1) == set.end()){
+              //i = set.find(curr - 1) - set.begin();
+              result = 1;
+          }
+          /*else{
+              //beginning of a new subsequence
+              result = 1;
+          }*/
+          else if(set.find(curr + 1) != set.end()){
+              //i = set.find(curr + 1) - set.begin();
+              result++;
+              maxResult = max(result, maxResult);
+          }
+      }
+      return maxResult;;
     }
 
 };

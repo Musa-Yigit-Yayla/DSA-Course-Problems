@@ -62,6 +62,7 @@ public:
           if(set.find(curr - 1) == set.end()){
               //i = set.find(curr - 1) - set.begin();
               result = 1;
+              curr = curr - 1;
           }
           /*else{
               //beginning of a new subsequence
@@ -71,9 +72,10 @@ public:
               //i = set.find(curr + 1) - set.begin();
               result++;
               maxResult = max(result, maxResult);
+              curr = curr + 1;
           }
       }
-      return maxResult;;
+      return maxResult + 1;
     }
 
 };

@@ -41,7 +41,9 @@ int main()
     */
     LongestConsequtiveSubsequence lcs;
     int arr[7] = {1, 3, 9, 2, 8, 2};
-    cout << lcs.longestSubsequence(arr, 7);
+    int arr2[7] = {2, 6, 1, 9, 4, 5, 3};
+    //cout << lcs.longestSubsequence(arr, 7);
+    cout << lcs.findLongestConseqSubseq(arr2, 7);
 
     return 0;
 }

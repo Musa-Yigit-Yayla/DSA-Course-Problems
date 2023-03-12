@@ -1,12 +1,13 @@
 #include <iostream>
 #include <vector>
+#include <unordered_map>
 #include "QuadraticProbing.cpp"
 #include "HashingForPair.cpp"
 #include "SortArrayAccordingToOther.cpp"
 #include "FirstRepeatingElement.cpp"
 #include "SubarrayWith0Sum.cpp"
 #include "LongestConsequtiveSubsequence.cpp"
-
+#include "NumbersContainingSet.cpp"
 
 using namespace std;
 
@@ -49,5 +50,7 @@ int main()
     //cout << lcs.findLongestConseqSubseq(arr2, 7) << endl;
     cout << lcs.findLongestConseqSubseq(arr4, 20) << endl;
 
+    NumbersContainingSet ncs;
+    ncs.findAll();
     return 0;
 }

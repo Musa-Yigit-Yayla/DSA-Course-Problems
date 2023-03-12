@@ -56,34 +56,16 @@ public:
       }
       int result = 1;
       int maxResult = 1;
-      int curr = arr[0];
-      int k = 1;
-      bool searchingUp = false;
-      for(int i = 0; i < n && k < n; i++){
-          //int curr = arr[i];
-          if(set.find(curr - 1) == set.end()){
-              //i = set.find(curr - 1) - set.begin();
-              result = 1;
-              //curr = arr[k++];
-              searchingUp = true;
-          }
-          /*else{
-              //beginning of a new subsequence
-              result = 1;
-          }*/
-          /*else if(set.find(curr - 1) != set.end() && !searchingUp){
-            curr -= 1;
-            result = 1;
-          }*/
-          else if(set.find(curr + 1) != set.end()){
-              //i = set.find(curr + 1) - set.begin();
-              result++;
-              maxResult = max(result, maxResult);
-              curr = curr + 1;
-          }
 
+      for(auto it: set){
+        if(set.find(it - 1) == set.end()){
+            int curr = 1;
+            while(set.find(it + curr) != set.end()){
+                curr++;
+            }
+            result = max(result, curr);
+        }
       }
-      return maxResult + 1;
+      return result;
     }
-
 };

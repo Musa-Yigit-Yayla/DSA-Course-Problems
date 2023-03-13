@@ -40,6 +40,7 @@
 		<Unit filename="LinearProbing.cpp" />
 		<Unit filename="LongestConsequtiveSubsequence.cpp" />
 		<Unit filename="LongestSubarrayWithEqual01.cpp" />
+		<Unit filename="NumbersContainingSet.cpp" />
 		<Unit filename="QuadraticProbing.cpp" />
 		<Unit filename="SortArrayAccordingToOther.cpp" />
 		<Unit filename="SortByFrequency.cpp" />

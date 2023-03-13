@@ -9,11 +9,20 @@
 using namespace std;
 
 class NumbersContainingSet{
-    const int n = 3;
+private:
+    int n;
     int* arr;
-    unordered_set<int> numberSet(arr, arr + n);
+    unordered_set<int> numberSet;
     unordered_map<int, int> numberMap;
 
+public:
+
+    NumbersContainingSet(int* arr, int n){
+        this->arr = arr;
+        this->n = n;
+        unordered_set<int> numberSet(arr, arr + n);
+        this->numberSet = numberSet;
+    }
     //Function to find all the numbers with only 1,2 and 3 in their digits.
     void findAll(){
         //code here

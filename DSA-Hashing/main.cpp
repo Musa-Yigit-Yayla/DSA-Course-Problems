@@ -50,7 +50,11 @@ int main()
     //cout << lcs.findLongestConseqSubseq(arr2, 7) << endl;
     cout << lcs.findLongestConseqSubseq(arr4, 20) << endl;
 
-    NumbersContainingSet ncs;
+    NumbersContainingSet ncs(arr, 7);
     ncs.findAll();
+
+    int data = 3;
+    const int* ptr = &data;
+    const int* const ptr2 = &data;
     return 0;
 }

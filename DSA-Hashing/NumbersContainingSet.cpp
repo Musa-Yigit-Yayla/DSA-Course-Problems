@@ -33,6 +33,9 @@ public:
         for(int i = 0; i < n; i++){
             this->helper(arr[i]);
         }
+        for(int i = 1; i <= pow(10, 6); i++){
+            numberMap.insert({i, 0});
+        }
         for(auto it: numberSet){
             this->numberMap.at(it) = 1;
         }

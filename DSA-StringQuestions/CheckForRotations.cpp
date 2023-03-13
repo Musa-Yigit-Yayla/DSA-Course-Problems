@@ -22,7 +22,15 @@ int strstr(string s, string x){
              if(curr == x.at(0)){
                 result = i; //assuming this is the beginning of our subsequence
              }
-             ch = x.at(++currCharIndex);
+             if(currCharIndex != x.size() - 1){
+                ch = x.at(++currCharIndex);
+             }
+             else{
+                 //reset the currCharIndex
+                 currCharIndex = 0;
+                 ch = x.at(currCharIndex);
+                 result = prevResult;
+             }
          }
          else{
              //no such subsequence reset the properties

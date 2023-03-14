@@ -2,10 +2,21 @@
 1678791879 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\checkforrotations.cpp
 	<string>
 
-1678791074 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\main.cpp
+1678826229 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\main.cpp
 	<iostream>
 	"CheckForRotations.cpp"
+	"IsomorphicString.cpp"
 
 1678791879 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\checkforrotations.cpp
 	<string>
+
+1678826128 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\isomorphicstring.cpp
+	<string>
+	<unordered_map>
+	<vector>
+
+1678826671 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\isomorphicstring.cpp
+	<string>
+	<unordered_map>
+	<vector>
 

@@ -3,7 +3,7 @@
 #include <vector>
 
 using namespace std;
-class Solution{
+class IsomorphicString{
 public:
     //Function to check if two strings are isomorphic.
     bool areIsomorphic(string str1, string str2){
@@ -21,7 +21,12 @@ public:
             for(int i = 0; i < str1.size(); i++){
                 char ch1 = str1.at(i);
                 char ch2 = str2.at(i);
-                if(map3.at(ch1) != ch2){
+                try{
+                    if(map3.at(ch1) != ch2){
+                        return false;
+                    }
+                }
+                catch(out_of_range){
                     return false;
                 }
             }
@@ -92,10 +97,36 @@ public:
             for(int i = 0; i < s.size(); i++){
                 char ch1 = s.at(i);
                 char ch2 = x.at(i);
-                if(map.find(ch1) == map.end() && map.find(ch2) == map.end()){
+                if(map.find(ch1) == map.end() && map.find(ch2) == map.end() && !valueExistsInMap(map, ch1) && !valueExistsInMap(map, ch2)){
                     map.insert({ch1, ch2});
                 }
             }
         }
+    }
+    //Returns true if the given char exists as a value in our map
+    bool valueExistsInMap(const unordered_map<char, char>& map, char ch){
+        for(auto it: map){
+            if(it.second == ch){
+                return true;
+            }
+        }
+        return false;
+    }
+    //Function to check if a string is subsequence of other string.
+    bool isSubSequence(string A, string B){
+        //code here
+        int i = 0;
+        int j = 0;
+
+        while(i < A.size() && j < B.size()){
+            char ch1 = A.at(i);
+            char ch2 = B.at(j);
+            if(ch1 == ch2){
+                i++;
+            }
+            j++;
+        }
+        return i == A.size(); // check whether we reached the end of string B which implies completion
+        //of checking for the substring
     }
 };

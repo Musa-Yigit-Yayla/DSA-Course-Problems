@@ -11,10 +11,22 @@ public:
         // Your code here
         unordered_map<char, int> map1;
         unordered_map<char, int> map2;
+        unordered_map<char, char> map3;
 
         this->mapValues(map1, str1);
         this->mapValues(map2, str2);
+        this->setCharMap(map3, str1, str2);
 
+        if(str1.size() == str2.size()){
+            for(int i = 0; i < str1.size(); i++){
+                char ch1 = str1.at(i);
+                char ch2 = str2.at(i);
+                if(map3.at(ch1) != ch2){
+                    return false;
+                }
+            }
+        }
+        return true;
         /*vector<int> vec1;
         vector<int> vec2;
 
@@ -24,7 +36,7 @@ public:
         for(auto it: map2){
             vec2.push_back(it.second);
         }*/
-
+        /*
         vector<int> vec3;
         vector<int> vec4;
 
@@ -70,6 +82,19 @@ public:
             }
             else{
                 map1.at(ch)++;
+            }
+        }
+    }
+    //Maps the characters of each string to each other sequentially with respect to their order
+    //If the lengths are different does not operate
+    void setCharMap(unordered_map<char, char>& map, string& s, string& x){
+        if(s.size() == x.size()){
+            for(int i = 0; i < s.size(); i++){
+                char ch1 = s.at(i);
+                char ch2 = x.at(i);
+                if(map.find(ch1) == map.end() && map.find(ch2) == map.end()){
+                    map.insert({ch1, ch2});
+                }
             }
         }
     }

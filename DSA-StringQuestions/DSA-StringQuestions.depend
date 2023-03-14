@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1678790889 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\checkforrotations.cpp
+	<string>
+
+1678791074 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\main.cpp
+	<iostream>
+	"CheckForRotations.cpp"
+
+1678791576 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\checkforrotations.cpp
+	<string>
+

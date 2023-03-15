@@ -8,7 +8,7 @@ using namespace std;
 class caseSpecificStringSort{
 public:
     //Function to perform case-specific sorting of strings.
-    string caseSort(string str, int n){
+    string caseSort(string str){
         // your code here
         //Retrieve two strings one containing lowercase chars the other uppercase ones.
         //Subsequently merge the uppercase one to the lowercase one strings

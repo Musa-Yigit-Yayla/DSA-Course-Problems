@@ -2,6 +2,7 @@
 #include "CheckForRotations.cpp"
 #include "IsomorphicString.cpp"
 #include "CaseSpecificStringSort.cpp"
+#include "AnagramStrings.cpp"
 
 using namespace std;
 
@@ -21,6 +22,11 @@ int main(){
     caseSpecificStringSort csss;
     string s5 = "defRTSersUXI";
     cout << csss.caseSort(s5) << endl;
+
+    AnagramStrings as;
+    string s6 = "geeksforgeeks";
+    string s7 = "forgeeksgeeks";
+    cout << as.isAnagram(s6, s7) << endl;
 
     return 0;
 }

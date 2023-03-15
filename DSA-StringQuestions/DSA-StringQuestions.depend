@@ -2,11 +2,12 @@
 1678791879 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\checkforrotations.cpp
 	<string>
 
-1678886419 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\main.cpp
+1678894200 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\main.cpp
 	<iostream>
 	"CheckForRotations.cpp"
 	"IsomorphicString.cpp"
 	"CaseSpecificStringSort.cpp"
+	"AnagramStrings.cpp"
 
 1678791879 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\checkforrotations.cpp
 	<string>
@@ -21,17 +22,25 @@
 	<unordered_map>
 	<vector>
 
-1678886379 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\casespecificstringsort.cpp
+1678894135 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\casespecificstringsort.cpp
 	<string>
 	<vector>
 	<cctype>
 	<unordered_map>
 	<algorithm>
 
-1678886379 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\casespecificstringsort.cpp
+1678894135 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\casespecificstringsort.cpp
 	<string>
 	<vector>
 	<cctype>
 	<unordered_map>
 	<algorithm>
+
+1678894164 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\anagramstrings.cpp
+	<unordered_map>
+	<string>
+
+1678894256 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\anagramstrings.cpp
+	<unordered_map>
+	<string>
 

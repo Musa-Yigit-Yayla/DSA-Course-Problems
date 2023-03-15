@@ -2,6 +2,7 @@
 #include <vector>
 #include <cctype>
 #include <unordered_map>
+#include <algorithm>
 
 using namespace std;
 class caseSpecificStringSort{
@@ -14,32 +15,35 @@ public:
 
         string uppercaseLetters = "";
         string lowercaseLetters = "";
+        vector<int> uppercaseIndexes;
 
         for(int i = 0; i < str.size(); i++){
             char ch = str.at(i);
             if(isupper(ch)){
-                uppercaseLetters.push_back(ch);
+                uppercaseLetters += ch;
+                uppercaseIndexes.push_back(i);
             }
             else{
-                lowercaseLetters.push_back(ch);
+                lowercaseLetters += ch;
             }
         }
+        uppercaseIndexes.shrink_to_fit();
 
-        vector<int> uppercaseIndexes(uppercaseLetters.size());
-        for(int i = 0; i < str.size(); i++){
+        /*for(int i = 0; i < str.size(); i++){
             char ch = str.at(i);
             if(isupper(ch)){
                 uppercaseIndexes.push_back(i);
             }
-        }
+        }*/
         sort(uppercaseLetters.begin(), uppercaseLetters.end());
         sort(lowercaseLetters.begin(), lowercaseLetters.end());
 
         //After having sorted the individual strings, merge them into one.
 
         string result = "";
+        bool isUppercaseExhausted = false;
         int i = 0, j = 0, k = 0;
-        while(i < str.size()){
+        while(i < str.size() && j < uppercaseLetters.size() && k < lowercaseLetters.size()){
             if(count(uppercaseIndexes.begin(), uppercaseIndexes.end(), i) != 0){
                 //our uppercaseIndexes contains this index
                 result += uppercaseLetters.at(j++);
@@ -47,7 +51,20 @@ public:
             else{
                 result += lowercaseLetters.at(k++);
             }
+            if(j == uppercaseLetters.size()){
+                isUppercaseExhausted = true;
+            }
             i++;
+        }
+        if(isUppercaseExhausted){
+            while(k < lowercaseLetters.size()){
+                result += lowercaseLetters.at(k++);
+            }
+        }
+        else{
+            while(j < uppercaseLetters.size()){
+                result += uppercaseLetters.at(j++);
+            }
         }
         return result;
     }

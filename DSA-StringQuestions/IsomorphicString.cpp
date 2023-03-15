@@ -113,7 +113,7 @@ public:
         return false;
     }
     //Function to check if a string is subsequence of other string.
-    bool isSubSequence(string A, string B){
+    bool isSubsequence(string A, string B){
         //code here
         int i = 0;
         int j = 0;

@@ -38,4 +38,18 @@ public:
             }
         }
     }
+    //Function to check if a string is Isogram or not.
+    bool isIsogram(string s){
+        //Your code here
+        unordered_map<char, int> map;
+
+        for(int i = 0; i < s.size(); i++){
+            char ch = s.at(i);
+            if(map.find(ch) != map.end()){
+                return false;
+            }
+            map.insert({ch, 1});
+        }
+        return true;
+    }
 };

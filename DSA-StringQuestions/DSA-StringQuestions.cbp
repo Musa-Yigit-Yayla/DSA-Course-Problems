@@ -32,8 +32,11 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="AnagramStrings.cpp" />
+		<Unit filename="CaseSpecificStringSort.cpp" />
 		<Unit filename="CheckForRotations.cpp" />
 		<Unit filename="IsomorphicString.cpp" />
+		<Unit filename="RepeatingCharacter.cpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

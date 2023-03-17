@@ -1,5 +1,6 @@
 #include <unordered_map>
 #include <string>
+#include <vector>
 
 using namespace std;
 class MinIndexChar{
@@ -48,31 +49,32 @@ class MinIndexChar{
         bool consecCharFound = false;
         for(int i = 1; i < s.size(); i++){
             char ch = s.at(i);
-            if(!consecCharFound){
-                if(prevChar == ch){
-                    consecCount++;
+            if(prevChar == ch){
+                consecCount++;
 
-                }
-                else{
-                    if(consecCount >= 3){
-                        maxConsecCounts.push_back(consecCount);
-                    }
-                    consecCount = 1;
-                    prevChar = ch;
-                }
-                if(consecCount > maxConsecCount){
-                    maxConsecCount = consecCount;
-                }
             }
+            else{
+                if(consecCount >= 3){
+                    maxConsecCounts.push_back(consecCount);
+                }
+                consecCount = 1;
+                prevChar = ch;
+            }
+            if(consecCount > maxConsecCount){
+                maxConsecCount = consecCount;
+            }
+
             if(ch > maxChar){
                 maxChar = ch;
             }
 
         }
+        if(consecCount >= 3){
+            maxConsecCounts.push_back(consecCount);
+        }
         int sum = 0;
         for(int i = 0; i < maxConsecCounts.size(); i++){
             int curr = maxConsecCounts.at(i);
-            cout << curr;
             sum += ceil(curr / 2.0) - 1;
         }
         return sum;

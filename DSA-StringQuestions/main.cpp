@@ -4,6 +4,7 @@
 #include "CaseSpecificStringSort.cpp"
 #include "AnagramStrings.cpp"
 #include "RepeatingCharacter.cpp"
+#include "PrintPyramid.cpp"
 
 using namespace std;
 
@@ -33,5 +34,13 @@ int main(){
     string s8 = "geeksforgeeks";
     cout << rc.repeatedCharacter(s8);
 
+    cout << "******************************************************************" << endl;
+
+    string s9 = "Aybuke";
+
+    PrintPyramid pp;
+    //pp.printPyramid(s9, 15);
+
+    pp.printHeart();
     return 0;
 }

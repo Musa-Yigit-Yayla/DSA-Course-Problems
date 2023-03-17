@@ -36,6 +36,7 @@
 		<Unit filename="CaseSpecificStringSort.cpp" />
 		<Unit filename="CheckForRotations.cpp" />
 		<Unit filename="IsomorphicString.cpp" />
+		<Unit filename="MinIndexChar.cpp" />
 		<Unit filename="RepeatingCharacter.cpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>

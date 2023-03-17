@@ -2,7 +2,7 @@
 1678791879 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\checkforrotations.cpp
 	<string>
 
-1679051898 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\main.cpp
+1679053385 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\main.cpp
 	<iostream>
 	"CheckForRotations.cpp"
 	"IsomorphicString.cpp"
@@ -42,7 +42,7 @@
 	<unordered_map>
 	<string>
 
-1678894785 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\anagramstrings.cpp
+1679083512 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\anagramstrings.cpp
 	<unordered_map>
 	<string>
 
@@ -54,7 +54,7 @@
 	<string>
 	<unordered_map>
 
-1679051747 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\printpyramid.cpp
+1679053418 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\printpyramid.cpp
 	<string>
 	<iostream>
 
@@ -64,7 +64,12 @@
 	<vector>
 	<cmath>
 
-1679051941 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\printpyramid.cpp
+1679053418 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\printpyramid.cpp
 	<string>
 	<iostream>
+
+1679083496 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\reversewords.cpp
+	<string>
+	<vector>
+	<algorithm>
 

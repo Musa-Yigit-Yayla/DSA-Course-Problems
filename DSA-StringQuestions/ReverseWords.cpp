@@ -2,12 +2,16 @@
 *Program to reverse given words in a string, separated by dots
 *Musa Yiğit Yayla
 */
+#include <string>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
 class ReverseWords{
 public:
     //Function to reverse words in a given string.
     string reverseWords(string s){
         // code here
-        stack<string> myStack;
         vector<string> vec;
 
         string word = "";

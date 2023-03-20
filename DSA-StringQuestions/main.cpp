@@ -6,6 +6,7 @@
 #include "RepeatingCharacter.cpp"
 #include "PrintPyramid.cpp"
 #include "SumNumbersInString.cpp"
+#include "PrimeDigits.cpp"
 
 using namespace std;
 
@@ -45,7 +46,9 @@ int main(){
     pp.printHeart();
 
     SumNumbersInString snis;
-    cout << snis.findSum("4sd5ddsdsf");
+    cout << snis.findSum("4sd5ddsdsf") << endl;
 
+    PrimeDigits pd;
+    cout << "Prime digits:" << pd.primeDigits(10) << endl;
     return 0;
 }

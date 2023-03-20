@@ -50,7 +50,7 @@ public:
     	for(int i = 0; i < txt.size() - pat.size(); i++){
     	    int index = 0; //index for accomplishing the comparison
     	    bool found = true;
-    	    for(int j = i; j < i + pat.size(); j++){
+    	    for(int j = i; j <= i + pat.size(); j++){
     	        if(txt.at(j) != pat.at(index++)){
     	            found = false;
     	            break;

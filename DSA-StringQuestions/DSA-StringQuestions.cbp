@@ -39,6 +39,7 @@
 		<Unit filename="MinIndexChar.cpp" />
 		<Unit filename="PrintPyramid.cpp" />
 		<Unit filename="RepeatingCharacter.cpp" />
+		<Unit filename="ReverseWords.cpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

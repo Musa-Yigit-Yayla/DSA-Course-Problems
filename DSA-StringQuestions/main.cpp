@@ -5,6 +5,7 @@
 #include "AnagramStrings.cpp"
 #include "RepeatingCharacter.cpp"
 #include "PrintPyramid.cpp"
+#include "SumNumbersInString.cpp"
 
 using namespace std;
 
@@ -42,5 +43,9 @@ int main(){
     //pp.printPyramid(s9, 15);
 
     pp.printHeart();
+
+    SumNumbersInString snis;
+    cout << snis.findSum("1abc23");
+
     return 0;
 }

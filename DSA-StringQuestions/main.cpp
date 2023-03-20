@@ -26,10 +26,10 @@ int main(){
     string s5 = "defRTSersUXI";
     cout << csss.caseSort(s5) << endl;
 
-    AnagramStrings as;
+    /*AnagramStrings as;
     string s6 = "geeksforgeeks";
     string s7 = "forgeeksgeeks";
-    cout << as.isAnagram(s6, s7) << endl;
+    cout << as.isAnagram(s6, s7) << endl;*/
 
     RepeatingCharacter rc;
     string s8 = "geeksforgeeks";
@@ -45,7 +45,7 @@ int main(){
     pp.printHeart();
 
     SumNumbersInString snis;
-    cout << snis.findSum("1abc23");
+    cout << snis.findSum("4sd5ddsdsf");
 
     return 0;
 }

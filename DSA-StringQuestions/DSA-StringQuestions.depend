@@ -2,7 +2,7 @@
 1678791879 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\checkforrotations.cpp
 	<string>
 
-1679053385 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\main.cpp
+1679318282 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\main.cpp
 	<iostream>
 	"CheckForRotations.cpp"
 	"IsomorphicString.cpp"
@@ -10,6 +10,7 @@
 	"AnagramStrings.cpp"
 	"RepeatingCharacter.cpp"
 	"PrintPyramid.cpp"
+	"SumNumbersInString.cpp"
 
 1678791879 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\checkforrotations.cpp
 	<string>
@@ -38,11 +39,11 @@
 	<unordered_map>
 	<algorithm>
 
-1678894785 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\anagramstrings.cpp
+1679318112 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\anagramstrings.cpp
 	<unordered_map>
 	<string>
 
-1679083512 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\anagramstrings.cpp
+1679318112 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\anagramstrings.cpp
 	<unordered_map>
 	<string>
 
@@ -72,4 +73,14 @@
 	<string>
 	<vector>
 	<algorithm>
+
+1679318666 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\sumnumbersinstring.cpp
+	"ctype.h"
+	<vector>
+	<string>
+
+1679318666 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\sumnumbersinstring.cpp
+	"ctype.h"
+	<vector>
+	<string>
 

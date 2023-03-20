@@ -26,7 +26,7 @@ public:
         }
 
     }
-    void removeChars(string& s1, string s2){
+    /*void removeChars(string& s1, string s2){
         string newS1 = "";
         for(int i = 0; i < s1.size(); i++){
             char ch = s1.at(i);
@@ -35,7 +35,7 @@ public:
             }
         }
         s1 = newS1;
-    }
+    }*/
     //Add the chars in s1 which do not occur in s2 into an empty string
     void removeChars(string& s1, string s2, const unordered_map<char, int>& map2){
         string newS1;

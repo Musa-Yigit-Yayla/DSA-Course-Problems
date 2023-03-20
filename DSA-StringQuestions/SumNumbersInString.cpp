@@ -39,7 +39,7 @@ public:
                 break;
             }
         }
-        if(isNum){
+        if(isNum && num.size() != 0){
             nums.push_back(stoi(num));
         }
         return nums;

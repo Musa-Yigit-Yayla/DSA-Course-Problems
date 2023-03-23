@@ -37,9 +37,11 @@
 		<Unit filename="CheckForRotations.cpp" />
 		<Unit filename="IsomorphicString.cpp" />
 		<Unit filename="MinIndexChar.cpp" />
+		<Unit filename="PrimeDigits.cpp" />
 		<Unit filename="PrintPyramid.cpp" />
 		<Unit filename="RepeatingCharacter.cpp" />
 		<Unit filename="ReverseWords.cpp" />
+		<Unit filename="SumNumbersInString.cpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

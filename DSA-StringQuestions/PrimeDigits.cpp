@@ -78,7 +78,7 @@ public:
             arr[i] = initialResult % 10;
             initialResult /= 10;
         }
-        return arr;
+        return &arr[0];
     }
 private:
     int primeDigitArray[4] = {2, 3, 5, 7};

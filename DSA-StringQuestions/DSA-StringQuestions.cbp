@@ -39,6 +39,7 @@
 		<Unit filename="MinIndexChar.cpp" />
 		<Unit filename="PrimeDigits.cpp" />
 		<Unit filename="PrintPyramid.cpp" />
+		<Unit filename="RabinKarpSearch.cpp" />
 		<Unit filename="RepeatingCharacter.cpp" />
 		<Unit filename="ReverseWords.cpp" />
 		<Unit filename="SumNumbersInString.cpp" />

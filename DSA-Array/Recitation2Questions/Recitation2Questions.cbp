@@ -2,12 +2,12 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="DSA-StringQuestions" />
+		<Option title="Recitation2Questions" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/DSA-StringQuestions" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Debug/Recitation2Questions" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -16,7 +16,7 @@
 				</Compiler>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/DSA-StringQuestions" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Release/Recitation2Questions" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -32,21 +32,8 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="AnagramStrings.cpp" />
-		<Unit filename="CaseSpecificStringSort.cpp" />
-		<Unit filename="CheckForRotations.cpp" />
-		<Unit filename="IsomorphicString.cpp" />
-		<Unit filename="KeyPad.cpp" />
-		<Unit filename="MinIndexChar.cpp" />
-		<Unit filename="PrimeDigits.cpp" />
-		<Unit filename="PrintPyramid.cpp" />
-		<Unit filename="RabinKarpSearch.cpp" />
-		<Unit filename="RepeatingCharacter.cpp" />
-		<Unit filename="ReverseWords.cpp" />
-		<Unit filename="SumNumbersInString.cpp" />
+		<Unit filename="Q1.cpp" />
 		<Unit filename="main.cpp" />
-		<Extensions>
-			<lib_finder disable_auto="1" />
-		</Extensions>
+		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

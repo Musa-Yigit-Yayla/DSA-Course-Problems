@@ -6,7 +6,7 @@ using namespace std;
 int main(){
     Q7 q7;
 
-    int arr[] = {45, 2, 6, 68, 12, 10, 3, 2, 10, 21, 5};
+    int arr[] = {45, -2, 6, -68, -12, 10, 3, 2, 10, 21, -5};
     int n = 11;
     int* arr1 = nullptr;
     int* arr2 = nullptr;
@@ -22,7 +22,13 @@ int main(){
     q7.displayArr(arr2, n2);
     q7.displayArr(arr, n);
 
+    int resultSize = n;
+    int* arr3 = q7.selectNegatives(arr, n, resultSize);
+
+    q7.displayArr(arr3, resultSize);
+
     delete[] arr1;
     delete[] arr2;
+    delete[] arr3;
     return 0;
 }

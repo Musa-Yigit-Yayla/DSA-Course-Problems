@@ -25,7 +25,25 @@ public:
             subArr2[counter] = arr[i];
         }
     }
+    int* selectNegatives(int arr[], int n, int& resultSize){
+        resultSize = 0;
+        for(int i = 0; i < n; i++){
+            if(arr[i] < 0){
+                resultSize++;
+            }
+        }
 
+        int* resultArr = new int[resultSize];
+        int counter = 0;
+
+        for(int i = 0; i < n && counter < resultSize; i++){
+            int x = arr[i];
+            if(arr[i] < 0){
+                resultArr[counter++] = arr[i];
+            }
+        }
+        return resultArr;
+    }
     void displayArr(const int* arr, int n){
         for(int i = 0; i < n; i++){
             cout << arr[i] << " ";

@@ -50,4 +50,16 @@ public:
         }
         cout << endl;
     }
+    int* rowSum(const int matrix[][4], const int r, const int c){
+        int* result = new int[r];
+
+        for(int i = 0; i < r; i++){
+            int sum = 0;
+            for(int j = 0; j < c; j++){
+                sum += matrix[i][j];
+            }
+            result[i] = sum;
+        }
+        return result;
+    }
 };

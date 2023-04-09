@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Q7.cpp"
+#include <cmath>
 
 using namespace std;
 
@@ -27,8 +28,24 @@ int main(){
 
     q7.displayArr(arr3, resultSize);
 
+    const int r = 5;
+    const int c = 4;
+    int matrix[5][4] = {{1, 2, 3, 2}, {3, -1, 1, -1}, {2, 1, 2, -2}, {1, 2, 5, 2}, {4, 1, 3, 3}};
+    int* arr4 = q7.rowSum(matrix, r, c);
+    q7.displayArr(arr4, r);
+
+    int* dynamicMatrix = new int[r * c];
+    for(int i = 0; i < r; i++){
+        for(int j = 0; j < c; j++){
+            *(dynamicMatrix + i * c + j)  = (int)(rand() % (5));
+        }
+    }
+
     delete[] arr1;
     delete[] arr2;
     delete[] arr3;
+    delete[] arr4;
+    delete[] dynamicMatrix;
+
     return 0;
 }

@@ -33,6 +33,7 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="Q1.cpp" />
+		<Unit filename="Q7.cpp" />
 		<Unit filename="main.cpp" />
 		<Extensions />
 	</Project>

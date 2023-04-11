@@ -2,7 +2,7 @@
 1678791879 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\checkforrotations.cpp
 	<string>
 
-1679320826 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\main.cpp
+1681205277 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\main.cpp
 	<iostream>
 	"CheckForRotations.cpp"
 	"IsomorphicString.cpp"
@@ -12,6 +12,7 @@
 	"PrintPyramid.cpp"
 	"SumNumbersInString.cpp"
 	"PrimeDigits.cpp"
+	"ReverseWords.cpp"
 
 1678791879 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\checkforrotations.cpp
 	<string>
@@ -70,7 +71,7 @@
 	<string>
 	<iostream>
 
-1679083496 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\reversewords.cpp
+1681205129 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\reversewords.cpp
 	<string>
 	<vector>
 	<algorithm>
@@ -85,11 +86,23 @@
 	<vector>
 	<string>
 
-1679589182 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\primedigits.cpp
+1679643475 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\primedigits.cpp
 	<string>
 	<iostream>
 
 1679643475 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\primedigits.cpp
 	<string>
 	<iostream>
+
+1679865984 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\keypad.cpp
+	<string>
+
+1679646288 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\rabinkarpsearch.cpp
+	<string>
+	<accctrl.h>
+
+1681205494 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\reversewords.cpp
+	<string>
+	<vector>
+	<algorithm>
 

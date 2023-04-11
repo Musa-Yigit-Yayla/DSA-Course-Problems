@@ -87,4 +87,14 @@ public:
         }
         s1 = newS1;
     }
+    bool search(string pat, string txt) {
+    	// Your code here
+    	for(int i = 0; i <= txt.size() - pat.size(); i++){
+            string substring = txt.substr(i, i + pat.size());
+    	    if(txt.substr(i, pat.size()) == pat){
+    	        return true;
+    	    }
+    	}
+    	return false;
+    }
 };

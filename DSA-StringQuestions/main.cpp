@@ -8,6 +8,7 @@
 #include "SumNumbersInString.cpp"
 #include "PrimeDigits.cpp"
 #include "ReverseWords.cpp"
+#include "AnagramSearch.cpp"
 
 using namespace std;
 
@@ -51,12 +52,17 @@ int main(){
 
     PrimeDigits pd;
     cout << "Prime digits:" << pd.primeDigits(10) << endl;*/
-    string text = "aabbccddeeddff";
+    /*string text = "aabbccddeeddff";
     string pat = "ddee";
 
     ReverseWords* rw = new ReverseWords();
     cout << rw->search(pat,text) << endl;
 
-    delete rw;
+    delete rw;*/
+    string s = "geeksforgeeks";
+    string pattern = "frog";
+
+    AnagramSearch as;
+    cout << as.anagramSearch(s, pattern) << endl;
     return 0;
 }

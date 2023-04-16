@@ -61,8 +61,10 @@ int main(){
     delete rw;*/
     string s = "geeksforgeeks";
     string pattern = "frog";
+    string pattern1 = "rseek";
 
     AnagramSearch as;
     cout << as.anagramSearch(s, pattern) << endl;
+    cout << as.anagramSearch(s, pattern1) << endl;
     return 0;
 }

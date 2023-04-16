@@ -32,6 +32,7 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="AnagramSearch.cpp" />
 		<Unit filename="AnagramStrings.cpp" />
 		<Unit filename="CaseSpecificStringSort.cpp" />
 		<Unit filename="CheckForRotations.cpp" />

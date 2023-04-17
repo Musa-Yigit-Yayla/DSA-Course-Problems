@@ -66,5 +66,6 @@ int main(){
     AnagramSearch as;
     cout << as.anagramSearch(s, pattern) << endl;
     cout << as.anagramSearch(s, pattern1) << endl;
+
     return 0;
 }

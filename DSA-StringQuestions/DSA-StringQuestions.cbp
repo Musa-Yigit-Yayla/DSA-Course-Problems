@@ -36,8 +36,10 @@
 		<Unit filename="AnagramStrings.cpp" />
 		<Unit filename="CaseSpecificStringSort.cpp" />
 		<Unit filename="CheckForRotations.cpp" />
+		<Unit filename="FindRank.cpp" />
 		<Unit filename="IsomorphicString.cpp" />
 		<Unit filename="KeyPad.cpp" />
+		<Unit filename="LongestDistinctSubstring.cpp" />
 		<Unit filename="MinIndexChar.cpp" />
 		<Unit filename="PrimeDigits.cpp" />
 		<Unit filename="PrintPyramid.cpp" />

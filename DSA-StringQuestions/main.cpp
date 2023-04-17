@@ -10,6 +10,7 @@
 #include "ReverseWords.cpp"
 #include "AnagramSearch.cpp"
 #include "FindRank.cpp"
+#include "LongestDistinctSubstring.cpp"
 
 using namespace std;
 
@@ -73,5 +74,11 @@ int main(){
     FindRank fr;
     cout << fr.findRank(s) << endl;
 
+    LongestDistinctSubstring* lds = new LongestDistinctSubstring();
+    cout << lds->getLongestDistinctSubstring("abcdabc") << endl;
+    cout << lds->getLongestDistinctSubstring("aaa") << endl;
+    cout << lds->getLongestDistinctSubstring("") << endl;
+
+    delete lds;
     return 0;
 }

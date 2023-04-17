@@ -2,7 +2,7 @@
 1678791879 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\checkforrotations.cpp
 	<string>
 
-1681719230 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\main.cpp
+1681722156 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\main.cpp
 	<iostream>
 	"CheckForRotations.cpp"
 	"IsomorphicString.cpp"
@@ -14,6 +14,7 @@
 	"PrimeDigits.cpp"
 	"ReverseWords.cpp"
 	"AnagramSearch.cpp"
+	"FindRank.cpp"
 
 1678791879 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\checkforrotations.cpp
 	<string>
@@ -107,10 +108,13 @@
 	<vector>
 	<algorithm>
 
-1681664596 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\anagramsearch.cpp
+1681719320 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\anagramsearch.cpp
 	<string>
 	<vector>
 	<unordered_set>
+	<ctype.h>
+	<unordered_map>
+	<algorithm>
 
 1681719320 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\anagramsearch.cpp
 	<string>
@@ -119,4 +123,12 @@
 	<ctype.h>
 	<unordered_map>
 	<algorithm>
+
+1681722112 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\findrank.cpp
+	<string>
+	<unordered_map>
+
+1681722231 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stringquestions\findrank.cpp
+	<string>
+	<unordered_map>
 

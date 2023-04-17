@@ -9,6 +9,7 @@
 #include "PrimeDigits.cpp"
 #include "ReverseWords.cpp"
 #include "AnagramSearch.cpp"
+#include "FindRank.cpp"
 
 using namespace std;
 
@@ -59,13 +60,18 @@ int main(){
     cout << rw->search(pat,text) << endl;
 
     delete rw;*/
-    string s = "geeksforgeeks";
+    /*string s = "geeksforgeeks";
     string pattern = "frog";
     string pattern1 = "rseek";
 
     AnagramSearch as;
     cout << as.anagramSearch(s, pattern) << endl;
     cout << as.anagramSearch(s, pattern1) << endl;
+    */
+
+    string s = "abc";
+    FindRank fr;
+    cout << fr.findRank(s) << endl;
 
     return 0;
 }

@@ -1,4 +1,5 @@
-#include "LoopLength.cpp"
+//#include "LoopLength.cpp"
+#include "LinkedListInsert.cpp"
 #include <iostream>
 /*struct Node {
     int data;
@@ -21,6 +22,13 @@ int main(){
 
     LoopLength ll;
     cout << ll.countNodesinLoop(&head) << endl;
+
+    Node* n1 = new Node(13);
+    Node* n2 = new Node(70);
+
+    LinkedListInsert lli;
+    lli.insertAtBegining(&n1);
+    lli.insertAtEnd(&n2);
 
     return 0;
 }

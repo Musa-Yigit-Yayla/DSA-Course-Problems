@@ -47,4 +47,26 @@ public:
 
        head = initialHead;
     }
+    void addNode(Node *head, int pos, int data)
+{
+
+
+    int cnt = -1;
+    Node * temp = head;
+    while(cnt < pos)
+    {
+        cnt++;
+        if(cnt == pos)
+        {
+            Node * temp1 = new Node (data);
+            temp1-> next = temp-> next;
+            temp-> next = temp1;
+            temp1-> prev = temp;
+
+        }
+        else temp = temp-> next;
+
+
+    }
+
 };

@@ -1,17 +1,39 @@
 # depslib dependency file v1.0
-1681891365 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\looplength.cpp
+1682434655 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\looplength.cpp
 	<vector>
 	<unordered_map>
+	"Node.cpp"
 
-1681890806 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\main.cpp
-	"LoopLength.cpp"
+1682434729 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\main.cpp
+	"ReverseSll.cpp"
 	<iostream>
 
-1681891365 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\looplength.cpp
+1682434655 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\looplength.cpp
 	<vector>
 	<unordered_map>
+	"Node.cpp"
 
-1681919208 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\linkedlistinsert.cpp
+1681920099 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\linkedlistinsert.cpp
 	<cstddef>
 	"LoopLength.cpp"
+
+1682434564 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\node.cpp
+	<cstddef>
+
+1682435503 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\reversesll.cpp
+	"Node.cpp"
+	<iostream>
+
+1682434564 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\node.cpp
+	<cstddef>
+
+1682434534 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\addnode.cpp
+	"Node.cpp"
+
+1682434638 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\reversedll.cpp
+	"Node.cpp"
+
+1682435503 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\reversesll.cpp
+	"Node.cpp"
+	<iostream>
 

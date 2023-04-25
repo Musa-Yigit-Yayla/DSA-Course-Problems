@@ -1,4 +1,4 @@
-
+#include "Node.cpp"
 class ReverseDll{
 public:
     Node* reverseDoublyLinkedList(Node* head){
@@ -15,7 +15,7 @@ public:
         }
         initialTail = tail;
         if(length == 0 || length == 1){
-            return;
+            return head;
         }
         for(int i = 0; i < length / 2; i++){
             int low = i;
@@ -37,8 +37,8 @@ public:
                 resultHead = tail;
             }
             else{
-                Node* n1 = this->nodeAt(low);
-                Node* n2 = this->nodeAt(high);
+                Node* n1 = this->nodeAt(head, low);
+                Node* n2 = this->nodeAt(head, high);
 
                 Node* n1Prev = n1->prev;
                 Node* n1Next = n1->next;
@@ -62,7 +62,7 @@ public:
 
             }
         }
-        return resultHead
+        return resultHead;
     }
     //Does no bounds checking
     //User is responsible of ensuring that the position is valid

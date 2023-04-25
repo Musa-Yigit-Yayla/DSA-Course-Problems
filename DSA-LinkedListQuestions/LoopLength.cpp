@@ -1,15 +1,15 @@
 #include <vector>
 #include <unordered_map>
+#include "Node.cpp"
 
-
-struct Node {
+/*struct Node {
     int data;
     struct Node *next;
     Node(int x) {
         data = x;
         next = NULL;
     }
-};
+};*/
 
 using namespace std;
 class LoopLength{

@@ -35,7 +35,9 @@
 		<Unit filename="AddNode.cpp" />
 		<Unit filename="LinkedListInsert.cpp" />
 		<Unit filename="LoopLength.cpp" />
+		<Unit filename="Node.cpp" />
 		<Unit filename="ReverseDll.cpp" />
+		<Unit filename="ReverseSll.cpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

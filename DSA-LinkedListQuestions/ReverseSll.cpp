@@ -71,7 +71,7 @@ public:
             head = head->next;
         }
         Node* result = head;
-        head = initialHead;
+        //head = initialHead;
         return result;
     }
 

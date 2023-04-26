@@ -33,6 +33,7 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="AddNode.cpp" />
+		<Unit filename="AddTwoLists.cpp" />
 		<Unit filename="LinkedListInsert.cpp" />
 		<Unit filename="LoopLength.cpp" />
 		<Unit filename="Node.cpp" />

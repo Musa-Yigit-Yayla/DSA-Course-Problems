@@ -1,6 +1,6 @@
 #include <cmath>
 #include <string>
-
+#include "Node.cpp"
 /*struct Node {
     int data;
     struct Node* next;
@@ -12,12 +12,10 @@
 
 */
 using namespace std;
-class Solution
-{
-    public:
+class AddTwoLists{
+public:
     //Function to add two numbers represented by linked list.
-    struct Node* addTwoLists(struct Node* first, struct Node* second)
-    {
+    Node* addTwoList(Node* first, Node* second){
         // code here
         int l1 = 0;
         int l2 = 0;
@@ -46,6 +44,10 @@ class Solution
             Node* currNode = this->nodeAt(second, nodeIndex);
             n2 += pow(10, l2 - i) * currNode->data;
         }
+        string s1 = this->reverseNum(n1);
+        string s2 = this->reverseNum(n2);
+        n1 = stoi(s1);
+        n2 = stoi(s2);
         int sum = n1 + n2;
         string sumString = to_string(sum);
         int size = sumString.size();
@@ -57,11 +59,14 @@ class Solution
             Node* currNode = new Node(currDigit);
             if(i == size){
                 newHead = currNode;
+                prev = currNode;
             }
             else{
                 prev->next = currNode;
+                prev = prev->next;
             }
-            sum /= pow(10, i - 1);
+            double x = pow(10, i - 1);
+            sum %= (int)(pow(10, i - 1));
         }
         return newHead;
     }
@@ -80,6 +85,15 @@ class Solution
         }
         Node* result = head;
         //head = initialHead;
+        return result;
+    }
+    string reverseNum(int n1){
+        string s1 = to_string(n1);
+        string result = "";
+        for(int i = 0; i < s1.size(); i++){
+            char ch = s1.at(s1.size() - 1 - i);
+            result += ch;
+        }
         return result;
     }
 };

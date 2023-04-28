@@ -98,47 +98,57 @@ public:
         return result;
     }
     //Function to swap Kth node from beginning and end in a linked list.
-Node* swapkthnode(Node* head, int n, int k)
-{
-    // Your Code here
-    if(n <= 1){
+    Node* swapkthnode(Node* head, int n, int k)
+    {
+        // Your Code here
+        if(n <= 1){
+            return head;
+        }
+        Node* initialHead = head;
+
+        int length = 0;
+        while(initialHead != NULL){
+            length++;
+            initialHead = initialHead->next;
+        }
+        if(k == 1){
+            //swap the head with end
+            Node* headNext = head->next;
+            Node* last = nodeAt(head, length);
+            Node* lastPrev = nodeAt(head, length - 1);
+            lastPrev->next = head;
+            head->next = nullptr;
+            last->next =headNext;
+            head = last;
+
+        }
+        else if(length - k != k){
+            Node* low = nodeAt(head, k - 1);
+            Node* lowPrev = nodeAt(head, k - 2);
+            Node* lowNext = nodeAt(head, k);
+
+            Node* high = nodeAt(head, length - (k - 1));
+            Node* highNext = nodeAt(head, length - (k - 2));
+            Node* highPrev = nodeAt(head, length - k);
+
+            lowPrev->next = high;
+            high->next = lowNext;
+
+            highPrev->next = low;
+            low->next = highNext;
+        }
         return head;
     }
-    Node* initialHead = head;
-
-    int length = 0;
-    while(initialHead != NULL){
-        length++;
-        initialHead = initialHead->next;
+    void deleteNode(Node* del)
+    {
+       // Your code here
+       //Node* initialDel = del;
+       //delete initialDel;
+       Node* temp = del->next;
+       del->data = temp->data;
+       del->next = temp->next;
+       delete temp;
     }
-    if(k == 1){
-        //swap the head with end
-        Node* headNext = head->next;
-        Node* last = nodeAt(head, length);
-        Node* lastPrev = nodeAt(head, length - 1);
-        lastPrev->next = head;
-        head->next = nullptr;
-        last->next =headNext;
-        head = last;
-
-    }
-    else if(length - k != k){
-        Node* low = nodeAt(head, k - 1);
-        Node* lowPrev = nodeAt(head, k - 2);
-        Node* lowNext = nodeAt(head, k);
-
-        Node* high = nodeAt(head, length - (k - 1));
-        Node* highNext = nodeAt(head, length - (k - 2));
-        Node* highPrev = nodeAt(head, length - k);
-
-        lowPrev->next = high;
-        high->next = lowNext;
-
-        highPrev->next = low;
-        low->next = highNext;
-    }
-    return head;
-}
 
 };
 

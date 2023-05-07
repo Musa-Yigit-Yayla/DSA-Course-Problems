@@ -34,6 +34,7 @@
 		</Compiler>
 		<Unit filename="AddNode.cpp" />
 		<Unit filename="AddTwoLists.cpp" />
+		<Unit filename="CircularLinkedList.cpp" />
 		<Unit filename="LinkedListInsert.cpp" />
 		<Unit filename="LoopLength.cpp" />
 		<Unit filename="Node.cpp" />

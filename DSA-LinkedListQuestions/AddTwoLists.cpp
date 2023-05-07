@@ -139,6 +139,8 @@ public:
         }
         return head;
     }
+    //delete the given node without the head pointer
+    //It is assumed that the given node is not the tail
     void deleteNode(Node* del)
     {
        // Your code here
@@ -149,6 +151,5 @@ public:
        del->next = temp->next;
        delete temp;
     }
-
 };
 

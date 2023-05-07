@@ -64,6 +64,22 @@ public:
         }
         return resultHead;
     }
+    //Inserts the given node at the very end of the dll
+    Node* insertAtEnd(Node* head, int data){
+        Node* newNode = new Node(data);
+        if(head == NULL){
+            head = newNode;
+        }
+        else{
+            Node* curr = head;
+            while(curr->next != NULL){
+                curr = curr->next;
+            }
+            curr->next = newNode;
+            newNode->prev = curr;
+        }
+        return head;
+    }
     //Does no bounds checking
     //User is responsible of ensuring that the position is valid
     //0 based indexing

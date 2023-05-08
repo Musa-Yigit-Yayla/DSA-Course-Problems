@@ -10,7 +10,7 @@ public:
         }
         Node* tail = head;
         int length = 1;
-        Node* tailPrev = tail;
+        Node* tailPrev = head;
         while(tail->next != head){
             tailPrev = tail;
             tail = tail->next;
@@ -31,17 +31,30 @@ public:
         //In this method we can consider the remaining part of the linked list as a linear linked list except the tail has a next node
         //Swap head and tail, then decrement the length by 2
 
+        else if(length == 2){
+            return tail;
+        }
         //Retrieve headPrev, headNext, tailPrev, tailNext
-        Node* headPrev = head->next;
-        while(headPrev != head){
+        Node* headPrev = head;
+        while(headPrev->next != head){
             headPrev = headPrev->next;
         }
-        Node* tailPrev = tail->next;
-        while(tailPrev != tail){
+        Node* tailPrev = tail;
+        while(tailPrev->next != tail){
             tailPrev = tailPrev->next;
         }
 
-        Node* result = this->reverseCircularHelper();
+        Node* headNext = head->next;
+        Node* tailNext = tail->next;
+
+        headPrev->next = tail;
+        tail->next = headNext;
+
+        tailPrev->next = head;
+        head->next = tailNext;
+
+        Node* result = this->reverseCircularHelper(tail, head, length - 2);
+        return result;
     }
     void printList(Node* head){
         if(head == NULL){

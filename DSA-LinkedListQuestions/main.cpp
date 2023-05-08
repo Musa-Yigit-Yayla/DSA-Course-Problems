@@ -1,7 +1,8 @@
 //#include "LoopLength.cpp"
 //#include "LinkedListInsert.cpp"
 //#include "ReverseSll.cpp"
-#include "AddTwoLists.cpp"
+//#include "AddTwoLists.cpp"
+#include "CircularLinkedList.cpp"
 #include <iostream>
 /*struct Node {
     int data;
@@ -20,7 +21,7 @@ int main(){
     next->next = new Node(2);
     next->next->next = new Node(5);
     next->next->next->next = new Node(6);
-    next->next->next->next->next = new Node(7);
+    next->next->next->next->next = &head;
 
     Node* head2 = new Node(5);
     head2->next = new Node(7);
@@ -36,6 +37,7 @@ int main(){
     head2->next->next->next->next->next->next->next->next->next->next->next = new Node(9);
     head2->next->next->next->next->next->next->next->next->next->next->next->next = new Node(8);
     head2->next->next->next->next->next->next->next->next->next->next->next->next->next = new Node(7);
+    head2->next->next->next->next->next->next->next->next->next->next->next->next->next->next = head2;
     int sllLength = 6;
 
     /*LoopLength ll;
@@ -49,12 +51,15 @@ int main(){
     lli.insertAtEnd(&n2);*/
 
 
-    AddTwoLists atl;
-    Node* newList = atl.addTwoList(&head, head2);
+    //AddTwoLists atl;
+    //Node* newList = atl.addTwoList(&head, head2);
+    CircularLinkedList cll;
+    cll.reverseCircularLinkedList(head2);
+    cll.printList(&head);
 
-    cout << newList->data << endl;
+    /*cout << newList->data << endl;
     cout << atl.nodeAt(&head, 3)->data << endl;
-    cout << atl.nodeAt(&head, 2)->data << endl;
+    cout << atl.nodeAt(&head, 2)->data << endl;*/
 
     /*Node* curr = head.next;
     for(int i = 0; i < sllLength - 1; i++){

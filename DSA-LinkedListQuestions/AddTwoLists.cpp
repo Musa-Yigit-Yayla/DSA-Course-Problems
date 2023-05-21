@@ -137,7 +137,7 @@ public:
             highPrev->next = low;
             low->next = highNext;
         }
-        return head;
+        return initialHead;
     }
     //delete the given node without the head pointer
     //It is assumed that the given node is not the tail

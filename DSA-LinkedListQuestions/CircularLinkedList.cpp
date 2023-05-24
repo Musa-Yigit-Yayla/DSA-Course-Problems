@@ -109,6 +109,26 @@ public:
         givenNode->next = head;
         return givenNode;
     }
+    Node* delHead(Node* head){
+        if(head == NULL){
+            return nullptr;
+        }
+        if(head->next == head){
+            delete head;
+            return nullptr;
+        }
+        else{
+            Node* headNext = head->next;
+            Node* currNode = head;
+            Node* prevNode = nullptr;
+            while(currNode != head){
+                prevNode = currNode;
+                currNode = currNode->next;
+            }
+            delete head;
+            prevNode->next = headNext;
+        }
+    }
     //Returns the length of the given circular linked list
     int getListLength(Node* head){
         Node* currNode = head;

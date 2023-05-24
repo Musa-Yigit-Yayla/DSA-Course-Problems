@@ -65,6 +65,13 @@ public:
             head->next = head;
             return head;
         }
+        int listLength = this->getListLength(head);
+        if(listLength == 1){
+            //only one node exists before the insertion operation
+            givenNode->next = head;
+            head->next = givenNode;
+            return givenNode;
+        }
         //traverse the node to check whether we have a node with the same data of the givenNode's
         Node* currNode = head;
         Node* prevNode = nullptr;
@@ -83,6 +90,38 @@ public:
         givenNode->next = head;
         head = givenNode;
         return head;
+    }
+    Node* insertAtEnd(Node* head, Node* givenNode){
+        int listLength = this->getListLength(head);
+        if(listLength == 0 || listLength == 1){
+            return this->insertAtBeginning(head, givenNode);
+        }
+        //we must traverse the list and retain the prevNode of head
+        Node* currNode = head;
+        Node* prevNode = nullptr;
+        int counter = 0;
+        while(currNode != head || counter == 0){
+            prevNode = currNode;
+            currNode = currNode->next;
+            counter++;
+        }
+        prevNode->next = givenNode;
+        givenNode->next = head;
+        return givenNode;
+    }
+    //Returns the length of the given circular linked list
+    int getListLength(Node* head){
+        Node* currNode = head;
+        if(head == NULL){
+            return 0;
+        }
+        int length = 0;
+        Node* currNode = head;
+        while(currNode != NULL){
+            currNode = currNode->next;
+            length++
+        }
+        return length;
     }
     void printList(Node* head){
         if(head == NULL){

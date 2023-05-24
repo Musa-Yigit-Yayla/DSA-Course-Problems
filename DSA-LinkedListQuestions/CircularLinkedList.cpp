@@ -56,6 +56,34 @@ public:
         Node* result = this->reverseCircularHelper(tail, head, length - 2);
         return result;
     }
+    //If the given node already exists in our list, then we must not insert and return nullptr
+    //Otherwise we must insert at the beginning by preserving the circular property of our list and return the new head
+    Node* insertAtBeginning(Node* head, Node* givenNode){
+
+        if(head == NULL){
+            head = givenNode;
+            head->next = head;
+            return head;
+        }
+        //traverse the node to check whether we have a node with the same data of the givenNode's
+        Node* currNode = head;
+        Node* prevNode = nullptr;
+        int counter = 0;
+        int givenData = givenNode->data;
+        while(currNode != head || counter == 0){
+            if(currNode->data == givenData){
+                return nullptr;
+            }
+            counter++;
+            prevNode = currNode;
+            currNode = currNode->next;
+        }
+        //prevNode is the node pointing to our current head
+        prevNode->next = givenNode;
+        givenNode->next = head;
+        head = givenNode;
+        return head;
+    }
     void printList(Node* head){
         if(head == NULL){
             return;

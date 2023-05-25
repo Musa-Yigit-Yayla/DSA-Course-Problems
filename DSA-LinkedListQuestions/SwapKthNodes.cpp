@@ -212,6 +212,15 @@ Node* swapkthnode(Node* head, int n, int k)
                 n1->next = n2;
                 n2->next = n1Next;
             }
+            else if(n2 == n1Next && n1 == n2Prev){
+                n2Prev = nullptr;
+
+                n2->next = n1;
+                n1->next = n2Next;
+
+                n1Next = nullptr;
+                n1Prev->next = n2;
+            }
             else{
                 n1Prev->next = n2;
                 n2->next = n1Next;

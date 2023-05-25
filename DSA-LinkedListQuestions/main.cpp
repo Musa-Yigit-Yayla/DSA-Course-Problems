@@ -68,8 +68,23 @@ int main(){
     head->next = new Node(2);
     head->next->next = new Node(3);
     head->next->next->next = new Node(4);
+    head->next->next->next->next = new Node(5);
+    head->next->next->next->next->next = new Node(6);
+    head->next->next->next->next->next->next = new Node(7);
+    head->next->next->next->next->next->next->next = new Node(8);
+    head->next->next->next->next->next->next->next->next = new Node(9);
+    head->next->next->next->next->next->next->next->next->next = new Node(10);
+    head->next->next->next->next->next->next->next->next->next->next = new Node(11);
+    head->next->next->next->next->next->next->next->next->next->next->next = new Node(12);
+    head->next->next->next->next->next->next->next->next->next->next->next->next = new Node(12);
+    head->next->next->next->next->next->next->next->next->next->next->next->next->next = new Node(12);
+    head->next->next->next->next->next->next->next->next->next->next->next->next->next->next = new Node(12);
+    head->next->next->next->next->next->next->next->next->next->next->next->next->next->next->next = new Node(16);
     //head->next->next->next->next = new Node(806);
-    head = skn.swapkthnode(head, 4, 3);
+    //failed the following input sequence
+    //16 8
+    //90 78 66 68 47 33 37 48 85 73 13 24 10 7 53 59
+    head = skn.swapkthnode(head, 16, 8);
     skn.printList(head, 4);
     return 0;
 }

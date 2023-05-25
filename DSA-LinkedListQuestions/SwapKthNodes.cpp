@@ -1,7 +1,10 @@
 #include "Node.cpp"
+#include <iostream>
+#include <cstddef>
 
 using namespace std;
 class SwapKthNodes{
+public:
     Node* nodeAt(Node* head, int pos){
         if(pos == 0){
             return head;
@@ -34,8 +37,8 @@ Node* swapkthnode(Node* head, int n, int k)
     if(k == 1){
         //swap the head with end
         Node* headNext = head->next;
-        Node* last = nodeAt(head, length);
-        Node* lastPrev = nodeAt(head, length - 1);
+        Node* last = nodeAt(head, length - 1);
+        Node* lastPrev = nodeAt(head, length - 2);
         lastPrev->next = head;
         head->next = nullptr;
         last->next =headNext;
@@ -71,4 +74,12 @@ Node* swapkthnode(Node* head, int n, int k)
     }
     return head;
 }
+    void printList(Node* head){
+        Node* currNode = head;
+        while(currNode != NULL){
+            cout << currNode->data << " ";
+            currNode = currNode->next;
+        }
+        cout << endl;
+    }
 };

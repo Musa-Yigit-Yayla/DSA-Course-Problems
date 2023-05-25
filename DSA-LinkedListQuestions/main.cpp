@@ -2,20 +2,14 @@
 //#include "LinkedListInsert.cpp"
 //#include "ReverseSll.cpp"
 //#include "AddTwoLists.cpp"
-#include "CircularLinkedList.cpp"
+//#include "CircularLinkedList.cpp"
+#include "SwapKthNodes.cpp"
 #include <iostream>
-/*struct Node {
-    int data;
-    struct Node *next;
-    Node(int x) {
-        data = x;
-        next = NULL;
-    }
-};*/
+
 
 using namespace std;
 int main(){
-    Node head(4);
+    /*Node head(4);
     Node* next = new Node(3);
     head.next = next;
     next->next = new Node(2);
@@ -53,10 +47,11 @@ int main(){
 
     //AddTwoLists atl;
     //Node* newList = atl.addTwoList(&head, head2);
+    /*
     CircularLinkedList cll;
     cll.reverseCircularLinkedList(head2);
     cll.printList(&head);
-
+    */
     /*cout << newList->data << endl;
     cout << atl.nodeAt(&head, 3)->data << endl;
     cout << atl.nodeAt(&head, 2)->data << endl;*/
@@ -68,5 +63,12 @@ int main(){
         curr = currNext;
     }*/
 
+    SwapKthNodes skn;
+    Node* head = new Node(1);
+    head->next = new Node(2);
+    head->next->next = new Node(3);
+    head->next->next->next = new Node(4);
+    head = skn.swapkthnode(head, 4, 1);
+    skn.printList(head);
     return 0;
 }

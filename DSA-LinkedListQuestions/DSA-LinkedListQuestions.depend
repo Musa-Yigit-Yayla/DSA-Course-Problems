@@ -4,8 +4,8 @@
 	<unordered_map>
 	"Node.cpp"
 
-1683529838 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\main.cpp
-	"CircularLinkedList.cpp"
+1685019132 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\main.cpp
+	"SwapKthNodes.cpp"
 	<iostream>
 
 1682434655 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\looplength.cpp
@@ -17,14 +17,14 @@
 	<cstddef>
 	"LoopLength.cpp"
 
-1682506387 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\node.cpp
+1685019132 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\node.cpp
 	<cstddef>
 
 1682507881 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\reversesll.cpp
 	"Node.cpp"
 	<iostream>
 
-1682506387 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\node.cpp
+1685019132 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\node.cpp
 	<cstddef>
 
 1682434534 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\addnode.cpp
@@ -37,7 +37,7 @@
 	"Node.cpp"
 	<iostream>
 
-1682933806 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\addtwolists.cpp
+1684695888 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\addtwolists.cpp
 	<cmath>
 	<string>
 	"Node.cpp"
@@ -51,7 +51,17 @@
 	"Node.cpp"
 	<iostream>
 
-1683529838 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\circularlinkedlist.cpp
+1685019028 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\circularlinkedlist.cpp
 	"Node.cpp"
 	<iostream>
+
+1685019028 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\swapkthnodes.cpp
+	"Node.cpp"
+	<iostream>
+	<cstddef>
+
+1685019488 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\swapkthnodes.cpp
+	"Node.cpp"
+	<iostream>
+	<cstddef>
 

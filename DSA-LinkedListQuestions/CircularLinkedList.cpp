@@ -136,10 +136,10 @@ public:
             return 0;
         }
         int length = 0;
-        Node* currNode = head;
+        //Node* currNode = head;
         while(currNode != NULL){
             currNode = currNode->next;
-            length++
+            length++;
         }
         return length;
     }

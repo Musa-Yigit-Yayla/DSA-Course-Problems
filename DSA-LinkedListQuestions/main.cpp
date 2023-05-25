@@ -64,12 +64,12 @@ int main(){
     }*/
 
     SwapKthNodes skn;
-    Node* head = new Node(715);
-    head->next = new Node(601);
-    head->next->next = new Node(895);
-    head->next->next->next = new Node(385);
-    head->next->next->next->next = new Node(806);
-    head = skn.swapkthnode(head, 5, 2);
-    skn.printList(head);
+    Node* head = new Node(1);
+    head->next = new Node(2);
+    head->next->next = new Node(3);
+    head->next->next->next = new Node(4);
+    //head->next->next->next->next = new Node(806);
+    head = skn.swapkthnode(head, 4, 1);
+    skn.printList(head, 4);
     return 0;
 }

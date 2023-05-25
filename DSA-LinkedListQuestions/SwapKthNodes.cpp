@@ -15,7 +15,7 @@ public:
             //cout << head->data << endl;
             head = head->next;
         }
-        Node* result = initialHead;
+        Node* result = head;
         //head = initialHead;
         return result;
 }
@@ -24,7 +24,8 @@ public:
 //This method is not thoroughly functional, try and avoid using if that's not possible approach with attention.
 Node* swapkthnode(Node* head, int n, int k)
 {
-    return this->swapNodes(head, k, n - k);
+    k--;
+    return this->swapNodes(head, k, n - k -1);
     /*// Your Code here
     if(n <= 1){
         return head;
@@ -76,11 +77,13 @@ Node* swapkthnode(Node* head, int n, int k)
     }
     return head;*/
 }
-    void printList(Node* head){
+    void printList(Node* head, int length){
         Node* currNode = head;
+        int counter = 0;
         while(currNode != NULL){
             cout << currNode->data << " ";
             currNode = currNode->next;
+            counter++;
         }
         cout << endl;
     }
@@ -135,7 +138,7 @@ Node* swapkthnode(Node* head, int n, int k)
             head->next = otherNode->next;
             return otherNode;
         }
-        else if(!swapHead && swapTail){
+        else if(!swapHead && swapTail){ // THIS BLOCK IS PROBLEMATIC FIX !!!!!
             Node* tailNode = this->nodeAt(head, length - 1);
             Node* tailPrev = this->nodeAt(head, length - 2);
             Node* otherNode = nullptr;
@@ -157,6 +160,7 @@ Node* swapkthnode(Node* head, int n, int k)
             otherPrev->next = tailNode;
             tailNode->next = otherNext;
             tailPrev->next = otherNode;
+            otherNode->next = nullptr;
             return head;
         }
         else if(swapHead && swapTail){
@@ -183,7 +187,7 @@ Node* swapkthnode(Node* head, int n, int k)
                 tailPrev = this->nodeAt(head, length - 2);
             }
             tailNode->next = headNext;
-            tailPrev = headNode;
+            tailPrev->next = headNode;
             headNode->next = nullptr;
             return tailNode;
         }

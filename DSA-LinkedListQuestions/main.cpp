@@ -64,7 +64,7 @@ int main(){
     }*/
 
     SwapKthNodes skn;
-    Node* head = new Node(1);
+    /*Node* head = new Node(1);
     head->next = new Node(2);
     head->next->next = new Node(3);
     head->next->next->next = new Node(4);
@@ -79,12 +79,14 @@ int main(){
     head->next->next->next->next->next->next->next->next->next->next->next->next = new Node(12);
     head->next->next->next->next->next->next->next->next->next->next->next->next->next = new Node(12);
     head->next->next->next->next->next->next->next->next->next->next->next->next->next->next = new Node(12);
-    head->next->next->next->next->next->next->next->next->next->next->next->next->next->next->next = new Node(16);
+    head->next->next->next->next->next->next->next->next->next->next->next->next->next->next->next = new Node(16);*/
+    Node* head = new Node(1);
+    head->next = new Node(2);
     //head->next->next->next->next = new Node(806);
     //failed the following input sequence
     //16 8
     //90 78 66 68 47 33 37 48 85 73 13 24 10 7 53 59
-    head = skn.swapkthnode(head, 16, 8);
+    head = skn.swapkthnode(head, 2, 2);
     skn.printList(head, 4);
     return 0;
 }

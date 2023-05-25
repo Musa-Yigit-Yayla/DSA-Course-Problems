@@ -168,7 +168,7 @@ Node* swapkthnode(Node* head, int n, int k)
                 Node* headNext = head->next;
                 headNext->next = head;
                 head->next = nullptr;
-                return head;
+                return headNext;
             }
             Node* headNode = nullptr;
             Node* headNext = nullptr;

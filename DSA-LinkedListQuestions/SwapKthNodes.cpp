@@ -183,7 +183,7 @@ Node* swapkthnode(Node* head, int n, int k)
                 tailPrev = this->nodeAt(head, length - 2);
             }
             tailNode->next = headNext;
-            tailNode->prev = headNode;
+            tailPrev = headNode;
             headNode->next = nullptr;
             return tailNode;
         }

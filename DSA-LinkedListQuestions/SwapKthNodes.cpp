@@ -25,7 +25,7 @@ public:
 Node* swapkthnode(Node* head, int n, int k)
 {
     k--;
-    return this->swapNodes(head, k, n - k -1);
+    return this->swapNodes(head, k, n - k - 1);
     /*// Your Code here
     if(n <= 1){
         return head;
@@ -138,7 +138,7 @@ Node* swapkthnode(Node* head, int n, int k)
             head->next = otherNode->next;
             return otherNode;
         }
-        else if(!swapHead && swapTail){ // THIS BLOCK IS PROBLEMATIC FIX !!!!!
+        else if(!swapHead && swapTail){
             Node* tailNode = this->nodeAt(head, length - 1);
             Node* tailPrev = this->nodeAt(head, length - 2);
             Node* otherNode = nullptr;
@@ -192,20 +192,33 @@ Node* swapkthnode(Node* head, int n, int k)
             return tailNode;
         }
         else{//we are swapping some inner nodes, proceed accordingly
+                //THIS BLOCK IS PROBLEMATIC FIX IT!!!!!
             Node* n1 = this->nodeAt(head, i1);
             Node* n1Prev = this->nodeAt(head, i1 - 1);
             Node* n1Next = this->nodeAt(head, i1 + 1);
             Node* n2 = this->nodeAt(head, i2);
-            Node* n2Prev = this->nodeAt(head, i2 -1);
+            Node* n2Prev = this->nodeAt(head, i2 - 1);
             Node* n2Next = this->nodeAt(head, i2 + 1);
 
             //it would be the same procedure whether we have n1Next == n2Prev or not
-            n1Prev->next = n2;
-            n2->next = n1Next;
+            if(n1Prev == n2 && n2Next == n1){
+                n1Prev = nullptr;
 
-            n2Prev->next = n1;
-            n1->next = n2Next;
+                n2->next = n1Next;
+                n2Prev->next = n1;
+                n2Next = nullptr;
 
+                n1Prev = nullptr;
+                n1->next = n2;
+                n2->next = n1Next;
+            }
+            else{
+                n1Prev->next = n2;
+                n2->next = n1Next;
+
+                n2Prev->next = n1;
+                n1->next = n2Next;
+            }
             return head;
         }
     }

@@ -69,7 +69,7 @@ int main(){
     head->next->next = new Node(3);
     head->next->next->next = new Node(4);
     //head->next->next->next->next = new Node(806);
-    head = skn.swapkthnode(head, 4, 1);
+    head = skn.swapkthnode(head, 4, 3);
     skn.printList(head, 4);
     return 0;
 }

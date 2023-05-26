@@ -231,4 +231,30 @@ Node* swapkthnode(Node* head, int n, int k)
             return head;
         }
     }
+    //Function to remove duplicates from sorted linked list.
+Node* removeDuplicates(Node *head)
+{
+ // your code goes here
+    Node* currNode = head->next;
+    Node* prevNode = head;
+
+    while(currNode != NULL){
+        if(currNode->data == prevNode->data){
+            Node* nextNode = currNode->next;
+            if(nextNode != NULL){
+                delete currNode;
+                prevNode->next = nextNode;
+            }
+            else{
+                delete currNode;
+            }
+            currNode = nextNode;
+            continue;
+        }
+        prevNode = currNode;
+        currNode = currNode->next;
+    }
+    prevNode->next = nullptr;
+    return head;
+}
 };

@@ -232,8 +232,7 @@ Node* swapkthnode(Node* head, int n, int k)
         }
     }
     //Function to remove duplicates from sorted linked list.
-Node* removeDuplicates(Node *head)
-{
+Node* removeDuplicates(Node *head){
  // your code goes here
     Node* currNode = head->next;
     Node* prevNode = head;
@@ -256,5 +255,37 @@ Node* removeDuplicates(Node *head)
     }
     prevNode->next = nullptr;
     return head;
+}
+inline int getSllLength(struct Node* head){
+    int length = 0;
+    struct Node* currNode = head;
+    while(currNode != NULL){
+        length++;
+        currNode = currNode->next;
+    }
+    return length;
+}
+
+//Function to check whether two linked lists are identical or not.
+bool areIdentical(struct Node *head1, struct Node *head2)
+{
+    // Code here
+    //initially check whether we have the same lengths
+    int length1 = getSllLength(head1);
+    int length2 = getSllLength(head2);
+
+    if(length1 == length2){
+        Node* n1 = head1;
+        Node* n2 = head2;
+        for(int i = 0; i < length1; i++){
+            if(n1->data != n2->data){
+                return false;
+            }
+            n1 = n1->next;
+            n2 = n2->next;
+        }
+        return true;
+    }
+    return false;
 }
 };

@@ -18,7 +18,7 @@ public:
         Node* result = head;
         //head = initialHead;
         return result;
-}
+    }
 
 //Function to swap Kth node from beginning and end in a linked list.
 //This method is not thoroughly functional, try and avoid using if that's not possible approach with attention.
@@ -288,4 +288,36 @@ bool areIdentical(struct Node *head1, struct Node *head2)
     }
     return false;
 }
+inline int getMidIndex(const int length){
+    return length / 2;
+}
+//Function to insert a node in the middle of the linked list.
+Node* insertInMiddle(Node* head, int x)
+{
+	// Code here
+	int length = 0;
+	Node* currNode = head;
+	while(currNode != NULL){
+	    length++;
+	    currNode = currNode->next;
+	}
+	Node* newNode = new Node(x);
+	int mid = getMidIndex(length);
+
+	Node* midNode = nodeAt(head, mid);
+	if(length % 2 == 0){
+	   midNode = nodeAt(head, mid - 1);
+	}
+	Node* midNext = midNode->next;
+
+	if(midNext != NULL){
+	    midNode->next = newNode;
+	    newNode->next = midNext;
+	}
+	else{
+	    midNode->next = newNode;
+	}
+	return head;
+}
+
 };

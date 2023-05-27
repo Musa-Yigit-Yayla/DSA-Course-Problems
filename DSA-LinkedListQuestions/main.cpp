@@ -4,7 +4,8 @@
 //#include "AddTwoLists.cpp"
 //#include "CircularLinkedList.cpp"
 //#include "SwapKthNodes.cpp"
-#include "MergeSortDll.cpp"
+//#include "MergeSortDll.cpp"
+#include "SegregateSll.cpp"
 #include <iostream>
 
 
@@ -87,8 +88,8 @@ int main(){
     head->next = new Node(2);
     head->next->next = new Node(1);
     head->next->next->next = new Node(2);
-    head->next->next->next->next = new Node(4);
-    head->next->next->next->next->next = new Node(3);
+    head->next->next->next->next = new Node(1);
+    head->next->next->next->next->next = new Node(0);
     //head->next->next->next->next = new Node(806);
     //failed the following input sequence
     //16 8
@@ -96,8 +97,11 @@ int main(){
     //head = skn.swapkthnode(head, 2, 2);
     //skn.printList(head, 4);
 
-    MergeSortDll msd;
-    head = msd.sortDoubly(head);
+    //MergeSortDll msd;
+    //head = msd.sortDoubly(head);
+
+    SegregateSll ss;
+    head = ss.segregate(head);
     printList(head, 6);
     return 0;
 }

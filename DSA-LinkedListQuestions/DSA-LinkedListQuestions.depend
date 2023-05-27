@@ -4,8 +4,8 @@
 	<unordered_map>
 	"Node.cpp"
 
-1685196304 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\main.cpp
-	"MergeSortDll.cpp"
+1685199079 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\main.cpp
+	"SegregateSll.cpp"
 	<iostream>
 
 1682434655 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\looplength.cpp
@@ -69,7 +69,15 @@
 	<cmath>
 	"Node.cpp"
 
-1685197358 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\mergesortdll.cpp
+1685197877 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\mergesortdll.cpp
 	<cmath>
+	"Node.cpp"
+
+1685199849 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\segregatesll.cpp
+	<unordered_map>
+	"Node.cpp"
+
+1685199044 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\segregatesll.cpp
+	<unordered_map>
 	"Node.cpp"
 

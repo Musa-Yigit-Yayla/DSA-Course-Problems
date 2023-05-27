@@ -164,5 +164,23 @@ struct Node *sortDoubly(struct Node *head)
 	return ascendingList;
 }
 
+//Function to find the data of nth node from the end of a linked list.
+int getNthFromLast(Node *head, int n)
+{
+       // Your code here
+    //initially we must find the length of our linked list
+    int length = 0;
+    Node* currNode = head;
+    while(currNode != NULL){
+        length++;
+        currNode = currNode->next;
+    }
+
+    if(length - n < 0){
+        return -1;;
+    }
+    Node* givenNode = nodeAt(head, length - n);
+    return givenNode->data;
+}
 
 };

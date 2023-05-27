@@ -37,6 +37,9 @@
 		<Unit filename="CircularLinkedList.cpp" />
 		<Unit filename="LinkedListInsert.cpp" />
 		<Unit filename="LoopLength.cpp" />
+		<Unit filename="MergeSortDll.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="Node.cpp" />
 		<Unit filename="ReverseDll.cpp" />
 		<Unit filename="ReverseSll.cpp" />

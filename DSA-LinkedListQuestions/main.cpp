@@ -3,9 +3,12 @@
 //#include "ReverseSll.cpp"
 //#include "AddTwoLists.cpp"
 //#include "CircularLinkedList.cpp"
-#include "SwapKthNodes.cpp"
+//#include "SwapKthNodes.cpp"
+#include "MergeSortDll.cpp"
 #include <iostream>
 
+
+void printList(Node* head, int length);
 
 using namespace std;
 int main(){
@@ -63,7 +66,7 @@ int main(){
         curr = currNext;
     }*/
 
-    SwapKthNodes skn;
+    //SwapKthNodes skn;
     /*Node* head = new Node(1);
     head->next = new Node(2);
     head->next->next = new Node(3);
@@ -82,11 +85,29 @@ int main(){
     head->next->next->next->next->next->next->next->next->next->next->next->next->next->next->next = new Node(16);*/
     Node* head = new Node(1);
     head->next = new Node(2);
+    head->next->next = new Node(1);
+    head->next->next->next = new Node(2);
+    head->next->next->next->next = new Node(4);
+    head->next->next->next->next->next = new Node(3);
     //head->next->next->next->next = new Node(806);
     //failed the following input sequence
     //16 8
     //90 78 66 68 47 33 37 48 85 73 13 24 10 7 53 59
-    head = skn.swapkthnode(head, 2, 2);
-    skn.printList(head, 4);
+    //head = skn.swapkthnode(head, 2, 2);
+    //skn.printList(head, 4);
+
+    MergeSortDll msd;
+    head = msd.sortAscending(head);
+    printList(head, 6);
     return 0;
+}
+void printList(Node* head, int length){
+        Node* currNode = head;
+        int counter = 0;
+        while(currNode != NULL){
+            cout << currNode->data << " ";
+            currNode = currNode->next;
+            counter++;
+        }
+        cout << endl;
 }

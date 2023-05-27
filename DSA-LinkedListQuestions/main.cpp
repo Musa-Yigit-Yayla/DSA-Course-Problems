@@ -97,7 +97,7 @@ int main(){
     //skn.printList(head, 4);
 
     MergeSortDll msd;
-    head = msd.sortAscending(head);
+    head = msd.sortDoubly(head);
     printList(head, 6);
     return 0;
 }

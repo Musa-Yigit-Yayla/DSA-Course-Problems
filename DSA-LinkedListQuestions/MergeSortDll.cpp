@@ -133,8 +133,8 @@ Node* sortAscendingHelper(Node* head, const int i1, int l){
     }
     else{
         int i2 = i1 + (l / 2);
-        Node* firstHalf = sortAscendingHelper(head, i1, i2);
-        Node* secondHalf = sortAscendingHelper(head + i2 + 1, i2 + 1, initialLength - 1);
+        Node* firstHalf = sortAscendingHelper(head + i1, i1, l / 2); //these two lines might be problematic (including the below line)
+        Node* secondHalf = sortAscendingHelper(head + i2 + 1, i2 + 1, i2 + l / 2);
 
         Node* firstHalfTail = nodeAt(firstHalf, i2);
 
@@ -156,9 +156,9 @@ Node* sortAscending(Node* head){
 struct Node *sortDoubly(struct Node *head)
 {
 	// Your code here
-	::head = head;
+	this->head = head;
 	int length = getSllLength(head);
-	::initialLength = length;
+	this->initialLength = length;
 
 	Node* ascendingList = sortAscending(head);
 	return ascendingList;

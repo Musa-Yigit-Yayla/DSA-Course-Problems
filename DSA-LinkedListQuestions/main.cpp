@@ -84,12 +84,14 @@ int main(){
     head->next->next->next->next->next->next->next->next->next->next->next->next->next = new Node(12);
     head->next->next->next->next->next->next->next->next->next->next->next->next->next->next = new Node(12);
     head->next->next->next->next->next->next->next->next->next->next->next->next->next->next->next = new Node(16);*/
-    Node* head = new Node(1);
+    Node* head = new Node(2);
     head->next = new Node(2);
     head->next->next = new Node(1);
     head->next->next->next = new Node(2);
     head->next->next->next->next = new Node(1);
-    head->next->next->next->next->next = new Node(0);
+    //head->next->next->next->next->next = new Node(0);
+    //head->next->next->next->next->next->next = new Node(2);
+    //head->next->next->next->next->next->next->next = new Node(2);
     //head->next->next->next->next = new Node(806);
     //failed the following input sequence
     //16 8
@@ -99,10 +101,13 @@ int main(){
 
     //MergeSortDll msd;
     //head = msd.sortDoubly(head);
-
+    //8
+    //1 2 2 1 2 0 2 2
+    //5
+    //2 2 1 2 1
     SegregateSll ss;
     head = ss.segregate3(head);
-    printList(head, 6);
+    printList(head, 5);
     return 0;
 }
 void printList(Node* head, int length){

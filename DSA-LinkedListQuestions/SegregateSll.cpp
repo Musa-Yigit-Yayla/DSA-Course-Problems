@@ -1,5 +1,6 @@
 #include <unordered_map>
 #include "Node.cpp"
+#include <iostream>
 
 using namespace std;
 class SegregateSll{
@@ -134,6 +135,10 @@ public:
     Node* segregate3(Node* head){
         unordered_map<int, int> map;
 
+        int zeroLength = 0;
+        int oneLength = 0;
+        int twoLength = 0;
+
         Node* currNode = head;
         while(currNode != NULL){
             int value = currNode->data;
@@ -164,9 +169,12 @@ public:
             }
             currNode = currNode->next;
         }
-        int zeroLength = map.at(0);
-        int oneLength = map.at(1);
-        int twoLength = map.at(2);
+        if(map.count(0) != 0)
+            zeroLength = map.at(0);
+        if(map.count(1) != 0)
+            oneLength = map.at(1);
+        if(map.count(2) != 0)
+            twoLength = map.at(2);
 
         bool is0Exhausted = (zeroLength == 0);
         bool is1Exhausted = (oneLength == 0);

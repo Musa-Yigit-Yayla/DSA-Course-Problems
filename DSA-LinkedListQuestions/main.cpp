@@ -101,7 +101,7 @@ int main(){
     //head = msd.sortDoubly(head);
 
     SegregateSll ss;
-    head = ss.segregate(head);
+    head = ss.segregate3(head);
     printList(head, 6);
     return 0;
 }

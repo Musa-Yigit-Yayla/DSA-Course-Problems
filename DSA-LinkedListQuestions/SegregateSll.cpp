@@ -207,14 +207,12 @@ public:
                 currNode = newNode;
             }
             else{
-                newNode->next = new Node(INT_MIN);
-                currNode = newNode;
+                currNode->next = newNode;
+                currNode = currNode->next;
             }
-            currNode = currNode->next;
-
             length--;
         }while(length > 0);
-        return head->next;;
+        return head->next;
     }
     void swap(Node* n1, Node* n2){
         int temp = n1->data;

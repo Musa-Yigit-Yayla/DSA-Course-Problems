@@ -4,7 +4,7 @@
 class RemoveDuplicatesSll{
 public:
     //Function to remove duplicates from unsorted linked list.
-    Node* removeDuplicates(Node *head)
+    Node * removeDuplicates(Node *head)
     {
      // your code goes here
      unordered_map<int, int> occurences;
@@ -34,11 +34,13 @@ public:
              Node* newNode = new Node(currData);
              if(newListNext == NULL){
                  newListNext = newNode;
+                 newList->next = newListNext;
              }
              else{
                  newListNext->next = newNode;
+                 newListNext = newListNext->next;
              }
-             newListNext = newListNext->next;
+
              isUsed.at(currData) = true;
          }
          currNode = currNode->next;

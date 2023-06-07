@@ -35,6 +35,7 @@
 		<Unit filename="AddNode.cpp" />
 		<Unit filename="AddTwoLists.cpp" />
 		<Unit filename="CircularLinkedList.cpp" />
+		<Unit filename="IntersectionYShaped.cpp" />
 		<Unit filename="LinkedListInsert.cpp" />
 		<Unit filename="LoopLength.cpp" />
 		<Unit filename="MergeSortDll.cpp" />
@@ -42,6 +43,7 @@
 		<Unit filename="RemoveDuplicatesSll.cpp" />
 		<Unit filename="ReverseDll.cpp" />
 		<Unit filename="ReverseSll.cpp" />
+		<Unit filename="RotateSll.cpp" />
 		<Unit filename="SegregateSll.cpp" />
 		<Unit filename="SwapKthNodes.cpp" />
 		<Unit filename="main.cpp" />

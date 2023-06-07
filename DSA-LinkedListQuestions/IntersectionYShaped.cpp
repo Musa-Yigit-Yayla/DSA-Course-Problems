@@ -11,7 +11,7 @@ public:
         currNode = currNode->next;
     }
     return nullptr;
-}
+    }
 bool containsRest(Node* curr1, Node* intersectionNode){
     Node* curr = curr1;
     while(curr1 != NULL && intersectionNode != NULL){
@@ -40,6 +40,40 @@ int intersectPoint(Node* head1, Node* head2)
     }
     return -1;
 }
+//Function to check if the linked list has a loop.
+    bool detectLoop(Node* head)
+    {
+        // your code here
+        /*Node* currNode = head;
+        vector<int> foundValues;
 
+        while(currNode != NULL){
+            if(count(foundValues.begin(), foundValues.end(), currNode->data) != 0){
+                return true;
+            }
+            else{
+                foundValues.push_back(currNode->data);
+            }
+            currNode = currNode->next;
+        }
+        return false;
+        */
+        Node* slow = head;
+        Node* fast = head;
+        int counter = 0;
+        while(slow != NULL && fast != NULL){
+            if(counter != 0 && slow == fast){
+                //loop has been detected
+                return true;
+            }
+            slow = slow->next;
+            fast = fast->next;
+            if(fast != NULL){
+                fast = fast->next;
+            }
+            counter++;
+        }
+        return false;
+    }
 
 };

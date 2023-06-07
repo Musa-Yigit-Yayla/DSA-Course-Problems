@@ -41,6 +41,7 @@
 		<Unit filename="MergeSortDll.cpp" />
 		<Unit filename="Node.cpp" />
 		<Unit filename="RemoveDuplicatesSll.cpp" />
+		<Unit filename="RemoveLoop.cpp" />
 		<Unit filename="ReverseDll.cpp" />
 		<Unit filename="ReverseSll.cpp" />
 		<Unit filename="RotateSll.cpp" />

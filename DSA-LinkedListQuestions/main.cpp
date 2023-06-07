@@ -5,11 +5,12 @@
 //#include "CircularLinkedList.cpp"
 //#include "SwapKthNodes.cpp"
 //#include "MergeSortDll.cpp"
-#include "SegregateSll.cpp"
+//#include "SegregateSll.cpp"
+#include "RemoveLoop.cpp"
 #include <iostream>
 
 
-void printList(Node* head, int length);
+void printList(Node* head);
 
 using namespace std;
 int main(){
@@ -84,12 +85,12 @@ int main(){
     head->next->next->next->next->next->next->next->next->next->next->next->next->next = new Node(12);
     head->next->next->next->next->next->next->next->next->next->next->next->next->next->next = new Node(12);
     head->next->next->next->next->next->next->next->next->next->next->next->next->next->next->next = new Node(16);*/
-    Node* head = new Node(2);
+    /*Node* head = new Node(2);
     head->next = new Node(2);
     head->next->next = new Node(1);
     head->next->next->next = new Node(2);
     head->next->next->next->next = new Node(1);
-    //head->next->next->next->next->next = new Node(0);
+    //head->next->next->next->next->next = new Node(0);*/
     //head->next->next->next->next->next->next = new Node(2);
     //head->next->next->next->next->next->next->next = new Node(2);
     //head->next->next->next->next = new Node(806);
@@ -105,12 +106,12 @@ int main(){
     //1 2 2 1 2 0 2 2
     //5
     //2 2 1 2 1
-    SegregateSll ss;
+    /*SegregateSll ss;
     head = ss.segregate3(head);
-    printList(head, 5);
+    printList(head, 5);*/
     return 0;
 }
-void printList(Node* head, int length){
+void printList(Node* head){
         Node* currNode = head;
         int counter = 0;
         while(currNode != NULL){

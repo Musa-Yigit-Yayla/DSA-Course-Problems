@@ -1,9 +1,10 @@
 #include <unordered_map>
+#include <cmath>
 #include "Node.cpp"
 
 using namespace std;
 class RemoveLoop{
-    public:
+public:
     static const int i = (int)(pow(10, 5));
     static const int differenceCheck = 1000;
     //Function to remove a loop in the linked list.
@@ -130,5 +131,27 @@ class RemoveLoop{
             counter++;
         }
         return false;
+    }
+    //Function to swap elements pairwise.
+    struct Node* pairwise_swap(struct Node* head)
+    {
+        // your code here
+        Node* currNode = head;
+        Node* prevNode = nullptr;
+        Node* newHead = nullptr;
+        while(currNode != NULL && currNode->next != NULL){
+            Node* currNext =currNode->next;
+            currNode->next = currNext->next;
+            currNext->next = currNode;
+            if(prevNode != NULL){
+                prevNode->next = currNext;
+            }
+            else{
+                newHead = currNext;
+            }
+            prevNode = currNode;
+            currNode = currNode->next;
+        }
+        return newHead;
     }
 };

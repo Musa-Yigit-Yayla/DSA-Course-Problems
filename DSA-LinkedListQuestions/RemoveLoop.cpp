@@ -88,7 +88,7 @@ public:
                 //    map.insert({currNode->data, 1});
                 //}
                 map.at(currNode->data)++;
-                if(map.at(currNode->data) > 1 &&){
+                if(map.at(currNode->data) > 1){ //&&){
                     prevNode->next = nullptr;
                     return;
                 }

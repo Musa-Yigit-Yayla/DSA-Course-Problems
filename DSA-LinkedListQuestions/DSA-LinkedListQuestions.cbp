@@ -47,6 +47,7 @@
 		<Unit filename="RotateSll.cpp" />
 		<Unit filename="SegregateSll.cpp" />
 		<Unit filename="SwapKthNodes.cpp" />
+		<Unit filename="copyArbitraryList.cpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

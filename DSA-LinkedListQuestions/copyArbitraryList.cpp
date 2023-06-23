@@ -58,6 +58,7 @@ class copyArbitraryList{
     Node* copyList2(Node* head){
         Node* initialHead = head;
         Node* newHead = nullptr;
+        Node* prev = nullptr;
         Node* curr = nullptr;
         int length = 0;
         while(head != NULL){
@@ -65,18 +66,48 @@ class copyArbitraryList{
             if(length == 0){
                 newHead = curr;
             }
+            else{
+                prev->next = curr;
+            }
             head = head->next;
+            prev = curr;
             curr = curr->next;
             length++;
         }
         if(length != 0){
-            Node* newNodes[length];
+            //Node* newNodes[length];
             head = newHead;
-            for(int i = 0; i < length; i++){
+            Node* originalHead = initialHead;
+            unordered_map<Node*, Node*> map; // key is the original list node, value is the copy list node correspondance
 
+
+            for(int i = 0; i < length; i++){
+                //newNodes[i] = head;
+                map[originalHead] = head;
+                originalHead = originalHead->next;
+                head = head->next;
+            }
+            head = initialHead;
+
+            while(head != NULL){
+                map[head]->arb = map[head->arb];
+                head = head->next;
             }
         }
         return newHead;
+    }
+    //gets the first occurence of the node with the given data if exists
+    Node* getNode(const Node* head, int data){
+        Node* curr = const_cast<Node*>(head);
+        Node* result = nullptr;
+        while(curr != NULL){
+            if(curr->data == data){
+                result = curr;
+                break;
+            }
+            curr = curr->next;
+        }
+        return result;
     }
 
 };

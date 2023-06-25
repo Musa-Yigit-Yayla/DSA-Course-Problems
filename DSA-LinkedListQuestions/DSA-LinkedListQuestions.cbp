@@ -39,6 +39,9 @@
 		<Unit filename="LinkedListInsert.cpp" />
 		<Unit filename="LoopLength.cpp" />
 		<Unit filename="MergeSortDll.cpp" />
+		<Unit filename="MergeSortSll.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="Node.cpp" />
 		<Unit filename="RemoveDuplicatesSll.cpp" />
 		<Unit filename="RemoveLoop.cpp" />

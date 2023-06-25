@@ -4,8 +4,8 @@
 	<unordered_map>
 	"Node.cpp"
 
-1685652902 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\main.cpp
-	"SegregateSll.cpp"
+1687700996 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\main.cpp
+	"isPalindromeSll.cpp"
 	<iostream>
 
 1682434655 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\looplength.cpp
@@ -17,21 +17,21 @@
 	<cstddef>
 	"LoopLength.cpp"
 
-1685019132 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\node.cpp
-	<cstddef>
+1687701425 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\node.cpp
 
 1682507881 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\reversesll.cpp
 	"Node.cpp"
 	<iostream>
 
-1685019132 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\node.cpp
+1687701425 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\node.cpp
+
+1687700583 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\addnode.cpp
+	"Node.cpp"
 	<cstddef>
 
-1682434534 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\addnode.cpp
+1687701536 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\reversedll.cpp
 	"Node.cpp"
-
-1683478365 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\reversedll.cpp
-	"Node.cpp"
+	<cstddef>
 
 1682507881 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\reversesll.cpp
 	"Node.cpp"
@@ -78,8 +78,38 @@
 	"Node.cpp"
 	<iostream>
 
-1685652835 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\segregatesll.cpp
+1685653091 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\segregatesll.cpp
 	<unordered_map>
 	"Node.cpp"
 	<iostream>
+
+1687700593 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\intersectionyshaped.cpp
+	"Node.cpp"
+	<cstddef>
+
+1685993558 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\removeduplicatessll.cpp
+	"Node.cpp"
+	<unordered_map>
+
+1687446375 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\removeloop.cpp
+	<unordered_map>
+	<cmath>
+	"Node.cpp"
+
+1685994607 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\rotatesll.cpp
+	"Node.cpp"
+
+1687700886 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\ispalindromesll.cpp
+	<cstddef>
+
+1687700886 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\ispalindromesll.cpp
+	<cstddef>
+
+1687700527 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\copyarbitrarylist.cpp
+	<cstddef>
+	<unordered_map>
+
+1687701527 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\mergesortsll.cpp
+	"Node.cpp"
+	<cstddef>
 

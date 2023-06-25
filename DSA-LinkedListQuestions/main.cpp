@@ -6,9 +6,18 @@
 //#include "SwapKthNodes.cpp"
 //#include "MergeSortDll.cpp"
 //#include "SegregateSll.cpp"
-#include "RemoveLoop.cpp"
+//#include "RemoveLoop.cpp"
+#include "isPalindromeSll.cpp"
 #include <iostream>
 
+/*struct Node {
+  int data;
+  struct Node *next;
+  Node(int x) {
+    data = x;
+    next = NULL;
+  }
+};*/
 
 void printList(Node* head);
 
@@ -109,6 +118,11 @@ int main(){
     /*SegregateSll ss;
     head = ss.segregate3(head);
     printList(head, 5);*/
+    Node* head = new Node(1);
+    head->next = new Node(2);
+    head->next->next = new Node(1);
+    isPalindromeSll ips;
+    cout << ips.isPalindrome(head) << endl;
     return 0;
 }
 void printList(Node* head){

@@ -34,7 +34,7 @@ public:
         Node* curr1 = head1;
         Node* curr2 = head2;
 
-        //for(int i = 0; i < l1 + l2; i++){
+
         while(curr1 != NULL && curr2 != NULL){
             if(curr1->data >= curr2->data){
                 Node* curr2Next = curr2->next;
@@ -44,7 +44,9 @@ public:
                 }
                 else{
                     prev1 = curr2;
+                    head1 = curr2;
                 }
+
                 curr2 = curr2Next;
                 //prev1 = curr1;
             }

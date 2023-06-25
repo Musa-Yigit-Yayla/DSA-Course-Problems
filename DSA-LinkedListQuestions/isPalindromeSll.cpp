@@ -29,7 +29,7 @@ class isPalindromeSll{
         int i = 0;
         while(i < length / 2){
             Node* left = this->nodeAt(head, i);
-            Node* right = this->nodeAt(head, length - i);
+            Node* right = this->nodeAt(head, length - i - 1);
             if(left->data != right->data){
                 return false;
             }

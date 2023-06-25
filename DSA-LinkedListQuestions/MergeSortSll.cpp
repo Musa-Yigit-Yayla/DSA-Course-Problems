@@ -37,24 +37,25 @@ public:
 
         //for(int i = 0; i < l1 + l2; i++){
         while(curr1 != NULL && curr2 != NULL){
-                if(curr1->data >= curr2->data){
-                    curr2Next = curr2->next;
-                    curr2->next = curr1;
-                    if(prev1 != NULL){
-                        prev1->next = curr2;
-                    }
-                    else{
-                        prev1 = curr2;
-                        head1 = curr2;
-                    }
-
-                    curr2 = curr2Next;
-                    //prev1 = curr1;
+            if(curr1->data >= curr2->data){
+                curr2Next = curr2->next;
+                curr2->next = curr1;
+                if(prev1 != NULL){
+                    prev1->next = curr2;
+                    prev1 = curr2;
                 }
                 else{
-                    prev1 = curr1;
-                    curr1 = curr1->next;
+                    prev1 = curr2;
+                    head1 = curr2;
                 }
+
+                curr2 = curr2Next;
+                //prev1 = curr1;
+            }
+            else{
+                prev1 = curr1;
+                curr1 = curr1->next;
+            }
         }
         if(prev1->data < head2->data){
             prev1->next = head2;

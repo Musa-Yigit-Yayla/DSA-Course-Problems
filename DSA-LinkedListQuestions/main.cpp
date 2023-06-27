@@ -133,7 +133,7 @@ int main(){
     //cout << ips.isPalindrome(head) << endl;
     MergeForSll mfl;
     mfl.mergeSort(head1);
-
+    printList(head1);
     return 0;
 }
 void printList(Node* head){

@@ -34,8 +34,13 @@ class MergeForSll{
     }
     //Merges two sorted sublists into one almost thoroughly inplace
     Node* merge(Node* h1, Node* h2, int l1 ,int l2){
-
-        if(l1 == 1 && l2 == 1){
+        if(l2 == 0){
+            return h1;
+        }
+        else if(l1 == 0){
+            return h2;
+        }
+        else if(l1 == 1 && l2 == 1){
             //both h1 and h2 are guaranteed to be of length 1
             Node* newList = this->sortedMerge(h1, h2);
             return newList;
@@ -67,9 +72,16 @@ class MergeForSll{
             else{
                 midL2 = l2 / 2 + 1;
             }
+            //Cut the connecting pointers so as to avoid prospective errors
+            Node* end1 = this->nodeAt(h1, midL1);
+            Node* end2 = this->nodeAt(h2, midL2);
+            if(end1 != NULL)
+                end1->next = nullptr;
+            if(end2 != NULL)
+                end2->next = nullptr;
             //Make sure that the below indexes are correct
-            sortedH1 = this->merge(h1, this->nodeAt(h1, midL1),  midL1, l1 - midL1);
-            sortedH2 = this->merge(h2, this->nodeAt(h2, midL2), midL2, l2 - midL2);
+            sortedH1 = this->merge(h1, end1,  midL1, l1 - midL1);
+            sortedH2 = this->merge(h2, end2, midL2, l2 - midL2);
             return this->sortedMerge(sortedH1, sortedH2);
         }
     }
@@ -126,7 +138,7 @@ class MergeForSll{
                 curr1 = curr1->next;
             }
         }
-        if(prev1->data < head2->data){
+        if(prev1 != NULL && head2 != NULL && (prev1->data < head2->data)){
             prev1->next = head2;
         }
         else if((curr2Next != NULL && (prev1->data < curr2Next->data))){

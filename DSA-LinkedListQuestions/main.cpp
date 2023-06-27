@@ -8,7 +8,8 @@
 //#include "SegregateSll.cpp"
 //#include "RemoveLoop.cpp"
 //#include "isPalindromeSll.cpp"
-#include "MergeSortSll.cpp"
+//#include "MergeSortSll.cpp"
+#include "MergeForSll.cpp"
 #include <iostream>
 
 /*struct Node {
@@ -127,10 +128,11 @@ int main(){
     Node* head2 = new Node(2);
     head2->next = new Node(3);
     head2->next->next = new Node(20);
+    head1->next->next->next->next = head2;
     //isPalindromeSll ips;
     //cout << ips.isPalindrome(head) << endl;
-    MergeSortSll msl;
-    msl.sortedMerge(head1, head2);
+    MergeForSll mfl;
+    mfl.mergeSort(head1);
 
     return 0;
 }

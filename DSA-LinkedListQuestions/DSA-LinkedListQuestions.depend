@@ -4,8 +4,8 @@
 	<unordered_map>
 	"Node.cpp"
 
-1687706702 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\main.cpp
-	"MergeSortSll.cpp"
+1687884796 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\main.cpp
+	"MergeForSll.cpp"
 	<iostream>
 
 1682434655 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\looplength.cpp
@@ -110,11 +110,23 @@
 	<cstddef>
 	<unordered_map>
 
-1687706770 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\mergesortsll.cpp
+1687709238 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\mergesortsll.cpp
 	"Node.cpp"
 	<cstddef>
 
 1687707586 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\mergesortsll.cpp
+	"Node.cpp"
+	<cstddef>
+
+1687874891 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\mergeksortedsll.cpp
+	<cstddef>
+	"Node.cpp"
+
+1687884808 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\mergeforsll.cpp
+	"Node.cpp"
+	<cstddef>
+
+1687884808 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-linkedlistquestions\mergeforsll.cpp
 	"Node.cpp"
 	<cstddef>
 

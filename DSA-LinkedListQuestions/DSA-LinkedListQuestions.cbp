@@ -38,10 +38,10 @@
 		<Unit filename="IntersectionYShaped.cpp" />
 		<Unit filename="LinkedListInsert.cpp" />
 		<Unit filename="LoopLength.cpp" />
+		<Unit filename="MergeForSll.cpp" />
+		<Unit filename="MergeKSortedSll.cpp" />
 		<Unit filename="MergeSortDll.cpp" />
-		<Unit filename="MergeSortSll.c">
-			<Option compilerVar="CC" />
-		</Unit>
+		<Unit filename="MergeSortSll.cpp" />
 		<Unit filename="Node.cpp" />
 		<Unit filename="RemoveDuplicatesSll.cpp" />
 		<Unit filename="RemoveLoop.cpp" />
@@ -51,6 +51,7 @@
 		<Unit filename="SegregateSll.cpp" />
 		<Unit filename="SwapKthNodes.cpp" />
 		<Unit filename="copyArbitraryList.cpp" />
+		<Unit filename="isPalindromeSll.cpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

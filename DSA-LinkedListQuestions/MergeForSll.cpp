@@ -93,11 +93,11 @@ class MergeForSll{
 
         Node* h1 = head1;
         Node* h2 = head2;
-        while(h1 != NULL){
+        while(h1 != NULL && h1->next != h1){
             l1++;
             h1 = h1->next;
         }
-        while(h2 != NULL){
+        while(h2 != NULL && h2->next != h2){
             l2++;
             h2 = h2->next;
         }

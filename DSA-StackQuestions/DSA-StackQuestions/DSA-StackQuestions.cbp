@@ -33,9 +33,13 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="ArrayStack.cpp" />
+		<Unit filename="DeleteMid.cpp" />
 		<Unit filename="MyStack.h" />
+		<Unit filename="ParanthesisChecker.cpp" />
+		<Unit filename="RemovingConsDuplicate.cpp" />
 		<Unit filename="SllStack.cpp" />
 		<Unit filename="StackOperations.cpp" />
+		<Unit filename="TwoStacks.cpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

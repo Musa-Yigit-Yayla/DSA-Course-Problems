@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1584205420 source:c:\users\yigit\documents\cs201\dsa-stackquestions\main.cpp
+	<iostream>
+
+1687981464 source:c:\users\yigit\documents\cs201\dsa-stackquestions\arraystack.cpp
+
+1687981599 source:c:\users\yigit\documents\cs201\dsa-stackquestions\sllstack.cpp
+	<cstddef>
+	"MyStack.h"
+
+1687981495 source:c:\users\yigit\documents\cs201\dsa-stackquestions\stackoperations.cpp
+	<stack>
+	<iostream>
+
+1687981636 c:\users\yigit\documents\cs201\dsa-stackquestions\mystack.h
+	<cstddef>
+

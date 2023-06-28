@@ -72,6 +72,6 @@ class ParanthesisChecker{
                 default: return false;
             }
         }
-return bracketArr[0] == bracketArr[1] && currlyArr[0] == currlyArr[1] && arrayBracket[0] ==arrayBracket[1];
+        return bracketArr[0] == bracketArr[1] && currlyArr[0] == currlyArr[1] && arrayBracket[0] ==arrayBracket[1];
     }
 };

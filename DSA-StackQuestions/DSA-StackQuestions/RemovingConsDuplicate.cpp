@@ -38,4 +38,29 @@ class RemovingConsDuplicate{
         }
         s = copy;
     }
+    string removePair(string str){
+        // Your code here
+        stack<char> chars;
+        for(int i = str.size() - 1; i >= 0; i--){
+            if(!chars.empty()){
+                char prev = chars.top();
+                if(prev == str.at(i)){
+                    chars.pop();
+                }
+                else{
+                    chars.push(str.at(i));
+                }
+            }
+            else{
+                chars.push(str.at(i));
+            }
+        }
+        //convert stack into string, the top element will be 0 indexed on our newly instantiated string
+        string result = "";
+        while(!chars.empty()){
+            result += chars.top();
+            chars.pop();
+        }
+        return result;
+    }
 };

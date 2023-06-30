@@ -15,3 +15,41 @@
 1687981636 c:\users\yigit\documents\cs201\dsa-stackquestions\mystack.h
 	<cstddef>
 
+1687981715 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stackquestions\dsa-stackquestions\arraystack.cpp
+
+1584205420 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stackquestions\dsa-stackquestions\main.cpp
+	<iostream>
+
+1687981599 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stackquestions\dsa-stackquestions\sllstack.cpp
+	<cstddef>
+	"MyStack.h"
+
+1687981636 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stackquestions\dsa-stackquestions\mystack.h
+	<cstddef>
+
+1687981495 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stackquestions\dsa-stackquestions\stackoperations.cpp
+	<stack>
+	<iostream>
+
+1687981938 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stackquestions\dsa-stackquestions\deletemid.cpp
+	<stack>
+
+1688054065 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stackquestions\dsa-stackquestions\nextgreaterelt.cpp
+	<vector>
+	<stack>
+
+1687983067 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stackquestions\dsa-stackquestions\paranthesischecker.cpp
+	<string>
+	<stack>
+
+1688049810 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stackquestions\dsa-stackquestions\removingconsduplicate.cpp
+	<stack>
+	<string>
+
+1687982772 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stackquestions\dsa-stackquestions\twostacks.cpp
+
+1688159860 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stackquestions\dsa-stackquestions\getminatpop.cpp
+	<stack>
+	<vector>
+	<iostream>
+

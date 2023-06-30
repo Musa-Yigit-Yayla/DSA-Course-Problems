@@ -3,8 +3,10 @@
 #include <iostream>
 
 using namespace std;
-int min = 0;
+
 class GetMinAtPop{
+private:
+    int min = 0;
 public:
     //Function to push all the elements into the stack.
     stack<int>_push(int arr[],int n)
@@ -13,12 +15,12 @@ public:
        stack<int> s;
 
        s.push(arr[0]);
-       ::min = arr[0];
+       min = arr[0];
        for(int i = 1; i < n; i++){
-           if(arr[i] <= ::min){
+           if(arr[i] <= min){
                //s.push(2 * arr[i] - ::min);
                s.push(arr[i]);
-               ::min = arr[i];
+               min = arr[i];
            }
            else{
                s.push(arr[i]);
@@ -30,21 +32,23 @@ public:
     /* print minimum element of the stack each time
        after poppings
     */
-    int getCurrMin(stack<int>& s){
-        //int min = INT_MAX;
+    int getCurrMin(stack<int> s){
         vector<int> arr;
         stack<int> stack;
 
+        int min = s.top();
         while(!s.empty()){
             int curr = s.top();
-            s.pop();
+
+
+            if(curr < min){
+                min = curr;
+            }
+            else if(curr == min && !s.empty()){
+                min = s.top();
+            }
             arr.push_back(curr);
-            if(curr < ::min){
-                ::min = curr;
-            }
-            else if(curr == ::min && !s.empty()){
-                ::min = s.top();
-            }
+            s.pop();
         }
         //reverse the array then convert the array into stack from then switch references
 
@@ -56,25 +60,26 @@ public:
             low++;
             high--;
         }
-        for(int i = arr.size() - 1; i >= 0; i--){
+        /*for(int i = arr.size() - 1; i >= 0; i--){
             stack.push(arr.at(i));
-        }
+        }*/
         s = stack;
-        return ::min;
+        return min;
     }
-    void _getMinAtPop(stack<int>s)
+    void _getMinAtPop(stack<int>& s)
     {
         // your code here
         while(!s.empty()){
-            cout << ::min << " ";
+            cout << min << " ";
             int curr = s.top();
+            int minimum = min; //for debugging purposes
             s.pop();
-            if(curr < ::min){
+            if(curr < min){
                 //::min = 2 * ::min - curr;
-                ::min = curr;
+                min = curr;
             }
-            else if(curr == ::min && !s.empty()){
-                ::min = s.top();
+            else if(curr == min && !s.empty()){
+                min = getCurrMin(s);
             }
 
         }

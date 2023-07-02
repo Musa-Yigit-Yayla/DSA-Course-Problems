@@ -53,6 +53,9 @@ public:
                 }
             }
             counter++;
+            if((counter + 1) * overallMin > prevArea){
+                prevArea = (counter + 1) * overallMin;
+            }
             prev = s.top();
             s.pop();
         }

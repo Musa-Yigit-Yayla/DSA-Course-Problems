@@ -3,10 +3,10 @@
 #include <iostream>
 
 using namespace std;
-int min = 0;
+
 class GetMinAtPop{
 private:
-
+int min = 0;
 public:
     //Function to push all the elements into the stack.
     stack<int>_push(int arr[],int n)
@@ -15,12 +15,12 @@ public:
        stack<int> s;
 
        s.push(arr[0]);
-       ::min = arr[0];
+       min = arr[0];
        for(int i = 1; i < n; i++){
-           if(arr[i] <= ::min){
+           if(arr[i] <= min){
                //s.push(2 * arr[i] - ::min);
                s.push(arr[i]);
-               ::min = arr[i];
+               min = arr[i];
            }
            else{
                s.push(arr[i]);
@@ -70,16 +70,16 @@ public:
     {
         // your code here
         while(!s.empty()){
-            cout << ::min << " ";
+            cout << min << " ";
             int curr = s.top();
             //int minimum = min; //for debugging purposes
             s.pop();
-            if(curr < ::min){
+            if(curr < min){
                 //::min = 2 * ::min - curr;
-                ::min = curr;
+                min = curr;
             }
-            else if(curr == ::min && !s.empty()){
-                ::min = getCurrMin(s);
+            else if(curr == min && !s.empty()){
+                min = getCurrMin(s);
             }
 
         }

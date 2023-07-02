@@ -12,30 +12,52 @@ public:
         long long currLength = 1;
         long long currMin = s.top();
         long long prev = s.top();
+        bool currSequenceBroken = false;
+        long long overallMin = currMin; // the most minimum element we have encountered so far
+        int counter = 0;
         s.pop();
         while(!s.empty()){
+            if(s.top() < overallMin){
+                overallMin = s.top();
+            }
             long long minOfRecents = this->min(prev, s.top()); // minimum of latest two elements
-            if(minOfRecents * 2 > prevArea){
-                prevArea = minOfRecents * 2;
-                currMin = minOfRecents;
-                currLength = 2;
+            if(minOfRecents * 2 > prevArea || s.top() > prevArea){
+                if(s.top() >= minOfRecents * 2){
+                    prevArea = s.top();
+                    currMin = s.top();
+                    currLength = 1;
+                }
+                else{
+                    prevArea = minOfRecents * 2;
+                    currMin = minOfRecents;
+                    currLength = 2;
+                }
+                currSequenceBroken = false;
             }
             else{
-                if(s.top() >= currMin){
+                if(s.top() >= currMin && !currSequenceBroken){
                     prevArea += currMin;
                     currLength++;
                 }
-                else{
-                    long long newArea = (currLength + 1) * s.top();
+                else if(s.top() <= overallMin){
+                    long long newArea = (counter + 1) * s.top();
                     if(newArea > prevArea){
                         prevArea = newArea;
-                        currLength++;
+                        currLength = counter + 1;
                         currMin = s.top();
+                        currSequenceBroken = false;
                     }
                 }
+                else{
+                    currSequenceBroken = true;
+                }
             }
+            counter++;
             prev = s.top();
             s.pop();
+        }
+        if(n * overallMin > prevArea){
+            prevArea = overallMin;
         }
         return prevArea;
     }

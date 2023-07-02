@@ -90,5 +90,9 @@ int main()
     //stack<int> newStack = _push(arr, 12);
     //gmap._getMinAtPop(newStack);
     //_getMinAtPop(newStack);
+    MaximumRectangularArea mra;
+    int n = 7;
+    long long arr[n] =  {6,2,5,4,5,1,6};
+    cout << mra.getMaxArea(arr, n) << endl;
     return 0;
 }

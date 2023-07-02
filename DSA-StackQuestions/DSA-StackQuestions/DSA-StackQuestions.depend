@@ -17,9 +17,10 @@
 
 1687981715 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stackquestions\dsa-stackquestions\arraystack.cpp
 
-1688304603 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stackquestions\dsa-stackquestions\main.cpp
+1688304895 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stackquestions\dsa-stackquestions\main.cpp
 	<iostream>
-	"GetMinAtPop.cpp"
+	<vector>
+	<stack>
 
 1687981599 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stackquestions\dsa-stackquestions\sllstack.cpp
 	<cstddef>
@@ -51,7 +52,7 @@
 
 1687982772 D
 
-1688159860 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stackquestions\dsa-stackquestions\getminatpop.cpp
+1688304666 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stackquestions\dsa-stackquestions\getminatpop.cpp
 	<stack>
 	<vector>
 	<iostream>
@@ -69,4 +70,7 @@
 	<stack>
 	<vector>
 	<iostream>
+
+1688308459 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stackquestions\dsa-stackquestions\maximumrectangulararea.cpp
+	<stack>
 

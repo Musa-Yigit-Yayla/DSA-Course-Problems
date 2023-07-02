@@ -93,6 +93,7 @@ int main()
     MaximumRectangularArea mra;
     int n = 5;
     long long arr[n] =  {5, 4, 3, 2, 1};
-    cout << mra.getMaxArea(arr, n) << endl;
+    long long arr1[10] = {10,9,8,7,6,1,2,3,4,5};
+    cout << mra.getMaxArea(arr1, 10) << endl;
     return 0;
 }

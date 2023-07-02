@@ -58,6 +58,10 @@ public:
                         currMin = s.top();
                         currSequenceBroken = false;
                     }
+                    else{
+                        currSequenceBroken = true;
+                    }
+                    //you might want to update overallMin here before exiting the outer condition
                 }
                 else{
                     currSequenceBroken = true;
@@ -66,6 +70,9 @@ public:
             counter++;
             if((counter + 1) * overallMin > prevArea){
                 prevArea = (counter + 1) * overallMin;
+                if(overallMin < currMin){
+                    currMin = overallMin;
+                }
             }
             prev = s.top();
             s.pop();

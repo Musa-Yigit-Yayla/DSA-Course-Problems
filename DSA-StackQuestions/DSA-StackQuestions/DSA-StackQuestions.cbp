@@ -35,6 +35,7 @@
 		<Unit filename="ArrayStack.cpp" />
 		<Unit filename="DeleteMid.cpp" />
 		<Unit filename="GetMinAtPop.cpp" />
+		<Unit filename="MaximumRectangularArea.cpp" />
 		<Unit filename="MyStack.h" />
 		<Unit filename="NextGreaterElt.cpp" />
 		<Unit filename="ParanthesisChecker.cpp" />

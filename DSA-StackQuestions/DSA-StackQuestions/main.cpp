@@ -92,7 +92,7 @@ int main()
     //_getMinAtPop(newStack);
     MaximumRectangularArea mra;
     int n = 5;
-    long long arr[n] =  {1, 2, 3, 4, 5};
+    long long arr[n] =  {5, 4, 3, 2, 1};
     cout << mra.getMaxArea(arr, n) << endl;
     return 0;
 }

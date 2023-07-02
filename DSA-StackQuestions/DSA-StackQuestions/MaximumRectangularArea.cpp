@@ -8,6 +8,9 @@ public:
     {
         // Your code here
         stack<long long> s = this->getStack(arr, n);
+        long long linearMin = s.top();
+        long long linearArea = s.top();
+        bool isAscending = false;
         long long prevArea = s.top();
         long long currLength = 1;
         long long currMin = s.top();
@@ -27,7 +30,15 @@ public:
                     currMin = s.top();
                     currLength = 1;
                 }
+                else if(minOfRecents * 2 > prevArea && s.top() >= prev && currMin * (currLength + 1) > prevArea){
+                    prevArea = currMin * (++currLength);
+                }
                 else{
+                    prevArea = minOfRecents * 2;
+                    currMin = minOfRecents;
+                    currLength = 2;
+                }
+                if(minOfRecents * 2 >= prevArea){
                     prevArea = minOfRecents * 2;
                     currMin = minOfRecents;
                     currLength = 2;

@@ -1,0 +1,34 @@
+# depslib dependency file v1.0
+1672830902 source:c:\users\yigit\documents\cs201\dsa-recursion\main.cpp
+	<iostream>
+	"RecursivePalindromeCheck.cpp"
+	"RopeCutting.cpp"
+	"DigitalRoot.h"
+	<vector>
+
+1672653477 source:c:\users\yigit\documents\cs201\dsa-recursion\powerofnumbers.cpp
+	<iostream>
+	<cmath>
+
+1672653222 source:c:\users\yigit\documents\cs201\dsa-recursion\tester.cpp
+
+1672653477 c:\users\yigit\documents\cs201\dsa-recursion\powerofnumbers.cpp
+	<iostream>
+	<cmath>
+
+1672734063 c:\users\yigit\documents\cs201\dsa-recursion\recursivepalindromecheck.cpp
+	<iostream>
+	<string>
+
+1672734063 source:c:\users\yigit\documents\cs201\dsa-recursion\recursivepalindromecheck.cpp
+	<iostream>
+	<string>
+
+1672830978 source:c:\users\yigit\documents\cs201\dsa-recursion\digitalroot..cpp
+	"DigitalRoot.h"
+
+1672830758 c:\users\yigit\documents\cs201\dsa-recursion\digitalroot.h
+
+1672930372 source:c:\users\yigit\documents\cs201\dsa-recursion\towerofhanoi.cpp
+	<iostream>
+

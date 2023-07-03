@@ -2,12 +2,12 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="DSA-StackQuestions" />
+		<Option title="DSA-Recursion" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/DSA-StackQuestions" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Debug/DSA-Recursion" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -16,7 +16,7 @@
 				</Compiler>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/DSA-StackQuestions" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Release/DSA-Recursion" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -32,19 +32,15 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="ArrayStack.cpp" />
-		<Unit filename="DeleteMid.cpp" />
-		<Unit filename="GetMinAtPop.cpp" />
-		<Unit filename="MaxOfMin.cpp" />
-		<Unit filename="MaximumRectangularArea.cpp" />
-		<Unit filename="MyStack.h" />
-		<Unit filename="NextGreaterElt.cpp" />
-		<Unit filename="ParanthesisChecker.cpp" />
-		<Unit filename="RemovingConsDuplicate.cpp" />
-		<Unit filename="SllStack.cpp" />
-		<Unit filename="StackOperations.cpp" />
-		<Unit filename="StackSpan.cpp" />
-		<Unit filename="TwoStacks.cpp" />
+		<Unit filename="DigitalRoot..cpp" />
+		<Unit filename="DigitalRoot.h" />
+		<Unit filename="PowerOfNumbers.cpp" />
+		<Unit filename="RecursivePalindromeCheck.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="RecursivePalindromeCheck.cpp" />
+		<Unit filename="Tester.cpp" />
+		<Unit filename="TowerOfHanoi.cpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

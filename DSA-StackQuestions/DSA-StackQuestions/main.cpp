@@ -1,6 +1,7 @@
 #include <iostream>
 //#include "GetMinAtPop.cpp"
-#include "MaximumRectangularArea.cpp"
+//#include "MaximumRectangularArea.cpp"
+#include "MaxOfMin.cpp"
 #include <vector>
 #include <stack>
 
@@ -90,10 +91,14 @@ int main()
     //stack<int> newStack = _push(arr, 12);
     //gmap._getMinAtPop(newStack);
     //_getMinAtPop(newStack);
-    MaximumRectangularArea mra;
+    /*MaximumRectangularArea mra;
     int n = 5;
     long long arr[n] =  {5, 4, 3, 2, 1};
     long long arr1[10] = {10,9,8,7,6,1,2,3,4,5};
-    cout << mra.getMaxArea(arr1, 10) << endl;
+    cout << mra.getMaxArea(arr1, 10) << endl;*/
+    int arr[] = {10, 20, 30, 50, 10, 70, 30};
+    int n = 7;
+    MaxOfMin mom;
+    vector<int> result = mom.maxOfMin(arr, n);
     return 0;
 }

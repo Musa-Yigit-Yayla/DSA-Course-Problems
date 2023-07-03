@@ -17,9 +17,9 @@
 
 1687981715 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stackquestions\dsa-stackquestions\arraystack.cpp
 
-1688326857 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stackquestions\dsa-stackquestions\main.cpp
+1688402265 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stackquestions\dsa-stackquestions\main.cpp
 	<iostream>
-	"MaximumRectangularArea.cpp"
+	"MaxOfMin.cpp"
 	<vector>
 	<stack>
 
@@ -72,9 +72,17 @@
 	<vector>
 	<iostream>
 
-1688326812 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stackquestions\dsa-stackquestions\maximumrectangulararea.cpp
+1688327785 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stackquestions\dsa-stackquestions\maximumrectangulararea.cpp
 	<stack>
 
 1688327785 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stackquestions\dsa-stackquestions\maximumrectangulararea.cpp
 	<stack>
+
+1688403300 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stackquestions\dsa-stackquestions\maxofmin.cpp
+	<stack>
+	<vector>
+
+1688402758 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-stackquestions\dsa-stackquestions\maxofmin.cpp
+	<stack>
+	<vector>
 

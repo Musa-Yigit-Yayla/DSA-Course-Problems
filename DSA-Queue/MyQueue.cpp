@@ -39,7 +39,23 @@ public:
             this->rear++;
         }
     }
-
+    void push1(int x){
+        if(this->front < 100004){
+            this->arr[++this->front] = x;
+        }
+        if(this->rear == 0){
+            this->rear++;
+        }
+    }
+    int pop1(){
+        int result = -1;
+        if(this->rear > 0){
+            result = this->arr[front];
+            this->arr[front--] = 0;
+            this->rear--;
+        }
+        return result;
+    }
     //Function to pop an element from queue and return that element.
     int pop()
     {

@@ -1,11 +1,11 @@
 # depslib dependency file v1.0
-1688473866 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-queue\main.cpp
+1688476600 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-queue\main.cpp
 	<iostream>
 	"MyQueue.cpp"
 
-1688474478 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-queue\myqueue.cpp
+1688476514 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-queue\myqueue.cpp
 	<queue>
 
-1688473866 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-queue\myqueue.cpp
+1688476514 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-queue\myqueue.cpp
 	<queue>
 

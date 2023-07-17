@@ -2,7 +2,7 @@
 #include <cstddef>
 
 using namespace std;
-class Solution{
+class FindTriplet{
   private:
     int* array = nullptr;
     int size;
@@ -53,37 +53,34 @@ class Solution{
     {
         //code here
         for(int i = 1; i < n; i++){
-            int key = arr[i];
-            int insertionPos;//position for the key to be inserted in the sorted part
-            //Elements before i are assumed to be sorted already
-            bool insertionPosFound = false;
-            for(int j = 0; j < i; j++){
-                if(arr[j] > key){
-                    //insert right before the first bigger element
-                    insertionPos = j;
-                    insertionPosFound = true;
+            int curr = arr[i];
+            bool broken = false;
+            int j;
+            for(j = 0; j < i; j++){
+                if(j < i && arr[j] > curr){
+                    //place curr at jth position and shift everything from j to i
+                    broken = true;
                     break;
                 }
             }
-            if(!insertionPosFound){
-                insertionPos = i;
+            if(broken){
+                //now j stands for insertion pos
+                int prev;
+                bool counter = false;
+                while(j < i){
+                    if(counter == false){
+                        prev = arr[j + 1];
+                        arr[j + 1] = arr[j];
+                    }
+                    else{
+                        int nextPrev = arr[j + 1];
+                        arr[j + 1] = prev;
+                        prev = nextPrev;
+                    }
+                    j++;
+                    counter = true;
+                }
             }
-
-            //insert the element
-            int temp = arr[insertionPos];
-
-            for(int j = insertionPos, counter = 0; j < i; j++, counter++){
-                /*int currElt = arr[j];
-                if(counter == 0){
-                    arr[j] = temp;
-                    temp = currElt;
-                }*/
-                arr[j + 1] = arr[j];
-                //arr[j + 1] = arr[j];
-                counter++;
-            }
-            arr[insertionPos] = key;
-
         }
     }
     bool helper( vector<int> selections, int currIndex){
@@ -114,5 +111,65 @@ class Solution{
         }
         return false;
         //two way recursion
+    }
+    //Function to return a list containing the intersection of two arrays.
+    vector<int> printIntersection(int arr1[], int arr2[], int N, int M)
+    {
+        //Your code here
+        vector<int> result;
+        int low1 = 0, low2 = 0;
+        /*bool isSwapped = false;
+        if(M > N){
+            int* temp = arr1;
+            arr1 = arr2;
+            arr2 = temp;
+            int temp1 = N;
+            N = M;
+            M = temp1;
+            isSwapped = true;
+        }*/
+        /*for(int i = 0; i < N && low2 < M; i++){
+            int curr1 = arr1[i];
+            int curr2 = arr2[low2];
+            if(curr1 == curr2){
+                result.push_back(curr1);
+                low2++;
+            }
+            else if(curr2 < curr1){
+                low2++;
+            }
+        }*/
+        int* prev = nullptr;
+        while(low1 < N && low2 < M){
+            int curr1 = arr1[low1];
+            int curr2 = arr2[low2];
+
+            if(curr1 < curr2){
+                low1++;
+            }
+            else if(curr1 == curr2){
+                if(prev == NULL){
+                    result.push_back(curr1);
+                }
+                else if(prev != NULL && *prev != curr1){
+                    result.push_back(curr1);
+                }
+                prev = arr1 + low1;
+                low1++;
+                low2++;
+            }
+            else{
+                low2++;
+            }
+        }
+        if(result.size() == 0){
+            result.push_back(-1);
+        }
+        /*if(isSwapped){
+            int* temp = arr1;
+            arr1 = arr2;
+            arr2 = temp;
+        }*/
+        return result;
     }
 };

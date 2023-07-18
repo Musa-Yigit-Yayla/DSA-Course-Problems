@@ -2,11 +2,12 @@
 1675672984 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-searchingsorting\allocateminpages.cpp
 	<iostream>
 
-1675863098 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-searchingsorting\insertionsort.cpp
+1689681932 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-searchingsorting\insertionsort.cpp
 	<iostream>
 
-1584205420 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-searchingsorting\main.cpp
+1689683061 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-searchingsorting\main.cpp
 	<iostream>
+	"InsertionSort.cpp"
 
 1675673782 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-searchingsorting\maxwaterbetweentowers.cpp
 	<iostream>
@@ -18,4 +19,11 @@
 	<iostream>
 	<vector>
 	<algorithm>
+
+1689677237 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-searchingsorting\findtriplet.cpp
+	<vector>
+	<cstddef>
+
+1689683300 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-searchingsorting\insertionsort.cpp
+	<iostream>
 

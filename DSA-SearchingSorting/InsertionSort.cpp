@@ -64,5 +64,49 @@ public:
             pass++;
         }
     }
+   void quickSort(int arr[], int low, int high)
+    {
+        // code here
+        if(low < high){
+            int pivotIndex = this->partition(arr, low, high);
+
+            this->quickSort(arr, low, pivotIndex - 1);
+            this->quickSort(arr, pivotIndex + 1, high);
+        }
+    }
+
+
+    int partition (int arr[], int low, int high)
+    {
+       // Your code here
+       int pivotIndex = low;
+       int pivot = arr[low];
+       while(low < high){
+           while(arr[low] <= pivot){
+               low++;
+               if(low > high){
+                   break;
+               }
+           }
+           int currLow = arr[low];
+           while(arr[high] >= pivot){
+               high--;
+               if(high < low){
+                   break;
+               }
+           }
+           int currHigh = arr[high];
+           //swap these two
+           if(high > low){
+            int temp = currLow;
+            arr[low] = arr[high];
+            arr[high] = temp;
+           }
+       }
+       //place pivot at high index attained after loop execution
+       arr[pivotIndex] = arr[high];
+       arr[high] = pivot;
+       return high;
+    }
 };
 

@@ -1,7 +1,7 @@
 #include <iostream>
+#incude <cmath>
 
 using namespace std;
-
 class InsertionSort{
 public:
     //Function to sort the array using insertion sort algorithm.
@@ -106,6 +106,32 @@ public:
        arr[pivotIndex] = arr[high];
        arr[high] = pivot;
        return high;
+    }
+    //Algorithm belongs to Carrano Henry book
+    void radixSort(int arr[], int n, int d){
+        for(int j = d; j > 0; j--){
+            //since there are 10 digits we initialize 10 empty groups with size 10
+            int groups[10][n] = {0};
+            int counters[10] = {0};
+
+            for(int i = 0; i < n; i++){
+                int currDigit = arr[i] % (pow(10, d- j + 1))
+                int k = currDigit;
+                groups[k][counter[k]++] = arr[i];
+            }
+            int count = 0;
+            int* counterPtr = counters;
+            while(count < n && counterPtr != NULL){
+                else if(*counterPtr == 0){
+                    counterPtr++;
+                }
+                else{
+                    for(int i = 0; i < *counterPtr; i++){
+                        arr[count++] = groups[counterPtr][i];
+                    }
+                }
+            }
+        }
     }
 };
 

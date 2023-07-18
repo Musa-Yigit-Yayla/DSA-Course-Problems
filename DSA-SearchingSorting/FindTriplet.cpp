@@ -172,4 +172,81 @@ class FindTriplet{
         }*/
         return result;
     }
+    //arr1,arr2 : the arrays
+    // n, m: size of arrays
+    //Function to return a list containing the union of the two sorted arrays.
+    vector<int> findUnion(int arr1[], int arr2[], int n, int m)
+    {
+        //Your code here
+        //return vector with correct order of elements
+        int low1 = 0;
+        int low2 = 0;
+        vector<int> result;
+        int prev;
+        bool isLoopExecuted = false;
+        while(low1 < n && low2 < m){
+            int curr1 = arr1[low1];
+            int curr2 = arr2[low2];
+
+            if(!isLoopExecuted){
+                //don't check prev
+                if(curr1 == curr2){
+                    result.push_back(curr1);
+                    prev = curr1;
+                    low1++;
+                    low2++;
+                }
+                else if(curr1 < curr2){
+                    result.push_back(curr1);
+                    prev = curr1;
+                    low1++;
+                }
+                else{
+                    result.push_back(curr2);
+                    prev = curr2;
+                    low2++;
+                }
+                isLoopExecuted = true;
+            }
+            else{
+                //same procedure but if the element to be pushed equates to prev then don't add to vector
+                if(curr1 == curr2){
+                    if(prev != curr1)
+                        result.push_back(curr1);
+                    prev = curr1;
+                    low1++;
+                    low2++;
+                }
+                else if(curr1 < curr2){
+                    if(prev != curr1)
+                        result.push_back(curr1);
+                    prev = curr1;
+                    low1++;
+                }
+                else{
+                    if(prev != curr2)
+                        result.push_back(curr2);
+                    prev = curr2;
+                    low2++;
+                }
+            }
+
+        }
+        //add the remaining elements if one of the arrays is not exhausted yet
+        while(low1 < n){
+            int curr1 = arr1[low1];
+            if(prev != curr1)
+                result.push_back(curr1);
+            prev = curr1;
+            low1++;
+        }
+         while(low2 < m){
+            int curr2 = arr2[low2];
+            if(prev != curr2)
+                result.push_back(curr2);
+            prev = curr2;
+            low2++;
+        }
+        return result;
+    }
 };

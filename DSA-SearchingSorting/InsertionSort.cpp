@@ -95,7 +95,6 @@ public:
                    break;
                }
            }
-           int currHigh = arr[high];
            //swap these two
            if(high > low){
             int temp = currLow;

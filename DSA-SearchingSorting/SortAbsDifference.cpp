@@ -43,8 +43,8 @@ public:
        int prevDiff = differenceArr[0];
        for(int i = 1; i < N; i++){
            int currDiff = differenceArr[i];
-           if(currDiff = prevDiff){
-               vector<int> elements = this->getKeys(initialArr, differenceArr, N, currDiff);
+           if(currDiff == prevDiff){
+               vector<int> elements = this->getKeys(initialArr, N, currDiff, k);
                i -= 1;
                for(int j = 0; j < elements.size(); j++, i++){
                    A[i] = elements.at(j);
@@ -107,10 +107,10 @@ public:
     }
     //When we have multiple elements in our original array attaining same absolute difference,
     //we will invoke this method so as to obtain those elemens in the order they appear in our array
-    vector<int> getKeys(int const arr[], int const differenceArr[], int n, int value){
+    vector<int> getKeys(int const arr[], int n, int value, int K){
         vector<int> result;
         for(int i = 0; i < n; i++){
-            if(differenceArr[i] == value){
+            if(abs(arr[i] - K)== value){
                 result.push_back(arr[i]);
             }
         }

@@ -116,4 +116,31 @@ public:
         }
         return result;
     }
+    // arr[]: input array
+    // n: size of array
+    // x: element to find index
+    //Function to find index of element x in the array if it is present.
+    int closer(int arr[],int n, int x){
+        int low = 0;
+        int high = n - 1;
+        while(low <= high){
+            int mid = (low + high) / 2;
+            if(arr[mid] == x){
+                return mid;
+            }
+            else if(arr[mid - 1] == x){
+                return (mid - 1);
+            }
+            else if(arr[mid + 1] == x){
+                return (mid + 1);
+            }
+            if(x < arr[mid]){
+                high = mid - 2;
+            }
+            else if(x > arr[mid]){
+                low = mid + 2;
+            }
+        }
+        return -1;
+    }
 };

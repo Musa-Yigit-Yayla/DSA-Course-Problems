@@ -45,5 +45,52 @@ public:
         }
         return -1;
     }
+    // Function to insert a node in a BST.
+    Node* insert(Node* root, int key) {
+        // Your code here
+        Node* newRoot = root;
+        Node* currNode = root;
+        Node* prevNode = nullptr;
+        while(currNode != NULL){
+            prevNode = currNode;
+            if(currNode->data < key){
+                currNode = currNode->right;
+            }
+            else if(currNode->data > key){
+                currNode = currNode->left;
+            }
+            else{
+                return newRoot;
+            }
+        }
+        Node* newNode = new Node(key);
+        if(prevNode->data < key){
+            prevNode->right = newNode;
+        }
+        else{
+            prevNode->left = newNode;
+        }
+        return newRoot;
+    }
+    // Function to return a list containing the inorder traversal of the BST.
+    vector<int> inOrder(Node *root) {
+        // code here
+        vector<int> vec;
+        if(root != NULL){
+            vector<int> leftTree = inOrder(root->left);
+            //push the children in the left subtree
+            for(int i: leftTree){
+                vec.push_back(i);
+            }
+            //push the current node
+            vec.push_back(root->data);
+            vector<int> rightTree = inOrder(root->right);
+            //push the right subtree's children
+            for(int i: rightTree){
+                vec.push_back(i);
+            }
+        }
+        return vec;
+    }
 
 };

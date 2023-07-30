@@ -92,5 +92,27 @@ public:
         }
         return vec;
     }
-
+    // Function to return the ceil of given number in BST.
+    int findCeil(Node* root, int input) {
+        if (root == NULL){
+            return -1;
+        }
+        int ceil = -1;
+        Node* currNode = root;
+        while(currNode != NULL){
+            int currValue = currNode->data;
+            if(currValue < input){
+                //search right subtree
+                currNode = currNode->right;
+            }
+            else if(currValue == input){
+                return currValue;
+            }
+            else{
+                ceil = currValue;
+                currNode = currNode->left;
+            }
+        }
+        return ceil;
+    }
 };

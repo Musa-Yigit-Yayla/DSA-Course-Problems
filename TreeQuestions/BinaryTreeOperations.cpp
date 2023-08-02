@@ -141,4 +141,31 @@ public:
         }
         return true;
     }
+    //Function to check if S is a subtree of tree T.
+    bool isSubTree(Node* T, Node* S)
+    {
+        // Your code here
+        vector<int> vecT = this->postOrder(T);
+        vector<int> vecS = this->postOrder(S);
+
+        string t = "";
+        string s = "";
+
+        for(int i = 0; i < vecT.size(); i++){
+            int curr = vecT.at(i);
+            t += curr;
+        }
+        for(int i = 0; i < vecS.size(); i++){
+            int curr = vecS.at(i);
+            s += curr;
+        }
+        int sLength = s.size();
+        for(int i = 0; i <= vecT.size() - vecS.size(); i++){
+            string currStr = t.substr(i, sLength);
+            if(currStr == s){
+                return true;
+            }
+        }
+        return false;
+    }
 };

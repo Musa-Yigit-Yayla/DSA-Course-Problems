@@ -104,38 +104,4 @@ public:
         }
         return result;
     }
-    //Function to check whether all nodes of a tree have the value
-    //equal to the sum of their child nodes.
-    //returns 1 if the condition is satisfied, returns 0 otherwise
-    int isSumProperty(Node *root){
-        // Add your code here
-        if(root != NULL){
-            if(root->left != NULL && root->right != NULL){
-                int currSum = root->left->data + root->right->data;
-                if(currSum != root->data){
-                    return 0;
-                }
-                else{
-                    return isSumProperty(root->left) && isSumProperty(root->right);
-                }
-            }
-            else if(root->left != NULL){
-                if(root->data != root->left->data){
-                    return 0;
-                }
-                else{
-                    return isSumProperty(root->left);
-                }
-            }
-            else if(root->right != NULL){
-                if(root->data != root->right->data){
-                    return 0;
-                }
-                else{
-                    return isSumProperty(root->right);
-                }
-            }
-        }
-        return 1;
-    }
 };

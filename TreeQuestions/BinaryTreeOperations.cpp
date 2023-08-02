@@ -1,5 +1,6 @@
 #include <cstddef>
 #include <vector>
+#include <cmath>
 
 using namespace std;
 struct Node{
@@ -50,5 +51,34 @@ public:
 
           }
           return result;
+    }
+    //Function to find the height of a binary tree.
+    int height(struct Node* node){
+        // code here
+        int result = 0;
+        if(node != NULL){
+            int leftHeight = height(node->left);
+            int rightHeight = height(node->right);
+            int maxHeight = max(leftHeight, rightHeight);
+            result = maxHeight + 1;
+        }
+        return result;
+    }
+    //Function to return a list containing elements of left view of the binary tree.
+    vector<int> leftView(Node *root)
+    {
+       // Your code here
+       vector<int> result;
+       if(root != NULL && root->left == NULL){
+           result.push_back(root->data);
+           vector<int> rightSubtree = leftView(root->right);
+           result.insert(result.end(), rightSubtree.begin(), rightSubtree.end());
+       }
+       else if(root != NULL){
+           result.push_back(root->data);
+           vector<int> leftSubtree = leftView(root->left);
+           result.insert(result.end(), leftSubtree.begin(), leftSubtree.end());
+       }
+       return result;
     }
 };

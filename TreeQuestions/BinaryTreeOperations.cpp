@@ -53,7 +53,7 @@ public:
           return result;
     }
     //Function to find the height of a binary tree.
-    int height(struct Node* node){
+    int height(Node* node){
         // code here
         int result = 0;
         if(node != NULL){
@@ -142,6 +142,7 @@ public:
         return true;
     }
     //Function to check if S is a subtree of tree T.
+    /*
     bool isSubTree(Node* T, Node* S)
     {
         // Your code here
@@ -167,5 +168,42 @@ public:
             }
         }
         return false;
+    }*/
+    // Function to check if S is a subtree of tree T.
+    bool isSubTree(Node* T, Node* S) {
+        if (S == nullptr) {
+            // An empty tree is a subtree of any tree.
+            return true;
+        }
+
+        if (T == nullptr) {
+            // If T is null but S is not, S cannot be a subtree of T.
+            return false;
+        }
+
+        // Check if the trees rooted at T and S are identical.
+        if (isIdentical(T, S)) {
+            return true;
+        }
+
+        // Recursively check in the left and right subtrees of T.
+        return isSubTree(T->left, S) || isSubTree(T->right, S);
+    }
+
+private:
+    // Function to check if two trees are identical.
+    bool isIdentical(Node* T, Node* S) {
+        if (T == nullptr && S == nullptr) {
+            // Both trees are empty (null), so they are identical.
+            return true;
+        }
+
+        if (T == nullptr || S == nullptr) {
+            // If one of the trees is empty and the other is not, they are not identical.
+            return false;
+        }
+
+        // Check if the current nodes have the same value and recursively check their subtrees.
+        return (T->data == S->data) && isIdentical(T->left, S->left) && isIdentical(T->right, S->right);
     }
 };

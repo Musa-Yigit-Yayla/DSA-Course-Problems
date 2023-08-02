@@ -15,7 +15,7 @@ struct Node
 };
 
 // Should return  right view of tree
-class Solution{
+class RightView{
 private:
     int rightHeight = 0;
 public:

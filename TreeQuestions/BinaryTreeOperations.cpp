@@ -127,4 +127,18 @@ public:
             mirror(node->right);
         }
     }
+    //Function to check whether a binary tree is balanced or not.
+    bool isBalanced(Node *root)
+    {
+        //  Your Code here
+        if(root != NULL){
+            if(abs(this->height(root->left) - this->height(root->right)) > 1){
+                return false;
+            }
+            else{
+                return isBalanced(root->left) && isBalanced(root->right);
+            }
+        }
+        return true;
+    }
 };

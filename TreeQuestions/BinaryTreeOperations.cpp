@@ -65,6 +65,7 @@ public:
         return result;
     }
     //Function to return a list containing elements of left view of the binary tree.
+    //Not thoroughly reliable, passed 600/603 test cases though.
     vector<int> leftView(Node *root)
     {
        // Your code here

@@ -19,7 +19,7 @@ class Solution{
 private:
     int rightHeight = 0;
 public:
-    //Function to return list containing elements of right view of binary tree.
+    /*//Function to return list containing elements of right view of binary tree.
     vector<int> rightView(Node *root)
     {
        // Your Code here
@@ -55,6 +55,26 @@ public:
             result.insert(result.end(), rightSubtree.begin(), rightSubtree.end());
         }
         return result;
+    }*/
+    vector<int> rightView(Node* root) {
+        vector<int> result;
+        rightViewHelper(root, 1, result);
+        return result;
+    }
+
+    // Helper function to obtain right view elements.
+    void rightViewHelper(Node* root, int currHeight, vector<int>& result) {
+        if (root == NULL) {
+            return;
+        }
+
+        if (currHeight > result.size()) {
+            result.push_back(root->data);
+        }
+
+        // Traverse the right subtree first to get the rightmost nodes.
+        rightViewHelper(root->right, currHeight + 1, result);
+        rightViewHelper(root->left, currHeight + 1, result);
     }
     vector<int> inorderHeight(Node* root, int currHeight, const int keyHeight){
         vector<int> result;

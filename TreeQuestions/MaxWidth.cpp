@@ -12,7 +12,6 @@ struct Node
         left = right = NULL;
     }
 };
- */
 
 class MaxWidth{
   public:

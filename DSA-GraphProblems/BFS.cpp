@@ -1,5 +1,6 @@
 #include <vector>
 #include <queue>
+#include <algorithm>
 
 using namespace std;
 class BFS{
@@ -23,6 +24,26 @@ public:
         int vertexCount = regularValues.size();
         bool visited[vertexCount + 1];
         queue<int> myQueue;
+        myQueue.push(V);
+
+        //mark v as visited and push it into the queue
+        while(!myQueue.empty()){
+            int u = myQueue.front();
+            myQueue.pop();
+            visited[u] = true;
+            myQueue.push(u);
+            returnValue.push_back(u);
+
+            //traverse the adjacent vertices to the u and push them into the queue if not visited
+            for(int i = 0; i < adj[u].size(); i++){
+                int currVertex = adj[u].at(i);
+                if(!visited[currVertex]){
+                    myQueue.push(currVertex);
+                }
+            }
+
+        }
+        return returnValue;
     }
 };
 

@@ -6,42 +6,30 @@ using namespace std;
 class BFS{
 public:
     // Function to return Breadth First Traversal of given graph.
-    vector<int> bfsOfGraph(int V, vector<int> adj[]) {
+    public:
+    vector<int> bfsOfGraph(int vertexCount, vector<int> adj[]) {
         vector<int> returnValue;
+        int startVertex = 0;
 
-        vector<int> regularValues;
-        //retrieve the number of vertices in the graph
-        for(int i = 0; i < sizeof(adj) / sizeof(adj[0]); i++){
-            vector<int> currAdj = adj[i];
-            for(int j = 0; j < currAdj.size(); j++){
-                int currVertex = currAdj.at(j);
-                if(count(regularValues.begin(), regularValues.end(), currVertex) == 0){
-                    //add it to the regularValues
-                    regularValues.push_back(currVertex);
-                }
-            }
+        bool visited[vertexCount];
+        for(int i = 0; i < vertexCount; i++){
+            visited[i] = false;
         }
-        int vertexCount = regularValues.size();
-        bool visited[vertexCount + 1];
-        queue<int> myQueue;
-        myQueue.push(V);
-
-        //mark v as visited and push it into the queue
-        while(!myQueue.empty()){
-            int u = myQueue.front();
-            myQueue.pop();
-            visited[u] = true;
-            myQueue.push(u);
-            returnValue.push_back(u);
-
-            //traverse the adjacent vertices to the u and push them into the queue if not visited
-            for(int i = 0; i < adj[u].size(); i++){
-                int currVertex = adj[u].at(i);
-                if(!visited[currVertex]){
-                    myQueue.push(currVertex);
+        queue<int> q;
+        //push the first vertex into the queue
+        q.push(startVertex);
+        while(!q.empty()){
+            int curr = q.front();
+            visited[curr] = true;
+            returnValue.push_back(curr);
+            q.pop();
+            for(int i = 0; i < adj[curr].size(); i++){
+                int currAdj = adj[curr].at(i);
+                if(!visited[currAdj]){
+                    q.push(currAdj);
+                    visited[currAdj];
                 }
             }
-
         }
         return returnValue;
     }

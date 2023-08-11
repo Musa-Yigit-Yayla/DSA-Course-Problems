@@ -58,37 +58,60 @@ public:
                     visit[adjList[temp][i]] = true;
                     int newRow = adjList[temp][i] / dist.at(0).size();
                     int newColumn = adjList[temp][i] % dist.at(0).size();
-                    dist[newRow][newColumn] = dist[currRow][currColumn] + 1;
+
+                    // Only update the distance if it's greater than the new calculated distance
+                    if (dist[newRow][newColumn] > dist[currRow][currColumn] + 1) {
+                        dist[newRow][newColumn] = dist[currRow][currColumn] + 1;
+                    }
                 }
             }
         }
     }
+
+
+
 };
 
 class GridDistance{
     public:
     //Function to find distance of nearest 1 in the grid for each cell.
 	vector<vector<int>> nearest(vector<vector<int>>& grid) {
-        Graph myGraph(grid);
+        int rows = grid.size();
+        int cols = grid[0].size();
+        vector<vector<int>> result(rows, vector<int>(cols, INT_MAX));
+        queue<pair<int, int>> q;
 
-        queue<int> q;
-        vector<vector<int>> result(grid.size(), vector<int>(grid.at(0).size(), 0));
-        bool visit[myGraph.getNodeCount()];
-        for (int i = 0; i < myGraph.getNodeCount(); i++) {
-            visit[i] = false;
-        }
-
-        // Find cells with value 1 and start BFS from them
-        for (int i = 0; i < grid.size(); i++) {
-            for (int j = 0; j < grid.at(i).size(); j++) {
+        // Initialize distances for cells with value 1 and push them into the queue
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
                 if (grid[i][j] == 1) {
-                    q.push(i * grid.at(0).size() + j); // Convert 2D index to 1D index
-                    visit[i * grid.at(0).size() + j] = true;
+                    result[i][j] = 0;
+                    q.push({i, j});
                 }
             }
         }
 
-        myGraph.bfs(visit, result, q);
+        int dx[] = {-1, 0, 1, 0}; // Directions: Up, Right, Down, Left
+        int dy[] = {0, 1, 0, -1};
+
+        while (!q.empty()) {
+            int x = q.front().first;
+            int y = q.front().second;
+            q.pop();
+
+            for (int k = 0; k < 4; k++) {
+                int newX = x + dx[k];
+                int newY = y + dy[k];
+
+                if (newX >= 0 && newX < rows && newY >= 0 && newY < cols) {
+                    if (result[newX][newY] > result[x][y] + 1) {
+                        result[newX][newY] = result[x][y] + 1;
+                        q.push({newX, newY});
+                    }
+                }
+            }
+        }
+
         return result;
     }
 };

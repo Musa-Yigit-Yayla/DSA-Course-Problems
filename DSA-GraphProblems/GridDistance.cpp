@@ -15,23 +15,23 @@ public:
         adjList = new vector<int>[this->nodeCount];
 
         int currIndex = 0;
-        for(int i = 0; i < i < grid.size(); i++){
-            for(int j = 0; j < grid.at(i).size(); j++){
-                vector<int> adj; //adjacency list for the current element
-                //we will store the binary values of the adjacent nodes
-                //diagonal nodes are not considered to be adjacent
-                if(j - 1 >= 0){
-                    adj.push_back(grid.at(i).at(j - 1));
+        for (int i = 0; i < grid.size(); i++) {
+            for (int j = 0; j < grid[i].size(); j++) {
+                vector<int> adj; // adjacency list for the current element
+
+                if (j - 1 >= 0 && grid[i][j - 1] == 1) {
+                    adj.push_back(i * grid[i].size() + j - 1);
                 }
-                if(j + 1 < grid.at(i).size()){
-                    adj.push_back(grid.at(i).at(j + 1));
+                if (j + 1 < grid[i].size() && grid[i][j + 1] == 1) {
+                    adj.push_back(i * grid[i].size() + j + 1);
                 }
-                if(i - 1 >= 0){
-                    adj.push_back(grid.at(i - 1).at(j));
+                if (i - 1 >= 0 && grid[i - 1][j] == 1) {
+                    adj.push_back((i - 1) * grid[i].size() + j);
                 }
-                if(i + 1 < grid.size()){
-                    adj.push_back(grid.at(i + 1).at(j));
+                if (i + 1 < grid.size() && grid[i + 1][j] == 1) {
+                    adj.push_back((i + 1) * grid[i].size() + j);
                 }
+
                 adjList[currIndex] = adj;
                 currIndex++;
             }
@@ -41,18 +41,24 @@ public:
         delete[] adjList;
     }
      // BFS function to find minimum distance
-    void bfs(bool visit[], vector<vector<int>>& dist, queue<int>& q){
+
+    int getNodeCount() const{
+        return this->nodeCount;
+    }
+    void bfs(bool visit[], vector<vector<int>>& dist, queue<int>& q) {
         while (!q.empty()) {
             int temp = q.front();
             q.pop();
+            int currColumn = temp % dist.at(0).size();
+            int currRow = temp / dist.at(0).size();
 
-            for (int i = 0; i < this->adjList[temp].size(); i++) {
-                if (visit[this->adjList[temp][i]] != 1) {
-                    this->adjList[temp][i]] = min(dist[this->adjList[temp]][i]);
-                    dist[this->adjList[temp][i], dist[temp] + 1);
-
-                    q.push(this->adjList[temp][i]);
-                    visit[this->adjList[temp][i]] = 1;
+            for (int i = 0; i < adjList[temp].size(); i++) {
+                if (!visit[adjList[temp][i]]) {
+                    q.push(adjList[temp][i]);
+                    visit[adjList[temp][i]] = true;
+                    int newRow = adjList[temp][i] / dist.at(0).size();
+                    int newColumn = adjList[temp][i] % dist.at(0).size();
+                    dist[newRow][newColumn] = dist[currRow][currColumn] + 1;
                 }
             }
         }
@@ -60,38 +66,29 @@ public:
 };
 
 class GridDistance{
-public:
+    public:
     //Function to find distance of nearest 1 in the grid for each cell.
-	vector<vector<int>>nearest(vector<vector<int>>grid)
-	{
-	    // Code here
-	    //Construct a graph where each vertex has adjacency between their adjacent grid elements in
-	    //the grid
+	vector<vector<int>> nearest(vector<vector<int>>& grid) {
+        Graph myGraph(grid);
 
-	    Graph myGraph(grid);
+        queue<int> q;
+        vector<vector<int>> result(grid.size(), vector<int>(grid.at(0).size(), 0));
+        bool visit[myGraph.getNodeCount()];
+        for (int i = 0; i < myGraph.getNodeCount(); i++) {
+            visit[i] = false;
+        }
 
-	    queue<int> q;
+        // Find cells with value 1 and start BFS from them
+        for (int i = 0; i < grid.size(); i++) {
+            for (int j = 0; j < grid.at(i).size(); j++) {
+                if (grid[i][j] == 1) {
+                    q.push(i * grid.at(0).size() + j); // Convert 2D index to 1D index
+                    visit[i * grid.at(0).size() + j] = true;
+                }
+            }
+        }
 
-	    int currIndex = 0;
-	    for(int i = 0; i < grid.size(); i++){
-	        for(int j = 0; j < grid.at(i).size(); j++){
-	            int curr = grid.at(i).at(j);
-	            if(curr == 1){
-	                q.push(currIndex);
-	            }
-	            currIndex++;
-	        }
-	    }
-
-	    vector<vector<int>> result(grid.size(), vector<int>(grid.at(0).size(), 0));
-	    bool visit[currIndex];
-	    for(int i = 0; i < currIndex; i++){
-	        visit[i] = false;
-	    }
-
-	    //push the first element into the queue before breadth first traversal
-	    q.push(grid.at(0).at(0));
-	    bfs(visit, result, q);
-	    return result;
-	}
+        myGraph.bfs(visit, result, q);
+        return result;
+    }
 };

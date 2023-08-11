@@ -1,4 +1,5 @@
 #include <vector>
+#include <stack>
 
 using namespace std;
 
@@ -34,6 +35,32 @@ class DFS{
     }
     //Iterative approach, take root as the 0th element
     vector<int> dfs(int vertexCount, vector<int> adj[]){
+        vector<int> result;
+        stack<int> newStack;
+        int currVertex = 0;
+        newStack.push(currVertex);
 
+        bool visited[vertexCount];
+        for(int i = 0; i < vertexCount; i++){
+            visited[i] = false;
+        }
+
+        //result.push_back(currVertex);
+        while(!newStack.empty()){
+            currVertex = newStack.top();
+            newStack.pop();
+            if(!visited[currVertex]){
+                result.push_back(currVertex);
+                visited[currVertex] = true;
+            }
+            vector<int> currAdjList = adj[currVertex];
+                for(int i = currAdjList.size() - 1; i >= 0; i--){
+                    int currAdj = currAdjList.at(i);
+                    if(!visited[currAdj]){
+                        newStack.push(currAdj);
+                    }
+                }
+        }
+        return result;
     }
 };

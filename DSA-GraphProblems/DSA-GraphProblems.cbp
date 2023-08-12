@@ -33,6 +33,7 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="BFS.cpp" />
+		<Unit filename="DFS.cpp" />
 		<Unit filename="GridDistance.cpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>

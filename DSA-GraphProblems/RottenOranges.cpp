@@ -1,7 +1,7 @@
 #include <vector>
 
 using namespace std;
-class RottenOranges{
+class Solution{
 private:
     vector<vector<vector<int>>> adjList; //contains adjacency list disregarding empty cells
     //the 3d vector data field contains a 2d vector which is the adjacency list of every non empty cell
@@ -16,7 +16,7 @@ public:
         //initialize the adjList
         const int columnCount = grid.at(0).size();
         for(int i = 0; i < grid.size(); i++){
-            for(int j = 0; j < grid.size(); j++){
+            for(int j = 0; j < columnCount; j++){
                 int currIndex = columnCount * i + j;
                 int currValue = grid.at(i).at(j);
                 vector<vector<int>> curr;
@@ -56,8 +56,8 @@ public:
             //start of the recursion
             vector<vector<int>> currAdj = this->adjList.at(startVertex);
             for(int i = 0; i < currAdj.size(); i++){
-                int currAdjValue = currAdj.at(0).at(1);
-                int currAdjIndex = currAdj.at(0).at(0);
+                int currAdjValue = currAdj.at(i).at(1);
+                int currAdjIndex = currAdj.at(i).at(0);
                 if(currAdjValue == 1){
                     findTime(startVertex, currAdjIndex, minTime, currTime + 1);
                 }

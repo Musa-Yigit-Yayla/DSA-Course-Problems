@@ -35,7 +35,7 @@ public:
             cout << arr[i] << ", ";
           }
           cout << endl;*/
-      while(currIndex < n && arr[currIndex] < largerChild){
+      while(currIndex < n && largerIndex < n && arr[currIndex] < largerChild){
           //swap with the larger child then update the indexes
           int temp = arr[currIndex];
           arr[currIndex] = largerChild;
@@ -47,15 +47,17 @@ public:
           cout << endl;*/
 
           currIndex = largerIndex;
+          bool isLeftVisited = false;
           if(2 * currIndex + 1 < n){
             largerIndex = 2 * currIndex + 1;
             largerChild = arr[largerIndex];
+            isLeftVisited = true;
           }
           if(2 * currIndex + 2 < n && arr[2 * currIndex + 2] > largerChild){
             largerIndex = 2 * currIndex + 2;
             largerChild = arr[largerIndex];
           }
-          else{
+          else if(!isLeftVisited){
             break;
           }
       }
@@ -83,14 +85,15 @@ public:
     {
         //code here
         this->buildHeap(arr, n);
-        /*for(int i = 0; i < this->n; i++){
+        for(int i = 0; i < this->n; i++){
             cout << this->arr[i] << ", ";
         }
-        cout << endl;*/
+        cout << endl;
 
         for(int i = n - 1; i >= 0; i--){
             int currMax = this->popMax();
-            this->heapify(this->arr, i + 1);
+            cout << "Popped max is " << currMax << endl;
+            this->heapify(this->arr, i);
             arr[i] = currMax;
         }
     }

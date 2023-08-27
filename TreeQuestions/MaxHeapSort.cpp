@@ -30,21 +30,34 @@ public:
           largerIndex = 2 * currIndex + 2;
           largerChild = arr[largerIndex];
       }
+      /*cout << "Curr array at heapify function body is: ";
+          for(int i = 0; i < n; i++){
+            cout << arr[i] << ", ";
+          }
+          cout << endl;*/
       while(currIndex < n && arr[currIndex] < largerChild){
           //swap with the larger child then update the indexes
           int temp = arr[currIndex];
           arr[currIndex] = largerChild;
           arr[largerIndex] = temp;
+          /*cout << "Curr array at heapify while loop is: ";
+          for(int i = 0; i < n; i++){
+            cout << arr[i] << ", ";
+          }
+          cout << endl;*/
 
           currIndex = largerIndex;
           if(2 * currIndex + 1 < n){
             largerIndex = 2 * currIndex + 1;
             largerChild = arr[largerIndex];
           }
-          if (2 * currIndex + 2 < n && arr[2 * currIndex + 2] > arr[largerIndex]) {
-                largerIndex = 2 * currIndex + 2;
-                largerChild = arr[2 * currIndex + 2];
-        }
+          if(2 * currIndex + 2 < n && arr[2 * currIndex + 2] > largerChild){
+            largerIndex = 2 * currIndex + 2;
+            largerChild = arr[largerIndex];
+          }
+          else{
+            break;
+          }
       }
     }
 
@@ -59,7 +72,7 @@ public:
         this->arr = new int[n];
         this->n = n;
         for(int i = 0; i < this->n; i++){
-            this->insertKey(arr[i], i);
+            this->insertKey(arr[i], this->currSize);
             this->currSize++;
         }
     }
@@ -77,7 +90,7 @@ public:
 
         for(int i = n - 1; i >= 0; i--){
             int currMax = this->popMax();
-            this->heapify(this->arr, i);
+            this->heapify(this->arr, i + 1);
             arr[i] = currMax;
         }
     }
@@ -88,7 +101,7 @@ private: //private helper functions
             //since we use a max heap we must simply trickle the newly inserted element if applicable
             int index = currSize;
             int parentIndex = (index - 1) / 2;
-            while(parentIndex >= 0 && this->arr[parentIndex] > this->arr[index]){
+            while(parentIndex >= 0 && this->arr[parentIndex] < this->arr[index]){
                 //swap then update the indexes accordingly
                 int temp = this->arr[index];
                 this->arr[index] = this->arr[parentIndex];
@@ -116,5 +129,4 @@ private: //private helper functions
         }
         return returnValue;
     }
-
 };

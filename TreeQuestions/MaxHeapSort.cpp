@@ -8,21 +8,13 @@ using namespace std;
 class MaxHeapSort{
 private:
     int* arr = nullptr;
-    int n;
-
-public:
-    #include <cstddef>
-
-class Solution{
-private:
-    int* arr = nullptr;
     int currSize = 0;
     int n;
 
 public:
     //Heapify function to maintain heap property.
     //This function processes the given array pointer hence you can use it for other arrays too
-    void heapify(int arr[], int n, int i)
+    void heapify(int arr[], int n)
     {
       // Your Code Here
       //We should call the heapify when we have a semi-heap
@@ -78,9 +70,14 @@ public:
     {
         //code here
         this->buildHeap(arr, n);
+        /*for(int i = 0; i < this->n; i++){
+            cout << this->arr[i] << ", ";
+        }
+        cout << endl;*/
 
         for(int i = n - 1; i >= 0; i--){
             int currMax = this->popMax();
+            this->heapify(this->arr, i);
             arr[i] = currMax;
         }
     }

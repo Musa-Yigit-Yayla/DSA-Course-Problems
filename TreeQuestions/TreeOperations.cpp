@@ -1,4 +1,5 @@
 #include <cstddef>
+#include <vector>
 
 using namespace std;
 struct Node{
@@ -115,7 +116,7 @@ public:
         }
         return ceil;
     }
-    vector<int> inOrder(Node* root) {
+    vector<int> inOrder2(Node* root) {
       vector<int> result;
       if(root != NULL){
           vector<int> leftTree = inOrder(root->left);

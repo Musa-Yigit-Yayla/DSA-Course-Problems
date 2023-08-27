@@ -8,7 +8,9 @@ struct MinHeap
     int *harr;
     int capacity, heap_size;
     MinHeap(int cap) {heap_size = 0; capacity = cap; harr = new int[cap];}
+    void MinHeapify(int);
     int extractMin();
+    void decreaseKey(int, int);
     void deleteKey(int i);
     void insertKey(int k);
     int parent(int i);
@@ -16,7 +18,7 @@ struct MinHeap
     int right(int i);
 };
 
-//Function to extract minimum value in heap and then to store
+/*//Function to extract minimum value in heap and then to store
 //next minimum value at first index.
 void printArr(int* arr, int size){
     for(int i = 0; i < size; i++){
@@ -169,7 +171,7 @@ void MinHeap::decreaseKey(int i, int new_val)
 /* You may call below MinHeapify function in
    above codes. Please do not delete this code
    if you are not writing your own MinHeapify */
-void MinHeap::MinHeapify(int i)
+/*void MinHeap::MinHeapify(int i)
 {
     int l = left(i);
     int r = right(i);
@@ -180,4 +182,4 @@ void MinHeap::MinHeapify(int i)
         swap(harr[i], harr[smallest]);
         MinHeapify(smallest);
     }
-}
+}*/

@@ -1,4 +1,5 @@
 #include <cstddef>
+#include <vector>
 
 using namespace std;
 struct Node

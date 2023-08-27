@@ -16,10 +16,14 @@ struct MinHeap
     int right(int i);
 };
 
-
-
 //Function to extract minimum value in heap and then to store
 //next minimum value at first index.
+void printArr(int* arr, int size){
+    for(int i = 0; i < size; i++){
+        cout << arr[i] << ", ";
+    }
+    cout << endl;
+}
 int MinHeap::extractMin()
 {
     // Your code here
@@ -28,6 +32,8 @@ int MinHeap::extractMin()
         returnValue = this->harr[0];
         this->deleteKey(0);
     }
+    //cout << "After extracting " << returnValue << endl;
+    //printArr(this->harr, this->heap_size);
     return returnValue;
 }
 
@@ -56,9 +62,9 @@ void MinHeap::deleteKey(int i)
             int leftChild = INT_MAX;
             int rightChild = INT_MAX;
 
-            if(leftIndex  < this->capacity)
+            if(leftIndex  < this->heap_size)
                 leftChild = this->harr[leftIndex];
-            if(rightIndex < this->capacity)
+            if(rightIndex < this->heap_size)
                 rightChild = this->harr[rightIndex];
 
             if(leftChild < rightChild){
@@ -73,21 +79,22 @@ void MinHeap::deleteKey(int i)
             while(smallerValue < lastValue){
                 //this while block satisfies the condition in which there is at least one smaller child
                 //hence we must trickle down
-                int temp = this->harr[smallerIndex];
-                this->harr[smallerIndex] = lastValue;
-                this->harr[newIndex] = temp;
-
                 //update the conditions so as to keep trickling down the element
                 newIndex = smallerIndex;
                 leftIndex = 2 * newIndex + 1;
                 rightIndex = 2 * newIndex + 2;
 
+                int temp = this->harr[smallerIndex];
+                this->harr[smallerIndex] = lastValue;
+                this->harr[newIndex] = temp;
+
+
                 leftChild = INT_MAX;
                 rightChild = INT_MAX;
 
-                if(leftIndex  < this->capacity)
+                if(leftIndex  < this->heap_size)
                     leftChild = this->harr[leftIndex];
-                if(rightIndex < this->capacity)
+                if(rightIndex < this->heap_size)
                     rightChild = this->harr[rightIndex];
 
                 if(leftChild < rightChild){
@@ -108,6 +115,8 @@ void MinHeap::deleteKey(int i)
         if(this->heap_size > 0){
             this->heap_size--;
         }
+        //cout << "After deleting the " << to_string(i) << "th element" << endl;
+        //printArr(this->harr, this->heap_size);
     }
 }
 
@@ -128,7 +137,7 @@ void MinHeap::insertKey(int k)
             //retrieve the parent
             int currIndex = this->heap_size;
             int parentIndex = (currIndex - 1) / 2;
-            while(parentIndex >= 0 && this->harr[parentIndex] < k){
+            while(parentIndex >= 0 && this->harr[parentIndex] > k){
                 //swap the current indexed element with its parent
                 int temp = this->harr[parentIndex];
                 this->harr[parentIndex] = this->harr[currIndex];
@@ -140,7 +149,10 @@ void MinHeap::insertKey(int k)
             }
         }
         this->heap_size++;
+        //cout << "After inserting the " << k << endl;
+        //printArr(this->harr, this->heap_size);
     }
+
 }
 //2* i + 1, 2* i + 2 for child nodes
 //(i - 1) / 2 for parent node

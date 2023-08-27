@@ -85,16 +85,45 @@ public:
     {
         //code here
         this->buildHeap(arr, n);
-        for(int i = 0; i < this->n; i++){
+        /*for(int i = 0; i < this->n; i++){
             cout << this->arr[i] << ", ";
         }
-        cout << endl;
+        cout << endl;*/
 
         for(int i = n - 1; i >= 0; i--){
             int currMax = this->popMax();
-            cout << "Popped max is " << currMax << endl;
+            //cout << "Popped max is " << currMax << endl;
             this->heapify(this->arr, i);
             arr[i] = currMax;
+        }
+    }
+    public:
+    //Function to return the sum of frequencies of k numbers
+    //with most occurrences in an array.
+    int kMostFrequent(int arr[], int n, int k)
+    {
+    	// Your code here
+    	int result = 0;
+    	int freqCount = 0;
+        //MaxHeapSort mhs;
+        this->heapSort(arr, n);
+        int currFreqElt;
+        int currFreq;
+        int prevFreq = -1;
+        int prevFreqElt = -1;
+        for(int i = 0; i < n; i++){
+            currFreqElt = arr.at(i);
+            if(currFreqElt != prevFreqElt){
+                if(prevFreq == k){
+                    freqCount++;
+                }
+                prevFreq = currFreq;
+                prevFreqElt = currFreqElt;
+            }
+            else{
+                int next = arr.at()
+                while()
+            }
         }
     }
 private: //private helper functions

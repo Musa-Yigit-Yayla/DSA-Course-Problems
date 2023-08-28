@@ -37,6 +37,7 @@
 		<Unit filename="GridDistance.cpp" />
 		<Unit filename="PrintAdjList.cpp" />
 		<Unit filename="RottenOranges.cpp" />
+		<Unit filename="StepByKnight.cpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

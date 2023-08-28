@@ -7,7 +7,7 @@
 
 using namespace std;
 
-class Solution {
+class StepByKnight {
     private:
     int adjMatrix[64][64];
     int adjArr[64];

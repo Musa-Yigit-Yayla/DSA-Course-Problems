@@ -1,9 +1,8 @@
 #include <iostream>
 #include <cstddef>
+#include <vector>
 
 using namespace std;
-
-#include <cstddef>
 
 class MaxHeapSort{
 private:
@@ -100,31 +99,71 @@ public:
     public:
     //Function to return the sum of frequencies of k numbers
     //with most occurrences in an array.
-    int kMostFrequent(int arr[], int n, int k)
-    {
-    	// Your code here
-    	int result = 0;
-    	int freqCount = 0;
-        //MaxHeapSort mhs;
-        this->heapSort(arr, n);
-        int currFreqElt;
-        int currFreq;
-        int prevFreq = -1;
-        int prevFreqElt = -1;
-        for(int i = 0; i < n; i++){
-            currFreqElt = arr.at(i);
-            if(currFreqElt != prevFreqElt){
-                if(prevFreq == k){
-                    freqCount++;
+    //!!! This function returns the total sum of the frequencies of the elements in the array which occur k times
+    int kMostFrequent2(int arr[], int n, int k){
+        	// Your code here
+        	int result = 0;
+        	int freqCount = 0;
+            //MaxHeapSort mhs;
+            this->heapSort(arr, n);
+
+
+            int currFreqElt;
+            int currFreq = 0;
+            int prevFreq = -1;
+            int prevFreqElt = -1;
+            for(int i = 0; i < n; i++){
+                currFreqElt = arr[i];
+                if(currFreqElt != prevFreqElt){
+                    if(currFreq == k){
+                        freqCount++;
+                    }
+                    prevFreq = currFreq;
+                    prevFreqElt = currFreqElt;
+                    currFreq = 1;
                 }
-                prevFreq = currFreq;
-                prevFreqElt = currFreqElt;
+                else{
+                    currFreq++;
+                }
             }
-            else{
-                int next = arr.at()
-                while()
+            return freqCount * k;
+
+    }
+     //Function to return the sum of frequencies of k numbers
+    //with most occurrences in an array.
+    static int kMostFrequent(int arr[], int n, int k){
+        	// Your code here
+        	int result = 0;
+        	int freqCount = 0;
+            MaxHeapSort mhs;
+            //build a max heap based on the frequencies
+            vector<int> usedElts;
+            vector<int> frequencies;
+
+            for(int i = 0; i < n; i++){
+                int curr = arr[i];
+                if(std::count(usedElts.begin(), usedElts.end(), curr) == 0){
+                    int currFreq = std::count(arr, arr + n, curr);
+                    frequencies.push_back(currFreq);
+                    usedElts.push_back(curr);
+                }
             }
-        }
+            //convert the frequencies to a int array then build a max heap out of it
+            int freqLength = frequencies.size();
+            int freqArr[freqLength];
+            for(int i = 0; i < frequencies.size(); i++){
+                freqArr[i] = frequencies.at(i);
+            }
+
+            mhs.buildHeap(freqArr, freqLength);
+            for(int i = 0; i < k; i++){
+                result += mhs.popMax();
+                mhs.heapify(mhs.getArr(), mhs.getCurrSize());
+            }
+
+            return result;
+
+
     }
 private: //private helper functions
     void insertKey(int key, int currSize){

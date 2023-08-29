@@ -33,6 +33,18 @@ class NumberOfIslands{
                 int currLabel = this->getLabel(i, j, rowLength);
                 //retrieve the adjacent nodes with their label
                 vector<int> adjNodes = this->getAdjNodes(i, j, rowLength, gridLength);
+                //we retrieve each and every adjacent vertice regardless of whether they contain 1, hence we must remove the ones with 0
+                for(int k = 0; k < adjNodes.size(); k++){
+                    int adjVertex = adjNodes.at(k);
+                    int adjRow = this->getVerticeRow(adjVertex);
+                    int adjColumn = this->getVerticeColumn(adjVertex);
+                    int adjValue = this->grid.at(adjRow).at(adjColumn);
+                    if(adjValue == 0){
+                        //remove the ones with 0
+                        vector<int>::iterator posIt = adjNodes.begin() + k;
+                        adjNodes.erase(posIt);
+                    }
+                }
                 this->adjList.at(currLabel) = adjNodes;
             }
         }
@@ -43,14 +55,23 @@ class NumberOfIslands{
         //to do this we need to traverse each and every graph node, once we cannot go to anywhere
         //we must traverse other nodes which are not connected to the graph that we have just traversed
         bool visit[gridElementCount + 1];
-        for(int i = 0; i < gridElementCount + 1; i++){
-            visit[i] = false;
+        //set the labels with 0 value to true
+        for(int i = 1; i < gridElementCount + 1; i++){
+            int currRow = this->getVerticeRow(i);
+            int currColumn = this->getVerticeColumn(i);
+            int ch = this->grid.at(currRow).at(currColumn);
+            if(ch == 0){
+                visit[i] = true;
+            }
+            else{
+               visit[i] = false;
+            }
         }
         visit[0] = true;
         int falseIndex = this->getFalseIndex(visit, gridElementCount);
         while(falseIndex != -1){
             //int currLabel = falseIndex;
-            int currLabel = falseIndex + 1; //1 based indexing for the vertices
+            int currLabel = falseIndex; //1 based indexing for the vertices
             this->dfs(currLabel, visit, gridElementCount);
             //increment the result which represents number of connected graphs by one
             result++;
@@ -62,17 +83,19 @@ class NumberOfIslands{
     //Iterative dfs approach
     //notice that visit is 0 based indexing whereas currLabel is 1 based indexing
     void dfs(int currLabel, bool visit[], int gridElementCount){
+        cout << "DFS Beginning visit arr: ";
+        this->printArr(visit, gridElementCount + 1);
         stack<int> s;
         //mark currLabel as visited
-        visit[currLabel - 1] = true;
+        visit[currLabel] = true; // swap the index to currLabel - 1 if necessary
         s.push(currLabel);
 
         while(!s.empty()){
             bool noUnvisitedAdj = true;
-            int currLabel = s.top();
-            int verticeRow = this->getVerticeRow(currLabel);
-            int verticeColumn = this->getVerticeColumn(currLabel);//!!!MIGHT BE PROBLEMATIC PAY ATTENTION
-            vector<int> currAdjacents = this->getAdjNodes(verticeRow, verticeColumn, rowLength, gridLength);
+            int topLabel = s.top();
+            int verticeRow = this->getVerticeRow(topLabel);
+            int verticeColumn = this->getVerticeColumn(topLabel);//!!!MIGHT BE PROBLEMATIC PAY ATTENTION
+            vector<int> currAdjacents = this->adjList.at(topLabel); //indexing might be problematic here
 
             for(int i = 0; i < currAdjacents.size(); i++){
                 int currAdj = currAdjacents.at(i);
@@ -194,5 +217,12 @@ class NumberOfIslands{
             }
             cout << endl;
         }
+    }
+    template<typename it>
+    void printArr(it arr[], int n){
+        for(int i = 0; i < n; i++){
+            cout << arr[i] << ", ";
+        }
+        cout << endl;
     }
 };

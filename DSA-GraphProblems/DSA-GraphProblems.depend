@@ -1,4 +1,41 @@
 # depslib dependency file v1.0
-1584205420 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-graphproblems\main.cpp
+1693301966 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-graphproblems\main.cpp
 	<iostream>
+	<vector>
+	"NumberOfIslands.cpp"
+
+1691690895 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-graphproblems\bfs.cpp
+	<vector>
+	<queue>
+	<algorithm>
+
+1691764103 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-graphproblems\dfs.cpp
+	<vector>
+	<stack>
+
+1693301602 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-graphproblems\printadjlist.cpp
+	<vector>
+	<utility>
+
+1693301608 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-graphproblems\griddistance.cpp
+	<queue>
+	<vector>
+	<cmath>
+
+1693302844 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-graphproblems\numberofislands.cpp
+	<vector>
+	<stack>
+
+1693301644 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-graphproblems\rottenoranges.cpp
+	<vector>
+	<climits>
+
+1693301655 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-graphproblems\stepbyknight.cpp
+	<vector>
+	<set>
+	<climits>
+
+1693303198 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-graphproblems\numberofislands.cpp
+	<vector>
+	<stack>
 

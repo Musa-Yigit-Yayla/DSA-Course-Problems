@@ -1,6 +1,6 @@
 #include <queue>
 #include <vector>
-#include <math>
+#include <cmath>
 
 using namespace std;
 class Graph{

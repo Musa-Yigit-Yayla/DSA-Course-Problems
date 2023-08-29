@@ -1,4 +1,5 @@
 #include <vector>
+#include <stack>
 
 using namespace std;
 class NumberOfIslands{
@@ -39,12 +40,14 @@ class NumberOfIslands{
         //subsequently we must count the number of connected graphs and return it as the result
         //to do this we need to traverse each and every graph node, once we cannot go to anywhere
         //we must traverse other nodes which are not connected to the graph that we have just traversed
-        bool visit[gridElementCount];
-        for(int i = 0; i < gridElementCount; i++){
+        bool visit[gridElementCount + 1];
+        for(int i = 0; i < gridElementCount + 1; i++){
             visit[i] = false;
         }
+        visit[0] = true;
         int falseIndex = this->getFalseIndex(visit, gridElementCount);
         while(falseIndex != -1){
+            //int currLabel = falseIndex;
             int currLabel = falseIndex + 1; //1 based indexing for the vertices
             this->dfs(currLabel, visit, gridElementCount);
             //increment the result which represents number of connected graphs by one
@@ -95,11 +98,11 @@ class NumberOfIslands{
         return row * rowLength + column + 1; //we start counting from 1
     }
     int getVerticeRow(int label){
-        int verticeRow = label / rowLength;
+        int verticeRow = (label - 1) / rowLength;
         return verticeRow;
     }
     int getVerticeColumn(int label){
-        int verticeColumn = label % rowLength - 1;
+        int verticeColumn = (label - 1)% rowLength;
         return verticeColumn;
     }
     //Returns the adjacent nodes if any

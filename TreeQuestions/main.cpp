@@ -1,5 +1,6 @@
 #include <iostream>
 #include "MaxHeapSort.cpp"
+//#include "NumberOfIslands.cpp"
 
 using namespace std;
 
@@ -13,6 +14,10 @@ int main()
         cout << arr[i] << ", ";
     }
     cout << endl;
+    NumberOfIslands noi;
+    /*vector<vector<char>> input{{{0,1},{1,0},{1,1},{1,0}}};
+    int result = noi.numIslands(input);
+    cout << result << endl;*/
 
     return 0;
 }

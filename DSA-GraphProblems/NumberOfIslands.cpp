@@ -6,7 +6,7 @@ class NumberOfIslands{
     vector<vector<int>> adjList;
     int rowLength;
     int gridLength;
-    vector<vector<char>>& grid;
+    vector<vector<char>> grid;
   public:
 
     const int charValue0 = 48; //in decimal
@@ -67,10 +67,10 @@ class NumberOfIslands{
             int currLabel = s.top();
             int verticeRow = this->getVerticeRow(currLabel);
             int verticeColumn = this->getVerticeColumn(currLabel);//!!!MIGHT BE PROBLEMATIC PAY ATTENTION
-            vector<int> currAdj = this->getAdjNodes(verticeRow, verticeColumn, rowLength, gridLength, grid);
+            vector<int> currAdjacents = this->getAdjNodes(verticeRow, verticeColumn, rowLength, gridLength, grid);
 
-            for(int i = 0; i < currAdj.size(); i++){
-                int currAdj = currAdj.at(i);
+            for(int i = 0; i < currAdjacents.size(); i++){
+                int currAdj = currAdjacents.at(i);
                 if(visit[currAdj]){
                     noUnvisitedAdj = false;
                     break;
@@ -83,7 +83,7 @@ class NumberOfIslands{
             }
             else{
                 //select an unvisited vertex at currAdj push it onto the stack and mark it as visited
-                int nextVertex = currAdj.at(0);
+                int nextVertex = currAdjacents.at(0);
                 s.push(nextVertex);
                 visit[nextVertex] = true;
             }
@@ -95,11 +95,11 @@ class NumberOfIslands{
         return row * rowLength + column + 1; //we start counting from 1
     }
     int getVerticeRow(int label){
-        int verticeRow = currLabel / rowLength;
+        int verticeRow = label / rowLength;
         return verticeRow;
     }
     int getVerticeColumn(int label){
-        int verticeColumn = currLabel % rowLength - 1;
+        int verticeColumn = label % rowLength - 1;
         return verticeColumn;
     }
     //Returns the adjacent nodes if any

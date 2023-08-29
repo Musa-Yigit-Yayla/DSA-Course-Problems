@@ -1,3 +1,4 @@
+#include <iostream>
 #include <vector>
 #include <stack>
 
@@ -31,11 +32,12 @@ class NumberOfIslands{
             for(int j = 0; j < rowLength; j++){
                 int currLabel = this->getLabel(i, j, rowLength);
                 //retrieve the adjacent nodes with their label
-                vector<int> adjNodes = this->getAdjNodes(i, j, rowLength, gridLength, grid);
+                vector<int> adjNodes = this->getAdjNodes(i, j, rowLength, gridLength);
                 this->adjList.at(currLabel) = adjNodes;
             }
         }
-
+        //print the adjList beforehand for debugging purposes
+        this->printAdjList();
         int result = 0;
         //subsequently we must count the number of connected graphs and return it as the result
         //to do this we need to traverse each and every graph node, once we cannot go to anywhere
@@ -70,7 +72,7 @@ class NumberOfIslands{
             int currLabel = s.top();
             int verticeRow = this->getVerticeRow(currLabel);
             int verticeColumn = this->getVerticeColumn(currLabel);//!!!MIGHT BE PROBLEMATIC PAY ATTENTION
-            vector<int> currAdjacents = this->getAdjNodes(verticeRow, verticeColumn, rowLength, gridLength, grid);
+            vector<int> currAdjacents = this->getAdjNodes(verticeRow, verticeColumn, rowLength, gridLength);
 
             for(int i = 0; i < currAdjacents.size(); i++){
                 int currAdj = currAdjacents.at(i);
@@ -106,7 +108,7 @@ class NumberOfIslands{
         return verticeColumn;
     }
     //Returns the adjacent nodes if any
-    vector<int> getAdjNodes(int row, int column, const int rowLength, const int gridLength, vector<vector<char>>& grid){
+    vector<int> getAdjNodes(int row, int column, const int rowLength, const int gridLength){
         vector<int> result;
         //start from top left
         int currRow = row - 1;
@@ -114,59 +116,59 @@ class NumberOfIslands{
         if(currRow >= 0){
             if(currColumn >= 0){
                 int ch = grid.at(currRow).at(currColumn);
-                if(ch == charValue1){
+                //if(ch == charValue1){
                     result.push_back(this->getLabel(currRow, currColumn, rowLength));
-                }
+                //}
             }
             currColumn = column;
             int ch = grid.at(currRow).at(currColumn);
-            if(ch == charValue1){
+            //if(ch == charValue1){
                 result.push_back(this->getLabel(currRow, currColumn, rowLength));
-            }
+            //}
             currColumn = column + 1;
             if(currColumn < rowLength){
                 int ch = grid.at(currRow).at(currColumn);
-                if(ch == charValue1){
+                //if(ch == charValue1){
                     result.push_back(this->getLabel(currRow, currColumn, rowLength));
-                }
+                //}
             }
         }
         currRow = row;
         currColumn = column - 1;
         if(currColumn >= 0){
             int ch = grid.at(currRow).at(currColumn);
-            if(ch == charValue1){
+            //if(ch == charValue1){
                 result.push_back(this->getLabel(currRow, currColumn, rowLength));
-            }
+            //}
         }
         //disregard the piece's position itself since we use adjList
         currColumn = column + 1;
         if(currColumn < rowLength){
             int ch = grid.at(currRow).at(currColumn);
-                if(ch == charValue1){
+                //if(ch == charValue1){
                     result.push_back(this->getLabel(currRow, currColumn, rowLength));
-                }
+                //}
         }
         currRow = row + 1;
         currColumn = column - 1;
         if(currRow < gridLength){
             if(currColumn >= 0){
                 int ch = grid.at(currRow).at(currColumn);
-                if(ch == charValue1){
+                //if(ch == charValue1){
                     result.push_back(this->getLabel(currRow, currColumn, rowLength));
-                }
+                //}
             }
             currColumn = column;
             int ch = grid.at(currRow).at(currColumn);
-            if(ch == charValue1){
+            //if(ch == charValue1){
                 result.push_back(this->getLabel(currRow, currColumn, rowLength));
-            }
+            //}
             currColumn = column + 1;
             if(currColumn < rowLength){
                 int ch = grid.at(currRow).at(currColumn);
-                if(ch == charValue1){
+                //if(ch == charValue1){
                     result.push_back(this->getLabel(currRow, currColumn, rowLength));
-                }
+                //}
             }
         }
         return result;
@@ -182,5 +184,15 @@ class NumberOfIslands{
             }
         }
         return result;
+    }
+    void printAdjList(){
+        for(int i = 0; i < this->adjList.size(); i++){
+            vector<int> currList = this->adjList.at(i);
+            for(int j = 0; j < currList.size(); j++){
+                int curr = currList.at(j);
+                cout << curr << ", ";
+            }
+            cout << endl;
+        }
     }
 };

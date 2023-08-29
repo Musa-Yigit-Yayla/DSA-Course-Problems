@@ -1,6 +1,7 @@
 #include <vector>
 #include <climits>
 #include <cstddef>
+#include <queue>
 
 using namespace std;
 class FindPath{
@@ -63,7 +64,7 @@ private:
     void bfs(vector<vector<int>>& grid, int startLabel, bool visit[]){
         int vertexCount = this->matrixSize; //visit length is represented by vertexCount
         int startRow = this->getLabelRow(startLabel);
-        int startColumn = this->getLabelColumn(startColumn);
+        int startColumn = this->getLabelColumn(startLabel);
 
         queue<int> q;
         //mark root as visited and enqueue it

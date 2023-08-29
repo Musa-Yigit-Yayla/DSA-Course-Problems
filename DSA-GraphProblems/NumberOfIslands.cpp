@@ -99,7 +99,7 @@ class NumberOfIslands{
 
             for(int i = 0; i < currAdjacents.size(); i++){
                 int currAdj = currAdjacents.at(i);
-                if(visit[currAdj]){
+                if(!visit[currAdj]){
                     noUnvisitedAdj = false;
                     break;
                 }
@@ -111,9 +111,17 @@ class NumberOfIslands{
             }
             else{
                 //select an unvisited vertex at currAdj push it onto the stack and mark it as visited
-                int nextVertex = currAdjacents.at(0);
-                s.push(nextVertex);
-                visit[nextVertex] = true;
+                int nextVertex = -1; //next vertex must be an unvisited vertex if possible
+                for(int i: currAdjacents){
+                    if(!visit[i]){
+                        nextVertex = i;
+                        break;
+                    }
+                }
+                if(nextVertex != -1){
+                    s.push(nextVertex);
+                    visit[nextVertex] = true;
+                }
             }
 
         }

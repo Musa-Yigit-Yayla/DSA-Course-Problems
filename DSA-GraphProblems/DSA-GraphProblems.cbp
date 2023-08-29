@@ -34,6 +34,7 @@
 		</Compiler>
 		<Unit filename="BFS.cpp" />
 		<Unit filename="DFS.cpp" />
+		<Unit filename="FindPath.cpp" />
 		<Unit filename="GridDistance.cpp" />
 		<Unit filename="NumberOfIslands.cpp" />
 		<Unit filename="PrintAdjList.cpp" />

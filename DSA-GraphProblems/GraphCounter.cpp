@@ -130,10 +130,12 @@ private:
                 visit[adjLabel] =  true;
             }*/
             if(unvisitedAdj.size() != 0){
-                int unvisitedLabel = unvisitedAdj.at(0);
-                //mark as visited and push to the stack before doing that
-                s.push(unvisitedLabel);
-                visit[unvisitedLabel] = true;
+                for(int i = 0; i < unvisitedAdj.size(); i++){
+                    int unvisitedLabel = unvisitedAdj.at(i);
+                    //mark as visited and push to the stack before doing that
+                    s.push(unvisitedLabel);
+                    visit[unvisitedLabel] = true;
+                }
             }
             else{
                 //backtracking will be done automatically

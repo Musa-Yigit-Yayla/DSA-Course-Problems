@@ -36,7 +36,9 @@
 		<Unit filename="DFS.cpp" />
 		<Unit filename="FindPath.cpp" />
 		<Unit filename="GridDistance.cpp" />
+		<Unit filename="NodeLevel.cpp" />
 		<Unit filename="NumberOfIslands.cpp" />
+		<Unit filename="PathCounter.cpp" />
 		<Unit filename="PrintAdjList.cpp" />
 		<Unit filename="RottenOranges.cpp" />
 		<Unit filename="StepByKnight.cpp" />

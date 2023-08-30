@@ -35,6 +35,7 @@
 		<Unit filename="BFS.cpp" />
 		<Unit filename="DFS.cpp" />
 		<Unit filename="FindPath.cpp" />
+		<Unit filename="GraphCounter.cpp" />
 		<Unit filename="GridDistance.cpp" />
 		<Unit filename="NodeLevel.cpp" />
 		<Unit filename="NumberOfIslands.cpp" />

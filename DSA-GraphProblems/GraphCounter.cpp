@@ -31,9 +31,26 @@ public:
 
         bool visit[grid.size() * grid.at(0).size()];
         for(int i = 0; i < this->vertexCount; i++){
-            visit[i] = false;
+            int rowI = this->getLabelRow(i);
+            int columnI = this->getLabelColumn(i);
+            if(grid.at(rowI).at(columnI) == '0'){
+                visit[i] = true;
+            }
+            else{
+                visit[i] = false;
+            }
         }
         this->initializeAdjList(grid);
+        //apply dfs while not thoroughly traversed
+        while(!this->isTraversed(visit, this->vertexCount)){
+            //retrieve a random unvisited label
+            int currLabel = this->retrieveUnvisitedLabel(visit, this->vertexCount);
+            if(currLabel >= 0){
+                this->dfs(grid, visit, currLabel);
+                this->graphCount++;
+            }
+        }
+        return this->graphCount;
     }
     //we don't check whether adjacent labels are walls or they are visited
     vector<int> getAdjLabels( int label){
@@ -86,8 +103,31 @@ public:
     }
 private:
     //labels are 0 based indexing
-    int dfs(vector<vector<char>>& grid, bool visit[], int currLabel){
-
+    void dfs(vector<vector<char>>& grid, bool visit[], int currLabel){
+        stack<int> s;
+        visit[currLabel] = true;
+        s.push(currLabel);
+        while(!s.empty()){
+            //pop the top element
+            int top = s.top();
+            s.pop();
+            //retrieve the unvisited adjacent vertices if any
+            vector<int> currAdj = this->getAdjLabels(top);
+            vector<int> unvisitedAdj;
+            for(int i: currAdj){
+                int adjRow = this->getLabelRow(i);
+                int adjColumn = this->getLabelColumn(i);
+                if(grid.at(adjRow).at(adjColumn) != '0' && !visit[i]){
+                    unvisitedAdj.push_back(i);
+                }
+            }
+            //traverse the unvisited vertices and mark the ones as visited
+            for(int i = 0; i < unvisitedAdj.size(); i++){
+                int adjLabel = unvisitedAdj.at(i);
+                s.push(adjLabel);
+                visit[adjLabel] =  true;
+            }
+        }
     }
     //We consider north south east and west as adjacency directions
     void initializeAdjList(vector<vector<char>>& grid){
@@ -113,9 +153,28 @@ private:
                         }
                     }
                 }
-                this->adjList.push_back(currAdj);
+                this->adjList[i] = currAdj;
             }
         }
 
+    }
+    bool isTraversed(bool visit[], int n){
+        for(int i = 0; i < n; i++){
+            if(!visit[i]){
+                return false;
+            }
+        }
+        return true;
+    }
+    //returns -1 when no unvisited label is found
+    int retrieveUnvisitedLabel(bool visit[], int n){
+        int result = -1;
+        for(int i = 0; i < n; i++){
+            if(!visit[i]){
+                result = i;
+                break;
+            }
+        }
+        return result;
     }
 };

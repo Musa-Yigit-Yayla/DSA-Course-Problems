@@ -82,7 +82,9 @@ private:
 
             for (int adjLabel : currAdjList) {
                 bool x = visit[adjLabel];
-                if (!visit[adjLabel]) {
+                int adjLabelRow = this->getLabelRow(adjLabel);
+                int adjLabelColumn = this->getLabelColumn(adjLabel);
+                if (!visit[adjLabel] && grid.at(adjLabelRow).at(adjLabelColumn) != 0) {
                     unvisitedAdj.push_back(adjLabel);
                 }
             }

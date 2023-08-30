@@ -8,15 +8,25 @@ private:
     //we are not responsible of any deallocation since this is given by the client
 public:
     // Function to detect cycle in an undirected graph.
-    bool isCycle(int V, vector<int> adj[]) {
+    bool isCycle(int v, vector<int> adj[]) {
         // Code here
         this->adjList = adj;
-        return this->dfs(V);
-    }
-    bool dfs(const int v){
-        int rootLabel = 0;
-
         bool visit[v];
+        //initialize the visit array to all false
+        for(int i = 0; i < v; i++){
+            visit[i] = false;
+        }
+        for(int i = 0; i < v; i++){
+            if(!visit[i] && this->dfs(i, visit, v)){
+                return true;
+            }
+        }
+        return false;
+
+    }
+    bool dfs(int rootLabel, bool visit[], const int v){
+
+
         for(int i = 0; i < v; i++){
             visit[i] = false;
         }
@@ -56,5 +66,13 @@ public:
             }
         }
         return false;
+    }
+    bool isTraversed(bool visit[], int n){
+        for(int i = 0; i < n; i++){
+            if(!visit[i]){
+                return false;
+            }
+        }
+        return true;
     }
 };

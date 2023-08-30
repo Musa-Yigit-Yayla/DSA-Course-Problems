@@ -3,6 +3,7 @@
 #include "NumberOfIslands.cpp"
 #include "FindPath.cpp"
 #include "GraphCounter.cpp"
+#include "DetectCycle.cpp"
 using namespace std;
 
 int main()
@@ -40,11 +41,19 @@ int main()
     cout << fp.is_Possible(input2) << endl;
     cout  << fp.is_Possible(input3) << endl;
     cout << fp.is_Possible(input4) << endl;*/
-    GraphCounter gc;
+    /*GraphCounter gc;
     vector<vector<char>> grid = {{'X', 'O', 'X'},
                                   {'O', 'X', 'O'},
                                   {'X', 'X', 'X'}};
-    cout << gc.xShape(grid) << endl;
+    cout << gc.xShape(grid) << endl;*/
+    int v = 5;
+    vector<int> adjArr[] = {{0, 1},
+                            {1, 2},
+                            {1, 4},
+                            {2, 3},
+                            {3, 4}};
+    DetectCycle dc;
+    cout << dc.isCycle(v, adjArr) << endl;
 
     return 0;
 }

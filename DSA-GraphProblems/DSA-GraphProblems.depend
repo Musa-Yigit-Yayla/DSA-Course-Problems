@@ -64,7 +64,7 @@
 1693401071 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-graphproblems\pathcounter.cpp
 	<vector>
 
-1693423345 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-graphproblems\graphcounter.cpp
+1693423854 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-graphproblems\graphcounter.cpp
 	<iostream>
 	<vector>
 	<cstddef>
@@ -75,4 +75,8 @@
 	<vector>
 	<cstddef>
 	<stack>
+
+1693435650 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-graphproblems\detectcycle.cpp
+	<vector>
+	<cstddef>
 

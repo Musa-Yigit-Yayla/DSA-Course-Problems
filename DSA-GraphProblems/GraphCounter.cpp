@@ -1,10 +1,12 @@
 #include <iostream>
 #include <vector>
 #include <cstddef>
+#include <stack>
 
 /**
 *We consider a grid to be of 0 and X characters only
 *We count the number of graphs formed by X characters where adjacency is measured in 2D without diagonal direction
+*CHARACTERS ARE COMPRISED OF O as letter & X.
 */
 using namespace std;
 class GraphCounter{
@@ -33,7 +35,7 @@ public:
         for(int i = 0; i < this->vertexCount; i++){
             int rowI = this->getLabelRow(i);
             int columnI = this->getLabelColumn(i);
-            if(grid.at(rowI).at(columnI) == '0'){
+            if(grid.at(rowI).at(columnI) == 'O'){
                 visit[i] = true;
             }
             else{
@@ -117,15 +119,24 @@ private:
             for(int i: currAdj){
                 int adjRow = this->getLabelRow(i);
                 int adjColumn = this->getLabelColumn(i);
-                if(grid.at(adjRow).at(adjColumn) != '0' && !visit[i]){
+                if(grid.at(adjRow).at(adjColumn) != 'O' && !visit[i]){
                     unvisitedAdj.push_back(i);
                 }
             }
             //traverse the unvisited vertices and mark the ones as visited
-            for(int i = 0; i < unvisitedAdj.size(); i++){
+            /*for(int i = 0; i < unvisitedAdj.size(); i++){
                 int adjLabel = unvisitedAdj.at(i);
                 s.push(adjLabel);
                 visit[adjLabel] =  true;
+            }*/
+            if(unvisitedAdj.size() != 0){
+                int unvisitedLabel = unvisitedAdj.at(0);
+                //mark as visited and push to the stack before doing that
+                s.push(unvisitedLabel);
+                visit[unvisitedLabel] = true;
+            }
+            else{
+                //backtracking will be done automatically
             }
         }
     }
@@ -140,13 +151,13 @@ private:
                 int labelRow = this->getLabelRow(currLabel);
                 int labelColumn = this->getLabelColumn(currLabel);
                 vector<int> currAdj;
-                if(grid.at(labelRow).at(labelColumn) != '0'){
+                if(grid.at(labelRow).at(labelColumn) != 'O'){
                     currAdj = this->getAdjLabels(currLabel);
                     for(int k = 0; k < currAdj.size(); k++){
                         int adjLabel = currAdj.at(k);
                         int adjRow = this->getLabelRow(adjLabel);
                         int adjColumn = this->getLabelColumn(adjRow);
-                        if(grid.at(adjRow).at(adjColumn) == '0'){
+                        if(grid.at(adjRow).at(adjColumn) == 'O'){
                             //remove the blank grid nodes from the adjacency list
                             currAdj.erase(currAdj.begin() + k);
                             k--;

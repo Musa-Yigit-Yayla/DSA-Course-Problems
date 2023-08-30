@@ -1,9 +1,10 @@
 # depslib dependency file v1.0
-1693394744 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-graphproblems\main.cpp
+1693423345 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-graphproblems\main.cpp
 	<iostream>
 	<vector>
 	"NumberOfIslands.cpp"
 	"FindPath.cpp"
+	"GraphCounter.cpp"
 
 1691690895 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-graphproblems\bfs.cpp
 	<vector>
@@ -55,4 +56,23 @@
 	<cstddef>
 	<queue>
 	<iostream>
+
+1693399191 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-graphproblems\nodelevel.cpp
+	<queue>
+	<vector>
+
+1693401071 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-graphproblems\pathcounter.cpp
+	<vector>
+
+1693423345 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-graphproblems\graphcounter.cpp
+	<iostream>
+	<vector>
+	<cstddef>
+	<stack>
+
+1693423345 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-graphproblems\graphcounter.cpp
+	<iostream>
+	<vector>
+	<cstddef>
+	<stack>
 

@@ -2,6 +2,7 @@
 #include <climits>
 #include <cstddef>
 #include <queue>
+#include <iostream>
 
 using namespace std;
 class FindPath{
@@ -45,6 +46,7 @@ public:
             }
             int startLabel = positions.at(0);
             int destLabel = positions.at(1);
+            this->printAdjMatrix();
             this->bfs(grid, startLabel, visit);
             pathFound = visit[destLabel];
         }
@@ -61,41 +63,38 @@ public:
     }
 private:
     //after we execute our bfs starting from the startlabel we will mark every reachable vertex
-    void bfs(vector<vector<int>>& grid, int startLabel, bool visit[]){
-        int vertexCount = this->matrixSize; //visit length is represented by vertexCount
+    void bfs(vector<vector<int>>& grid, int startLabel, bool visit[]) {
+        int vertexCount = this->matrixSize;
         int startRow = this->getLabelRow(startLabel);
         int startColumn = this->getLabelColumn(startLabel);
 
         queue<int> q;
-        //mark root as visited and enqueue it
         q.push(startLabel);
         visit[startLabel] = true;
-        while(!q.empty()){
-            //retrieve each and every unvisited adjacent vertex of the top of the queue
-            //enqueue them, then continue
-            //if no unvisited adjacent vertex exists then dequeue
-            int topElt = q.front();
-            vector<int> currAdjList = this->getAdjLabels(grid, topElt);
-            //remove the unvisited adjacents from the list
-            for(int i = 0; i < currAdjList.size(); i++){
-                int currAdjLabel = currAdjList.at(i);
-                if(this->adjMatrix[topElt][currAdjLabel] != 1){
-                    //erase since there is no adjacency
-                    vector<int>::iterator it = currAdjList.begin() + i;
-                    currAdjList.erase(it);
+
+        while (!q.empty()) {
+            int currentLabel = q.front();
+            q.pop();  // Dequeue the front node before processing neighbors
+
+            // Get unvisited adjacent labels
+            vector<int> currAdjList = this->getAdjLabels(grid, currentLabel);
+            vector<int> unvisitedAdj;
+
+            for (int adjLabel : currAdjList) {
+                bool x = visit[adjLabel];
+                if (!visit[adjLabel]) {
+                    unvisitedAdj.push_back(adjLabel);
                 }
             }
-            if(currAdjList.size() != 0){
-                //enqueue each and every unvisited adjacent node and mark them as visited
-                for(int adjLabel: currAdjList){
+
+            if (!unvisitedAdj.empty()) {
+                // Enqueue unvisited adjacent nodes and mark them as visited
+                for (int adjLabel : unvisitedAdj) {
                     q.push(adjLabel);
                     visit[adjLabel] = true;
                 }
             }
-            else{
-                //backtrack
-                q.pop();
-            }
+            // No unvisited adjacent nodes, continue to backtrack
         }
     }
     //Invoke when adjMatrix has been deallocated so as to avoid memory leak
@@ -195,5 +194,13 @@ private:
             }
         }
         return result;
+    }
+    void printAdjMatrix(){
+        for(int i = 0; i < this->matrixSize; i++){
+            for(int j = 0; j < this->matrixSize; j++){
+                cout << this->adjMatrix[i][j] << ", ";
+            }
+            cout << endl;
+        }
     }
 };

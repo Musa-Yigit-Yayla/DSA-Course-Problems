@@ -1,5 +1,7 @@
 #include <vector>
 #include <stack>
+#include <algorithm>
+#include <iostream>
 
 using namespace std;
 class DetectDirectedCycle{
@@ -16,10 +18,15 @@ public:
         while(!this->isTraversed(totalVisit, v)){
             //retrieve an unvisited vertex and start the traversal from there
             int currLabel = this->getUnvisitedLabel(totalVisit, v);
+            //cout << currLabel << endl;
             if(currLabel != -1 && this->dfsCycleCheck(adj, v, currLabel, totalVisit)){
                 result = true;
                 break;
             }
+            else if(currLabel == -1){
+                break;
+            }
+
         }
         return result;
     }
@@ -75,7 +82,7 @@ public:
     int getUnvisitedLabel(bool visit[], int n){
         int result = -1;
         for(int i = 0; i < n; i++){
-            if(visit[i]){
+            if(!visit[i]){
                 result = i;
                 break;
             }

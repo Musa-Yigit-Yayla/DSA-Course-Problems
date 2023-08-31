@@ -1,11 +1,12 @@
 # depslib dependency file v1.0
-1693436238 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-graphproblems\main.cpp
+1693496209 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-graphproblems\main.cpp
 	<iostream>
 	<vector>
 	"NumberOfIslands.cpp"
 	"FindPath.cpp"
 	"GraphCounter.cpp"
 	"DetectCycle.cpp"
+	"DetectDirectedCycle.cpp"
 
 1691690895 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-graphproblems\bfs.cpp
 	<vector>
@@ -77,11 +78,34 @@
 	<cstddef>
 	<stack>
 
-1693435650 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-graphproblems\detectcycle.cpp
+1693478598 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-graphproblems\detectcycle.cpp
 	<vector>
 	<cstddef>
 
 1693478598 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-graphproblems\detectcycle.cpp
 	<vector>
 	<cstddef>
+
+1693483747 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-graphproblems\minswaps.cpp
+	<vector>
+
+1693484917 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-graphproblems\mothervertex.cpp
+	<vector>
+	<queue>
+
+1693495740 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-graphproblems\detectdirectedcycle.cpp
+	<vector>
+	<stack>
+	<algorithm>
+	<iostream>
+
+1693495647 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-graphproblems\topologicalsort.cpp
+	<vector>
+	<algorithm>
+
+1693496298 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-graphproblems\detectdirectedcycle.cpp
+	<vector>
+	<stack>
+	<algorithm>
+	<iostream>
 

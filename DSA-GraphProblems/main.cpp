@@ -4,6 +4,7 @@
 #include "FindPath.cpp"
 #include "GraphCounter.cpp"
 #include "DetectCycle.cpp"
+#include "DetectDirectedCycle.cpp"
 using namespace std;
 
 int main()
@@ -46,14 +47,21 @@ int main()
                                   {'O', 'X', 'O'},
                                   {'X', 'X', 'X'}};
     cout << gc.xShape(grid) << endl;*/
-    int v = 5;
+    /*int v = 5;
     vector<int> adjArr[] = {{0, 1},
                             {1, 2},
                             {1, 4},
                             {2, 3},
                             {3, 4}};
     DetectCycle dc;
-    cout << dc.isCycle(v, adjArr) << endl;
+    cout << dc.isCycle(v, adjArr) << endl;*/
+    DetectDirectedCycle ddc;
+    vector<int> adj[] = {{1},
+                         {2},
+                          {3},
+                          {3}
+                           };
+    cout << ddc.isCyclic(4, adj) << endl;
 
     return 0;
 }

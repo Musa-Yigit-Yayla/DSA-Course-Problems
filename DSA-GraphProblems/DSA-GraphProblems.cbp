@@ -38,12 +38,15 @@
 		<Unit filename="FindPath.cpp" />
 		<Unit filename="GraphCounter.cpp" />
 		<Unit filename="GridDistance.cpp" />
+		<Unit filename="MinSwaps.cpp" />
+		<Unit filename="MotherVertex.cpp" />
 		<Unit filename="NodeLevel.cpp" />
 		<Unit filename="NumberOfIslands.cpp" />
 		<Unit filename="PathCounter.cpp" />
 		<Unit filename="PrintAdjList.cpp" />
 		<Unit filename="RottenOranges.cpp" />
 		<Unit filename="StepByKnight.cpp" />
+		<Unit filename="TopologicalSort.cpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

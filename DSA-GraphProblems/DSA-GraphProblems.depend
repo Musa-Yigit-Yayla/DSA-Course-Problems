@@ -1,10 +1,11 @@
 # depslib dependency file v1.0
-1693423345 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-graphproblems\main.cpp
+1693436238 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-graphproblems\main.cpp
 	<iostream>
 	<vector>
 	"NumberOfIslands.cpp"
 	"FindPath.cpp"
 	"GraphCounter.cpp"
+	"DetectCycle.cpp"
 
 1691690895 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-graphproblems\bfs.cpp
 	<vector>
@@ -77,6 +78,10 @@
 	<stack>
 
 1693435650 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-graphproblems\detectcycle.cpp
+	<vector>
+	<cstddef>
+
+1693436579 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-graphproblems\detectcycle.cpp
 	<vector>
 	<cstddef>
 

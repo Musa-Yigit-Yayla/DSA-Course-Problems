@@ -56,30 +56,26 @@ public:
 	    }
 	}
 
-	int partition(vector<vector<int>>& arr, int low, int high){
-	    //select the low index as the pivot
-	    int pivot = arr.at(low).at(0);
+	int partition(vector<vector<int>>& arr, int low, int high) {
+    int pivot = arr[low][0];
+    int left = low + 1;
+    int right = high;
 
-	    int l1 = low + 1, h1 = high;
-	    while(l1 < h1){
-	        //find the first larger element on the left side
-	        int largerValue = arr.at(l1).at(0);
-	        int smallerValue = arr.at(h1).at(0);
-	        while(largerValue < pivot && l1 <= high){
-	            l1++;
-	            largerValue = arr.at(l1).at(0);
-	        }
-	        while(smallerValue > pivot && h1 >= 0){
-	            h1--;
-	            smallerValue = arr.at(h1).at(0);
-	        }
-	    }
-	    //swap the pivot with the h1 index now
-	    vector<int> temp = arr.at(pivot);
-	    arr.erase(arr.begin() + pivot);
-	    arr.insert(arr.begin() + pivot, arr.at(h1));
-	    arr.erase(arr.begin() + h1);
-	    arr.insert(arr.begin() + h1, temp);
-	    return h1;
-	}
+    while (left <= right) {
+        while (left <= right && arr[left][0] <= pivot) {
+            left++;
+        }
+        while (left <= right && arr[right][0] > pivot) {
+            right--;
+        }
+        if (left <= right) {
+            swap(arr[left], arr[right]);
+        }
+    }
+
+    // Swap pivot element to its correct position
+    swap(arr[low], arr[right]);
+
+    return right;
+}
 };

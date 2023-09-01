@@ -16,6 +16,7 @@ public:
         if(this->adjList != NULL){
             areaCounter.clear();
             delete[] adjList;
+            this->adjList = nullptr;
         }
 
 
@@ -53,7 +54,7 @@ public:
     //This bfs function counts the total number of visited nodes on each call and pushes them into
     //the areaCounter at each call
     //Given start label must be a valid label, not a 0 valued label which indicates a wall
-    void bfs(vector<vector<int>>& grid, vector<bool> visit, int v, int start){
+    void bfs(vector<vector<int>>& grid, vector<bool>& visit, int v, int start){
         queue<int> q;
         //enqueue the start and mark it as visited
         q.push(start);
@@ -179,7 +180,7 @@ private:
                     vector<int> currAdj = this->getAdjNodes(i, j, this->columnCount, this->rowCount, grid);
                     for(int adjLabel: currAdj){
                         int adjRow = this->getLabelRow(adjLabel);
-                        int adjColumn = this->getLabelColumn(adjColumn);
+                        int adjColumn = this->getLabelColumn(adjLabel);
                         if(grid.at(adjRow).at(adjColumn) != 0){
                             //this is a valid adjacent node
                             validAdj.push_back(adjLabel);

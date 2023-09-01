@@ -1,6 +1,8 @@
 #include <vector>
 #include <cstddef>
-#include <unordered_set>
+#include <set>
+#include <climits>
+#include <algorithm>
 
 using namespace std;
 class Dijkstra{
@@ -23,6 +25,7 @@ public:
         for(int i = 0; i < v; i++){
             weightArr[i] = this->adjMatrix[s][i];
         }
+        weightArr[s] = 0;
 
         //Second step of the dijkstra's algorithm
         for(int i = 0; i < v - 1; i++){
@@ -30,9 +33,9 @@ public:
             int minWeight = INT_MAX;
             int minLabel = -1;
             for(int i = 0; i < v; i++){
-                if(vertexSet.count(v) == 0 && weightArr[v] < minWeight){
-                    minWeight = weightArr[v];
-                    minLabel = v;
+                if(vertexSet.count(i) == 0 && weightArr[i] < minWeight){
+                    minWeight = weightArr[i];
+                    minLabel = i;
                 }
             }
             //add the min label to the vertexSet
@@ -43,8 +46,8 @@ public:
             //destination is smaller than the original weight
             for(int i = 0; i < v; i++){
                 if(vertexSet.count(i) == 0){
-                    if(weightArr[i] < weightArr[v] + this->adjMatrix[v][i]){
-                        weightArr[i] = weightArr[v] + this->adjMatrix[v][i];
+                    if(weightArr[i] < weightArr[minLabel] + this->adjMatrix[minLabel][i]){
+                        weightArr[i] = weightArr[minLabel] + this->adjMatrix[minLabel][i];
                     }
                 }
             }

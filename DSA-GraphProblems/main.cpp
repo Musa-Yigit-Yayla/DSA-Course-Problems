@@ -6,6 +6,7 @@
 #include "DetectCycle.cpp"
 #include "DetectDirectedCycle.cpp"
 #include "LargestArea.cpp"
+#include "Dijkstra.cpp"
 using namespace std;
 
 int main()
@@ -63,11 +64,16 @@ int main()
                           {3}
                            };
     cout << ddc.isCyclic(4, adj) << endl;*/
-    LargestArea la;
+    /*LargestArea la;
     vector<vector<int>> grid = {{1, 1, 1, 0},
                                 {0, 0, 1, 0},
                                 {0, 0, 0, 1}};
-    cout << la.findMaxArea(grid) << endl;
+    cout << la.findMaxArea(grid) << endl;*/
+    Dijkstra d;
+    int v = 2;
+    vector<vector<int>> input[] =  {{{1, 9}}, {{0, 9}}};
+    int s = 0;
+    vector<int> output = d.dijkstra(v, input, s);
 
     return 0;
 }

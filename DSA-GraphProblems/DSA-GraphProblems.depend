@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1693496209 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-graphproblems\main.cpp
+1693573442 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-graphproblems\main.cpp
 	<iostream>
 	<vector>
 	"NumberOfIslands.cpp"
@@ -7,6 +7,7 @@
 	"GraphCounter.cpp"
 	"DetectCycle.cpp"
 	"DetectDirectedCycle.cpp"
+	"LargestArea.cpp"
 
 1691690895 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-graphproblems\bfs.cpp
 	<vector>
@@ -93,7 +94,7 @@
 	<vector>
 	<queue>
 
-1693495740 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-graphproblems\detectdirectedcycle.cpp
+1693496308 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-graphproblems\detectdirectedcycle.cpp
 	<vector>
 	<stack>
 	<algorithm>
@@ -103,9 +104,24 @@
 	<vector>
 	<algorithm>
 
-1693496298 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-graphproblems\detectdirectedcycle.cpp
+1693496308 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-graphproblems\detectdirectedcycle.cpp
 	<vector>
 	<stack>
 	<algorithm>
 	<iostream>
+
+1693573191 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-graphproblems\largestarea.cpp
+	<vector>
+	<queue>
+	<cstddef>
+
+1693573434 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-graphproblems\mincostpath.cpp
+	<vector>
+	<queue>
+	<climits>
+
+1693573606 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-graphproblems\largestarea.cpp
+	<vector>
+	<queue>
+	<cstddef>
 

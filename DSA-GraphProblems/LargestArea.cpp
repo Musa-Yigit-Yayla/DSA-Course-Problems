@@ -32,7 +32,7 @@ public:
             int currRow = this->getLabelRow(currLabel);
             int currColumn = this->getLabelColumn(currLabel);
 
-            if(grid.at(currLabel).at(currColumn) == 0){
+            if(grid.at(currRow).at(currColumn) == 0){
                 visit.at(currLabel) = true;
             }
         }

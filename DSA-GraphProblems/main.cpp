@@ -5,6 +5,7 @@
 #include "GraphCounter.cpp"
 #include "DetectCycle.cpp"
 #include "DetectDirectedCycle.cpp"
+#include "LargestArea.cpp"
 using namespace std;
 
 int main()
@@ -55,13 +56,18 @@ int main()
                             {3, 4}};
     DetectCycle dc;
     cout << dc.isCycle(v, adjArr) << endl;*/
-    DetectDirectedCycle ddc;
+    /*DetectDirectedCycle ddc;
     vector<int> adj[] = {{1},
                          {2},
                           {3},
                           {3}
                            };
-    cout << ddc.isCyclic(4, adj) << endl;
+    cout << ddc.isCyclic(4, adj) << endl;*/
+    LargestArea la;
+    vector<vector<int>> grid = {{1, 1, 1, 0},
+                                {0, 0, 1, 0},
+                                {0, 0, 0, 1}};
+    cout << la.findMaxArea(grid) << endl;
 
     return 0;
 }

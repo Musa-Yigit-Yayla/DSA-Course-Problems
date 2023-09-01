@@ -1,5 +1,6 @@
 #include <vector>
-#include <priority_queue>
+#include <queue>
+#include <climits>
 
 using namespace std;
 class MinCostPath{

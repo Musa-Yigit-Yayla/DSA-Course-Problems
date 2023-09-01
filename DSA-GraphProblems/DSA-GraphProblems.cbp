@@ -39,6 +39,7 @@
 		<Unit filename="FindPath.cpp" />
 		<Unit filename="GraphCounter.cpp" />
 		<Unit filename="GridDistance.cpp" />
+		<Unit filename="MinCostPath.cpp" />
 		<Unit filename="MinSwaps.cpp" />
 		<Unit filename="MotherVertex.cpp" />
 		<Unit filename="NodeLevel.cpp" />

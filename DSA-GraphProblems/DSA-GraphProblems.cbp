@@ -36,6 +36,7 @@
 		<Unit filename="DFS.cpp" />
 		<Unit filename="DetectCycle.cpp" />
 		<Unit filename="DetectDirectedCycle.cpp" />
+		<Unit filename="Dijkstra.cpp" />
 		<Unit filename="FindPath.cpp" />
 		<Unit filename="GraphCounter.cpp" />
 		<Unit filename="GridDistance.cpp" />

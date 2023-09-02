@@ -63,7 +63,7 @@ public:
     }
     void initializeAdjMatrix(int v, vector<vector<int>> adj[], int source){
         if(this->adjMatrix != NULL){
-            for(int i = this->matrixLength; i < this->matrixLength; i++){
+            for(int i = 0; i < this->matrixLength; i++){
                 int* currArr = this->adjMatrix[i];
                 delete[] currArr;
             }
@@ -82,12 +82,20 @@ public:
             for(int j = 0; j < v; j++){
                 this->adjMatrix[i][j] = INT_MAX;
             }
-            vector<vector<int>> currAdjacents = adj[i]; //first column is label, second is weight
-            for(vector<int> vec: currAdjacents){
-                int adjLabel = vec.at(0);
-                int adjWeight = vec.at(1);
+            if(i < v - 1){
+                vector<vector<int>> currAdjacents = adj[i]; //first column is label, second is weight
+                for(vector<int> vec: currAdjacents){
+                    //if(vec.size() != 0){
+                        int adjLabel = vec.at(1);
+                        int adjWeight = vec.at(2);
 
-                this->adjMatrix[i][adjLabel] = adjWeight;
+
+                        this->adjMatrix[i][adjLabel] = adjWeight;
+                    //}
+                    /*else{
+                        this->adjMatrix[i][adjLabel] = INT_MAX; //no adjacency
+                    }*/
+                }
             }
         }
     }

@@ -20,6 +20,27 @@ public:
         }
         return nodeList.at(0);
     }
+    Node *bTreeToCList(Node *root){
+        Node* start = this->bToDLL(root);
+        if(start == NULL){
+            return nullptr;
+        }
+        //get to the latest node in the current dll using right pointers to traverse
+        Node* currNode = start;
+        while(currNode != NULL){
+            if(currNode->right == NULL){
+                //link the terminating node back to the beginning node
+                currNode->right = start;
+                start->left = currNode;
+                break;
+            }
+            else{
+                currNode = currNode->right;
+            }
+        }
+        return start;
+
+    }
     //Does not make any binding alternation to the pointers
     void inorder(Node* currNode, vector<Node*>& nodeList){
         if(currNode != NULL){

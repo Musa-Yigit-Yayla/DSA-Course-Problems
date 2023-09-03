@@ -2,14 +2,14 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="MinHeapOperations.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="BinaryTreeToDll.cpp" open="1" top="1" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="6285" topLine="158" />
+			<Cursor1 position="1146" topLine="10" />
 		</Cursor>
 	</File>
-	<File name="BinaryTreeOperations.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="VerticalWidth.cpp" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1314" topLine="182" />
+			<Cursor1 position="558" topLine="5" />
 		</Cursor>
 	</File>
 	<File name="main.cpp" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -17,29 +17,39 @@
 			<Cursor1 position="179" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="FoldableTreeChecker.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="202" topLine="10" />
-		</Cursor>
-	</File>
-	<File name="TreeOperations.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="3439" topLine="108" />
-		</Cursor>
-	</File>
 	<File name="RightView.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="2967" topLine="68" />
 		</Cursor>
 	</File>
-	<File name="MaxHeapSort.cpp" open="1" top="1" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="4599" topLine="123" />
-		</Cursor>
-	</File>
 	<File name="MaxWidth.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="39" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="BinaryTreeOperations.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1314" topLine="175" />
+		</Cursor>
+	</File>
+	<File name="TreeOperations.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3439" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="MinHeapOperations.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="6285" topLine="151" />
+		</Cursor>
+	</File>
+	<File name="MaxHeapSort.cpp" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="728" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="FoldableTreeChecker.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="202" topLine="3" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

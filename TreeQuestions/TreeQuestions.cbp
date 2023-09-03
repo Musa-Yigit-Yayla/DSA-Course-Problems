@@ -33,12 +33,14 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="BinaryTreeOperations.cpp" />
+		<Unit filename="BinaryTreeToDll.cpp" />
 		<Unit filename="FoldableTreeChecker.cpp" />
 		<Unit filename="MaxHeapSort.cpp" />
 		<Unit filename="MaxWidth.cpp" />
 		<Unit filename="MinHeapOperations.cpp" />
 		<Unit filename="RightView.cpp" />
 		<Unit filename="TreeOperations.cpp" />
+		<Unit filename="VerticalWidth.cpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

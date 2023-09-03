@@ -70,6 +70,15 @@ int main()
                                 {0, 0, 0, 1}};
     cout << la.findMaxArea(grid) << endl;*/
     Dijkstra d;
+    /*int v0 = 2;
+    vector<vector<int>> input0[] = {{{0, 1, 9}}};
+    int s0 = 0;
+    vector<int> output0 = d.dijkstra(v0, input0, s0);
+    for(int i: output0){
+        cout << i << ", ";
+    }
+    cout << endl;*/
+
     int v = 4;
     vector<vector<int>> input[] =  {{{0, 1, 9}, {0, 2, 1}, {0, 3, 1}},
 {{1, 3, 3}},

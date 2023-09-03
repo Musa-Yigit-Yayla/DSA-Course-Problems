@@ -3,6 +3,7 @@
 #include <set>
 #include <climits>
 #include <algorithm>
+#include <cmath>
 
 using namespace std;
 class Dijkstra{
@@ -23,12 +24,13 @@ public:
 
         int weightArr[v];
         for(int i = 0; i < v; i++){
+            int curr = this->adjMatrix[s][i];
             weightArr[i] = this->adjMatrix[s][i];
         }
         weightArr[s] = 0;
 
         //Second step of the dijkstra's algorithm
-        for(int i = 0; i < v - 1; i++){
+        for(int k = 0; k < v - 1; k++){
             //gin the smallest weighted label which is not in vertexSet
             int minWeight = INT_MAX;
             int minLabel = -1;
@@ -45,59 +47,54 @@ public:
             //check weight and update it if the weight of the recently marked vertex + source to this
             //destination is smaller than the original weight
             for(int i = 0; i < v; i++){
+                    int x = weightArr[i];
+                    int y = weightArr[minLabel] + this->adjMatrix[minLabel][i]; //for debugging purposes
                 if(vertexSet.count(i) == 0){
-                    if(weightArr[i] < weightArr[minLabel] + this->adjMatrix[minLabel][i]){
+                     if(weightArr[i] > weightArr[minLabel] + this->adjMatrix[minLabel][i]){
                         weightArr[i] = weightArr[minLabel] + this->adjMatrix[minLabel][i];
                     }
                 }
             }
 
-            //convert weight array to vector
+
+        }
+        //convert weight array to vector
             vector<int> result;
             for(int i = 0; i < v; i++){
                 result.push_back(weightArr[i]);
             }
             return result;
-        }
 
     }
-    void initializeAdjMatrix(int v, vector<vector<int>> adj[], int source){
-        if(this->adjMatrix != NULL){
-            for(int i = 0; i < this->matrixLength; i++){
-                int* currArr = this->adjMatrix[i];
-                delete[] currArr;
+    void initializeAdjMatrix(int v, vector<vector<int>> adj[], int source) {
+        if (this->adjMatrix != nullptr) {
+            for (int i = 0; i < this->matrixLength; i++) {
+                delete[] this->adjMatrix[i];
             }
             delete[] this->adjMatrix;
             this->adjMatrix = nullptr;
         }
-        const int size = v;
-        this->adjMatrix = new int*[size];
-        for(int i = 0; i < size; i++){
-            this->adjMatrix[i] = new int[size];
-        }
+
         this->matrixLength = v;
-
-        for(int i = 0; i < v; i++){
-            //set the entire row to int max initially
-            for(int j = 0; j < v; j++){
-                this->adjMatrix[i][j] = INT_MAX;
+        this->adjMatrix = new int*[v];
+        for (int i = 0; i < v; i++) {
+            this->adjMatrix[i] = new int[v];
+            for (int j = 0; j < v; j++) {
+                this->adjMatrix[i][j] = (i == j) ? 0 : INT_MAX;
             }
-            if(i < v - 1){
-                vector<vector<int>> currAdjacents = adj[i]; //first column is label, second is weight
-                for(vector<int> vec: currAdjacents){
-                    //if(vec.size() != 0){
-                        int adjLabel = vec.at(1);
-                        int adjWeight = vec.at(2);
+        }
 
-
-                        this->adjMatrix[i][adjLabel] = adjWeight;
-                    //}
-                    /*else{
-                        this->adjMatrix[i][adjLabel] = INT_MAX; //no adjacency
-                    }*/
+        for (int i = 0; i < v - 1; i++) {
+            vector<vector<int>> currAdjacents = adj[i]; // first column is label, second is weight
+            for (vector<int> vec : currAdjacents) {
+                if (vec.size() >= 2) { // Ensure that vec has at least 2 elements
+                    int adjLabel = vec.at(1);
+                    int adjWeight = vec.at(2);
+                    this->adjMatrix[i][adjLabel] = adjWeight;
                 }
             }
         }
     }
+
 
 };

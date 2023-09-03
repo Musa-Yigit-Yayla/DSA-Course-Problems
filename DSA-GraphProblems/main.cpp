@@ -7,6 +7,7 @@
 #include "DetectDirectedCycle.cpp"
 #include "LargestArea.cpp"
 #include "Dijkstra.cpp"
+#include "BridgeEdge.cpp"
 using namespace std;
 
 int main()
@@ -79,7 +80,7 @@ int main()
     }
     cout << endl;*/
 
-    int v = 4;
+    /*int v = 4;
     vector<vector<int>> input[] =  {{{0, 1, 9}, {0, 2, 1}, {0, 3, 1}},
 {{1, 3, 3}},
 {{2, 3, 2}}};
@@ -88,6 +89,12 @@ int main()
     for(int i: output){
         cout << i << ", ";
     }
-    cout << endl;
+    cout << endl;*/
+    BridgeEdge be;
+    vector<int> adj[] = {{0, 1},
+{1, 2},
+{2, 3},
+{1, 2}};
+    cout << be.isBridge(4, adj, 1, 2) << endl;
     return 0;
 }

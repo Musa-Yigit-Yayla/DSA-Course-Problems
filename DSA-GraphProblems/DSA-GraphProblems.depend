@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1693658982 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-graphproblems\main.cpp
+1693749017 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-graphproblems\main.cpp
 	<iostream>
 	<vector>
 	"NumberOfIslands.cpp"
@@ -9,6 +9,7 @@
 	"DetectDirectedCycle.cpp"
 	"LargestArea.cpp"
 	"Dijkstra.cpp"
+	"BridgeEdge.cpp"
 
 1691690895 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-graphproblems\bfs.cpp
 	<vector>
@@ -126,12 +127,13 @@
 	<queue>
 	<cstddef>
 
-1693741351 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-graphproblems\dijkstra.cpp
+1693742119 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-graphproblems\dijkstra.cpp
 	<vector>
 	<cstddef>
 	<set>
 	<climits>
 	<algorithm>
+	<cmath>
 
 1693742119 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-graphproblems\dijkstra.cpp
 	<vector>
@@ -140,4 +142,13 @@
 	<climits>
 	<algorithm>
 	<cmath>
+
+1693744218 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-graphproblems\articulation.cpp
+	<stack>
+	<vector>
+
+1693749161 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-graphproblems\bridgeedge.cpp
+	<vector>
+	<queue>
+	<iostream>
 

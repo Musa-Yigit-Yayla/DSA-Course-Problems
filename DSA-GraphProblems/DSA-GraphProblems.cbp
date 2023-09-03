@@ -32,6 +32,7 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Articulation.cpp" />
 		<Unit filename="BFS.cpp" />
 		<Unit filename="DFS.cpp" />
 		<Unit filename="DetectCycle.cpp" />

@@ -34,6 +34,7 @@
 		</Compiler>
 		<Unit filename="BinaryTreeOperations.cpp" />
 		<Unit filename="BinaryTreeToDll.cpp" />
+		<Unit filename="BuildCTFromSLL.cpp" />
 		<Unit filename="FoldableTreeChecker.cpp" />
 		<Unit filename="MaxHeapSort.cpp" />
 		<Unit filename="MaxWidth.cpp" />

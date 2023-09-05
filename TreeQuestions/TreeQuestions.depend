@@ -1,7 +1,8 @@
 # depslib dependency file v1.0
-1693168961 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\treequestions\main.cpp
+1693921333 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\treequestions\main.cpp
 	<iostream>
-	"MaxHeapSort.cpp"
+	<cstddef>
+	"BTFromParentArr.cpp"
 
 1690974797 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\treequestions\binarytreeoperations.cpp
 	<cstddef>
@@ -16,10 +17,11 @@
 	<cstddef>
 	<cmath>
 
-1693169917 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\treequestions\maxheapsort.cpp
+1693921324 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\treequestions\maxheapsort.cpp
 	<iostream>
 	<cstddef>
-	<cstddef>
+	<vector>
+	<algorithm>
 
 1693163445 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\treequestions\maxwidth.cpp
 	<cstddef>
@@ -37,4 +39,29 @@
 	<iostream>
 	<cstddef>
 	<vector>
+
+1693920946 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\treequestions\btfromparentarr.cpp
+	<cstddef>
+	<unordered_map>
+	<queue>
+	<cstddef>
+
+1693921021 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\treequestions\buildctfromsll.cpp
+	<cstddef>
+
+1693921060 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\treequestions\verticalwidth.cpp
+	<cstddef>
+	<cmath>
+	<cstddef>
+
+1693921245 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\treequestions\binarytreetodll.cpp
+	<cstddef>
+	<vector>
+
+1693922203 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\treequestions\btfromparentarr.cpp
+	<cstddef>
+	<unordered_map>
+	<queue>
+	<cstddef>
+	<cstdlib>
 

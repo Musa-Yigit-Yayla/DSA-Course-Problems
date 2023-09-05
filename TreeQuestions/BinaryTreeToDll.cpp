@@ -1,7 +1,18 @@
-#include <vector>
 #include <cstddef>
+struct Node
+{
+    int data;
+    struct Node* left = nullptr;
+    struct Node* right = nullptr;
 
-class BinaryTreeToDll{
+    Node(int x){
+        data = x;
+        left = right = NULL;
+    }
+};
+#include <vector>
+
+/*class BinaryTreeToDll{
 public:
     //Function to convert binary tree to doubly linked list and return it.
     Node * bToDLL(Node *root){
@@ -49,4 +60,4 @@ public:
             this->inorder(currNode->right, nodeList);
         }
     }
-};
+};*/

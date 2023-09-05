@@ -1,5 +1,21 @@
 #include <cstddef>
 #include <unordered_map>
+#include <queue>
+#include <cstddef>
+#include <cstdlib>
+
+
+struct Node
+{
+    int data;
+    struct Node* left = nullptr;
+    struct Node* right = nullptr;
+
+    Node(int x){
+        data = x;
+        left = right = NULL;
+    }
+};
 
 using namespace std;
 class BTFromParentArr{
@@ -68,9 +84,31 @@ public:
                         parent->right = newNode;
                     }
                 }
-                else{
-                    //enqueue the newly popped element back into the queue for later use
-                    q.push(front);
+                else if(q.size() >= 2){
+                    //pop at most 2 elements from the top and shuffle them, then enqueue them, notice that we already popped an element
+                    int popCount = rand() % 2 + 1;
+                    vector<int> poppedElts;
+                    poppedElts.push_back(front);
+                    for(int i = 0; i < popCount; i++){
+                        int currElt = q.front();
+                        q.pop();
+                        poppedElts.push_back(currElt);
+
+                    }
+                    //shuffle the poppedElts
+                    for(int i = 0; i < poppedElts.size() / 2; i++){
+                        int index1 = rand() % poppedElts.size();
+                        int index2 = rand() % poppedElts.size();
+                        if(index1 != index2){
+                            int temp = poppedElts.at(index1);
+                            poppedElts.at(index1) = poppedElts.at(index2);
+                            poppedElts.at(index2) = temp;
+                        }
+                    }
+                    //enqueue the popped elements again
+                    for(int elt: poppedElts){
+                        q.push(elt);
+                    }
                 }
             }
         }

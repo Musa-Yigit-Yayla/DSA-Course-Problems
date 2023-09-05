@@ -1,10 +1,12 @@
 #include <cstddef>
+#include <cmath>
+#include <cstddef>
 
 using namespace std;
-struct{
+struct Node{
     int data;
-    struct Node* left;
-    struct Node* right;
+    struct Node* left = nullptr;
+    struct Node* right = nullptr;
 
     Node(int x){
         data = x;

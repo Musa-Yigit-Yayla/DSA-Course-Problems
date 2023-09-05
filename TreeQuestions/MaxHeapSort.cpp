@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstddef>
 #include <vector>
+#include <algorithm>
 
 using namespace std;
 
@@ -164,6 +165,12 @@ public:
             return result;
 
 
+    }
+    int* getArr() const{
+        return this->arr;
+    }
+    int getCurrSize() const{
+        return this->currSize;
     }
 private: //private helper functions
     void insertKey(int key, int currSize){

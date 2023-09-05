@@ -7,7 +7,7 @@ using namespace std;
 struct Node
 {
     int data;
-    struct node* next;
+    struct Node* next;
 
     Node(int x){
         data = x;
@@ -15,8 +15,11 @@ struct Node
     }
 };
 //The structure of TreeNode is as follows
-struct TreeNode
-{
+struct TreeNode{
+
+    TreeNode(int data){
+        this->data = data;
+    }
     int data;
     TreeNode *left;
     TreeNode *right;

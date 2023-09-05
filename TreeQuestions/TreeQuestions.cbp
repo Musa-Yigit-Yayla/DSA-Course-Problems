@@ -32,6 +32,7 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="BTFromParentArr.cpp" />
 		<Unit filename="BinaryTreeOperations.cpp" />
 		<Unit filename="BinaryTreeToDll.cpp" />
 		<Unit filename="BuildCTFromSLL.cpp" />

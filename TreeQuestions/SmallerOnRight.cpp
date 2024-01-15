@@ -3,8 +3,22 @@
 #include <algorithm>
 using namespace std;
 
+struct Node
+{
+    int data;
+    struct Node* left = nullptr;
+    struct Node* right = nullptr;
+
+    Node(int x){
+        data = x;
+        left = right = NULL;
+    }
+};
+
 int getSmallerOnRight(int* arr, int n);
+int optimizedSmallerOnRight(int* arr, int n);
 int subArrHelper(int* arr, int n);
+bool insert(Node& head, int data);
 
 int main() {
 
@@ -19,14 +33,66 @@ int main() {
         for(int j = 0; j < n; j++){
             cin >> arr[j];
         }
-        cout << getSmallerOnRight(arr, n) << endl;
+        cout << optimizedSmallerOnRight(arr, n) << endl;
         delete[] arr;
     }
 	return 0;
 }
 
 int subArrHelper(int* arr, int n){
-    return 0;
+    //create a BST from the given sub-array with root arr[0]
+    //count the total elements inserted at the left subtree
+    int leftInsertionCount = 0;
+
+    Node head(arr[0]);
+    for(int i = 1; i < n; i++){
+        int curr = arr[i];
+        if(curr < head.data && insert(head, curr)){
+            leftInsertionCount++;
+        }
+    }
+    return leftInsertionCount;
+}
+//inserts only the smaller elements than head
+bool insert(Node& head, int data){
+    Node* newNode = new Node(data);
+    Node* currNode = &head;
+    Node* prevNode = &head;
+
+    bool isRight = false;
+    while(currNode != NULL){
+        if(newNode->data < currNode->data){
+            prevNode = currNode;
+            currNode = currNode->left;
+            isRight = false;
+        }
+        else if(newNode->data > currNode->data){
+            prevNode = currNode;
+            currNode = currNode->right;
+            isRight = true;
+        }
+        else{
+            return false; //insertion unsuccessful
+        }
+    }
+    if(isRight){
+        prevNode->right = newNode;
+    }
+    else{
+        prevNode->left = newNode;
+    }
+    return true;
+}
+int optimizedSmallerOnRight(int* arr, int n){
+    int maxResult = 0;
+
+    for(int i = 0; i < n - 1; i++){
+        int currResult = subArrHelper(arr + i, n - i);
+        if(currResult > maxResult){
+            maxResult = currResult;
+        }
+    }
+    return maxResult;
 }
 int getSmallerOnRight(int* arr, int n){
     int result = 0;

@@ -50,10 +50,11 @@ public:
                 for(int i = 0; i < currNode->neighbors.size(); i++){
                     Node* currAdj = currNode->neighbors.at(i);
                     if(!this->isVisited(currAdj->val)){
-                        //instantiate a clone node and connect it to currNode bidirectionally
+                        //instantiate a clone node and connect it to currNode's cloned correspondance bidirectionally
                         Node* currClone = new Node(currAdj->val);
-                        currNode->neighbors.push_back(currClone);
-                        currClone->neighbors.push_back(currNode);
+                        Node* currNodeClone = this->getClonedByValue(currNode->val);
+                        currNodeClone->neighbors.push_back(currClone);
+                        currClone->neighbors.push_back(currNodeClone);
 
                         //push the currClone onto the stack
                         s.push(currClone);
@@ -77,5 +78,17 @@ public:
             }
         }
         return found;
+    }
+    //Returns nullptr when not found, when found returns the cloned node itself
+    Node* getClonedByValue(int val){
+        Node* result = nullptr;
+        for(int i = 0; i < this->clonedNodes.size(); i++){
+            Node* currNode = this->clonedNodes.at(i);
+            if(currNode->val == val){
+                result = currNode;
+                break;
+            }
+        }
+        return result;
     }
 };

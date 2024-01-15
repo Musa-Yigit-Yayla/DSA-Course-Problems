@@ -18,7 +18,8 @@ struct Node
 int getSmallerOnRight(int* arr, int n);
 int optimizedSmallerOnRight(int* arr, int n);
 int subArrHelper(int* arr, int n);
-bool insert(Node& head, int data);
+bool insert(Node* head, int data);
+void deleteTree(Node* currNode);
 
 int main() {
 
@@ -44,20 +45,21 @@ int subArrHelper(int* arr, int n){
     //count the total elements inserted at the left subtree
     int leftInsertionCount = 0;
 
-    Node head(arr[0]);
+    Node* head = new Node(arr[0]);
     for(int i = 1; i < n; i++){
         int curr = arr[i];
-        if(curr < head.data && insert(head, curr)){
+        if(curr < head->data && insert(head, curr)){
             leftInsertionCount++;
         }
     }
+    deleteTree(head);
     return leftInsertionCount;
 }
 //inserts only the smaller elements than head
-bool insert(Node& head, int data){
+bool insert(Node* head, int data){
     Node* newNode = new Node(data);
-    Node* currNode = &head;
-    Node* prevNode = &head;
+    Node* currNode = head;
+    Node* prevNode = head;
 
     bool isRight = false;
     while(currNode != NULL){
@@ -82,6 +84,14 @@ bool insert(Node& head, int data){
         prevNode->left = newNode;
     }
     return true;
+}
+void deleteTree(Node* currNode){
+    //simply post-order traverse the given tree and deallocate each node
+    if(currNode != NULL){
+        deleteTree(currNode->left);
+        deleteTree(currNode->right);
+        delete currNode;
+    }
 }
 int optimizedSmallerOnRight(int* arr, int n){
     int maxResult = 0;
@@ -112,3 +122,4 @@ int getSmallerOnRight(int* arr, int n){
     }
     return result;
 }
+

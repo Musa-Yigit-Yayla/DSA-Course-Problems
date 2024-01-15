@@ -25,7 +25,7 @@ public:
 };
 
 
-class Solution {
+class CloneGraph {
 private:
     vector<Node*> clonedNodes;
 
@@ -47,16 +47,16 @@ public:
 
 
                 //get the adjList of the current actual node and select unvisited nodes then push them into the stack
-                for(int i = 0; i < currNode->neighbors; i++){
+                for(int i = 0; i < currNode->neighbors.size(); i++){
                     Node* currAdj = currNode->neighbors.at(i);
                     if(!this->isVisited(currAdj->val)){
                         //instantiate a clone node and connect it to currNode bidirectionally
                         Node* currClone = new Node(currAdj->val);
-                        currNode->neighbros.push_back(currClone);
+                        currNode->neighbors.push_back(currClone);
                         currClone->neighbors.push_back(currNode);
 
                         //push the currClone onto the stack
-                        s.push_back(currClone);
+                        s.push(currClone);
 
                         //mark the currClone as visited by pushing it to clonedNodes
                         this->clonedNodes.push_back(currClone);

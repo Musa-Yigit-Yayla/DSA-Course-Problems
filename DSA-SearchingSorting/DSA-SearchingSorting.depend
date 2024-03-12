@@ -2,12 +2,13 @@
 1675672984 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-searchingsorting\allocateminpages.cpp
 	<iostream>
 
-1689681932 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-searchingsorting\insertionsort.cpp
+1710238212 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-searchingsorting\insertionsort.cpp
 	<iostream>
+	<cmath>
 
-1689683061 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-searchingsorting\main.cpp
+1710238414 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-searchingsorting\main.cpp
 	<iostream>
-	"InsertionSort.cpp"
+	"SortQuick.cpp"
 
 1675673782 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-searchingsorting\maxwaterbetweentowers.cpp
 	<iostream>
@@ -24,6 +25,13 @@
 	<vector>
 	<cstddef>
 
-1689683300 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-searchingsorting\insertionsort.cpp
+1710238212 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-searchingsorting\insertionsort.cpp
 	<iostream>
+	<cmath>
+
+1710238169 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-searchingsorting\sortquick.cpp
+	<vector>
+
+1710238169 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-searchingsorting\sortquick.cpp
+	<vector>
 

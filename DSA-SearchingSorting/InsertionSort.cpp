@@ -1,5 +1,5 @@
 #include <iostream>
-#incude <cmath>
+#include <cmath>
 
 using namespace std;
 class InsertionSort{
@@ -108,7 +108,7 @@ public:
        return high;
     }
     //Algorithm belongs to Carrano Henry book
-    void radixSort(int arr[], int n, int d){
+    /*void radixSort(int arr[], int n, int d){
         for(int j = d; j > 0; j--){
             //since there are 10 digits we initialize 10 empty groups with size 10
             int groups[10][n] = {0};
@@ -132,6 +132,6 @@ public:
                 }
             }
         }
-    }
+    }*/
 };
 

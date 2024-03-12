@@ -35,6 +35,7 @@
 		<Unit filename="Articulation.cpp" />
 		<Unit filename="BFS.cpp" />
 		<Unit filename="BridgeEdge.cpp" />
+		<Unit filename="CloneGraph.cpp" />
 		<Unit filename="DFS.cpp" />
 		<Unit filename="DetectCycle.cpp" />
 		<Unit filename="DetectDirectedCycle.cpp" />

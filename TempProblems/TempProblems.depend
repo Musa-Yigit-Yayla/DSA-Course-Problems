@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1710243113 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\tempproblems\sortquicker.cpp
+	<vector>
+
+1710243136 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\tempproblems\main.cpp
+	<iostream>
+	<vector>
+	"SortQuicker.cpp"
+
+1710243426 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\tempproblems\sortquicker.cpp
+	<vector>
+

@@ -1,5 +1,7 @@
 #include <climits>
+#include <vector>
 
+using namespace std;
 class SmallestRange2 {
 public:
     /*int smallestRangeII(vector<int>& nums, int k) {

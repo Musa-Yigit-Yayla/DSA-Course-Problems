@@ -32,6 +32,8 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="HIndex.cpp" />
+		<Unit filename="SmallestRange2.cpp" />
 		<Unit filename="SortQuicker.cpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>

@@ -1,12 +1,25 @@
 # depslib dependency file v1.0
-1710243113 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\tempproblems\sortquicker.cpp
+1710273354 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\tempproblems\sortquicker.cpp
 	<vector>
 
-1710243136 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\tempproblems\main.cpp
+1710327904 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\tempproblems\main.cpp
 	<iostream>
 	<vector>
 	"SortQuicker.cpp"
+	"HIndex.cpp"
 
-1710243426 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\tempproblems\sortquicker.cpp
+1710273354 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\tempproblems\sortquicker.cpp
 	<vector>
+
+1710328340 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\tempproblems\hindex.cpp
+	<vector>
+	<iostream>
+
+1710325388 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\tempproblems\smallestrange2.cpp
+	<climits>
+	<vector>
+
+1710327611 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\tempproblems\hindex.cpp
+	<vector>
+	<iostream>
 

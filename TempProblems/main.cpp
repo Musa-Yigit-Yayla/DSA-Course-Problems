@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include "SortQuicker.cpp"
+#include "HIndex.cpp"
 
 using namespace std;
 
@@ -9,11 +10,14 @@ void printVec(vector<int>&);
 int main(){
         vector<int> vec = {5, 6, 4, 3, 8, 12, 45, 9, 2, 1};
         vector<int> vec2 = {5, 4, 3, 2, 1};
-        SortQuick sq;
+        vector<int> vec1 = {1, 2, 2 ,1};
+        /*SortQuick sq;
         sq.sortArray(vec);
         printVec(vec);
         sq.sortArray(vec2);
-        printVec(vec2);
+        printVec(vec2);*/
+        HIndex hi;
+        hi.hIndex(vec1);
 
         return 0;
 }

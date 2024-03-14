@@ -32,6 +32,7 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="FindShiftAmt.cpp" />
 		<Unit filename="HIndex.cpp" />
 		<Unit filename="SmallestRange2.cpp" />
 		<Unit filename="SortQuicker.cpp" />

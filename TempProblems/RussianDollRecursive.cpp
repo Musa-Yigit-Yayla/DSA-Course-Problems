@@ -1,8 +1,5 @@
-#include <vector>
-#include <iostream>
-
-using namespace std;
-class RussianDoll{
+class RussianDollRecursive{
+class Solution {
 public:
     int maxEnvelopes(vector<vector<int>>& envelopes) {
         //first sort the envelopes with respect to width, then we should find the maximum length ascending subarray wrt height
@@ -10,10 +7,15 @@ public:
         /*for(vector<int> v: envelopes){
             cout << v.at(0) << ", " << v.at(1) << endl;
         }*/
-        int maxResult = 0;
-        int currResult = 1;
+        int currResult = 0;
+
         int prevHeight = envelopes.at(0).at(1);
         int prevWidth = envelopes.at(0).at(0);
+
+        //following vector has 2 columns which contains start and end indexes of each sorted sublist specifying height property too
+        vector<vector<int>> sortedSublists; //sorted wrt width in ascending order
+
+
         //now traverse the array once and track the max ascending height subarray
         for(int i = 1; i < envelopes.size(); i++){
             int currHeight = envelopes.at(i).at(1);
@@ -21,52 +23,59 @@ public:
             if(currWidth > prevWidth && currHeight > prevHeight){
                 currResult++;
             }
-            else if(currWidth == prevWidth){
-                /*if(i >= 2){
-                    //track prev of prev (CHECK GITHUB COMMIT MESSAGE)
-                    int twoPrevHeight = envelopes.at(i - 2).at(1);
-                    if(currHeight > twoPrevHeight){
-                        if(prevHeight < twoPrevHeight || prevHeight > currHeight){
-                            //set the prevHeight and prevWidth to currHeight and currWidth
-                            prevHeight = currHeight;
-                            prevWidth = currWidth;
-                        }
-                    }
-                    else if(prevHeight > twoPrevHeight){
-                        if(currHeight < twoPrevHeight || currHeight > prevHeight){
-                            //do not alter the prevHeight
-                        }
-                    }
-                }
-                else{
-                    //select the prevHeight as the smallest one of the first two elements
-                    int minHeight = min(envelopes.at(0).at(1), envelopes.at(1).at(1));
-                    prevHeight = minHeight;
-                    prevWidth = currWidth;
-                    continue;
-                }*/
+            /*else if(currWidth == prevWidth){
                 int minHeight = min(envelopes.at(i - 1).at(1), envelopes.at(i).at(1));
-                int maxHeight = max(envelopes.at(i - 1).at(1), envelopes.at(i).at(1));
                     prevHeight = minHeight;
                     prevWidth = currWidth;
                     continue;
             }
+            else if(currHeight == prevHeight){
+                //take the smaller of widths which satisfy the greater than currMaxWidth
+                if(currWidth > currMaxHeight &&)
+            }*/
             else{
-                //check whether we should update the maxResult
-                if(maxResult < currResult){
-                    maxResult = currResult;
+                //push back the current sublist
+                vector<int> currIndexes;
+                int prevIndex = i - 1;
+                for(int j = prevIndex - currResult; j < i; j++){
+                    currIndexes.push_back(envelopes.at(j).at(0));
+                    currIndexes.push_back(envelopes.at(j).at(1));
+
                 }
+                sortedSublists.push_back(currIndexes);
                 currResult = 1;
             }
             prevHeight = currHeight;
             prevWidth = currWidth;
         }
-        //final check for maxResult
-        if(maxResult < currResult){
-            maxResult = currResult;
-        }
-        return maxResult;
+        //final check for the last insertion
 
+        cout << sortedSublists.size() << endl;
+        int maxSublistLength = this->findMaxSublist(sortedSublists, 0)
+        return 0;
+
+    }
+    int findMaxSublist(vector<vector<int>>& list, int index, int prevIndex, int currMax){
+        if(index == list.size() - 1){
+            return currMax;
+        }
+        vector<int>& next = list.at(index + 1);
+        vector<int>& curr = list.at(index);
+        int nextFirstWidth = next.at(0);
+        int nextFirstHeight = next.at(1);
+        int currLastWidth = curr.at(curr.size() - 2);
+        int currLastHeight = curr.at(curr.size() - 1);
+        bool isNextAppendable = nextFirstWidth > currLastWidth && nextFirstHeight > currLastHeight;
+
+        int v1 = 0;
+        int v2 = 0;
+        int v3 = 0;
+        if(isNextAppendable){
+            v1 = this->findMaxSublist(list, index + 1, index, currMax + next.size() / 2); // divide by 2 since we hold x, y coordinates in 1D
+        }
+        else{
+            //skip the current index and start fresh from the nextIndex
+        }
     }
     void quickSort(vector<vector<int>>& envelopes, int start, int end){
         cout << "invoked quicksort with start and end " << start << ", " << end << endl;

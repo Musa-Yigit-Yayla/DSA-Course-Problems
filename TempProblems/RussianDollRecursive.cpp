@@ -47,18 +47,20 @@ public:
                     currIndexes.push_back(envelopes.at(j).at(1));
                     sortedSublists.push_back(currIndexes);
                 }
-
-                //last sublist checking before termination
-                if(i == envelopes.size() - 1){
-
-                }
-
                 currResult = 1;
             }
             prevHeight = currHeight;
             prevWidth = currWidth;
         }
         //final check for the last insertion
+        if(currResult > 1){
+            for(int j = envelopes.size() - 1 - currResult; j < envelopes.size() - 1; j++){
+                vector<int> currIndexes;
+                currIndexes.push_back(envelopes.at(j).at(0));
+                currIndexes.push_back(envelopes.at(j).at(1));
+                sortedSublists.push_back(currIndexes);
+            }
+        }
 
         cout << sortedSublists.size() << endl;
         cout << "sortedSubLists content is as follows: ";

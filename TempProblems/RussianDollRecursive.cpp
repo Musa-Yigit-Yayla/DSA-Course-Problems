@@ -9,6 +9,22 @@ public:
         if(envelopes.size() == 1){
             return 1;
         }
+        bool eachDollUsed = true;
+        //let's check if we have a direct solution where we can use each and every doll we have been given
+        for(int i = 1; i < envelopes.size(); i++){
+            int prevHeight = envelopes.at(i - 1).at(1);
+            int prevWidth = envelopes.at(i - 1).at(0);
+            int currWidth = envelopes.at(i).at(0);
+            int currHeight = envelopes.at(i).at(1);
+
+            if(!(currWidth > prevWidth && currHeight > prevHeight)){
+                eachDollUsed = false;
+                break;
+            }
+        }
+        if(eachDollUsed){
+            return envelopes.size();
+        }
 
         int currResult = 0;
 
@@ -26,16 +42,6 @@ public:
             if(currWidth > prevWidth && currHeight > prevHeight){
                 currResult++;
             }
-            /*else if(currWidth == prevWidth){
-                int minHeight = min(envelopes.at(i - 1).at(1), envelopes.at(i).at(1));
-                    prevHeight = minHeight;
-                    prevWidth = currWidth;
-                    continue;
-            }
-            else if(currHeight == prevHeight){
-                //take the smaller of widths which satisfy the greater than currMaxWidth
-                if(currWidth > currMaxHeight &&)
-            }*/
             else{
                 //push back the current sublist
 
@@ -48,6 +54,7 @@ public:
                     sortedSublists.push_back(currIndexes);
                 }
                 currResult = 1;
+                prevIndex = i + 1; //uppdate the prevIndex
             }
             prevHeight = currHeight;
             prevWidth = currWidth;
@@ -71,7 +78,8 @@ public:
             cout << endl;
         }
 
-        int maxSublistLength = this->findMaxSublist(sortedSublists, 0, 0, 1);
+        int maxSublistLength = this->findMaxSublist(envelopes, 0, 0, 1);
+
         return maxSublistLength;
 
     }

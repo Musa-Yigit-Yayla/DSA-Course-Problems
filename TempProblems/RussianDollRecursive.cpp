@@ -1,5 +1,4 @@
 class RussianDollRecursive{
-class Solution {
 public:
     int maxEnvelopes(vector<vector<int>>& envelopes) {
         //first sort the envelopes with respect to width, then we should find the maximum length ascending subarray wrt height
@@ -7,6 +6,10 @@ public:
         /*for(vector<int> v: envelopes){
             cout << v.at(0) << ", " << v.at(1) << endl;
         }*/
+        if(envelopes.size() == 1){
+            return 1;
+        }
+
         int currResult = 0;
 
         int prevHeight = envelopes.at(0).at(1);
@@ -35,14 +38,21 @@ public:
             }*/
             else{
                 //push back the current sublist
-                vector<int> currIndexes;
+
                 int prevIndex = i - 1;
                 for(int j = prevIndex - currResult; j < i; j++){
+                    cout << "Loop condition has been satisfied during sorted sublist tracking" << endl;
+                    vector<int> currIndexes;
                     currIndexes.push_back(envelopes.at(j).at(0));
                     currIndexes.push_back(envelopes.at(j).at(1));
+                    sortedSublists.push_back(currIndexes);
+                }
+
+                //last sublist checking before termination
+                if(i == envelopes.size() - 1){
 
                 }
-                sortedSublists.push_back(currIndexes);
+
                 currResult = 1;
             }
             prevHeight = currHeight;
@@ -51,11 +61,20 @@ public:
         //final check for the last insertion
 
         cout << sortedSublists.size() << endl;
-        int maxSublistLength = this->findMaxSublist(sortedSublists, 0)
-        return 0;
+        cout << "sortedSubLists content is as follows: ";
+        for(vector<int> currVec: sortedSublists){
+            for(int curr: currVec){
+                cout << curr << ",";
+            }
+            cout << endl;
+        }
+
+        int maxSublistLength = this->findMaxSublist(sortedSublists, 0, 0, 1);
+        return maxSublistLength;
 
     }
     int findMaxSublist(vector<vector<int>>& list, int index, int prevIndex, int currMax){
+        cout << "list size is " << list.size() << ", index is " << index;
         if(index == list.size() - 1){
             return currMax;
         }
@@ -66,16 +85,17 @@ public:
         int currLastWidth = curr.at(curr.size() - 2);
         int currLastHeight = curr.at(curr.size() - 1);
         bool isNextAppendable = nextFirstWidth > currLastWidth && nextFirstHeight > currLastHeight;
+        cout << "isNextAppendable yields " << isNextAppendable << " on the index " << index;
 
         int v1 = 0;
         int v2 = 0;
-        int v3 = 0;
         if(isNextAppendable){
+            cout << "isNextAppendable scope has been entered" << endl;
             v1 = this->findMaxSublist(list, index + 1, index, currMax + next.size() / 2); // divide by 2 since we hold x, y coordinates in 1D
         }
-        else{
-            //skip the current index and start fresh from the nextIndex
-        }
+        v2 = this->findMaxSublist(list, index + 1, prevIndex, currMax);
+
+        return max(v1, v2);
     }
     void quickSort(vector<vector<int>>& envelopes, int start, int end){
         cout << "invoked quicksort with start and end " << start << ", " << end << endl;

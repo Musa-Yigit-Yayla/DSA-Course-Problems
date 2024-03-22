@@ -34,6 +34,7 @@
 		</Compiler>
 		<Unit filename="FindShiftAmt.cpp" />
 		<Unit filename="HIndex.cpp" />
+		<Unit filename="LargestDivisibleSubset.cpp" />
 		<Unit filename="MajorityElement2.cpp" />
 		<Unit filename="RussianDoll.cpp" />
 		<Unit filename="SmallestRange2.cpp" />

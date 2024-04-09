@@ -32,6 +32,7 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="CoveredIntervals.cpp" />
 		<Unit filename="FindShiftAmt.cpp" />
 		<Unit filename="HIndex.cpp" />
 		<Unit filename="LargestDivisibleSubset.cpp" />

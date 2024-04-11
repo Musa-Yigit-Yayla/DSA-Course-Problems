@@ -1,18 +1,24 @@
 //Leetcode problem
+#include <vector>
+#include <string>
+#include <cmath>
+#include <iostream>
 
-class Solution {
+using namespace std;
+
+class SearchSuggestionHeap {
 public:
     vector<vector<string>> suggestedProducts(vector<string>& products, string searchWord) {
         //for each substring of the searchword (starting from index 0 at all times) we search for matchs in products
         //we accumulate the matched entries and pick the first three in lexicographic order
         vector<vector<string>> result;
         this->heapSort(products);
-        for(int i = 1; i < searchWord.size(); i++){
+        for(int i = 0; i < searchWord.size(); i++){
             string searchKey = searchWord.substr(0, i + 1);
             vector<string> matchedEntries;
             for(int j = 0; j < products.size(); j++){
                 string currProduct = products.at(j);
-                if(currProduct.starts_with(searchKey)){
+                if(this->hasPrefix(currProduct, searchKey)){
                     //insert the current product to matchedEntries
                     matchedEntries.push_back(currProduct);
                     if(matchedEntries.size() == 3){
@@ -32,11 +38,25 @@ public:
         for(int i = floor(arr.size() / 2); i >= 0; i--){
             this->heapify(arr, i, arr.size() - 1);
         }
+        for(string s: arr){
+            cout << s << ",";
+        }
+        cout << endl;
         //next keep extracting root element to form a sorted array
-        for(int i = arr.size() - 1; i > 0; i++){
+        for(int i = arr.size() - 1; i > 0; i--){
+            cout << "swapping ith elementh " << arr.at(i) << " with i " << i << " with 0th elementh " << arr.at(0) << endl;
             swap(arr.at(i), arr.at(0));
             this->heapify(arr, 0, i - 1);
+            cout << "current contents after heapify is ";
+            for(string s: arr){
+            cout << s << ",";
+            }
+            cout << endl;
         }
+        for(string s: arr){
+            cout << s << ",";
+        }
+        cout << endl;
     }
     //lastIndex is inclusive careful!
     void heapify(vector<string>& arr, int rootIndex, int lastIndex){
@@ -49,7 +69,7 @@ public:
             //we are guaranteed to have a left child
             string largerChild = arr.at(leftIndex);
             int largerIndex = leftIndex;
-            if(rightIndex < arr.size() && arr.at(rightIndex) > largerChild){
+            if(rightIndex <= lastIndex && arr.at(rightIndex) > largerChild){
                 largerChild = arr.at(rightIndex);
                 largerIndex = rightIndex;
             }
@@ -65,5 +85,18 @@ public:
                 break;
             }
         }
+    }
+    bool hasPrefix(string s, string prefix){
+        bool result = false;
+        if(prefix.size() <= s.size()){
+            result = true;
+            for(int i = 0; i < prefix.size(); i++){
+                if(s.at(i) != prefix.at(i)){
+                    result = false;
+                    break;
+                }
+            }
+        }
+        return result;
     }
 };

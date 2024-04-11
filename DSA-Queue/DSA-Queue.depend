@@ -1,11 +1,31 @@
 # depslib dependency file v1.0
-1688476600 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-queue\main.cpp
+1712856105 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-queue\main.cpp
 	<iostream>
+	<vector>
+	<string>
 	"MyQueue.cpp"
+	"SearchSuggestionHeap.cpp"
 
-1688476514 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-queue\myqueue.cpp
+1688477471 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-queue\myqueue.cpp
 	<queue>
 
-1688476514 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-queue\myqueue.cpp
+1688477471 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-queue\myqueue.cpp
 	<queue>
+
+1712854212 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-queue\searchsuggestionheap.cpp
+	<vector>
+	<string>
+	<cmath>
+
+1712856826 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-queue\searchsuggestionheap.cpp
+	<vector>
+	<string>
+	<cmath>
+	<iostream>
+
+1712853553 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-queue\taskschedule.cpp
+	<unordered_map>
+	<vector>
+	<iostream>
+	<algorithm>
 

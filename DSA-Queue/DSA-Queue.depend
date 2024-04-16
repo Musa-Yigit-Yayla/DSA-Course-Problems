@@ -12,10 +12,11 @@
 1688477471 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-queue\myqueue.cpp
 	<queue>
 
-1712854212 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-queue\searchsuggestionheap.cpp
+1712856826 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-queue\searchsuggestionheap.cpp
 	<vector>
 	<string>
 	<cmath>
+	<iostream>
 
 1712856826 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-queue\searchsuggestionheap.cpp
 	<vector>
@@ -28,4 +29,7 @@
 	<vector>
 	<iostream>
 	<algorithm>
+
+1712867259 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-queue\windowslider.cpp
+	<vector>
 

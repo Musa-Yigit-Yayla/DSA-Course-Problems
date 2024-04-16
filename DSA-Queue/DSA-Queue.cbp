@@ -35,6 +35,7 @@
 		<Unit filename="MyQueue.cpp" />
 		<Unit filename="SearchSuggestionHeap.cpp" />
 		<Unit filename="TaskSchedule.cpp" />
+		<Unit filename="WindowSlider.cpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

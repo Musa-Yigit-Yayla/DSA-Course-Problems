@@ -1,4 +1,7 @@
-class Solution {
+#include <vector>
+
+using namespace std;
+class WindowSlider{
 public:
     int longestSubarray(vector<int>& nums, int limit) {
         // <= limit

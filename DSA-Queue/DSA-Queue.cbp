@@ -33,6 +33,7 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="MyQueue.cpp" />
+		<Unit filename="OccursHalfFloor.cpp" />
 		<Unit filename="SearchSuggestionHeap.cpp" />
 		<Unit filename="TaskSchedule.cpp" />
 		<Unit filename="WindowSlider.cpp" />

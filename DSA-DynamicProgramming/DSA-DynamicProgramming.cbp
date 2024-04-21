@@ -2,12 +2,12 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="DSA-Queue" />
+		<Option title="DSA-DynamicProgramming" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/DSA-Queue" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Debug/DSA-DynamicProgramming" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -16,7 +16,7 @@
 				</Compiler>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/DSA-Queue" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Release/DSA-DynamicProgramming" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -32,13 +32,6 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="ClosestSum3.cpp" />
-		<Unit filename="FindExactSumPairs.cpp" />
-		<Unit filename="MyQueue.cpp" />
-		<Unit filename="OccursHalfFloor.cpp" />
-		<Unit filename="SearchSuggestionHeap.cpp" />
-		<Unit filename="TaskSchedule.cpp" />
-		<Unit filename="WindowSlider.cpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

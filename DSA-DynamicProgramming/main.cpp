@@ -7,6 +7,6 @@ using namespace std;
 int main(){
     LongestPalindromicSubstring lps;
 
-    cout << lps.longestPalindrome("babad") << endl;
+    cout << lps.longestPalindrome("aaaaa") << endl;
     return 0;
 }

@@ -30,19 +30,20 @@ public:
                 arr[i - 1][i] = true;
             }
         }
+        //instead of traversing in a right to left and top to bottom manner, we should try diagonal traversal to calculate the results correctly
         for(int i = 0; i < s.size(); i++){ //i is the row index
-            for(int j = i + 2; j < s.size(); j++){ //j is the column index we are interested to calculate
+            for(int j = i + 2, k = 0; j < s.size(); j++, k++){ //j is the column index we are interested to calculate
                 bool currResult = false;
                 //check if the ith and jth characters match each other and if the middle part is palindromic by using the dp table
-                if(s.at(i) == s.at(j)){
-                    if(i < s.size() - 1 && j > 0){
-                        currResult = arr[i + 1][j - 1];
+                if(s.at(k) == s.at(j)){
+                    if(k < s.size() - 1 && j > 0){
+                        currResult = arr[k + 1][j - 1];
                     }
                     else{
                         currResult = true; //true since the intermediate substring is of length 0
                     }
                 }
-                arr[i][j] = currResult;
+                arr[k][j] = currResult;
             }
         }
         //now we must search for a largest substring

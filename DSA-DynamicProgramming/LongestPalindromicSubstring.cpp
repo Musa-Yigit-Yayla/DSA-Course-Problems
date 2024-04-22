@@ -1,3 +1,4 @@
+#include <string>
 
 using namespace std;
 class LongestPalindromicSubstring {
@@ -47,7 +48,7 @@ public:
         //now we must search for a largest substring
         //start the iteration from top right and search only the half of the matrix including the main diagonal
         for(int i = 0; i < s.size(); i++){
-            for(int j = 4; j >= i; j--){
+            for(int j = s.size() - 1; j >= i; j--){
                 if(arr[i][j] == true){
                     //we have a palindrome, check if it is of larger length than current result
                     int length = j - i + 1;

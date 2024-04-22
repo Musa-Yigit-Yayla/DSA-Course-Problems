@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1713779897 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-dynamicprogramming\main.cpp
+	<iostream>
+	<string>
+	"LongestPalindromicSubstring.cpp"
+
+1713780096 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-dynamicprogramming\longestpalindromicsubstring.cpp
+	<string>
+

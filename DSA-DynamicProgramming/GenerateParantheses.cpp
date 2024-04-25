@@ -16,29 +16,38 @@ public:
         tableDP.insert(make_pair("()", true));
         tableDP.insert(make_pair("()()", true));
         tableDP.insert(make_pair("(())", true));
-        //we can start our calculations from n 3
-        for(int i = 3; i <= n; i++){
-            //fetch all permutations of parantheses strings of length i
-            //first retrieve parantheses strings of length i - 1 from tableDP and store them in a vector
-            vector<string> prevElts;
-            int prevLength = (i - 1) * 2;
-            for(auto& it: tableDP){
-                if(it.first.size() == prevLength){
-                    prevElts.push_back(it.first);
+        if(n == 1){
+            result.push_back("()");
+        }
+        else if(n == 2){
+            result.push_back("()()");
+            result.push_back("(())");
+        }
+        else{
+            //we can start our calculations from n 3
+            for(int i = 3; i <= n; i++){
+                //fetch all permutations of parantheses strings of length i
+                //first retrieve parantheses strings of length i - 1 from tableDP and store them in a vector
+                vector<string> prevElts;
+                int prevLength = (i - 1) * 2;
+                for(auto& it: tableDP){
+                    if(it.first.size() == prevLength){
+                        prevElts.push_back(it.first);
+                    }
                 }
-            }
-            unordered_set<string> currElts = this->permute(prevElts);
+                unordered_set<string> currElts = this->permute(prevElts);
 
-            for(unordered_set<string>::iterator it = currElts.begin(); it != currElts.end(); it++){
-               if(i == n){
-                    //simply fill the result vector since this is the desired level
-                    result.push_back(*it);
-               }
-               else{//track intermediate results
-                    tableDP.insert(make_pair(*it, true));
-               }
-            }
+                for(unordered_set<string>::iterator it = currElts.begin(); it != currElts.end(); it++){
+                if(i == n){
+                        //simply fill the result vector since this is the desired level
+                        result.push_back(*it);
+                }
+                else{//track intermediate results
+                        tableDP.insert(make_pair(*it, true));
+                }
+                }
 
+            }
         }
         return result;
     }
@@ -70,10 +79,8 @@ public:
         for(string s: prevElements){
             for(int i = 0; i <= s.size(); i++){
                 string newStr = s.substr(0, i) + '(' + s.substr(i);
-                for(int j = i + 1; j <= newStr.size(); j++){
+                for(int j = i + 1; j < newStr.size(); j++){
                     string tempStr = newStr;
-                    cout << "Printing out with tempStr: " << tempStr << endl;
-                    cout << "Substring of tempStr from 0 to j is " << tempStr.substr(0, j) << ", s.substr(j) is " << s.substr(j) << endl;
                     tempStr = tempStr.substr(0, j) + ')' + tempStr.substr(j);
                     result.insert(tempStr);
                 }

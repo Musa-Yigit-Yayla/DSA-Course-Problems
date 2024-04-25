@@ -51,6 +51,21 @@ public:
         }
         return result;
     }
+    int longestValidParentheses(string s) {
+        //we can work with tabulation by using hashmap to store smaller subproblems (substrings) which yields a valid parantheses match
+        int result = 0;
+        for(int i = 2; i <= s.size(); i += 2){
+            string currStr;
+            for(int j = 0; j <= s.size() - i; j++){
+                currStr = s.substr(j, i); //i represents length, j is the start index
+                if(this->validate(currStr)){
+                    result = i;
+                    break; //no need to search for same length substrings
+                }
+            }
+        }
+        return result;
+    }
     //Validates whether a given string consists of well formed parantheses
     bool validate(string str){
         stack<char> s;

@@ -11,6 +11,7 @@ int main(){
 
     //cout << lps.longestPalindrome("aaaaa") << endl;
     GenerateParantheses gp;
-    vector<string> vec = gp.generateParenthesis(5);
+    //vector<string> vec = gp.generateParenthesis(5);
+    int x = gp.longestValidParentheses("()");
     return 0;
 }

@@ -1,12 +1,30 @@
 # depslib dependency file v1.0
-1713780141 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-dynamicprogramming\main.cpp
+1713988466 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-dynamicprogramming\main.cpp
 	<iostream>
 	<string>
+	<vector>
 	"LongestPalindromicSubstring.cpp"
+	"GenerateParantheses.cpp"
 
 1713781435 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-dynamicprogramming\longestpalindromicsubstring.cpp
 	<string>
 
-1713781042 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-dynamicprogramming\longestpalindromicsubstring.cpp
+1713781435 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-dynamicprogramming\longestpalindromicsubstring.cpp
 	<string>
+
+1714028961 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-dynamicprogramming\generateparantheses.cpp
+	<vector>
+	<unordered_map>
+	<unordered_set>
+	<string>
+	<stack>
+	<iostream>
+
+1714028961 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-dynamicprogramming\generateparantheses.cpp
+	<vector>
+	<unordered_map>
+	<unordered_set>
+	<string>
+	<stack>
+	<iostream>
 

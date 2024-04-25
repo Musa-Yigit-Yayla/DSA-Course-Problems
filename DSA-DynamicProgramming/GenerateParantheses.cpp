@@ -3,6 +3,7 @@
 #include <unordered_set>
 #include <string>
 #include <stack>
+#include <iostream>
 
 using namespace std;
 
@@ -70,8 +71,11 @@ public:
             for(int i = 0; i <= s.size(); i++){
                 string newStr = s.substr(0, i) + '(' + s.substr(i);
                 for(int j = i + 1; j <= newStr.size(); j++){
-                    newStr = newStr.substr(0, j) + ')' + s.substr(j);
-                    result.insert(newStr);
+                    string tempStr = newStr;
+                    cout << "Printing out with tempStr: " << tempStr << endl;
+                    cout << "Substring of tempStr from 0 to j is " << tempStr.substr(0, j) << ", s.substr(j) is " << s.substr(j) << endl;
+                    tempStr = tempStr.substr(0, j) + ')' + tempStr.substr(j);
+                    result.insert(tempStr);
                 }
             }
         }

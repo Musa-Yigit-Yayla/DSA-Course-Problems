@@ -32,6 +32,7 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="GenerateParantheses.cpp" />
 		<Unit filename="LongestPalindromicSubstring.cpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>

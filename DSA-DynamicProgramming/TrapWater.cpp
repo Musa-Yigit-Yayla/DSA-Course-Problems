@@ -31,18 +31,22 @@ public:
                 //calculate how much water is trapped by first checking our table
                 int currWater = 0;
                 int matchingWall = height.at(matchingWallIndex);
-                string str = stoi(leftWall) + ":" + stoi(matchingWall);
-                if(map.find(str) != map.end()){
-                    currWater = map.at(str);
+                string str = to_string(leftWall) + ":" + to_string(matchingWall);
+                if(table.find(str) != table.end()){
+                    currWater = table.at(str);
                 }
                 else{
                     //calculate and insert into the table
                     for(int j = i + 1; j < matchingWallIndex; j++){
                         currWater += leftWall - height.at(j);
-                        map.insert(make_pair(str, currWater));
+                        table.insert(make_pair(str, currWater));
                     }
                 }
                 totalWater += currWater;
+                i = matchingWallIndex;
+            }
+            else{
+                i++;
             }
         }
         return totalWater;

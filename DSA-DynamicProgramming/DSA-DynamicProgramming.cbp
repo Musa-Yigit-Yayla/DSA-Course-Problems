@@ -34,6 +34,7 @@
 		</Compiler>
 		<Unit filename="GenerateParantheses.cpp" />
 		<Unit filename="LongestPalindromicSubstring.cpp" />
+		<Unit filename="TrapWater.cpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

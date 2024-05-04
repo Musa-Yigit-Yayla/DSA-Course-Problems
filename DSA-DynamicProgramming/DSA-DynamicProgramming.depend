@@ -1,10 +1,11 @@
 # depslib dependency file v1.0
-1714031750 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-dynamicprogramming\main.cpp
+1714822867 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-dynamicprogramming\main.cpp
 	<iostream>
 	<string>
 	<vector>
 	"LongestPalindromicSubstring.cpp"
 	"GenerateParantheses.cpp"
+	"Kadane.cpp"
 
 1713781435 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-dynamicprogramming\longestpalindromicsubstring.cpp
 	<string>
@@ -31,4 +32,16 @@
 1714411360 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-dynamicprogramming\untitled1.cpp
 	<iostream>
 	<string>
+
+1714822979 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-dynamicprogramming\kadane.cpp
+	<climits>
+
+1714822979 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-dynamicprogramming\kadane.cpp
+	<climits>
+
+1714822905 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-dynamicprogramming\trapwater.cpp
+	<string>
+	<algorithm>
+	<vector>
+	<unordered_map>
 

@@ -1,4 +1,5 @@
 #include <climits>
+#include <iostream>
 
 using namespace std;
 class Kadane
@@ -32,10 +33,10 @@ class Kadane
            currLength++;
            //now perform the bottom up approach and obtain the result using DP
            for(int i = 0; i <= n - currLength; i++){
-               int prevResult = table[currLength - 1][i]; //the result of the currLength - 1 length subarray sum
+               long long prevResult = table[currLength - 1][i]; //the result of the currLength - 1 length subarray sum
                //starting at the same index i
                int nextElt = arr[i + currLength - 1];
-               int currResult = prevResult + nextElt;
+               long long currResult = prevResult + nextElt;
                table[currLength][i] = currResult;
                if(currResult > result){
                     result = currResult;
@@ -43,6 +44,24 @@ class Kadane
 
             }
        }
+        //print the matrix first
+        /*for(int i = 0; i < n + 1; i++){
+            for(int j = 0; j < n; j++){
+                cout << table[i][j] << " ";
+            }
+            cout << endl;
+        }
+       //print the maximum continous subarray sum for each ending index starting from 0 up to n - 1 inclusive
+       for(int i = 1; i < n; i++){
+            long long currMax = table[0][i];
+            for(int j = 0; j < n - i; j++){
+                long long curr = table[j][i];
+                if(curr > currMax){
+                    currMax = curr;
+                }
+            }
+            cout << currMax << " ";
+       }*/
        for(int i = 0; i < n + 1; i++){
             delete[] table[i];
        }

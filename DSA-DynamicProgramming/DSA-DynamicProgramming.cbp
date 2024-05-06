@@ -33,6 +33,7 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="GenerateParantheses.cpp" />
+		<Unit filename="LCS.cpp" />
 		<Unit filename="LongestPalindromicSubstring.cpp" />
 		<Unit filename="TrapWater.cpp" />
 		<Unit filename="main.cpp" />

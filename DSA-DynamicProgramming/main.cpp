@@ -6,6 +6,7 @@
 #include "Kadane.cpp"
 #include "LCS.cpp"
 #include "ActivitySelect.cpp"
+#include "Climber.cpp"
 
 using namespace std;
 
@@ -26,9 +27,20 @@ int main(){
 
     //LCS lcs;
     //cout << lcs.lcs(6, 13, "CECDBB", "CAACDDABBDACA") << endl;
-    ActivitySelect as;
+    /*ActivitySelect as;
     vector<int> start = {2, 1};
     vector<int> end = {2, 2};
-    int z = as.activitySelection(start, end, 2);
+    int z = as.activitySelection(start, end, 2);*/
+    Climber c;
+    int* grid[1] = {};
+    grid[0] = new int[2]{3, 5};
+
+    int* grid2[4] = {};
+    grid2[0] = new int[5]{2, 8, 9, 5, 8};
+    grid2[1] = new int[5]{4, 4, 6, 2, 3};
+    grid2[2] = new int[5]{5, 7, 5, 6, 1};
+    grid2[3] = new int[5]{3, 2, 5, 4, 8};
+    cout << c.getSafestPath(grid, 1, 2) << endl;
+    cout << c.getSafestPath(grid2, 4, 5) << endl;
     return 0;
 }

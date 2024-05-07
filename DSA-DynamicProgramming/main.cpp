@@ -5,6 +5,7 @@
 #include "GenerateParantheses.cpp"
 #include "Kadane.cpp"
 #include "LCS.cpp"
+#include "ActivitySelect.cpp"
 
 using namespace std;
 
@@ -23,7 +24,11 @@ int main(){
     //cout << k.maximumSum(arr2, 5) <<endl;
     //cout << k.maximumSum(arr3, 5) <<endl;
 
-    LCS lcs;
-    cout << lcs.lcs(6, 13, "CECDBB", "CAACDDABBDACA") << endl;
+    //LCS lcs;
+    //cout << lcs.lcs(6, 13, "CECDBB", "CAACDDABBDACA") << endl;
+    ActivitySelect as;
+    vector<int> start = {2, 1};
+    vector<int> end = {2, 2};
+    int z = as.activitySelection(start, end, 2);
     return 0;
 }

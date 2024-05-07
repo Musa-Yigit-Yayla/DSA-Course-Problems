@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1714910004 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-dynamicprogramming\main.cpp
+1715078579 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-dynamicprogramming\main.cpp
 	<iostream>
 	<string>
 	<vector>
@@ -7,6 +7,7 @@
 	"GenerateParantheses.cpp"
 	"Kadane.cpp"
 	"LCS.cpp"
+	"ActivitySelect.cpp"
 
 1713781435 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-dynamicprogramming\longestpalindromicsubstring.cpp
 	<string>
@@ -54,5 +55,19 @@
 
 1714910124 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-dynamicprogramming\lcs.cpp
 	<string>
+	<cmath>
+
+1715079941 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-dynamicprogramming\activityselect.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+
+1715080126 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-dynamicprogramming\activityselect.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+
+1715078935 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-dynamicprogramming\coins.cpp
+	<cstddef>
 	<cmath>
 

@@ -1,7 +1,7 @@
 #include <cstddef>
 #include <cmath>
 
-using namespace std;
+/*using namespace std;
 
 class Coins{
 private:
@@ -45,3 +45,4 @@ public:
     }
 
 };
+*/

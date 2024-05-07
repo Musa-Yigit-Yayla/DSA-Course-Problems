@@ -32,6 +32,7 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Coins.cpp" />
 		<Unit filename="GenerateParantheses.cpp" />
 		<Unit filename="LCS.cpp" />
 		<Unit filename="LongestPalindromicSubstring.cpp" />

@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1715109130 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-dynamicprogramming\main.cpp
+1715166095 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-dynamicprogramming\main.cpp
 	<iostream>
 	<string>
 	<vector>
@@ -9,6 +9,7 @@
 	"LCS.cpp"
 	"ActivitySelect.cpp"
 	"Climber.cpp"
+	"PlayerSelect.cpp"
 
 1713781435 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-dynamicprogramming\longestpalindromicsubstring.cpp
 	<string>
@@ -81,4 +82,10 @@
 	<climits>
 	<cmath>
 	<algorithm>
+
+1715166185 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-dynamicprogramming\playerselect.cpp
+	<algorithm>
+	<string>
+	<iostream>
+	<vector>
 

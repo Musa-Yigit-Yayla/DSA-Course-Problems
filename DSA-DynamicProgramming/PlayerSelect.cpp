@@ -27,7 +27,7 @@ public:
         }
         //proceed with 01 knapsack loop body
         for(int i = 1; i < n + 1; i++){
-            Player currPlayer = players.at(i);
+            Player currPlayer = players.at(i - 1);
             for(int j = 1; j < maxCredits + 1; j++){
 
                 if(currPlayer.price <= j){ //check the weight property's satisfaction
@@ -41,6 +41,10 @@ public:
         }
         //result is always at the latest cell
         return dp[n][maxCredits];
+    }
+    int select2(vector<Player>& players, int maxPlayers){
+
+
     }
 
     void printTest(){

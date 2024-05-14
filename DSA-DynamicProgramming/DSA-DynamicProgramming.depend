@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1715166095 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-dynamicprogramming\main.cpp
+1715685065 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-dynamicprogramming\main.cpp
 	<iostream>
 	<string>
 	<vector>
@@ -10,6 +10,7 @@
 	"ActivitySelect.cpp"
 	"Climber.cpp"
 	"PlayerSelect.cpp"
+	"Huffman.cpp"
 
 1713781435 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-dynamicprogramming\longestpalindromicsubstring.cpp
 	<string>
@@ -83,9 +84,31 @@
 	<cmath>
 	<algorithm>
 
-1715166185 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-dynamicprogramming\playerselect.cpp
+1715172943 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-dynamicprogramming\playerselect.cpp
 	<algorithm>
 	<string>
 	<iostream>
 	<vector>
+
+1715176420 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-dynamicprogramming\knapsack01.cpp
+	<algorithm>
+
+1715176452 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-dynamicprogramming\matrixmultiply.cpp
+	<algorithm>
+
+1715172943 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-dynamicprogramming\playerselect.cpp
+	<algorithm>
+	<string>
+	<iostream>
+	<vector>
+
+1715684909 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-dynamicprogramming\huffman.cpp
+	<unordered_map>
+	<string>
+	<iostream>
+
+1715685344 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\dsa-dynamicprogramming\huffman.cpp
+	<unordered_map>
+	<string>
+	<iostream>
 

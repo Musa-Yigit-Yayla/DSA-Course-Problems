@@ -6,8 +6,10 @@
 
 using namespace std;
 
-int main()
-{
+void test0();
+
+int main(){
+    test0();
     /*MyQueue mq;
     mq.push(2);
     //mq.push(3);
@@ -22,4 +24,8 @@ int main()
     sgh.suggestedProducts(arr, "a");
     vector<vector<string>> result = sgh.suggestedProducts(products, searchWord);
     return 0;
+}
+void test0(){
+    cout << endl;
+    cout << endl;
 }

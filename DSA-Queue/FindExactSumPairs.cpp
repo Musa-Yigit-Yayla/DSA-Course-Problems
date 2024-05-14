@@ -8,4 +8,4 @@ class FindExactSumPairs{
         //to see if we have sum equal to x, if not we decide to either go to left or to right
         //You might want to have the mid element fixed, just search for the second element to sum with the mid element (RETHINK THIS)
     }
-}
+};

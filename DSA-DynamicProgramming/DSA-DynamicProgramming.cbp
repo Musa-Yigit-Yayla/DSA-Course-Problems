@@ -35,8 +35,11 @@
 		<Unit filename="Climber.cpp" />
 		<Unit filename="Coins.cpp" />
 		<Unit filename="GenerateParantheses.cpp" />
+		<Unit filename="Knapsack01.cpp" />
 		<Unit filename="LCS.cpp" />
 		<Unit filename="LongestPalindromicSubstring.cpp" />
+		<Unit filename="MatrixMultiply.cpp" />
+		<Unit filename="PlayerSelect.cpp" />
 		<Unit filename="TrapWater.cpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>

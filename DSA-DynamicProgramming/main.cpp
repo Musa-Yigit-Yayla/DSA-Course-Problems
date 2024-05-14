@@ -8,8 +8,18 @@
 #include "ActivitySelect.cpp"
 #include "Climber.cpp"
 #include "PlayerSelect.cpp"
+#include "Huffman.cpp"
 
 using namespace std;
+
+
+MinHeapNode* createNode(char data, int freq) {
+    MinHeapNode* node = new MinHeapNode();
+    node->data = data;
+    node->freq = freq;
+    return node;
+}
+
 
 int main(){
     //LongestPalindromicSubstring lps;
@@ -44,7 +54,26 @@ int main(){
     cout << c.getSafestPath(grid, 1, 2) << endl;
     cout << c.getSafestPath(grid2, 4, 5) << endl;*/
 
-    PlayerSelect ps;
-    ps.printTest();
+    //PlayerSelect ps;
+    //ps.printTest();
+    Huffman h;
+
+    MinHeapNode* root = createNode('$', 20);
+
+    root->left = createNode('$', 8);
+    root->right = createNode('$', 12);
+
+    root->left->left = createNode('$', 3);
+    root->left->right = createNode('E', 5);
+
+    root->left->left->left = createNode('B', 1);
+    root->left->left->right = createNode('D', 2);
+
+    root->right->left = createNode('C', 6);
+    root->right->right = createNode('A', 6);
+
+    string binaryStr = "1111111111110001010101010100010010101010101";
+    cout << "Result: " << h.decodeHuffmanData(root, binaryStr) << endl;
+
     return 0;
 }

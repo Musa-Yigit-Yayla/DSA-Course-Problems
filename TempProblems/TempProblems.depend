@@ -2,16 +2,17 @@
 1710273354 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\tempproblems\sortquicker.cpp
 	<vector>
 
-1710327904 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\tempproblems\main.cpp
+1710334825 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\tempproblems\main.cpp
 	<iostream>
 	<vector>
 	"SortQuicker.cpp"
 	"HIndex.cpp"
+	"FindShiftAmt.cpp"
 
 1710273354 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\tempproblems\sortquicker.cpp
 	<vector>
 
-1710328340 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\tempproblems\hindex.cpp
+1710330721 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\tempproblems\hindex.cpp
 	<vector>
 	<iostream>
 
@@ -24,5 +25,8 @@
 	<iostream>
 
 1710334615 source:c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\tempproblems\findshiftamt.cpp
+	<vector>
+
+1710334615 c:\users\yigit\documents\netbeansprojects\stopmotioneditorgitrepository\dsa-course-problems\tempproblems\findshiftamt.cpp
 	<vector>
 

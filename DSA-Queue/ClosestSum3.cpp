@@ -1,3 +1,8 @@
+#include <vector>
+#include <cmath>
+#include <algorithm>
+
+using namespace std;
 class ClosestSum3 {
 public:
     int threeSumClosest(vector<int>& nums, int target) {

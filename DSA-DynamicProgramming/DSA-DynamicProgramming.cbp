@@ -34,7 +34,9 @@
 		</Compiler>
 		<Unit filename="Climber.cpp" />
 		<Unit filename="Coins.cpp" />
+		<Unit filename="FractionalKnapsack.cpp" />
 		<Unit filename="GenerateParantheses.cpp" />
+		<Unit filename="Huffman.cpp" />
 		<Unit filename="Knapsack01.cpp" />
 		<Unit filename="LCS.cpp" />
 		<Unit filename="LongestPalindromicSubstring.cpp" />

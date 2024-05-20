@@ -40,8 +40,10 @@
 		<Unit filename="Knapsack01.cpp" />
 		<Unit filename="LCS.cpp" />
 		<Unit filename="LongestPalindromicSubstring.cpp" />
+		<Unit filename="MatrixDestinationDP.cpp" />
 		<Unit filename="MatrixMultiply.cpp" />
 		<Unit filename="PlayerSelect.cpp" />
+		<Unit filename="SumWithoutNeighbor.cpp" />
 		<Unit filename="TrapWater.cpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
